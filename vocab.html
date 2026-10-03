@@ -39,15 +39,18 @@
   .decks { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
   .decks button { padding: 3px 12px; border-radius: 999px; font-size: 13px; }
   .decks button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 10px; }
-  .vbox { position: relative; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 12px 8px 10px; text-align: center; cursor: pointer; min-width: 0; }
-  .vbox:hover { border-color: var(--accent); }
-  .vbox .word { font-size: 26px; line-height: 1.25; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; overflow-wrap: anywhere; }
-  .vbox .word.long { font-size: 20px; }
-  .vbox .word.xlong { font-size: 16px; }
-  .vbox .kana { font-size: 13px; min-height: 1.4em; overflow-wrap: anywhere; }
-  .vbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; visibility: hidden; }
-  .vbox:hover .m { visibility: visible; }
+  .rows { border-top: 1px solid var(--line); }
+  .vrow, .vhead { display: grid; grid-template-columns: minmax(70px, 1fr) minmax(110px, 1.3fr) minmax(0, 2.6fr) minmax(0, 1.6fr); gap: 14px; align-items: baseline; padding: 10px 6px; }
+  .vhead { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 0; padding-bottom: 6px; }
+  .vrow { border-bottom: 1px solid var(--line); cursor: pointer; }
+  .vrow:hover { background: var(--bg); }
+  .vrow .word { font-size: 17px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; color: var(--muted); }
+  .vrow .kana { font-size: 21px; font-weight: 600; overflow-wrap: anywhere; }
+  .vrow .ex { font-size: 15px; overflow-wrap: anywhere; }
+  .vrow .en { font-size: 14px; visibility: hidden; }
+  .vrow .en b { display: block; font-weight: 600; }
+  .vrow .en span { color: var(--muted); font-size: 13px; }
+  .vrow:hover .en { visibility: visible; }
   #d-body { padding: 22px 20px 16px; }
   dialog { border: 1px solid var(--line); border-radius: 12px; padding: 0; width: min(440px, calc(100% - 32px)); background: var(--card); color: var(--ink); }
   dialog::backdrop { background: rgba(0, 0, 0, .4); }
@@ -85,7 +88,10 @@
   .toast.show { opacity: 1; }
   @media (max-width: 720px) {
     .mock { grid-template-columns: 1fr; }
-    .grid { grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); }
+    .vhead { display: none; }
+    .vrow { grid-template-columns: auto 1fr; gap: 2px 12px; }
+    .vrow .ex { grid-column: 1 / -1; font-size: 14px; color: var(--muted); }
+    .vrow .en { display: none; }
   }
 </style>
 </head>
@@ -173,7 +179,8 @@
       <input type="search" id="q" placeholder="Search Japanese or English…" autocomplete="off">
     </div>
     <div class="decks" id="decks"></div>
-    <div class="grid" id="list"></div>
+    <div class="vhead"><span>Kanji</span><span>Kana</span><span>Example</span><span>English <span style="text-transform:none;letter-spacing:0">(hover)</span></span></div>
+    <div class="rows" id="list"></div>
   </div>
 </main>
 <dialog id="detail"><button type="button" class="x" id="d-close" aria-label="Close">×</button><div id="d-body"></div></dialog>
@@ -212,13 +219,16 @@ function render() {
   const shown = vocab.filter(v => (deck === 'all' || v.deck === deck) &&
     (!q || [v.word, v.kana, v.meaning].some(f => (f || '').toLowerCase().includes(q))));
 
-  const size = s => s.length > 6 ? ' xlong' : s.length > 4 ? ' long' : '';
-  $('list').innerHTML = shown.length ? shown.map(v => `
-    <div class="vbox" data-id="${esc(v.id)}">
-      <div class="word${size(v.word || v.kana)}" lang="ja">${esc(v.word || v.kana)}</div>
-      <div class="kana" lang="ja">${v.word ? esc(v.kana) : ''}</div>
-      <div class="m">${esc(v.meaning)}</div>
-    </div>`).join('')
+  $('list').innerHTML = shown.length ? shown.map(v => {
+    const ex = v.examples[0];
+    return `
+    <div class="vrow" data-id="${esc(v.id)}">
+      <span class="word" lang="ja">${esc(v.word) || '—'}</span>
+      <span class="kana" lang="ja">${esc(v.kana)}</span>
+      <span class="ex" lang="ja">${ex ? esc(ex.jp) : ''}</span>
+      <span class="en"><b>${esc(v.meaning)}</b>${ex?.en ? `<span>${esc(ex.en)}</span>` : ''}</span>
+    </div>`;
+  }).join('')
     : `<div class="empty">${vocab.length ? 'No words match.' : 'No words yet.'}</div>`;
 }
 
@@ -249,7 +259,7 @@ function showWord(id) {
   if (!$('detail').open) $('detail').showModal();
 }
 $('list').addEventListener('click', ev => {
-  const box = ev.target.closest('.vbox');
+  const box = ev.target.closest('.vrow');
   if (box) showWord(box.dataset.id);
 });
 $('d-close').addEventListener('click', () => $('detail').close());
@@ -319,7 +329,7 @@ $('auth-form').addEventListener('submit', async ev => {
 
 applyAuth();
 Promise.all([ghRead(FILE, [], token), loadJson('kanji.json')])
-  .then(([r, k]) => { vocab = r.data; kanji = k; render(); openFromHash(); $('status').textContent = 'Hover for the meaning, tap a word for examples.'; })
+  .then(([r, k]) => { vocab = r.data; kanji = k; render(); openFromHash(); $('status').textContent = 'Hover a row for the English, click it for more examples and its kanji.'; })
   .catch(e => { $('status').textContent = 'Couldn\'t load vocab: ' + e.message; });
 </script>
 </body>
