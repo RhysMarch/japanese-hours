@@ -1383,5 +1383,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791044125931",
+    "word": "医者",
+    "kana": "いしゃ",
+    "meaning": "doctor",
+    "examples": [
+      {
+        "jp": "ともだちは いしゃです。",
+        "kanji": "友達は医者です。",
+        "en": "My friend is a doctor."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
