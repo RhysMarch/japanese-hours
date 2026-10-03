@@ -1,5 +1,69 @@
 [
   {
+    "k": "一",
+    "reading": "いち",
+    "meaning": "One",
+    "added": "2026-10-03",
+    "id": "XxkHciP83R"
+  },
+  {
+    "k": "二",
+    "reading": "に",
+    "meaning": "Two",
+    "added": "2026-10-03",
+    "id": "f5u99kyT2d"
+  },
+  {
+    "k": "三",
+    "reading": "さん",
+    "meaning": "Three",
+    "added": "2026-10-03",
+    "id": "VVYGexpT8P"
+  },
+  {
+    "k": "四",
+    "reading": "よん",
+    "meaning": "Four",
+    "added": "2026-10-03",
+    "id": "8GS8RTmoXA"
+  },
+  {
+    "k": "五",
+    "reading": "ご",
+    "meaning": "Five",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "六",
+    "reading": "ろく",
+    "meaning": "Six",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "七",
+    "reading": "なな / しち",
+    "meaning": "Seven",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "八",
+    "reading": "はち",
+    "meaning": "Eight",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "九",
+    "reading": "きゅう / く",
+    "meaning": "Nine",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "十",
+    "reading": "じゅう",
+    "meaning": "Ten",
+    "added": "2026-10-03"
+  },
+  {
     "k": "薬",
     "reading": "くすり",
     "meaning": "Medicine",
@@ -124,34 +188,6 @@
     "meaning": "Sun / day",
     "added": "2026-10-03",
     "id": "Yk9AtTQbj2"
-  },
-  {
-    "k": "一",
-    "reading": "いち",
-    "meaning": "One",
-    "added": "2026-10-03",
-    "id": "XxkHciP83R"
-  },
-  {
-    "k": "二",
-    "reading": "に",
-    "meaning": "Two",
-    "added": "2026-10-03",
-    "id": "f5u99kyT2d"
-  },
-  {
-    "k": "三",
-    "reading": "さん",
-    "meaning": "Three",
-    "added": "2026-10-03",
-    "id": "VVYGexpT8P"
-  },
-  {
-    "k": "四",
-    "reading": "よん",
-    "meaning": "Four",
-    "added": "2026-10-03",
-    "id": "8GS8RTmoXA"
   },
   {
     "k": "営",
