@@ -63,7 +63,6 @@
   .sub-note { font-size: 11px; color: var(--muted); white-space: nowrap; }
   .insight { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
   .insight b { color: var(--ink); }
-  .callout { font-size: 13px; background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; margin-top: 12px; }
   /* JLPT */
   .lvl { display: grid; grid-template-columns: 34px 1fr 150px; gap: 10px; align-items: center; margin: 10px 0; }
   .lvl .tag { font-weight: 700; font-size: 14px; }
@@ -81,21 +80,6 @@
   .routine .dot.pre { background: transparent; border: 1px dashed var(--line); }
   .routine .rate { font-size: 12px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
   .routine .dlbl { font-size: 9px; color: var(--muted); text-align: center; }
-  /* Genki pace */
-  .ch-bars { display: flex; align-items: flex-end; gap: 3px; height: 90px; margin-top: 12px; }
-  .ch-bars .cb { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
-  .ch-bars .cb div { background: var(--c0); border-radius: 3px 3px 0 0; min-height: 2px; }
-  .ch-bars .cb.cur div { background: color-mix(in srgb, var(--c0) 45%, var(--line)); }
-  .ch-bars .cb span { font-size: 9px; color: var(--muted); text-align: center; margin-top: 3px; }
-  .progress { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; margin: 8px 0 4px; }
-  .progress div { height: 100%; background: var(--c0); }
-  /* Study diet */
-  .diet-row { margin: 10px 0; }
-  .diet-row small { color: var(--muted); font-size: 12px; }
-  .stack { display: flex; height: 22px; border-radius: 6px; overflow: hidden; background: var(--line); margin-top: 4px; }
-  .stack div { height: 100%; color: #fff; font-size: 11px; font-weight: 600; display: grid; place-items: center; overflow: hidden; white-space: nowrap; }
-  .step .ch { font-size: 12px; font-weight: 400; color: var(--muted); margin-left: 10px; display: inline-flex; align-items: center; gap: 4px; }
-  .step .ch input { width: 58px; padding: 4px 6px; margin: 0; }
   .heat-wrap { overflow-x: auto; padding-bottom: 4px; }
   .heat { display: grid; grid-template-rows: 14px repeat(7, 12px); grid-auto-flow: column; grid-auto-columns: 12px; gap: 3px; width: max-content; }
   .heat .cell { border-radius: 2px; background: var(--line); }
@@ -199,17 +183,6 @@
   <div class="card">
     <h2>Routine — last 30 days</h2>
     <div id="routine"></div>
-  </div>
-
-  <div class="grid2">
-    <div class="card">
-      <h2>Genki pace</h2>
-      <div id="genki-pace"></div>
-    </div>
-    <div class="card">
-      <h2>Study diet</h2>
-      <div id="diet"></div>
-    </div>
   </div>
 
   <div class="grid2">
@@ -363,17 +336,13 @@ $('fields').innerHTML = SECTIONS.map((s, i) => `
       <div class="subs">
         ${s.subs.map(x => `<label>${x.name} ${hoursInput(x.key)}</label>`).join('')}
       </div>` : `
-      <span class="name"><label for="f-${s.id}">${s.name}</label>${s.id === 'genki' ? `
-        <label class="ch">Ch <input type="number" min="1" max="23" step="1" inputmode="numeric" id="f-genki_ch" placeholder="–"></label>` : ''}</span>
+      <label class="name" for="f-${s.id}">${s.name}</label>
       ${hoursInput(s.id)}`}
   </div>`).join('');
 
 function fillForm(date) {
   const e = data[date] || {};
   ALL_KEYS.forEach(k => $('f-' + k).value = e[k] || '');
-  // Genki chapter carries forward from the most recent earlier day, since you're usually still on it
-  const prev = Object.keys(data).filter(d => d < date && data[d].genki_ch).sort().pop();
-  $('f-genki_ch').value = e.genki_ch || (prev ? data[prev].genki_ch : '');
   $('note').value = e.note || '';
   updateDayTotal();
 }
@@ -397,9 +366,6 @@ $('entry').addEventListener('submit', ev => {
   if (!date) return;
   const e = {};
   ALL_KEYS.forEach(k => { const v = parseFloat($('f-' + k).value); if (v > 0) e[k] = v; });
-  // chapter only means something on days you actually did Genki
-  const ch = parseInt($('f-genki_ch').value, 10);
-  if (e.genki && ch >= 1 && ch <= 23) e.genki_ch = ch;
   const note = $('note').value.trim();
   if (note) e.note = note;
   const has = Object.keys(e).length > 0;
@@ -513,7 +479,7 @@ function render() {
         ${SECTIONS.map(s => {
           const h = secHours(e, s);
           if (!h) return '<td><span class="muted">–</span></td>';
-          const parts = s.subs ? subBreakdown(e, s) : s.id === 'genki' && e.genki_ch ? 'ch ' + e.genki_ch : '';
+          const parts = s.subs ? subBreakdown(e, s) : '';
           return `<td>${fmt(h)}${parts ? `<div class="sub-note">${parts}</div>` : ''}</td>`;
         }).join('')}
         <td><b>${fmt(dayTotal(e))}</b></td>
