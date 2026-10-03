@@ -181,20 +181,18 @@
 
 <script>
 const SECTIONS = [
-  { id: 'genki',    name: 'Genki' },
-  { id: 'writing',  name: 'Writing / Grammar' },
+  { id: 'genki',    name: 'Genki',             color: 'var(--c0)' },
+  { id: 'writing',  name: 'Writing / Grammar', color: 'var(--c1)' },
   // Anki is split by what you're drilling. Hours logged before the split live under plain `anki` ("unsorted").
-  { id: 'anki',     name: 'Anki', subs: [
+  { id: 'anki',     name: 'Anki',              color: 'var(--c2)', subs: [
     { key: 'anki_kana',  name: 'Kana' },
     { key: 'anki_kanji', name: 'Kanji' },
     { key: 'anki_vocab', name: 'Vocab' },
   ] },
-  { id: 'kana',     name: 'Kana' },
-  { id: 'kanji',    name: 'Kanji' },
-  { id: 'listening',name: 'Listening / Anime' },
-  { id: 'duolingo', name: 'Duolingo' },
+  { id: 'listening',name: 'Listening',         color: 'var(--c5)' },
+  { id: 'duolingo', name: 'Duolingo',          color: 'var(--c6)' },
 ];
-const COLORS = SECTIONS.map((_, i) => `var(--c${i})`);
+const COLORS = SECTIONS.map(s => s.color);
 const REPO = 'RhysMarch/japanese-hours';
 const FILE = 'data.json';
 const API = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
