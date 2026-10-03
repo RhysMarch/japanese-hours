@@ -8,9 +8,10 @@
 <style>
   :root {
     --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
-    --accent: #c8102e; --accent-soft: #fbe9ec;  }
+    --accent: #c8102e; --accent-soft: #fbe9ec;
+    --great: #2e8b57; --neutral: #b9b0a4; --bad: #c8102e;  }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; }
+    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; --great: #4caf7a; --neutral: #5f5a52; }
   }
   * { box-sizing: border-box; }
   [hidden] { display: none !important; }
@@ -67,7 +68,20 @@
   .d-meta { display: flex; justify-content: flex-end; margin-top: 12px; }
   .kbox .rm:hover { color: var(--accent); }
   .empty { color: var(--muted); padding: 20px 0; text-align: center; grid-column: 1 / -1; }
-  .search { margin: 0 0 14px; }
+  .search { margin: 0 0 10px; }
+  .kbox.great { border-top-color: var(--great); }
+  .kbox.neutral { border-top-color: var(--neutral); }
+  .kbox.bad { border-top-color: var(--bad); }
+  .levels { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 14px; }
+  .levels button { padding: 3px 12px; border-radius: 999px; font-size: 13px; display: inline-flex; align-items: center; gap: 6px; }
+  .levels button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .levels .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  .rate { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0 0 14px; }
+  .rate button { padding: 8px 6px; font-weight: 600; border-width: 2px; }
+  .rate button[data-level="great"].on { background: var(--great); border-color: var(--great); color: #fff; }
+  .rate button[data-level="neutral"].on { background: var(--neutral); border-color: var(--neutral); color: #fff; }
+  .rate button[data-level="bad"].on { background: var(--bad); border-color: var(--bad); color: #fff; }
+  .lvl-tag { display: block; text-align: center; font-size: 12px; font-weight: 600; margin: -8px 0 14px; }
   .fmt { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; font-size: 14px; }
   .fmt summary { cursor: pointer; color: var(--accent); font-weight: 600; }
   .fmt h3 { font-size: 14px; margin: 16px 0 8px; }
@@ -165,6 +179,7 @@
       <span class="muted" style="font-size:13px" id="status">Loading…</span>
     </div>
     <input type="search" id="q" class="search" placeholder="Search kanji, reading or meaning… (romaji works too)" autocomplete="off">
+    <div class="levels" id="levels"></div>
     <div class="grid" id="grid"></div>
   </div>
 </main>
@@ -184,6 +199,15 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 let kanji = [];        // [{ k, reading, meaning, added: 'YYYY-MM-DD', id? (Anki note id) }]
 let vocab = [];        // from vocab.json, for "used in your vocab"
 let token = store.get(TOKEN_KEY);
+let levelFilter = 'all';
+
+// How well you know each kanji. Unrated counts as neutral.
+const LEVELS = [
+  { id: 'great', name: 'Great' },
+  { id: 'neutral', name: 'Neutral' },
+  { id: 'bad', name: 'Bad' },
+];
+const levelOf = x => x.level || 'neutral';
 
 function toast(msg) {
   const t = $('toast'); t.textContent = msg; t.classList.add('show');
@@ -193,9 +217,12 @@ function toast(msg) {
 function render() {
   $('s-total').textContent = kanji.length;
   const q = $('q').value;
-  const shown = kanji.filter(x => matchesQuery(q, [x.k, x.reading, x.meaning]));
+  const counts = Object.fromEntries(LEVELS.map(l => [l.id, kanji.filter(x => levelOf(x) === l.id).length]));
+  $('levels').innerHTML = [{ id: 'all', name: 'All' }, ...LEVELS].map(l => `<button type="button" data-filter="${l.id}" class="${levelFilter === l.id ? 'on' : ''}">
+    ${l.id === 'all' ? '' : `<span class="dot" style="background:var(--${l.id})"></span>`}${l.name} <span class="muted">${l.id === 'all' ? kanji.length : counts[l.id]}</span></button>`).join('');
+  const shown = kanji.filter(x => (levelFilter === 'all' || levelOf(x) === levelFilter) && matchesQuery(q, [x.k, x.reading, x.meaning]));
   $('grid').innerHTML = shown.length ? shown.map(x => `
-    <div class="kbox" data-k="${esc(x.k)}">
+    <div class="kbox ${levelOf(x)}" data-k="${esc(x.k)}" title="${LEVELS.find(l => l.id === levelOf(x)).name}">
       <div class="k" lang="ja">${esc(x.k)}</div>
       <div class="r" lang="ja">${esc(x.reading)}</div>
       <div class="m">${esc(x.meaning)}</div>
@@ -226,6 +253,9 @@ function showKanji(char) {
     <div class="d-k" lang="ja">${esc(char)}</div>
     ${x ? `<div class="d-r" lang="ja">${esc(x.reading)}</div><div class="d-m">${esc(x.meaning)}</div>`
         : '<div class="d-m muted" style="font-weight:400">Not in your kanji list yet</div>'}
+    ${x && token ? `<div class="d-h">How well do you know it?</div>
+      <div class="rate">${LEVELS.map(l => `<button type="button" data-level="${l.id}" class="${levelOf(x) === l.id ? 'on' : ''}">${l.name}</button>`).join('')}</div>`
+      : x ? `<span class="lvl-tag" style="color:var(--${levelOf(x)})">${LEVELS.find(l => l.id === levelOf(x)).name}</span>` : ''}
     <div class="d-h">In your vocab</div>
     <div class="d-words">${words.length ? words.map(v => `<a href="vocab.html#${encodeURIComponent(v.id)}">
         <span class="dw" lang="ja">${esc(v.word)}</span><span class="dk" lang="ja">${esc(v.kana)}</span><span class="dm">${esc(v.meaning)}</span></a>`).join('')
@@ -268,6 +298,10 @@ $('file').addEventListener('change', async ev => {
 });
 
 $('q').addEventListener('input', render);
+$('levels').addEventListener('click', ev => {
+  const f = ev.target.closest('button')?.dataset.filter;
+  if (f) { levelFilter = f; render(); }
+});
 $('grid').addEventListener('click', ev => {
   const box = ev.target.closest('.kbox');
   if (box) showKanji(box.dataset.k);
@@ -279,12 +313,26 @@ $('cov').addEventListener('click', ev => {
 $('d-close').addEventListener('click', () => $('detail').close());
 $('detail').addEventListener('click', async ev => {
   if (ev.target === $('detail')) return $('detail').close();   // clicked the backdrop
+  const level = ev.target.dataset.level;
+  if (level) return rate($('d-body').querySelector('.d-k').textContent, level);
   const rm = ev.target.dataset.rm;
   if (rm && confirm(`Remove ${rm} from your kanji list?`)) {
     $('detail').close();
     await save(list => list.filter(x => x.k !== rm), 'Remove kanji ' + rm, 'Removed ' + rm);
   }
 });
+// Set a rating: show it straight away, then save; put it back if the save fails
+async function rate(char, level) {
+  const x = kanji.find(y => y.k === char);
+  if (!x || levelOf(x) === level) return;
+  const before = x.level;
+  x.level = level; render(); showKanji(char);
+  const ok = await save(list => { const y = list.find(z => z.k === char); if (y) y.level = level; },
+    `Rate ${char}: ${level}`, `${char} → ${LEVELS.find(l => l.id === level).name}`);
+  if (!ok) { const y = kanji.find(z => z.k === char); if (y) y.level = before; render(); }
+  if ($('detail').open) showKanji(char);
+}
+
 // kanji.html#日 opens that kanji (links from the vocab page)
 const openFromHash = () => { const c = decodeURIComponent(location.hash.slice(1)); if (c) showKanji(c); };
 window.addEventListener('hashchange', openFromHash);
