@@ -47,6 +47,7 @@
   .vrow .word { font-size: 19px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; color: var(--ink); }
   .vrow .kana { font-size: 21px; font-weight: 600; overflow-wrap: anywhere; }
   .vrow .ex { font-size: 15px; overflow-wrap: anywhere; }
+  mark { background: var(--accent-soft); color: var(--accent); font-weight: 600; border-radius: 3px; padding: 0 2px; }
   .vrow .en { font-size: 14px; visibility: hidden; }
   .vrow .en b { display: block; font-weight: 600; }
   .vrow .en span { color: var(--muted); font-size: 13px; }
@@ -194,6 +195,23 @@ const FILE = 'vocab.json';
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+// Forms of a word to look for in its example sentence, longest first — the sentence may be conjugated
+function wordForms(v) {
+  const forms = [v.word, v.kana];
+  for (const f of [v.word, v.kana]) {
+    if (!f) continue;
+    if (f.endsWith('ます') && f.length >= 4) forms.push(f.slice(0, -2));     // たべます → たべ (たべました, たべに…)
+    else if (f.endsWith('い') && f.length >= 3) forms.push(f.slice(0, -1));   // たのしい → たのし (たのしかった)
+  }
+  // drop one-character stems (い from います would match everywhere)
+  return [...new Set(forms.filter(f => f && (f.length >= 2 || f === v.kana)))].sort((a, b) => b.length - a.length);
+}
+// Example sentence as HTML with the word highlighted
+function highlight(sentence, v) {
+  const form = wordForms(v).find(f => sentence.includes(f));
+  return form ? sentence.split(form).map(esc).join(`<mark>${esc(form)}</mark>`) : esc(sentence);
+}
+
 let vocab = [];        // [{ id, word, kana, meaning, examples: [{ jp, en }], deck }]
 let token = store.get(TOKEN_KEY);
 let deck = 'all';
@@ -225,7 +243,7 @@ function render() {
     <div class="vrow" data-id="${esc(v.id)}">
       <span class="word" lang="ja">${esc(v.word) || '—'}</span>
       <span class="kana" lang="ja">${esc(v.kana)}</span>
-      <span class="ex" lang="ja">${ex ? esc(ex.jp) : ''}</span>
+      <span class="ex" lang="ja">${ex ? highlight(ex.jp, v) : ''}</span>
       <span class="en"><b>${esc(v.meaning)}</b>${ex?.en ? `<span>${esc(ex.en)}</span>` : ''}</span>
     </div>`;
   }).join('')
@@ -253,7 +271,7 @@ function showWord(id) {
         <span>${k ? `<small lang="ja">${esc(k.reading)}</small><small>${esc(k.meaning)}</small>` : '<small>not learned yet</small>'}</span></a>`;
     }).join('')}</div>
     <div class="d-h">Example</div>` : ''}
-    <div class="d-ex">${v.examples.map(e => `<div class="jp" lang="ja">${esc(e.jp)}</div><div class="en">${esc(e.en)}</div>`).join('')
+    <div class="d-ex">${v.examples.map(e => `<div class="jp" lang="ja">${highlight(e.jp, v)}</div><div class="en">${esc(e.en)}</div>`).join('')
       || '<span class="muted">No example sentence.</span>'}</div>
     <div class="d-meta"><span>${esc(v.deck)}</span>${token ? `<button type="button" class="link" data-del="${esc(v.id)}">remove</button>` : ''}</div>`;
   if (!$('detail').open) $('detail').showModal();
