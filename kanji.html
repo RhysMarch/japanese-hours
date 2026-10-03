@@ -39,9 +39,32 @@
   .kbox .r { font-size: 13px; color: var(--ink); min-height: 1.4em; }
   .kbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; visibility: hidden; }
   .kbox { cursor: pointer; }
-  .kbox:hover .m, .kbox.reveal .m { visibility: visible; }
-  .kbox .rm { position: absolute; top: 2px; right: 4px; border: none; background: none; color: var(--muted); font-size: 16px; line-height: 1; padding: 2px 4px; opacity: 0; }
-  .kbox:hover .rm, .kbox.reveal .rm { opacity: 1; }
+  .kbox:hover .m { visibility: visible; }
+  .kbox:hover { border-color: var(--accent); }
+  .cov-bar { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; margin: 8px 0 14px; }
+  .cov-bar div { height: 100%; background: var(--accent); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { display: inline-flex; align-items: baseline; gap: 4px; border: 1px dashed var(--line); border-radius: 8px; padding: 4px 10px; background: var(--card); cursor: pointer; font: inherit; color: var(--ink); }
+  .chip:hover { border-color: var(--accent); }
+  .chip .c { font-size: 22px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
+  .chip small { color: var(--muted); font-size: 11px; }
+  #d-body { padding: 22px 20px 16px; }
+  dialog { border: 1px solid var(--line); border-radius: 12px; padding: 0; width: min(440px, calc(100% - 32px)); background: var(--card); color: var(--ink); }
+  dialog::backdrop { background: rgba(0, 0, 0, .4); }
+  dialog .x { position: absolute; top: 8px; right: 10px; border: none; background: none; font-size: 22px; color: var(--muted); padding: 2px 8px; }
+  dialog .x:hover { color: var(--accent); }
+  .d-k { font-size: 64px; line-height: 1.15; text-align: center; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
+  .d-r { text-align: center; font-size: 17px; }
+  .d-m { text-align: center; font-weight: 600; margin: 4px 0 14px; }
+  .d-h { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 6px; }
+  .d-words { background: var(--bg); border-radius: 8px; padding: 6px 12px; }
+  .d-words a { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+  .d-words a:last-child { border-bottom: none; }
+  .d-words a:hover .dw { color: var(--accent); }
+  .d-words .dw { font-size: 18px; }
+  .d-words .dk { font-size: 13px; }
+  .d-words .dm { font-size: 13px; color: var(--muted); margin-left: auto; text-align: right; }
+  .d-meta { display: flex; justify-content: flex-end; margin-top: 12px; }
   .kbox .rm:hover { color: var(--accent); }
   .empty { color: var(--muted); padding: 20px 0; text-align: center; }
   .fmt { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; font-size: 14px; }
@@ -111,11 +134,11 @@
         </div>
       </div>
       <ul>
-        <li><b>Front:</b> only the kanji — a single character (<span lang="ja">薬</span>) or a word (<span lang="ja">大学</span>). No romaji, brackets like <span lang="ja">「」</span> or other text.</li>
+        <li><b>Front:</b> one single kanji (<span lang="ja">薬</span>). No romaji, brackets like <span lang="ja">「」</span> or other text.</li>
         <li><b>Back, line 1:</b> the reading in kana (<span lang="ja">くすり</span>). Romaji like <i>Kusuri</i> still works — it gets converted to hiragana.</li>
         <li><b>Back, line 2:</b> the meaning in English.</li>
         <li>Press <b>Enter</b> between the reading and the meaning in the Anki editor so they're on separate lines.</li>
-        <li><b>One word per card</b> — make separate cards for <span lang="ja">入口</span> and <span lang="ja">出口</span> rather than one for both.</li>
+        <li><b>Words made of several kanji</b> (<span lang="ja">大学</span>, <span lang="ja">入口</span>) belong in your <a href="vocab.html">vocab</a> deck — give each kanji in them its own card here instead (<span lang="ja">大</span>, <span lang="ja">学</span>).</li>
         <li>Note type <b>Basic</b>; any deck name works.</li>
       </ul>
 
@@ -130,6 +153,11 @@
     </details>
   </div>
 
+  <div class="card" id="cov-card" hidden>
+    <h2>From your vocab</h2>
+    <div id="cov"></div>
+  </div>
+
   <div class="card">
     <div class="row" style="justify-content:space-between;align-items:baseline;margin-bottom:14px">
       <div class="count"><b id="s-total">–</b> kanji</div>
@@ -138,10 +166,12 @@
     <div class="grid" id="grid"></div>
   </div>
 </main>
+<dialog id="detail"><button type="button" class="x" id="d-close" aria-label="Close">×</button><div id="d-body"></div></dialog>
 <div class="toast" id="toast"></div>
 
 <script src="github.js?v=20261003b"></script>
 <script src="anki.js?v=20261003d"></script>
+<script src="kanji-links.js?v=20261003e"></script>
 <script>
 const FILE = 'kanji.json';
 const $ = id => document.getElementById(id);
@@ -150,6 +180,7 @@ const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.g
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 let kanji = [];        // [{ k, reading, meaning, added: 'YYYY-MM-DD', id? (Anki note id) }]
+let vocab = [];        // from vocab.json, for "used in your vocab"
 let token = store.get(TOKEN_KEY);
 
 function toast(msg) {
@@ -161,12 +192,42 @@ function render() {
   $('s-total').textContent = kanji.length;
   $('grid').innerHTML = kanji.length ? kanji.map(x => `
     <div class="kbox" data-k="${esc(x.k)}">
-      ${token ? `<button type="button" class="rm" data-rm="${esc(x.k)}" title="Remove ${esc(x.k)}">×</button>` : ''}
       <div class="k" lang="ja">${esc(x.k)}</div>
       <div class="r" lang="ja">${esc(x.reading)}</div>
       <div class="m">${esc(x.meaning)}</div>
     </div>`).join('')
     : '<div class="empty">No kanji yet.</div>';
+  renderCoverage();
+}
+
+// How many of the kanji in your vocab you know, and which unknown ones show up most
+function renderCoverage() {
+  const cov = kanjiCoverage(vocab, kanji);
+  $('cov-card').hidden = !cov.total;
+  if (!cov.total) return;
+  const pct = Math.round(cov.known / cov.total * 100);
+  $('cov').innerHTML = `
+    <div class="muted" style="font-size:14px">Your vocab uses <b style="color:var(--ink)">${cov.total}</b> different kanji — you know <b style="color:var(--ink)">${cov.known}</b> of them (${pct}%).</div>
+    <div class="cov-bar"><div style="width:${pct}%"></div></div>
+    ${cov.next.length ? `<div class="d-h">Learn next — most used in your vocab</div>
+    <div class="chips">${cov.next.slice(0, 24).map(n => `<button type="button" class="chip" data-k="${esc(n.char)}" title="Used in ${n.words.length} word${n.words.length === 1 ? '' : 's'}">
+      <span class="c" lang="ja">${esc(n.char)}</span><small>×${n.words.length}</small></button>`).join('')}</div>` : '<div class="muted">You know every kanji in your vocab.</div>'}`;
+}
+
+// Popup for a kanji — known (reading, meaning) or not yet — with the vocab words that use it
+function showKanji(char) {
+  const x = kanji.find(y => y.k === char);
+  const words = wordsUsing(char, vocab);
+  $('d-body').innerHTML = `
+    <div class="d-k" lang="ja">${esc(char)}</div>
+    ${x ? `<div class="d-r" lang="ja">${esc(x.reading)}</div><div class="d-m">${esc(x.meaning)}</div>`
+        : '<div class="d-m muted" style="font-weight:400">Not in your kanji list yet</div>'}
+    <div class="d-h">In your vocab</div>
+    <div class="d-words">${words.length ? words.map(v => `<a href="vocab.html#${encodeURIComponent(v.id)}">
+        <span class="dw" lang="ja">${esc(v.word)}</span><span class="dk" lang="ja">${esc(v.kana)}</span><span class="dm">${esc(v.meaning)}</span></a>`).join('')
+      : '<div class="muted" style="padding:6px 0;font-size:14px">None of your vocab words use this yet.</div>'}</div>
+    ${x && token ? `<div class="d-meta"><button type="button" class="link" data-rm="${esc(char)}">remove from kanji list</button></div>` : ''}`;
+  if (!$('detail').open) $('detail').showModal();
 }
 
 async function save(mutate, message, okMsg) {
@@ -202,15 +263,26 @@ $('file').addEventListener('change', async ev => {
      () => added.length ? `Added ${added.length}: ${added.join(' ')}` : 'No new kanji — all already here');
 });
 
-$('grid').addEventListener('click', async ev => {
-  const rm = ev.target.dataset.rm;
-  if (rm) {
-    if (confirm(`Remove ${rm} from your list?`)) await save(list => list.filter(x => x.k !== rm), 'Remove kanji ' + rm, 'Removed ' + rm);
-    return;
-  }
-  // tap reveals the meaning (no hover on phones)
-  ev.target.closest('.kbox')?.classList.toggle('reveal');
+$('grid').addEventListener('click', ev => {
+  const box = ev.target.closest('.kbox');
+  if (box) showKanji(box.dataset.k);
 });
+$('cov').addEventListener('click', ev => {
+  const chip = ev.target.closest('.chip');
+  if (chip) showKanji(chip.dataset.k);
+});
+$('d-close').addEventListener('click', () => $('detail').close());
+$('detail').addEventListener('click', async ev => {
+  if (ev.target === $('detail')) return $('detail').close();   // clicked the backdrop
+  const rm = ev.target.dataset.rm;
+  if (rm && confirm(`Remove ${rm} from your kanji list?`)) {
+    $('detail').close();
+    await save(list => list.filter(x => x.k !== rm), 'Remove kanji ' + rm, 'Removed ' + rm);
+  }
+});
+// kanji.html#日 opens that kanji (links from the vocab page)
+const openFromHash = () => { const c = decodeURIComponent(location.hash.slice(1)); if (c) showKanji(c); };
+window.addEventListener('hashchange', openFromHash);
 
 // --- Owner sign-in (same token as the hours page) ---
 function applyAuth() {
@@ -234,8 +306,8 @@ $('auth-form').addEventListener('submit', async ev => {
 });
 
 applyAuth();
-ghRead(FILE, [], token)
-  .then(r => { kanji = r.data; render(); $('status').textContent = 'Hover or tap a kanji for its meaning.'; })
+Promise.all([ghRead(FILE, [], token), loadJson('vocab.json')])
+  .then(([r, v]) => { kanji = r.data; vocab = v; render(); openFromHash(); $('status').textContent = 'Hover for the meaning, tap a kanji for the words that use it.'; })
   .catch(e => { $('status').textContent = 'Couldn\'t load kanji: ' + e.message; });
 </script>
 </body>

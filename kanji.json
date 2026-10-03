@@ -84,11 +84,18 @@
     "id": "P7hYYuiwcF"
   },
   {
-    "k": "大学",
-    "reading": "だいがく",
-    "meaning": "University",
+    "k": "大",
+    "reading": "おお / だい",
+    "meaning": "Big",
     "added": "2026-10-03",
     "id": "Fk2NCcrRyf"
+  },
+  {
+    "k": "学",
+    "reading": "がく",
+    "meaning": "Study / learning",
+    "added": "2026-10-03",
+    "id": "pV6leXHeCW"
   },
   {
     "k": "本",
@@ -147,23 +154,44 @@
     "id": "8GS8RTmoXA"
   },
   {
-    "k": "営業中",
-    "reading": "えいぎょうちゅう",
-    "meaning": "Shop is currently operating",
+    "k": "営",
+    "reading": "えい",
+    "meaning": "Manage / run (a business)",
     "added": "2026-10-03",
     "id": "PZ{I5#Bik4"
   },
   {
-    "k": "入口",
-    "reading": "いりぐち",
-    "meaning": "Entrance",
+    "k": "業",
+    "reading": "ぎょう",
+    "meaning": "Business / work",
+    "added": "2026-10-03",
+    "id": "NdefJtdNWz"
+  },
+  {
+    "k": "中",
+    "reading": "なか / ちゅう",
+    "meaning": "Middle / inside",
+    "added": "2026-10-03",
+    "id": "y6KCrtlpM7"
+  },
+  {
+    "k": "入",
+    "reading": "い(る) / はい(る)",
+    "meaning": "Enter",
     "added": "2026-10-03",
     "id": "lDD-Jd(?I9"
   },
   {
-    "k": "出口",
-    "reading": "でぐち",
-    "meaning": "Exit",
+    "k": "口",
+    "reading": "くち / ぐち",
+    "meaning": "Mouth / opening",
+    "added": "2026-10-03",
+    "id": "xNA3ftnfH6"
+  },
+  {
+    "k": "出",
+    "reading": "で(る)",
+    "meaning": "Exit / go out",
     "added": "2026-10-03",
     "id": "SGpe3Dws5w"
   },

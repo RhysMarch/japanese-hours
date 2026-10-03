@@ -786,5 +786,57 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "4tiBZrQODt",
+    "word": "大学",
+    "kana": "だいがく",
+    "meaning": "university",
+    "examples": [
+      {
+        "jp": "だいがくは どこですか。",
+        "en": "Where is the university?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "u3I9Q7uPwH",
+    "word": "営業中",
+    "kana": "えいぎょうちゅう",
+    "meaning": "open for business",
+    "examples": [
+      {
+        "jp": "カフェは えいぎょうちゅうです。",
+        "en": "The café is open."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "gdXx4xzF9t",
+    "word": "入口",
+    "kana": "いりぐち",
+    "meaning": "entrance",
+    "examples": [
+      {
+        "jp": "いりぐちは どこですか。",
+        "en": "Where is the entrance?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "amB2lzXygk",
+    "word": "出口",
+    "kana": "でぐち",
+    "meaning": "exit",
+    "examples": [
+      {
+        "jp": "でぐちは あそこです。",
+        "en": "The exit is over there."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
