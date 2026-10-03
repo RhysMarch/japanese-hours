@@ -1,4 +1,9 @@
 {
+  "2026-09-22": {
+    "anki_kana": 0.25,
+    "anki_vocab": 0.25,
+    "duolingo": 0.25
+  },
   "2026-09-23": {
     "anki_kana": 0.5,
     "duolingo": 0.25
