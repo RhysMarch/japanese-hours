@@ -1910,5 +1910,60 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-irasshaimase",
+    "word": "",
+    "kana": "いらっしゃいませ",
+    "meaning": "Welcome! (said by staff — no reply needed)",
+    "examples": [
+      {
+        "jp": "いらっしゃいませ！なんめいさまですか。",
+        "en": "Welcome! How many people?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-nanmeisama",
+    "word": "何名様ですか",
+    "kana": "なんめいさまですか",
+    "meaning": "How many people? (polite — asked at restaurants)",
+    "examples": [
+      {
+        "jp": "なんめいさまですか。— ふたりです。",
+        "kanji": "何名様ですか。— 二人です。",
+        "en": "How many people? — Two."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-hitori",
+    "word": "一人です",
+    "kana": "ひとりです",
+    "meaning": "Just one (person) / I'm on my own",
+    "examples": [
+      {
+        "jp": "すみません、ひとりです。",
+        "kanji": "すみません、一人です。",
+        "en": "Excuse me, (a table for) one."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-futari",
+    "word": "二人です",
+    "kana": "ふたりです",
+    "meaning": "Two people",
+    "examples": [
+      {
+        "jp": "ともだちと ふたりです。",
+        "kanji": "友達と二人です。",
+        "en": "Two of us — me and a friend."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
