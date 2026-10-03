@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>語彙 Vocab</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23c8102e'/></svg>">
+<style>
+  :root {
+    --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
+    --accent: #c8102e; --accent-soft: #fbe9ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  a { color: var(--accent); }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
+  h1 span { color: var(--accent); }
+  h2 { font-size: 16px; margin: 0 0 12px; }
+  .muted { color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+  label { display: block; font-size: 13px; color: var(--muted); }
+  input { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin-top: 4px; }
+  input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .row { display: flex; gap: 10px; align-items: end; flex-wrap: wrap; }
+  button { font: inherit; cursor: pointer; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 8px 14px; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  button.link { border: none; background: none; color: var(--muted); padding: 2px 6px; }
+  button.link:hover { color: var(--accent); }
+  .count { font-size: 15px; color: var(--muted); }
+  .count b { font-size: 28px; color: var(--accent); margin-right: 4px; }
+  .tools { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+  .tools input { margin: 0; flex: 1; min-width: 180px; }
+  .decks { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .decks button { padding: 3px 12px; border-radius: 999px; font-size: 13px; }
+  .decks button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .list { border-top: 1px solid var(--line); }
+  .w { border-bottom: 1px solid var(--line); padding: 10px 4px; cursor: pointer; }
+  .w .main { display: grid; grid-template-columns: minmax(90px, 160px) minmax(90px, 180px) 1fr; gap: 12px; align-items: baseline; }
+  .w .word { font-size: 20px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
+  .w .word.none { color: var(--muted); font-size: 15px; }
+  .w .kana { font-size: 15px; }
+  .w .meaning { color: var(--muted); font-size: 14px; visibility: hidden; }
+  .w:hover .meaning, .w.open .meaning { visibility: visible; }
+  .w .more { display: none; margin: 8px 0 2px; padding: 10px 12px; background: var(--bg); border-radius: 8px; font-size: 14px; }
+  .w.open .more { display: block; }
+  .w .ex-jp { font-size: 16px; }
+  .w .ex-en { color: var(--muted); margin-bottom: 6px; }
+  .w .ex-en:last-of-type { margin-bottom: 0; }
+  .w .meta { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 12px; color: var(--muted); }
+  .empty { color: var(--muted); padding: 20px 0; text-align: center; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  @media (max-width: 720px) {
+    .w .main { grid-template-columns: 1fr 1fr; }
+    .w .meaning { grid-column: 1 / -1; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><span>語彙</span> Vocab</h1>
+    <div class="row" style="align-items:center">
+      <a href="./">Hours</a>
+      <a href="kanji.html">Kanji</a>
+      <button type="button" class="link" id="auth">Sign in</button>
+    </div>
+  </header>
+
+  <div class="card" id="auth-card" hidden>
+    <h2>Sign in to edit</h2>
+    <p class="muted" style="margin:0 0 10px;font-size:14px">
+      Paste the same GitHub token you use on the hours page. It's stored in this browser only.
+    </p>
+    <form id="auth-form" class="row">
+      <label style="flex:1;min-width:160px">Token <input type="password" id="token" autocomplete="off" required></label>
+      <button type="submit" class="primary">Sign in</button>
+      <button type="button" id="auth-cancel">Cancel</button>
+    </form>
+  </div>
+
+  <div class="card owner-only" hidden>
+    <h2>Import from Anki</h2>
+    <p class="muted" style="margin:0 0 12px;font-size:14px">
+      In Anki: <b>Browse</b> → select the deck → <b>Notes → Export Notes</b> → <i>Notes in Plain Text</i>, with
+      <i>Include HTML</i>, <i>Include deck name</i> and <i>Include unique identifier</i> ticked.
+      Re-importing the same deck only adds new words and updates changed ones.
+    </p>
+    <button type="button" class="primary" id="import">Choose Anki export (.txt)</button>
+    <input type="file" id="file" accept=".txt,text/plain" hidden>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;align-items:baseline;margin-bottom:14px">
+      <div class="count"><b id="s-total">–</b> words</div>
+      <span class="muted" style="font-size:13px" id="status">Loading…</span>
+    </div>
+    <div class="tools">
+      <input type="search" id="q" placeholder="Search Japanese or English…" autocomplete="off">
+    </div>
+    <div class="decks" id="decks"></div>
+    <div class="list" id="list"></div>
+  </div>
+</main>
+<div class="toast" id="toast"></div>
+
+<script src="github.js"></script>
+<script src="anki.js"></script>
+<script>
+const FILE = 'vocab.json';
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+let vocab = [];        // [{ id, word, kana, meaning, examples: [{ jp, en }], deck }]
+let token = store.get(TOKEN_KEY);
+let deck = 'all';
+const open = new Set();
+
+function toast(msg) {
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+function render() {
+  $('s-total').textContent = vocab.length;
+
+  const decks = [...new Set(vocab.map(v => v.deck).filter(Boolean))];
+  $('decks').hidden = decks.length < 2;
+  $('decks').innerHTML = ['all', ...decks].map(d =>
+    `<button type="button" data-deck="${esc(d)}" class="${d === deck ? 'on' : ''}">${d === 'all' ? 'All' : esc(d)}</button>`).join('');
+
+  const q = $('q').value.trim().toLowerCase();
+  const shown = vocab.filter(v => (deck === 'all' || v.deck === deck) &&
+    (!q || [v.word, v.kana, v.meaning].some(f => (f || '').toLowerCase().includes(q))));
+
+  $('list').innerHTML = shown.length ? shown.map(v => `
+    <div class="w${open.has(v.id) ? ' open' : ''}" data-id="${esc(v.id)}">
+      <div class="main">
+        <span class="word${v.word ? '' : ' none'}" lang="ja">${v.word ? esc(v.word) : '—'}</span>
+        <span class="kana" lang="ja">${esc(v.kana)}</span>
+        <span class="meaning">${esc(v.meaning)}</span>
+      </div>
+      <div class="more">
+        ${v.examples.map(e => `<div class="ex-jp" lang="ja">${esc(e.jp)}</div><div class="ex-en">${esc(e.en)}</div>`).join('') || '<span class="muted">No example sentence.</span>'}
+        <div class="meta"><span>${esc(v.deck)}</span>${token ? `<button type="button" class="link" data-del="${esc(v.id)}">remove</button>` : ''}</div>
+      </div>
+    </div>`).join('')
+    : `<div class="empty">${vocab.length ? 'No words match.' : 'No words yet.'}</div>`;
+}
+
+$('q').addEventListener('input', render);
+$('decks').addEventListener('click', ev => {
+  const d = ev.target.dataset.deck;
+  if (d) { deck = d; render(); }
+});
+$('list').addEventListener('click', async ev => {
+  const del = ev.target.dataset.del;
+  if (del) {
+    const v = vocab.find(x => x.id === del);
+    if (v && confirm(`Remove ${v.word || v.kana}?`)) await save(list => list.filter(x => x.id !== del), 'Remove word ' + (v.word || v.kana), 'Removed');
+    return;
+  }
+  const row = ev.target.closest('.w');
+  if (!row) return;
+  open.has(row.dataset.id) ? open.delete(row.dataset.id) : open.add(row.dataset.id);
+  row.classList.toggle('open');
+});
+
+async function save(mutate, message, okMsg) {
+  if (!token) { toast('Sign in to edit'); return false; }
+  document.querySelectorAll('button').forEach(b => b.disabled = true);
+  try {
+    vocab = await ghWrite(FILE, list => mutate(list) ?? list, message, token, { empty: [] });
+    toast(typeof okMsg === 'function' ? okMsg() : okMsg); return true;
+  } catch (e) { toast(e.message); return false; }
+  finally { document.querySelectorAll('button').forEach(b => b.disabled = false); render(); }
+}
+
+// Merge an Anki export: match on Anki's note id, add new words, update changed ones, never delete
+$('import').addEventListener('click', () => $('file').click());
+$('file').addEventListener('change', async ev => {
+  const f = ev.target.files[0]; ev.target.value = '';
+  if (!f) return;
+  let incoming;
+  try { incoming = parseAnkiExport(await f.text()); } catch { incoming = []; }
+  if (!incoming.length) return toast('No notes found in that file');
+  let added = 0, updated = 0;
+  await save(list => {
+    added = updated = 0;
+    for (const v of incoming) {
+      const i = list.findIndex(x => x.id === v.id);
+      if (i < 0) { list.push(v); added++; }
+      else if (JSON.stringify(list[i]) !== JSON.stringify(v)) { list[i] = v; updated++; }
+    }
+  }, `Import ${incoming.length} notes from Anki (${f.name})`, () => `Added ${added}, updated ${updated}`);
+});
+
+// --- Owner sign-in (same token as the hours page) ---
+function applyAuth() {
+  document.querySelectorAll('.owner-only').forEach(el => el.hidden = !token);
+  $('auth').textContent = token ? 'Sign out' : 'Sign in';
+  render();
+}
+$('auth').addEventListener('click', () => {
+  if (token) { token = null; store.del(TOKEN_KEY); applyAuth(); toast('Signed out'); }
+  else { $('auth-card').hidden = false; $('token').focus(); }
+});
+$('auth-cancel').addEventListener('click', () => $('auth-card').hidden = true);
+$('auth-form').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const t = $('token').value.trim();
+  if (!await ghCanWrite(t)) return toast('That token can\'t write to ' + REPO);
+  token = t; store.set(TOKEN_KEY, t);
+  $('token').value = ''; $('auth-card').hidden = true;
+  applyAuth(); toast('Signed in');
+});
+
+applyAuth();
+ghRead(FILE, [], token)
+  .then(r => { vocab = r.data; render(); $('status').textContent = 'Hover or tap a word for its meaning.'; })
+  .catch(e => { $('status').textContent = 'Couldn\'t load vocab: ' + e.message; });
+</script>
+</body>
+</html>

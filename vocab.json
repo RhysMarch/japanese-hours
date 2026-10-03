@@ -1,0 +1,790 @@
+[
+  {
+    "id": "wQSi*}YFur",
+    "word": "私",
+    "kana": "わたし",
+    "meaning": "I",
+    "examples": [
+      {
+        "jp": "わたしはリースです。",
+        "en": "I am Rhys."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "wEwBq^|!Z<",
+    "word": "誰",
+    "kana": "だれ",
+    "meaning": "who",
+    "examples": [
+      {
+        "jp": "だれがソフトウェアかいはつしゃですか。",
+        "en": "Who is the software developer?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "cGj0Rdq8k2",
+    "word": "何",
+    "kana": "なに",
+    "meaning": "what",
+    "examples": [
+      {
+        "jp": "なにをよみますか。",
+        "en": "What will you read?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "zb0DZ[!v[%",
+    "word": "",
+    "kana": "どこ",
+    "meaning": "where",
+    "examples": [
+      {
+        "jp": "えきはどこですか。",
+        "en": "Where is the station?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "GfLQ7u4e[r",
+    "word": "",
+    "kana": "いつ",
+    "meaning": "when",
+    "examples": [
+      {
+        "jp": "いつにほんへいきますか。",
+        "en": "When will you go to Japan?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "BL{d4:m=kt",
+    "word": "",
+    "kana": "どう",
+    "meaning": "how / what do you think",
+    "examples": [
+      {
+        "jp": "にほんごのべんきょうはどうですか。",
+        "en": "How is your Japanese study?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "dC(JMHziq",
+    "word": "",
+    "kana": "どうして",
+    "meaning": "why",
+    "examples": [
+      {
+        "jp": "どうしてにほんごをべんきょうしますか。",
+        "en": "Why do you study Japanese?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "wyE;Mn*s|R",
+    "word": "朝ご飯",
+    "kana": "あさごはん",
+    "meaning": "breakfast",
+    "examples": [
+      {
+        "jp": "あさごはんをたべます。",
+        "en": "I eat breakfast."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "E60ISXZgLJ",
+    "word": "本",
+    "kana": "ほん",
+    "meaning": "book",
+    "examples": [
+      {
+        "jp": "げんきのほんをよみます。",
+        "en": "I read the Genki book."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Kokz/A5$|l",
+    "word": "仕事",
+    "kana": "しごと",
+    "meaning": "work / job",
+    "examples": [
+      {
+        "jp": "きょうはしごとです。",
+        "en": "I am working today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "k^Yj%s`w1f",
+    "word": "勉強",
+    "kana": "べんきょう",
+    "meaning": "study",
+    "examples": [
+      {
+        "jp": "にほんごのべんきょうはたのしいです。",
+        "en": "Studying Japanese is fun."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Ie:{;Mzc%?",
+    "word": "掃除",
+    "kana": "そうじ",
+    "meaning": "cleaning",
+    "examples": [
+      {
+        "jp": "きょう、へやのそうじをします。",
+        "en": "I will clean my room today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "s#qfxNK,X(",
+    "word": "日本語",
+    "kana": "にほんご",
+    "meaning": "Japanese language",
+    "examples": [
+      {
+        "jp": "まいにちにほんごをべんきょうします。",
+        "en": "I study Japanese every day."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "tV11|s+A[U",
+    "word": "音楽",
+    "kana": "おんがく",
+    "meaning": "music",
+    "examples": [
+      {
+        "jp": "しごとのあとでおんがくをききます。",
+        "en": "I listen to music after work."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "o6:CwXDJzn",
+    "word": "写真",
+    "kana": "しゃしん",
+    "meaning": "photo",
+    "examples": [
+      {
+        "jp": "じてんしゃのしゃしんをとります。",
+        "en": "I take a photo of my bicycle."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "ugU[8Hjo,O",
+    "word": "今日",
+    "kana": "きょう",
+    "meaning": "today",
+    "examples": [
+      {
+        "jp": "きょうはにほんごをべんきょうします。",
+        "en": "I will study Japanese today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "xC|bk*clzy",
+    "word": "",
+    "kana": "バレーボール",
+    "meaning": "volleyball",
+    "examples": [
+      {
+        "jp": "バレーボールがすきです。",
+        "en": "I like volleyball."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Cm@}>n=[R=",
+    "word": "好き",
+    "kana": "すき",
+    "meaning": "like / be fond of",
+    "examples": [
+      {
+        "jp": "じてんしゃがすきです。",
+        "en": "I like bicycles / cycling."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "n>*|-bx>-%",
+    "word": "大好き",
+    "kana": "だいすき",
+    "meaning": "love / really like",
+    "examples": [
+      {
+        "jp": "にほんのたべものがだいすきです。",
+        "en": "I really like Japanese food."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Kv68GM!RD;",
+    "word": "本当に",
+    "kana": "ほんとうに",
+    "meaning": "really / truly",
+    "examples": [
+      {
+        "jp": "にほんごはほんとうにおもしろいです。",
+        "en": "Japanese is really interesting."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "gg0D@NTZ.S",
+    "word": "楽しい",
+    "kana": "たのしい",
+    "meaning": "fun / enjoyable",
+    "examples": [
+      {
+        "jp": "にほんごのべんきょうはたのしいです。",
+        "en": "Studying Japanese is fun."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "CK_p,EM@zH",
+    "word": "難しい",
+    "kana": "むずかしい",
+    "meaning": "difficult",
+    "examples": [
+      {
+        "jp": "かんじはむずかしいです。",
+        "en": "Kanji is difficult."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Ju*a+?CQcT",
+    "word": "可愛い",
+    "kana": "かわいい",
+    "meaning": "cute",
+    "examples": [
+      {
+        "jp": "このねこはかわいいです。",
+        "en": "This cat is cute."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "yS7|_m[Ra3",
+    "word": "食べます",
+    "kana": "たべます",
+    "meaning": "to eat",
+    "examples": [
+      {
+        "jp": "あさごはんをたべます。",
+        "en": "I eat breakfast."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "uI%1pvUl%b",
+    "word": "飲みます",
+    "kana": "のみます",
+    "meaning": "to drink",
+    "examples": [
+      {
+        "jp": "しごとでコーヒーをのみます。",
+        "en": "I drink coffee at work."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "h{O2;)GT[r",
+    "word": "書きます",
+    "kana": "かきます",
+    "meaning": "to write",
+    "examples": [
+      {
+        "jp": "ノートににほんごをかきます。",
+        "en": "I write Japanese in my notebook."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "PaA6*<yBi1",
+    "word": "読みます",
+    "kana": "よみます",
+    "meaning": "to read",
+    "examples": [
+      {
+        "jp": "げんきのほんをよみます。",
+        "en": "I read the Genki book."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "cIX2U4:d:2",
+    "word": "聞きます",
+    "kana": "ききます",
+    "meaning": "to listen / to ask",
+    "examples": [
+      {
+        "jp": "おんがくをききます。",
+        "en": "I listen to music."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "x5;On;Gkzk",
+    "word": "見ます",
+    "kana": "みます",
+    "meaning": "to see / to watch",
+    "examples": [
+      {
+        "jp": "よるにユーチューブをみます。",
+        "en": "I watch YouTube in the evening."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "r6i(4XU-NH",
+    "word": "取ります",
+    "kana": "とります",
+    "meaning": "to take / pick up",
+    "examples": [
+      {
+        "jp": "つくえからほんをとります。",
+        "en": "I take the book from the desk."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "c#KO&Z5hAW",
+    "word": "使います",
+    "kana": "つかいます",
+    "meaning": "to use",
+    "examples": [
+      {
+        "jp": "しごとでコンピューターをつかいます。",
+        "en": "I use a computer at work."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "D5]a]Dk7Hb",
+    "word": "作ります",
+    "kana": "つくります",
+    "meaning": "to make / create",
+    "examples": [
+      {
+        "jp": "しごとでソフトウェアをつくります。",
+        "en": "I create software at work."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "A4ude@{Um6",
+    "word": "",
+    "kana": "します",
+    "meaning": "to do",
+    "examples": [
+      {
+        "jp": "まいにちアンキをします。",
+        "en": "I use Anki every day."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "EY-Zv.,Piy",
+    "word": "勉強します",
+    "kana": "べんきょうします",
+    "meaning": "to study",
+    "examples": [
+      {
+        "jp": "まいにちにほんごをべんきょうします。",
+        "en": "I study Japanese every day."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "J{{k(wpijW",
+    "word": "行きます",
+    "kana": "いきます",
+    "meaning": "to go",
+    "examples": [
+      {
+        "jp": "じてんしゃでこうえんへいきます。",
+        "en": "I go to the park by bicycle."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "wlPDw+LHp/",
+    "word": "来ます",
+    "kana": "きます",
+    "meaning": "to come",
+    "examples": [
+      {
+        "jp": "ともだちがうちにきます。",
+        "en": "My friend comes to my house."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Mw)dt)S~|B",
+    "word": "",
+    "kana": "います",
+    "meaning": "to exist / be, for living things",
+    "examples": [
+      {
+        "jp": "こうえんにねこがいます。",
+        "en": "There is a cat in the park."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Eqq!xxW=br",
+    "word": "明日",
+    "kana": "あした",
+    "meaning": "tomorrow",
+    "examples": [
+      {
+        "jp": "あしたは バレーボールを します。",
+        "en": "I will play volleyball tomorrow."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "F@YfQi4&wu",
+    "word": "昨日",
+    "kana": "きのう",
+    "meaning": "yesterday",
+    "examples": [
+      {
+        "jp": "きのうは コードを かきました。",
+        "en": "I wrote code yesterday."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "5S1}u_:r|",
+    "word": "日本",
+    "kana": "にほん",
+    "meaning": "Japan",
+    "examples": [
+      {
+        "jp": "にほんに ともだちが います。",
+        "en": "I have a friend in Japan."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "A.42+Wg:m{",
+    "word": "体育館",
+    "kana": "たいいくかん",
+    "meaning": "gym / sports hall",
+    "examples": [
+      {
+        "jp": "どようびに たいいくかんに いきます。",
+        "en": "I go to the gym on Saturdays."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "DM^^6XRzKv",
+    "word": "会社",
+    "kana": "かいしゃ",
+    "meaning": "office / company",
+    "examples": [
+      {
+        "jp": "きょうは かいしゃに いきません。",
+        "en": "I'm not going to the office today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "cR#F@dEj;*",
+    "word": "家",
+    "kana": "うち",
+    "meaning": "home / my house",
+    "examples": [
+      {
+        "jp": "うちに だれが いますか。",
+        "en": "Who's at home?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "C]Dus<D~:2",
+    "word": "部屋",
+    "kana": "へや",
+    "meaning": "room",
+    "examples": [
+      {
+        "jp": "へやに コンピューターが あります。",
+        "en": "There's a computer in my room."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Lp7d]^!|m.",
+    "word": "友達",
+    "kana": "ともだち",
+    "meaning": "friend",
+    "examples": [
+      {
+        "jp": "ともだちに メールを かきました。",
+        "en": "I wrote an email to a friend."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "i${v6/5Cm",
+    "word": "土曜日",
+    "kana": "どようび",
+    "meaning": "Saturday",
+    "examples": [
+      {
+        "jp": "どようびに バレーボールを します。",
+        "en": "I play volleyball on Saturdays."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "Nb;,~G7>SA",
+    "word": "日曜日",
+    "kana": "にちようび",
+    "meaning": "Sunday",
+    "examples": [
+      {
+        "jp": "にちようびに なにを しますか。",
+        "en": "What are you doing on Sunday?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "dgrralQ=bt",
+    "word": "練習",
+    "kana": "れんしゅう",
+    "meaning": "practice",
+    "examples": [
+      {
+        "jp": "きょうは れんしゅうに いきません。",
+        "en": "I'm not going to practice today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "sEp{UqTI]b",
+    "word": "帰ります",
+    "kana": "かえります",
+    "meaning": "to go home / to return",
+    "examples": [
+      {
+        "jp": "しごとのあとで うちに かえります。",
+        "en": "I go home after work."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "KD]oF$gbh/",
+    "word": "",
+    "kana": "あります",
+    "meaning": "to exist / be, for objects",
+    "examples": [
+      {
+        "jp": "たいいくかんに ボールが あります。",
+        "en": "There's a ball in the gym."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "P5~G/51U-*",
+    "word": "水",
+    "kana": "みず",
+    "meaning": "water",
+    "examples": [
+      {
+        "jp": "みずを のみに いきます。",
+        "en": "I'm going for some water."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "gj]v^xH{t:",
+    "word": "ご飯",
+    "kana": "ごはん",
+    "meaning": "meal / rice",
+    "examples": [
+      {
+        "jp": "きのう ごはんを たべに いきました。",
+        "en": "I went out to eat yesterday."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "lo6CasN*B8",
+    "word": "猫",
+    "kana": "ねこ",
+    "meaning": "cat",
+    "examples": [
+      {
+        "jp": "ねこが だいすきです。",
+        "en": "I love cats."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "7$Tm;;*!V",
+    "word": "自転車",
+    "kana": "じてんしゃ",
+    "meaning": "bicycle",
+    "examples": [
+      {
+        "jp": "じてんしゃで かいしゃに いきます。",
+        "en": "I go to the office by bicycle."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "J/.eMD!]E$",
+    "word": "公園",
+    "kana": "こうえん",
+    "meaning": "park",
+    "examples": [
+      {
+        "jp": "こうえんで バレーボールを しました。",
+        "en": "I played volleyball in the park."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "PUYNrJ=mZ-",
+    "word": "",
+    "kana": "カフェ",
+    "meaning": "café",
+    "examples": [
+      {
+        "jp": "カフェで にほんごを べんきょうします。",
+        "en": "I study Japanese at a café."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "c/3HIHwXWu",
+    "word": "練習します",
+    "kana": "れんしゅうします",
+    "meaning": "to practise",
+    "examples": [
+      {
+        "jp": "たいいくかんで れんしゅうします。",
+        "en": "I practise at the gym."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "KtWF;NgXV:",
+    "word": "何歳",
+    "kana": "なんさい",
+    "meaning": "how old / what age",
+    "examples": [
+      {
+        "jp": "なんさいですか。",
+        "en": "How old are you? (casual / direct)"
+      },
+      {
+        "jp": "にじゅうごさいです。",
+        "en": "I'm 25."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "t;#@Hmrl,K",
+    "word": "お幾つ",
+    "kana": "おいくつ",
+    "meaning": "how old (polite)",
+    "examples": [
+      {
+        "jp": "おいくつですか。",
+        "en": "How old are you? (polite, for adults you don't know well)"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "zDzu5</D{C",
+    "word": "名前",
+    "kana": "なまえ",
+    "meaning": "name",
+    "examples": [
+      {
+        "jp": "おなまえは なんですか。",
+        "en": "What's your name? (polite)"
+      },
+      {
+        "jp": "リースです。",
+        "en": "I'm Rhys."
+      }
+    ],
+    "deck": "Vocab"
+  }
+]
