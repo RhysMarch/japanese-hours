@@ -1397,5 +1397,504 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112435",
+    "word": "",
+    "kana": "と",
+    "meaning": "and (between nouns) / with",
+    "examples": [
+      {
+        "jp": "ねこと いぬが すきです。",
+        "en": "I like cats and dogs."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112436",
+    "word": "地図",
+    "kana": "ちず",
+    "meaning": "map",
+    "examples": [
+      {
+        "jp": "ちずは ありますか。",
+        "kanji": "地図はありますか。",
+        "en": "Do you have a map?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112437",
+    "word": "小さい",
+    "kana": "ちいさい",
+    "meaning": "small",
+    "examples": [
+      {
+        "jp": "ちいさい ねこが います。",
+        "kanji": "小さい猫がいます。",
+        "en": "There's a small cat."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112438",
+    "word": "大きい",
+    "kana": "おおきい",
+    "meaning": "big",
+    "examples": [
+      {
+        "jp": "おおきい いぬです。",
+        "kanji": "大きい犬です。",
+        "en": "It's a big dog."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112439",
+    "word": "花",
+    "kana": "はな",
+    "meaning": "flower",
+    "examples": [
+      {
+        "jp": "こうえんに はなが あります。",
+        "kanji": "公園に花があります。",
+        "en": "There are flowers in the park."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112440",
+    "word": "花火",
+    "kana": "はなび",
+    "meaning": "fireworks",
+    "examples": [
+      {
+        "jp": "はなびが だいすきです。",
+        "kanji": "花火が大好きです。",
+        "en": "I love fireworks."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112441",
+    "word": "半",
+    "kana": "はん",
+    "meaning": "half / half past (time)",
+    "examples": [
+      {
+        "jp": "いま さんじはんです。",
+        "kanji": "今、三時半です。",
+        "en": "It's 3:30 now."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112442",
+    "word": "弁護士",
+    "kana": "べんごし",
+    "meaning": "lawyer",
+    "examples": [
+      {
+        "jp": "ともだちは べんごしです。",
+        "kanji": "友達は弁護士です。",
+        "en": "My friend is a lawyer."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112443",
+    "word": "優しい",
+    "kana": "やさしい",
+    "meaning": "kind / gentle (written 易しい it means easy)",
+    "examples": [
+      {
+        "jp": "せんせいは やさしいです。",
+        "kanji": "先生は優しいです。",
+        "en": "The teacher is kind."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112444",
+    "word": "私の",
+    "kana": "わたしの",
+    "meaning": "my / mine",
+    "examples": [
+      {
+        "jp": "これは わたしの かさです。",
+        "kanji": "これは私の傘です。",
+        "en": "This is my umbrella."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112445",
+    "word": "アメリカ人",
+    "kana": "アメリカじん",
+    "meaning": "American (person)",
+    "examples": [
+      {
+        "jp": "ともだちは アメリカじんです。",
+        "kanji": "友達はアメリカ人です。",
+        "en": "My friend is American."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112446",
+    "word": "カナダ人",
+    "kana": "カナダじん",
+    "meaning": "Canadian (person)",
+    "examples": [
+      {
+        "jp": "せんせいは カナダじんです。",
+        "kanji": "先生はカナダ人です。",
+        "en": "The teacher is Canadian."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112447",
+    "word": "",
+    "kana": "コンビニ",
+    "meaning": "convenience store",
+    "examples": [
+      {
+        "jp": "コンビニは どこですか。",
+        "en": "Where is the convenience store?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112448",
+    "word": "",
+    "kana": "コート",
+    "meaning": "coat",
+    "examples": [
+      {
+        "jp": "くろい コートが ほしいです。",
+        "en": "I want a black coat."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112449",
+    "word": "",
+    "kana": "サラダ",
+    "meaning": "salad",
+    "examples": [
+      {
+        "jp": "あさごはんに サラダを たべます。",
+        "en": "I eat salad for breakfast."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112450",
+    "word": "",
+    "kana": "スマホ",
+    "meaning": "smartphone",
+    "examples": [
+      {
+        "jp": "スマホで しゃしんを とります。",
+        "en": "I take photos with my smartphone."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112451",
+    "word": "",
+    "kana": "デパート",
+    "meaning": "department store",
+    "examples": [
+      {
+        "jp": "どようびに デパートに いきます。",
+        "en": "I'm going to the department store on Saturday."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112452",
+    "word": "",
+    "kana": "パスポート",
+    "meaning": "passport",
+    "examples": [
+      {
+        "jp": "パスポートは かばんに あります。",
+        "en": "My passport is in my bag."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112453",
+    "word": "",
+    "kana": "ピザ",
+    "meaning": "pizza",
+    "examples": [
+      {
+        "jp": "ピザが だいすきです。",
+        "en": "I love pizza."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112454",
+    "word": "ブラジル人",
+    "kana": "ブラジルじん",
+    "meaning": "Brazilian (person)",
+    "examples": [
+      {
+        "jp": "せんせいは ブラジルじんですか。",
+        "kanji": "先生はブラジル人ですか。",
+        "en": "Is the teacher Brazilian?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112455",
+    "word": "ベトナム人",
+    "kana": "ベトナムじん",
+    "meaning": "Vietnamese (person)",
+    "examples": [
+      {
+        "jp": "ベトナムじんの ともだちが います。",
+        "kanji": "ベトナム人の友達がいます。",
+        "en": "I have a Vietnamese friend."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112456",
+    "word": "",
+    "kana": "ホテル",
+    "meaning": "hotel",
+    "examples": [
+      {
+        "jp": "ホテルは えきの みぎです。",
+        "en": "The hotel is to the right of the station."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112457",
+    "word": "",
+    "kana": "ラーメン",
+    "meaning": "ramen",
+    "examples": [
+      {
+        "jp": "ラーメンを たべに いきます。",
+        "en": "I'm going to eat ramen."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112458",
+    "word": "先生",
+    "kana": "せんせい",
+    "meaning": "teacher",
+    "examples": [
+      {
+        "jp": "せんせいは にほんじんです。",
+        "kanji": "先生は日本人です。",
+        "en": "The teacher is Japanese."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112459",
+    "word": "",
+    "kana": "すみません",
+    "meaning": "excuse me / sorry / pardon me",
+    "examples": [
+      {
+        "jp": "すみません、えきは どこですか。",
+        "en": "Excuse me, where is the station?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112460",
+    "word": "",
+    "kana": "ごめんなさい",
+    "meaning": "I'm sorry (apology)",
+    "examples": [
+      {
+        "jp": "ごめんなさい、きょうは いきません。",
+        "en": "Sorry, I'm not going today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112461",
+    "word": "",
+    "kana": "じゃない",
+    "meaning": "is not / am not (casual — polite: じゃないです)",
+    "examples": [
+      {
+        "jp": "これは わたしの かさじゃないです。",
+        "en": "This isn't my umbrella."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112462",
+    "word": "時",
+    "kana": "じ",
+    "meaning": "o'clock",
+    "examples": [
+      {
+        "jp": "いま ごじです。",
+        "kanji": "今、五時です。",
+        "en": "It's 5 o'clock now."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112463",
+    "word": "",
+    "kana": "さん",
+    "meaning": "Mr / Ms (after a name)",
+    "examples": [
+      {
+        "jp": "たなかさんは せんせいです。",
+        "en": "Mr / Ms Tanaka is a teacher."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112464",
+    "word": "",
+    "kana": "こんばんは",
+    "meaning": "good evening",
+    "examples": [
+      {
+        "jp": "こんばんは、リースです。",
+        "en": "Good evening, I'm Rhys."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112465",
+    "word": "",
+    "kana": "ここ",
+    "meaning": "here / this place",
+    "examples": [
+      {
+        "jp": "ここに ねこが います。",
+        "en": "There's a cat here."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112466",
+    "word": "靴",
+    "kana": "くつ",
+    "meaning": "shoes",
+    "examples": [
+      {
+        "jp": "あかい くつが ほしいです。",
+        "kanji": "赤い靴が欲しいです。",
+        "en": "I want red shoes."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112467",
+    "word": "",
+    "kana": "ください",
+    "meaning": "please (give me)",
+    "examples": [
+      {
+        "jp": "みずを ください。",
+        "en": "Water, please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112468",
+    "word": "切符",
+    "kana": "きっぷ",
+    "meaning": "ticket",
+    "examples": [
+      {
+        "jp": "きっぷは どこですか。",
+        "kanji": "切符はどこですか。",
+        "en": "Where are the tickets?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112469",
+    "word": "",
+    "kana": "かばん",
+    "meaning": "bag",
+    "examples": [
+      {
+        "jp": "かばんに スマホが あります。",
+        "en": "My smartphone is in my bag."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112470",
+    "word": "傘",
+    "kana": "かさ",
+    "meaning": "umbrella",
+    "examples": [
+      {
+        "jp": "かさが ありますか。",
+        "kanji": "傘がありますか。",
+        "en": "Do you have an umbrella?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791049112471",
+    "word": "",
+    "kana": "あそこ",
+    "meaning": "over there",
+    "examples": [
+      {
+        "jp": "えきは あそこです。",
+        "en": "The station is over there."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
