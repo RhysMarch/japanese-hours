@@ -1896,5 +1896,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-minna",
+    "word": "皆",
+    "kana": "みんな",
+    "meaning": "everyone / all (polite: みな, みなさん)",
+    "examples": [
+      {
+        "jp": "みんなで ラーメンを たべます。",
+        "kanji": "皆でラーメンを食べます。",
+        "en": "We all eat ramen together."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
