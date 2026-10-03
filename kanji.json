@@ -3,126 +3,217 @@
     "k": "薬",
     "reading": "くすり",
     "meaning": "medicine",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "f%><t)5l&%"
   },
   {
     "k": "円",
     "reading": "えん",
     "meaning": "yen",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "I;M]:Lp4s7"
   },
   {
     "k": "女",
     "reading": "おんな",
     "meaning": "woman",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "kp57shUbO9"
   },
   {
     "k": "男",
     "reading": "おとこ",
     "meaning": "man",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "i7$dDf;L&;"
   },
   {
     "k": "車",
     "reading": "くるま",
     "meaning": "car",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "tW=p-N;/k^"
   },
   {
     "k": "人",
     "reading": "ひと",
     "meaning": "person",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "8DsoszGPlQ"
   },
   {
     "k": "酒",
     "reading": "さけ",
     "meaning": "sake / alcohol",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "of1vVhbq/?"
   },
   {
     "k": "駅",
     "reading": "えき",
     "meaning": "station",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "cf05P=./]`"
   },
   {
     "k": "木",
     "reading": "き",
     "meaning": "tree",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "Zr3bAbdWob"
   },
   {
     "k": "山",
     "reading": "やま",
     "meaning": "mountain",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "I4ua7M4VEn"
   },
   {
     "k": "川",
     "reading": "かわ",
     "meaning": "river",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "5DxLG3Fvkn"
   },
   {
     "k": "囚",
     "reading": "しゅう",
     "meaning": "prisoner",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "P7hYYuiwcF"
   },
   {
     "k": "大学",
     "reading": "だいがく",
     "meaning": "University",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "Fk2NCcrRyf"
   },
   {
     "k": "本",
     "reading": "ほん",
     "meaning": "book",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "dtdhGrnbis"
   },
   {
     "k": "私",
     "reading": "わたし",
     "meaning": "I / me",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "7fC6sam4nw"
   },
   {
     "k": "田",
     "reading": "た",
     "meaning": "rice field",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "SI4Gi58RGP"
   },
   {
     "k": "日",
     "reading": "ひ",
     "meaning": "sun / day",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "Yk9AtTQbj2"
   },
   {
     "k": "一",
     "reading": "いち",
     "meaning": "one",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "XxkHciP83R"
   },
   {
     "k": "二",
     "reading": "に",
     "meaning": "two",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "f5u99kyT2d"
   },
   {
     "k": "三",
     "reading": "さん",
     "meaning": "three",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "VVYGexpT8P"
   },
   {
     "k": "四",
     "reading": "よん",
     "meaning": "four",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "id": "8GS8RTmoXA"
+  },
+  {
+    "k": "営業中",
+    "reading": "えいぎょうちゅう",
+    "meaning": "Shop is currently operating",
+    "added": "2026-10-03",
+    "id": "PZ{I5#Bik4"
+  },
+  {
+    "k": "入口",
+    "reading": "いりぐち",
+    "meaning": "Entrance",
+    "added": "2026-10-03",
+    "id": "lDD-Jd(?I9"
+  },
+  {
+    "k": "出口",
+    "reading": "でぐち",
+    "meaning": "Exit",
+    "added": "2026-10-03",
+    "id": "SGpe3Dws5w"
+  },
+  {
+    "k": "止",
+    "reading": "とまれ",
+    "meaning": "Stop (as in 止まれ)",
+    "added": "2026-10-03",
+    "id": "i2)@EhSm|a"
+  },
+  {
+    "k": "肉",
+    "reading": "にく",
+    "meaning": "Meat / beef",
+    "added": "2026-10-03",
+    "id": "CZ)hi=5m}I"
+  },
+  {
+    "k": "鳥",
+    "reading": "とり",
+    "meaning": "Chicken",
+    "added": "2026-10-03",
+    "id": "DHS5ueX@RB"
+  },
+  {
+    "k": "魚",
+    "reading": "さかな",
+    "meaning": "Fish",
+    "added": "2026-10-03",
+    "id": "JR;`7z=@Bk"
+  },
+  {
+    "k": "分",
+    "reading": "ぷん",
+    "meaning": "Minute",
+    "added": "2026-10-03",
+    "id": "bhU[co{d2."
+  },
+  {
+    "k": "時",
+    "reading": "じ",
+    "meaning": "Hour / time",
+    "added": "2026-10-03",
+    "id": "zi>fWAimh)"
+  },
+  {
+    "k": "東",
+    "reading": "ひがし",
+    "meaning": "East",
+    "added": "2026-10-03",
+    "id": "j%Tu@I;1IJ"
   }
 ]
