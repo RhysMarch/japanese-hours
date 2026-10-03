@@ -53,6 +53,20 @@
   .chart .col .seg:first-child { border-radius: 4px 4px 0 0; }
   .chart .lbl { font-size: 10px; color: var(--muted); text-align: center; margin-top: 4px; }
   .chart .col:hover::after { content: attr(data-tip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 11px; padding: 3px 6px; border-radius: 4px; white-space: nowrap; }
+  .heat-wrap { overflow-x: auto; padding-bottom: 4px; }
+  .heat { display: grid; grid-template-rows: 14px repeat(7, 12px); grid-auto-flow: column; grid-auto-columns: 12px; gap: 3px; width: max-content; }
+  .heat .cell { border-radius: 2px; background: var(--line); }
+  .heat .cell[data-date] { cursor: default; }
+  .owner .heat .cell[data-date] { cursor: pointer; }
+  .heat .cell.l1 { background: color-mix(in srgb, var(--accent) 25%, var(--line)); }
+  .heat .cell.l2 { background: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+  .heat .cell.l3 { background: color-mix(in srgb, var(--accent) 75%, var(--line)); }
+  .heat .cell.l4 { background: var(--accent); }
+  .heat .cell.future { background: transparent; }
+  .heat .mon { font-size: 10px; color: var(--muted); white-space: nowrap; overflow: visible; }
+  .heat .wd { font-size: 9px; color: var(--muted); line-height: 12px; padding-right: 4px; }
+  .heat-key { display: flex; align-items: center; gap: 3px; font-size: 11px; color: var(--muted); justify-content: flex-end; margin-top: 8px; }
+  .heat-key .cell { width: 12px; height: 12px; border-radius: 2px; }
   .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--muted); margin-top: 10px; }
   table { width: 100%; border-collapse: collapse; font-size: 14px; }
   th, td { text-align: right; padding: 8px 6px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
@@ -114,6 +128,21 @@
         <span class="muted" id="day-total"></span>
       </div>
     </form>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;align-items:baseline;margin-bottom:12px">
+      <h2 style="margin:0" id="heat-title">This year</h2>
+      <span class="muted" style="font-size:13px" id="heat-sum"></span>
+    </div>
+    <div class="heat-wrap" id="heat-wrap"><div class="heat" id="heat"></div></div>
+    <div class="heat-key">Less
+      <span class="cell" style="background:var(--line)"></span>
+      <span class="cell" style="background:color-mix(in srgb, var(--accent) 25%, var(--line))"></span>
+      <span class="cell" style="background:color-mix(in srgb, var(--accent) 50%, var(--line))"></span>
+      <span class="cell" style="background:color-mix(in srgb, var(--accent) 75%, var(--line))"></span>
+      <span class="cell" style="background:var(--accent)"></span>
+    More</div>
   </div>
 
   <div class="grid2">
@@ -276,6 +305,45 @@ $('entry').addEventListener('submit', ev => {
     (has ? 'Saved ' : 'Cleared ') + date);
 });
 
+// GitHub-style year-to-date grid: one column per week (Mon–Sun), Jan 1 → today
+function renderHeatmap(now) {
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const jan1 = new Date(today.getFullYear(), 0, 1);
+  const start = new Date(jan1); start.setDate(start.getDate() - ((jan1.getDay() + 6) % 7));
+  const level = h => !h ? '' : h <= 0.5 ? 'l1' : h <= 1 ? 'l2' : h <= 2 ? 'l3' : 'l4';
+
+  let html = '<div></div>' + ['Mon', '', 'Wed', '', 'Fri', '', ''].map(d => `<div class="wd">${d}</div>`).join('');
+  let ytd = 0, active = 0, lastMonth = -1;
+  for (const d = new Date(start); d <= today; d.setDate(d.getDate() + 7)) {
+    // month label goes on the first week containing the 1st of that month
+    const weekEnd = new Date(d); weekEnd.setDate(weekEnd.getDate() + 6);
+    const m = weekEnd < jan1 ? -1 : (d < jan1 ? 0 : weekEnd.getMonth());
+    const label = m !== lastMonth && m >= 0 && (weekEnd.getDate() <= 7 || m === 0)
+      ? weekEnd.toLocaleDateString(undefined, { month: 'short' }) : '';
+    if (label) lastMonth = m;
+    html += `<div class="mon">${label}</div>`;
+    for (let i = 0; i < 7; i++) {
+      const day = new Date(d); day.setDate(day.getDate() + i);
+      if (day < jan1 || day > today) { html += '<div class="cell future"></div>'; continue; }
+      const key = isoDate(day), h = data[key] ? dayTotal(data[key]) : 0;
+      ytd += h; if (h > 0) active++;
+      const tip = `${day.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' })}: ${h ? fmt(h) : 'no study'}`;
+      html += `<div class="cell ${level(h)}" data-date="${key}" title="${tip}"></div>`;
+    }
+  }
+  $('heat').innerHTML = html;
+  $('heat-title').textContent = today.getFullYear() + ' so far';
+  $('heat-sum').textContent = `${fmt(ytd)} across ${active} day${active === 1 ? '' : 's'}`;
+  $('heat-wrap').scrollLeft = $('heat-wrap').scrollWidth;
+}
+
+$('heat').addEventListener('click', ev => {
+  const date = ev.target.dataset.date;
+  if (!token || !date) return;
+  $('date').value = date; fillForm(date);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 function render() {
   const dates = Object.keys(data).sort().reverse();
   const totals = Object.fromEntries(SECTIONS.map(s => [s.id, 0]));
@@ -321,6 +389,8 @@ function render() {
       <div class="lbl">${d.getDate()}</div></div>`;
   }).join('');
   $('legend').innerHTML = SECTIONS.map((s, i) => `<span><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${COLORS[i]};margin-right:4px"></span>${s.name}</span>`).join('');
+
+  renderHeatmap(now);
 
   // History table
   if (!dates.length) {
@@ -370,6 +440,7 @@ $('file').addEventListener('change', async ev => {
 // --- Owner sign-in ---
 function applyAuth() {
   document.querySelectorAll('.owner-only').forEach(el => el.hidden = !token);
+  document.body.classList.toggle('owner', !!token);
   $('auth').textContent = token ? 'Sign out' : 'Sign in';
   $('status').innerHTML = token
     ? 'Signed in — every save is committed to <a href="https://github.com/' + REPO + '/commits/main/' + FILE + '" target="_blank" rel="noopener">data.json</a> on GitHub.'
