@@ -62,6 +62,7 @@
   .d-meaning { text-align: center; font-weight: 600; margin: 6px 0 14px; }
   .d-ex { background: var(--bg); border-radius: 8px; padding: 10px 12px; font-size: 14px; }
   .d-ex .jp { font-size: 16px; }
+  .d-ex .jp.kj { font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; font-size: 17px; }
   .d-ex .en { color: var(--muted); margin-bottom: 8px; }
   .d-ex .en:last-child { margin-bottom: 0; }
   .d-h { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 14px 0 6px; }
@@ -188,7 +189,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="github.js?v=20261003b"></script>
-<script src="anki.js?v=20261003h"></script>
+<script src="anki.js?v=20261003i"></script>
 <script src="kanji-links.js?v=20261003h"></script>
 <script>
 const FILE = 'vocab.json';
@@ -271,7 +272,7 @@ function showWord(id) {
         <span>${k ? `<small lang="ja">${esc(k.reading)}</small><small>${esc(k.meaning)}</small>` : '<small>not learned yet</small>'}</span></a>`;
     }).join('')}</div>
     <div class="d-h">Example</div>` : ''}
-    <div class="d-ex">${v.examples.map(e => `<div class="jp" lang="ja">${highlight(e.jp, v)}</div><div class="en">${esc(e.en)}</div>`).join('')
+    <div class="d-ex">${v.examples.map(e => `<div class="jp" lang="ja">${highlight(e.jp, v)}</div>${e.kanji ? `<div class="jp kj" lang="ja">${highlight(e.kanji, v)}</div>` : ''}<div class="en">${esc(e.en)}</div>`).join('')
       || '<span class="muted">No example sentence.</span>'}</div>
     <div class="d-meta"><span>${esc(v.deck)}</span>${token ? `<button type="button" class="link" data-del="${esc(v.id)}">remove</button>` : ''}</div>`;
   if (!$('detail').open) $('detail').showModal();

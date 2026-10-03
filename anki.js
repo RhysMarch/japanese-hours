@@ -74,8 +74,11 @@ function parseAnkiExport(text) {
     const back = htmlLines(fields[1] || '').filter(l => !/^example:?$/i.test(l));
     const examples = [];
     for (const l of back.slice(1)) {
-      if (hasJapanese(l)) examples.push({ jp: l, en: '' });
-      else if (examples.length && !examples[examples.length - 1].en) examples[examples.length - 1].en = l;
+      const last = examples[examples.length - 1];
+      // a second Japanese line right after the first is the same sentence written with kanji
+      if (hasJapanese(l) && last && !last.en && !last.kanji) last.kanji = l;
+      else if (hasJapanese(l)) examples.push({ jp: l, en: '' });
+      else if (last && !last.en) last.en = l;
     }
     return {
       id: id || word || right,

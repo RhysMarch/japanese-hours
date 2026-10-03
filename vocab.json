@@ -7,7 +7,8 @@
     "examples": [
       {
         "jp": "わたしはリースです。",
-        "en": "I am Rhys."
+        "en": "I am Rhys.",
+        "kanji": "私はリースです。"
       }
     ],
     "deck": "Vocab"
@@ -20,7 +21,8 @@
     "examples": [
       {
         "jp": "だれがソフトウェアかいはつしゃですか。",
-        "en": "Who is the software developer?"
+        "en": "Who is the software developer?",
+        "kanji": "誰がソフトウェア開発者ですか。"
       }
     ],
     "deck": "Vocab"
@@ -33,7 +35,8 @@
     "examples": [
       {
         "jp": "なにをよみますか。",
-        "en": "What will you read?"
+        "en": "What will you read?",
+        "kanji": "何を読みますか。"
       }
     ],
     "deck": "Vocab"
@@ -98,7 +101,8 @@
     "examples": [
       {
         "jp": "あさごはんをたべます。",
-        "en": "I eat breakfast."
+        "en": "I eat breakfast.",
+        "kanji": "朝ご飯を食べます。"
       }
     ],
     "deck": "Vocab"
@@ -111,7 +115,8 @@
     "examples": [
       {
         "jp": "げんきのほんをよみます。",
-        "en": "I read the Genki book."
+        "en": "I read the Genki book.",
+        "kanji": "げんきの本を読みます。"
       }
     ],
     "deck": "Vocab"
@@ -124,7 +129,8 @@
     "examples": [
       {
         "jp": "きょうはしごとです。",
-        "en": "I am working today."
+        "en": "I am working today.",
+        "kanji": "今日は仕事です。"
       }
     ],
     "deck": "Vocab"
@@ -137,7 +143,8 @@
     "examples": [
       {
         "jp": "にほんごのべんきょうはたのしいです。",
-        "en": "Studying Japanese is fun."
+        "en": "Studying Japanese is fun.",
+        "kanji": "日本語の勉強は楽しいです。"
       }
     ],
     "deck": "Vocab"
@@ -150,7 +157,8 @@
     "examples": [
       {
         "jp": "きょう、へやのそうじをします。",
-        "en": "I will clean my room today."
+        "en": "I will clean my room today.",
+        "kanji": "今日、部屋の掃除をします。"
       }
     ],
     "deck": "Vocab"
@@ -163,7 +171,8 @@
     "examples": [
       {
         "jp": "まいにちにほんごをべんきょうします。",
-        "en": "I study Japanese every day."
+        "en": "I study Japanese every day.",
+        "kanji": "毎日日本語を勉強します。"
       }
     ],
     "deck": "Vocab"
@@ -176,7 +185,8 @@
     "examples": [
       {
         "jp": "しごとのあとでおんがくをききます。",
-        "en": "I listen to music after work."
+        "en": "I listen to music after work.",
+        "kanji": "仕事の後で音楽を聞きます。"
       }
     ],
     "deck": "Vocab"
@@ -189,7 +199,8 @@
     "examples": [
       {
         "jp": "じてんしゃのしゃしんをとります。",
-        "en": "I take a photo of my bicycle."
+        "en": "I take a photo of my bicycle.",
+        "kanji": "自転車の写真を撮ります。"
       }
     ],
     "deck": "Vocab"
@@ -202,7 +213,8 @@
     "examples": [
       {
         "jp": "きょうはにほんごをべんきょうします。",
-        "en": "I will study Japanese today."
+        "en": "I will study Japanese today.",
+        "kanji": "今日は日本語を勉強します。"
       }
     ],
     "deck": "Vocab"
@@ -228,7 +240,8 @@
     "examples": [
       {
         "jp": "じてんしゃがすきです。",
-        "en": "I like bicycles / cycling."
+        "en": "I like bicycles / cycling.",
+        "kanji": "自転車が好きです。"
       }
     ],
     "deck": "Vocab"
@@ -241,7 +254,8 @@
     "examples": [
       {
         "jp": "にほんのたべものがだいすきです。",
-        "en": "I really like Japanese food."
+        "en": "I really like Japanese food.",
+        "kanji": "日本の食べ物が大好きです。"
       }
     ],
     "deck": "Vocab"
@@ -254,7 +268,8 @@
     "examples": [
       {
         "jp": "にほんごはほんとうにおもしろいです。",
-        "en": "Japanese is really interesting."
+        "en": "Japanese is really interesting.",
+        "kanji": "日本語は本当に面白いです。"
       }
     ],
     "deck": "Vocab"
@@ -267,7 +282,8 @@
     "examples": [
       {
         "jp": "にほんごのべんきょうはたのしいです。",
-        "en": "Studying Japanese is fun."
+        "en": "Studying Japanese is fun.",
+        "kanji": "日本語の勉強は楽しいです。"
       }
     ],
     "deck": "Vocab"
@@ -280,7 +296,8 @@
     "examples": [
       {
         "jp": "かんじはむずかしいです。",
-        "en": "Kanji is difficult."
+        "en": "Kanji is difficult.",
+        "kanji": "漢字は難しいです。"
       }
     ],
     "deck": "Vocab"
@@ -293,7 +310,8 @@
     "examples": [
       {
         "jp": "このねこはかわいいです。",
-        "en": "This cat is cute."
+        "en": "This cat is cute.",
+        "kanji": "この猫は可愛いです。"
       }
     ],
     "deck": "Vocab"
@@ -306,7 +324,8 @@
     "examples": [
       {
         "jp": "あさごはんをたべます。",
-        "en": "I eat breakfast."
+        "en": "I eat breakfast.",
+        "kanji": "朝ご飯を食べます。"
       }
     ],
     "deck": "Vocab"
@@ -319,7 +338,8 @@
     "examples": [
       {
         "jp": "しごとでコーヒーをのみます。",
-        "en": "I drink coffee at work."
+        "en": "I drink coffee at work.",
+        "kanji": "仕事でコーヒーを飲みます。"
       }
     ],
     "deck": "Vocab"
@@ -332,7 +352,8 @@
     "examples": [
       {
         "jp": "ノートににほんごをかきます。",
-        "en": "I write Japanese in my notebook."
+        "en": "I write Japanese in my notebook.",
+        "kanji": "ノートに日本語を書きます。"
       }
     ],
     "deck": "Vocab"
@@ -345,7 +366,8 @@
     "examples": [
       {
         "jp": "げんきのほんをよみます。",
-        "en": "I read the Genki book."
+        "en": "I read the Genki book.",
+        "kanji": "げんきの本を読みます。"
       }
     ],
     "deck": "Vocab"
@@ -358,7 +380,8 @@
     "examples": [
       {
         "jp": "おんがくをききます。",
-        "en": "I listen to music."
+        "en": "I listen to music.",
+        "kanji": "音楽を聞きます。"
       }
     ],
     "deck": "Vocab"
@@ -371,7 +394,8 @@
     "examples": [
       {
         "jp": "よるにユーチューブをみます。",
-        "en": "I watch YouTube in the evening."
+        "en": "I watch YouTube in the evening.",
+        "kanji": "夜にユーチューブを見ます。"
       }
     ],
     "deck": "Vocab"
@@ -384,7 +408,8 @@
     "examples": [
       {
         "jp": "つくえからほんをとります。",
-        "en": "I take the book from the desk."
+        "en": "I take the book from the desk.",
+        "kanji": "机から本を取ります。"
       }
     ],
     "deck": "Vocab"
@@ -397,7 +422,8 @@
     "examples": [
       {
         "jp": "しごとでコンピューターをつかいます。",
-        "en": "I use a computer at work."
+        "en": "I use a computer at work.",
+        "kanji": "仕事でコンピューターを使います。"
       }
     ],
     "deck": "Vocab"
@@ -410,7 +436,8 @@
     "examples": [
       {
         "jp": "しごとでソフトウェアをつくります。",
-        "en": "I create software at work."
+        "en": "I create software at work.",
+        "kanji": "仕事でソフトウェアを作ります。"
       }
     ],
     "deck": "Vocab"
@@ -436,7 +463,8 @@
     "examples": [
       {
         "jp": "まいにちにほんごをべんきょうします。",
-        "en": "I study Japanese every day."
+        "en": "I study Japanese every day.",
+        "kanji": "毎日日本語を勉強します。"
       }
     ],
     "deck": "Vocab"
@@ -449,7 +477,8 @@
     "examples": [
       {
         "jp": "じてんしゃでこうえんへいきます。",
-        "en": "I go to the park by bicycle."
+        "en": "I go to the park by bicycle.",
+        "kanji": "自転車で公園へ行きます。"
       }
     ],
     "deck": "Vocab"
@@ -462,7 +491,8 @@
     "examples": [
       {
         "jp": "ともだちがうちにきます。",
-        "en": "My friend comes to my house."
+        "en": "My friend comes to my house.",
+        "kanji": "友達が家に来ます。"
       }
     ],
     "deck": "Vocab"
@@ -488,7 +518,8 @@
     "examples": [
       {
         "jp": "あしたは バレーボールを します。",
-        "en": "I will play volleyball tomorrow."
+        "en": "I will play volleyball tomorrow.",
+        "kanji": "明日はバレーボールをします。"
       }
     ],
     "deck": "Vocab"
@@ -501,7 +532,8 @@
     "examples": [
       {
         "jp": "きのうは コードを かきました。",
-        "en": "I wrote code yesterday."
+        "en": "I wrote code yesterday.",
+        "kanji": "昨日はコードを書きました。"
       }
     ],
     "deck": "Vocab"
@@ -514,7 +546,8 @@
     "examples": [
       {
         "jp": "にほんに ともだちが います。",
-        "en": "I have a friend in Japan."
+        "en": "I have a friend in Japan.",
+        "kanji": "日本に友達がいます。"
       }
     ],
     "deck": "Vocab"
@@ -527,7 +560,8 @@
     "examples": [
       {
         "jp": "どようびに たいいくかんに いきます。",
-        "en": "I go to the gym on Saturdays."
+        "en": "I go to the gym on Saturdays.",
+        "kanji": "土曜日に体育館に行きます。"
       }
     ],
     "deck": "Vocab"
@@ -540,7 +574,8 @@
     "examples": [
       {
         "jp": "きょうは かいしゃに いきません。",
-        "en": "I'm not going to the office today."
+        "en": "I'm not going to the office today.",
+        "kanji": "今日は会社に行きません。"
       }
     ],
     "deck": "Vocab"
@@ -553,7 +588,8 @@
     "examples": [
       {
         "jp": "うちに だれが いますか。",
-        "en": "Who's at home?"
+        "en": "Who's at home?",
+        "kanji": "家に誰がいますか。"
       }
     ],
     "deck": "Vocab"
@@ -566,7 +602,8 @@
     "examples": [
       {
         "jp": "へやに コンピューターが あります。",
-        "en": "There's a computer in my room."
+        "en": "There's a computer in my room.",
+        "kanji": "部屋にコンピューターがあります。"
       }
     ],
     "deck": "Vocab"
@@ -579,7 +616,8 @@
     "examples": [
       {
         "jp": "ともだちに メールを かきました。",
-        "en": "I wrote an email to a friend."
+        "en": "I wrote an email to a friend.",
+        "kanji": "友達にメールを書きました。"
       }
     ],
     "deck": "Vocab"
@@ -592,7 +630,8 @@
     "examples": [
       {
         "jp": "どようびに バレーボールを します。",
-        "en": "I play volleyball on Saturdays."
+        "en": "I play volleyball on Saturdays.",
+        "kanji": "土曜日にバレーボールをします。"
       }
     ],
     "deck": "Vocab"
@@ -605,7 +644,8 @@
     "examples": [
       {
         "jp": "にちようびに なにを しますか。",
-        "en": "What are you doing on Sunday?"
+        "en": "What are you doing on Sunday?",
+        "kanji": "日曜日に何をしますか。"
       }
     ],
     "deck": "Vocab"
@@ -618,7 +658,8 @@
     "examples": [
       {
         "jp": "きょうは れんしゅうに いきません。",
-        "en": "I'm not going to practice today."
+        "en": "I'm not going to practice today.",
+        "kanji": "今日は練習に行きません。"
       }
     ],
     "deck": "Vocab"
@@ -631,7 +672,8 @@
     "examples": [
       {
         "jp": "しごとのあとで うちに かえります。",
-        "en": "I go home after work."
+        "en": "I go home after work.",
+        "kanji": "仕事の後で家に帰ります。"
       }
     ],
     "deck": "Vocab"
@@ -657,7 +699,8 @@
     "examples": [
       {
         "jp": "みずを のみに いきます。",
-        "en": "I'm going for some water."
+        "en": "I'm going for some water.",
+        "kanji": "水を飲みに行きます。"
       }
     ],
     "deck": "Vocab"
@@ -670,7 +713,8 @@
     "examples": [
       {
         "jp": "きのう ごはんを たべに いきました。",
-        "en": "I went out to eat yesterday."
+        "en": "I went out to eat yesterday.",
+        "kanji": "昨日ご飯を食べに行きました。"
       }
     ],
     "deck": "Vocab"
@@ -683,7 +727,8 @@
     "examples": [
       {
         "jp": "ねこが だいすきです。",
-        "en": "I love cats."
+        "en": "I love cats.",
+        "kanji": "猫が大好きです。"
       }
     ],
     "deck": "Vocab"
@@ -696,7 +741,8 @@
     "examples": [
       {
         "jp": "じてんしゃで かいしゃに いきます。",
-        "en": "I go to the office by bicycle."
+        "en": "I go to the office by bicycle.",
+        "kanji": "自転車で会社に行きます。"
       }
     ],
     "deck": "Vocab"
@@ -709,7 +755,8 @@
     "examples": [
       {
         "jp": "こうえんで バレーボールを しました。",
-        "en": "I played volleyball in the park."
+        "en": "I played volleyball in the park.",
+        "kanji": "公園でバレーボールをしました。"
       }
     ],
     "deck": "Vocab"
@@ -735,7 +782,8 @@
     "examples": [
       {
         "jp": "たいいくかんで れんしゅうします。",
-        "en": "I practise at the gym."
+        "en": "I practise at the gym.",
+        "kanji": "体育館で練習します。"
       }
     ],
     "deck": "Vocab"
@@ -748,11 +796,13 @@
     "examples": [
       {
         "jp": "なんさいですか。",
-        "en": "How old are you? (casual / direct)"
+        "en": "How old are you? (casual / direct)",
+        "kanji": "何歳ですか。"
       },
       {
         "jp": "にじゅうごさいです。",
-        "en": "I'm 25."
+        "en": "I'm 25.",
+        "kanji": "二十五歳です。"
       }
     ],
     "deck": "Vocab"
@@ -765,7 +815,8 @@
     "examples": [
       {
         "jp": "おいくつですか。",
-        "en": "How old are you? (polite, for adults you don't know well)"
+        "en": "How old are you? (polite, for adults you don't know well)",
+        "kanji": "お幾つですか。"
       }
     ],
     "deck": "Vocab"
@@ -778,7 +829,8 @@
     "examples": [
       {
         "jp": "おなまえは なんですか。",
-        "en": "What's your name? (polite)"
+        "en": "What's your name? (polite)",
+        "kanji": "お名前は何ですか。"
       },
       {
         "jp": "リースです。",
@@ -795,7 +847,8 @@
     "examples": [
       {
         "jp": "だいがくは どこですか。",
-        "en": "Where is the university?"
+        "en": "Where is the university?",
+        "kanji": "大学はどこですか。"
       }
     ],
     "deck": "Vocab"
@@ -808,7 +861,8 @@
     "examples": [
       {
         "jp": "カフェは えいぎょうちゅうです。",
-        "en": "The café is open."
+        "en": "The café is open.",
+        "kanji": "カフェは営業中です。"
       }
     ],
     "deck": "Vocab"
@@ -821,7 +875,8 @@
     "examples": [
       {
         "jp": "いりぐちは どこですか。",
-        "en": "Where is the entrance?"
+        "en": "Where is the entrance?",
+        "kanji": "入口はどこですか。"
       }
     ],
     "deck": "Vocab"
@@ -834,7 +889,8 @@
     "examples": [
       {
         "jp": "でぐちは あそこです。",
-        "en": "The exit is over there."
+        "en": "The exit is over there.",
+        "kanji": "出口はあそこです。"
       }
     ],
     "deck": "Vocab"
@@ -847,7 +903,8 @@
     "examples": [
       {
         "jp": "いま なんじですか。",
-        "en": "What time is it now?"
+        "en": "What time is it now?",
+        "kanji": "今、何時ですか。"
       }
     ],
     "deck": "Vocab"
@@ -860,7 +917,8 @@
     "examples": [
       {
         "jp": "ともだちは にほんじんです。",
-        "en": "My friend is Japanese."
+        "en": "My friend is Japanese.",
+        "kanji": "友達は日本人です。"
       }
     ],
     "deck": "Vocab"
@@ -873,7 +931,8 @@
     "examples": [
       {
         "jp": "にほんごは おもしろいです。",
-        "en": "Japanese is interesting."
+        "en": "Japanese is interesting.",
+        "kanji": "日本語は面白いです。"
       }
     ],
     "deck": "Vocab"
@@ -899,7 +958,8 @@
     "examples": [
       {
         "jp": "この ラーメンは おいしいです。",
-        "en": "This ramen is delicious."
+        "en": "This ramen is delicious.",
+        "kanji": "このラーメンは美味しいです。"
       }
     ],
     "deck": "Vocab"
@@ -912,7 +972,8 @@
     "examples": [
       {
         "jp": "わたしは ばかじゃないです。",
-        "en": "I'm not an idiot."
+        "en": "I'm not an idiot.",
+        "kanji": "私は馬鹿じゃないです。"
       }
     ],
     "deck": "Vocab"
@@ -925,7 +986,8 @@
     "examples": [
       {
         "jp": "こうえんに いぬが います。",
-        "en": "There is a dog in the park."
+        "en": "There is a dog in the park.",
+        "kanji": "公園に犬がいます。"
       }
     ],
     "deck": "Vocab"
@@ -938,11 +1000,13 @@
     "examples": [
       {
         "jp": "だいじょうぶですか。",
-        "en": "Are you okay?"
+        "en": "Are you okay?",
+        "kanji": "大丈夫ですか。"
       },
       {
         "jp": "はい、だいじょうぶです。",
-        "en": "Yes, I'm okay."
+        "en": "Yes, I'm okay.",
+        "kanji": "はい、大丈夫です。"
       }
     ],
     "deck": "Vocab"
@@ -968,7 +1032,8 @@
     "examples": [
       {
         "jp": "バスていは どこですか。",
-        "en": "Where is the bus stop?"
+        "en": "Where is the bus stop?",
+        "kanji": "バス停はどこですか。"
       }
     ],
     "deck": "Vocab"
@@ -981,7 +1046,8 @@
     "examples": [
       {
         "jp": "あした くうこうに いきます。",
-        "en": "I'm going to the airport tomorrow."
+        "en": "I'm going to the airport tomorrow.",
+        "kanji": "明日空港に行きます。"
       }
     ],
     "deck": "Vocab"
@@ -994,7 +1060,8 @@
     "examples": [
       {
         "jp": "ちかてつで かいしゃに いきます。",
-        "en": "I go to the office by subway."
+        "en": "I go to the office by subway.",
+        "kanji": "地下鉄で会社に行きます。"
       }
     ],
     "deck": "Vocab"
@@ -1007,7 +1074,8 @@
     "examples": [
       {
         "jp": "へやに てぶくろが あります。",
-        "en": "There are gloves in my room."
+        "en": "There are gloves in my room.",
+        "kanji": "部屋に手袋があります。"
       }
     ],
     "deck": "Vocab"
@@ -1020,7 +1088,8 @@
     "examples": [
       {
         "jp": "あかが すきです。",
-        "en": "I like red."
+        "en": "I like red.",
+        "kanji": "赤が好きです。"
       }
     ],
     "deck": "Vocab"
@@ -1033,7 +1102,8 @@
     "examples": [
       {
         "jp": "しろい ねこが います。",
-        "en": "There is a white cat."
+        "en": "There is a white cat.",
+        "kanji": "白い猫がいます。"
       }
     ],
     "deck": "Vocab"
@@ -1046,7 +1116,8 @@
     "examples": [
       {
         "jp": "あおい じてんしゃです。",
-        "en": "It's a blue bicycle."
+        "en": "It's a blue bicycle.",
+        "kanji": "青い自転車です。"
       }
     ],
     "deck": "Vocab"
@@ -1059,7 +1130,8 @@
     "examples": [
       {
         "jp": "くろい ねこが すきです。",
-        "en": "I like black cats."
+        "en": "I like black cats.",
+        "kanji": "黒い猫が好きです。"
       }
     ],
     "deck": "Vocab"
@@ -1085,7 +1157,8 @@
     "examples": [
       {
         "jp": "みどりの じてんしゃです。",
-        "en": "It's a green bicycle."
+        "en": "It's a green bicycle.",
+        "kanji": "緑の自転車です。"
       }
     ],
     "deck": "Vocab"
@@ -1098,7 +1171,8 @@
     "examples": [
       {
         "jp": "むらさきが だいすきです。",
-        "en": "I love purple."
+        "en": "I love purple.",
+        "kanji": "紫が大好きです。"
       }
     ],
     "deck": "Vocab"
@@ -1111,7 +1185,8 @@
     "examples": [
       {
         "jp": "えきは ひだりです。",
-        "en": "The station is on the left."
+        "en": "The station is on the left.",
+        "kanji": "駅は左です。"
       }
     ],
     "deck": "Vocab"
@@ -1124,7 +1199,8 @@
     "examples": [
       {
         "jp": "カフェは みぎです。",
-        "en": "The café is on the right."
+        "en": "The café is on the right.",
+        "kanji": "カフェは右です。"
       }
     ],
     "deck": "Vocab"
@@ -1137,7 +1213,8 @@
     "examples": [
       {
         "jp": "つくえの うえに ほんが あります。",
-        "en": "There's a book on the desk."
+        "en": "There's a book on the desk.",
+        "kanji": "机の上に本があります。"
       }
     ],
     "deck": "Vocab"
@@ -1150,7 +1227,8 @@
     "examples": [
       {
         "jp": "つくえの したに ねこが います。",
-        "en": "There's a cat under the desk."
+        "en": "There's a cat under the desk.",
+        "kanji": "机の下に猫がいます。"
       }
     ],
     "deck": "Vocab"
