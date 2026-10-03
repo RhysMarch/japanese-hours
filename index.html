@@ -15,6 +15,8 @@
     :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; }
   }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  a { color: var(--accent); }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
   main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
   header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
@@ -72,8 +74,25 @@
 <main>
   <header>
     <h1><span>日本語</span> Hours</h1>
-    <div class="muted" id="today"></div>
+    <div class="row" style="align-items:center">
+      <span class="muted" id="today"></span>
+      <button type="button" class="link" id="auth">Sign in</button>
+    </div>
   </header>
+
+  <div class="card" id="auth-card" hidden>
+    <h2>Sign in to edit</h2>
+    <p class="muted" style="margin:0 0 10px;font-size:14px">
+      Paste a GitHub <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>
+      with access to <b>only</b> the <code>japanese-hours</code> repo and <b>Contents: Read and write</b> permission.
+      It's stored in this browser only.
+    </p>
+    <form id="auth-form" class="row">
+      <label>Token <input type="password" id="token" autocomplete="off" required></label>
+      <button type="submit" class="primary">Sign in</button>
+      <button type="button" id="auth-cancel">Cancel</button>
+    </form>
+  </div>
 
   <div class="stats">
     <div class="stat"><small>Total</small><b id="s-total">0h</b></div>
@@ -82,7 +101,7 @@
     <div class="stat"><small>Days logged</small><b id="s-days">0</b></div>
   </div>
 
-  <div class="card">
+  <div class="card owner-only" hidden>
     <h2>Log a day</h2>
     <form id="entry">
       <div class="row">
@@ -114,12 +133,12 @@
       <h2 style="margin:0">History</h2>
       <div class="row">
         <button type="button" id="export">Export</button>
-        <button type="button" id="import">Import</button>
+        <button type="button" id="import" class="owner-only" hidden>Import</button>
         <input type="file" id="file" accept="application/json" hidden>
       </div>
     </div>
     <div class="table-wrap"><table id="history"></table></div>
-    <p class="muted" style="font-size:12px;margin:12px 0 0">Data is saved in this browser. Use Export now and then to back it up or move it to another device.</p>
+    <p class="muted" style="font-size:12px;margin:12px 0 0" id="status">Loading…</p>
   </div>
 </main>
 <div class="toast" id="toast"></div>
@@ -134,16 +153,75 @@ const SECTIONS = [
   { id: 'duolingo', name: 'Duolingo' },
 ];
 const COLORS = SECTIONS.map((_, i) => `var(--c${i})`);
-const KEY = 'japanese-hours-v1';
+const REPO = 'RhysMarch/japanese-hours';
+const FILE = 'data.json';
+const API = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
+const TOKEN_KEY = 'japanese-hours-token';
+const LEGACY_KEY = 'japanese-hours-v1';
 
-let data = load();
+// localStorage can be unavailable (private mode etc.) — never let that break the page
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch {} },
+  del(k) { try { localStorage.removeItem(k); } catch {} },
+};
 
-function load() {
-  try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; }
+let data = {};
+let token = store.get(TOKEN_KEY);
+
+// UTF-8 safe base64, so Japanese in notes survives the round trip
+const b64encode = s => {
+  let bin = '';
+  new TextEncoder().encode(s).forEach(b => bin += String.fromCharCode(b));
+  return btoa(bin);
+};
+const b64decode = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g, '')), c => c.charCodeAt(0)));
+
+async function fetchRemote() {
+  const headers = { Accept: 'application/vnd.github+json' };
+  if (token) headers.Authorization = 'Bearer ' + token;
+  const res = await fetch(API + '?t=' + Date.now(), { headers, cache: 'no-store' });
+  if (res.status === 404) return { data: {}, sha: null };
+  if (!res.ok) {
+    // API rate limit for anonymous visitors is 60/hr — fall back to the Pages copy
+    const fallback = await fetch(FILE + '?t=' + Date.now(), { cache: 'no-store' });
+    if (fallback.ok) return { data: await fallback.json(), sha: null };
+    throw new Error('GitHub returned ' + res.status);
+  }
+  const json = await res.json();
+  return { data: JSON.parse(b64decode(json.content) || '{}'), sha: json.sha };
 }
-function save() {
-  try { localStorage.setItem(KEY, JSON.stringify(data)); } catch { toast('Could not save — storage unavailable'); }
+
+// Re-read the latest file, apply the change, write it back. Retries once if someone/something else committed in between.
+async function commit(mutate, message) {
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const remote = await fetchRemote();
+    mutate(remote.data);
+    const res = await fetch(API, {
+      method: 'PUT',
+      headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token },
+      body: JSON.stringify({
+        message,
+        content: b64encode(JSON.stringify(sortKeys(remote.data), null, 2) + '\n'),
+        ...(remote.sha && { sha: remote.sha }),
+      }),
+    });
+    if (res.ok) { data = remote.data; return; }
+    if (res.status === 409 && attempt === 0) continue;
+    if (res.status === 401 || res.status === 403) throw new Error('Token rejected — sign in again');
+    throw new Error('Save failed (' + res.status + ')');
+  }
 }
+const sortKeys = o => Object.fromEntries(Object.keys(o).sort().map(k => [k, o[k]]));
+
+async function save(mutate, message, okMsg) {
+  if (!token) { toast('Sign in to edit'); return false; }
+  setBusy(true);
+  try { await commit(mutate, message); render(); fillForm($('date').value); toast(okMsg); return true; }
+  catch (e) { toast(e.message); return false; }
+  finally { setBusy(false); }
+}
+function setBusy(b) { document.querySelectorAll('button').forEach(x => x.disabled = b); }
 
 const $ = id => document.getElementById(id);
 const pad = n => String(n).padStart(2, '0');
@@ -191,9 +269,10 @@ $('entry').addEventListener('submit', ev => {
   SECTIONS.forEach(s => { const v = parseFloat($('f-' + s.id).value); if (v > 0) e[s.id] = v; });
   const note = $('note').value.trim();
   if (note) e.note = note;
-  if (Object.keys(e).length) data[date] = e; else delete data[date];
-  save(); render();
-  toast(Object.keys(e).length ? 'Saved ' + date : 'Cleared ' + date);
+  const has = Object.keys(e).length > 0;
+  save(d => { if (has) d[date] = e; else delete d[date]; },
+    (has ? 'Log ' : 'Clear ') + date + (has ? ` (${fmt(dayTotal(e))})` : ''),
+    (has ? 'Saved ' : 'Cleared ') + date);
 });
 
 function render() {
@@ -244,12 +323,12 @@ function render() {
 
   // History table
   if (!dates.length) {
-    $('history').innerHTML = '<tr><td class="muted">Nothing logged yet — add your first day above.</td></tr>';
+    $('history').innerHTML = `<tr><td class="muted">Nothing logged yet${token ? ' — add your first day above.' : '.'}</td></tr>`;
     return;
   }
   const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   $('history').innerHTML = `
-    <tr><th>Date</th>${SECTIONS.map(s => `<th>${s.name}</th>`).join('')}<th>Total</th><th>Notes</th><th></th></tr>
+    <tr><th>Date</th>${SECTIONS.map(s => `<th>${s.name}</th>`).join('')}<th>Total</th><th>Notes</th>${token ? '<th></th>' : ''}</tr>
     ${dates.map(d => {
       const e = data[d];
       return `<tr>
@@ -257,7 +336,7 @@ function render() {
         ${SECTIONS.map(s => `<td>${e[s.id] ? fmt(e[s.id]) : '<span class="muted">–</span>'}</td>`).join('')}
         <td><b>${fmt(dayTotal(e))}</b></td>
         <td class="note" title="${esc(e.note || '')}">${esc(e.note || '')}</td>
-        <td style="white-space:nowrap"><button class="link" data-edit="${d}">edit</button><button class="link" data-del="${d}">delete</button></td>
+        ${token ? `<td style="white-space:nowrap"><button class="link" data-edit="${d}">edit</button><button class="link" data-del="${d}">delete</button></td>` : ''}
       </tr>`;
     }).join('')}`;
 }
@@ -265,7 +344,7 @@ function render() {
 $('history').addEventListener('click', ev => {
   const edit = ev.target.dataset.edit, del = ev.target.dataset.del;
   if (edit) { $('date').value = edit; fillForm(edit); window.scrollTo({ top: 0, behavior: 'smooth' }); }
-  if (del && confirm('Delete entry for ' + del + '?')) { delete data[del]; save(); render(); fillForm($('date').value); }
+  if (del && confirm('Delete entry for ' + del + '?')) save(d => { delete d[del]; }, 'Delete ' + del, 'Deleted ' + del);
 });
 
 $('export').addEventListener('click', () => {
@@ -281,13 +360,54 @@ $('file').addEventListener('change', async ev => {
   try {
     const incoming = JSON.parse(await f.text());
     if (typeof incoming !== 'object' || Array.isArray(incoming)) throw 0;
-    Object.assign(data, incoming); save(); render(); fillForm($('date').value);
-    toast('Imported ' + Object.keys(incoming).length + ' days');
-  } catch { toast('That file doesn\'t look like an export'); }
-  ev.target.value = '';
+    const n = Object.keys(incoming).length;
+    ev.target.value = '';
+    await save(d => Object.assign(d, incoming), `Import ${n} days`, `Imported ${n} days`);
+  } catch { toast('That file doesn\'t look like an export'); ev.target.value = ''; }
 });
 
-render();
+// --- Owner sign-in ---
+function applyAuth() {
+  document.querySelectorAll('.owner-only').forEach(el => el.hidden = !token);
+  $('auth').textContent = token ? 'Sign out' : 'Sign in';
+  $('status').innerHTML = token
+    ? 'Signed in — every save is committed to <a href="https://github.com/' + REPO + '/commits/main/' + FILE + '" target="_blank" rel="noopener">data.json</a> on GitHub.'
+    : 'Read-only view. Hours are stored in <a href="https://github.com/' + REPO + '/blob/main/' + FILE + '" target="_blank" rel="noopener">data.json</a> on GitHub.';
+  render();
+}
+$('auth').addEventListener('click', () => {
+  if (token) { token = null; store.del(TOKEN_KEY); applyAuth(); toast('Signed out'); }
+  else { $('auth-card').hidden = false; $('token').focus(); }
+});
+$('auth-cancel').addEventListener('click', () => $('auth-card').hidden = true);
+$('auth-form').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const t = $('token').value.trim();
+  try {
+    const res = await fetch('https://api.github.com/repos/' + REPO, { headers: { Authorization: 'Bearer ' + t } });
+    const repo = res.ok ? await res.json() : null;
+    if (!repo?.permissions?.push) throw 0;
+  } catch { return toast('That token can\'t write to ' + REPO); }
+  token = t; store.set(TOKEN_KEY, t);
+  $('token').value = ''; $('auth-card').hidden = true;
+  applyAuth(); toast('Signed in');
+  migrateLegacy();
+});
+
+// Entries saved by the first (browser-only) version of this page get uploaded once
+function migrateLegacy() {
+  let old;
+  try { old = JSON.parse(store.get(LEGACY_KEY)); } catch {}
+  if (!token || !old || !Object.keys(old).length) return;
+  if (!confirm(`Upload ${Object.keys(old).length} day(s) saved in this browser to GitHub?`)) return;
+  save(d => { for (const k in old) d[k] ??= old[k]; }, 'Import browser-saved entries', 'Uploaded browser entries')
+    .then(ok => ok && store.del(LEGACY_KEY));
+}
+
+applyAuth();
+fetchRemote()
+  .then(r => { data = r.data; render(); fillForm($('date').value); migrateLegacy(); })
+  .catch(e => toast('Couldn\'t load hours: ' + e.message));
 </script>
 </body>
 </html>
