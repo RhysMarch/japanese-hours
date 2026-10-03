@@ -404,7 +404,7 @@
     "id": "r6i(4XU-NH",
     "word": "取ります",
     "kana": "とります",
-    "meaning": "to take / pick up",
+    "meaning": "to take / pick up (an object — for photos it's 撮ります)",
     "examples": [
       {
         "jp": "つくえからほんをとります。",
@@ -1268,6 +1268,20 @@
       {
         "jp": "あれは えきですか。",
         "en": "Is that (over there) a station?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791039279617",
+    "word": "撮ります",
+    "kana": "とります",
+    "meaning": "to take (a photo / video)",
+    "examples": [
+      {
+        "jp": "じてんしゃの しゃしんを とります。",
+        "kanji": "自転車の写真を撮ります。",
+        "en": "I take a photo of my bicycle."
       }
     ],
     "deck": "Vocab"
