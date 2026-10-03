@@ -30,7 +30,13 @@
   .stat b { display: block; font-size: 24px; }
   .stat small { color: var(--muted); }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  form .fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  form .fields { margin: 8px 0 14px; border-top: 1px solid var(--line); }
+  .step { display: grid; grid-template-columns: 28px 1fr 110px; align-items: center; column-gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .step .num { width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; font-weight: 700; display: grid; place-items: center; }
+  .step .name { font-size: 15px; font-weight: 600; color: var(--ink); }
+  .step input { margin-top: 0; }
+  .step .sec-total { text-align: right; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; padding-right: 10px; }
+  .step .subs { grid-column: 2 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px; }
   label { display: block; font-size: 13px; color: var(--muted); }
   label .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
   input, textarea { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin-top: 4px; }
@@ -53,10 +59,6 @@
   .chart .col .seg:first-child { border-radius: 4px 4px 0 0; }
   .chart .lbl { font-size: 10px; color: var(--muted); text-align: center; margin-top: 4px; }
   .chart .col:hover::after { content: attr(data-tip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 11px; padding: 3px 6px; border-radius: 4px; white-space: nowrap; }
-  fieldset.sub { grid-column: 1 / -1; border: 1px solid var(--line); border-radius: 8px; padding: 4px 12px 12px; margin: 0; }
-  fieldset.sub legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
-  fieldset.sub legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
-  .subfields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .subline { font-size: 12px; color: var(--muted); margin: -4px 0 8px 150px; }
   .sub-note { font-size: 11px; color: var(--muted); white-space: nowrap; }
   .heat-wrap { overflow-x: auto; padding-bottom: 4px; }
@@ -85,7 +87,7 @@
   @media (max-width: 720px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
     .grid2 { grid-template-columns: 1fr; }
-    form .fields { grid-template-columns: repeat(2, 1fr); }
+    .step { grid-template-columns: 28px 1fr 90px; }
     .bar .name { width: 110px; }
     .subline { margin-left: 120px; }
   }
@@ -183,7 +185,7 @@
 const SECTIONS = [
   { id: 'genki',    name: 'Genki',             color: 'var(--c0)' },
   { id: 'writing',  name: 'Writing / Grammar', color: 'var(--c1)' },
-  // Anki is split by what you're drilling. Hours logged before the split live under plain `anki` ("unsorted").
+  // Anki is split by deck; its hours are the sum of the decks
   { id: 'anki',     name: 'Anki',              color: 'var(--c2)', subs: [
     { key: 'anki_kana',  name: 'Kana' },
     { key: 'anki_kanji', name: 'Kanji' },
@@ -271,9 +273,9 @@ const fmt = h => {
   const r = Math.round(h * 100) / 100;
   return (Number.isInteger(r) ? r : r.toFixed(2).replace(/0$/, '')) + 'h';
 };
-// Every key a section's hours can be stored under; for split sections the bare id holds unsorted (pre-split) hours
-const leaves = s => s.subs ? [...s.subs.map(x => x.key), s.id] : [s.id];
-const subName = (s, key) => (s.subs.find(x => x.key === key) || { name: 'Unsorted' }).name;
+// The keys a section's hours are stored under in data.json
+const leaves = s => s.subs ? s.subs.map(x => x.key) : [s.id];
+const subName = (s, key) => s.subs.find(x => x.key === key).name;
 const ALL_KEYS = SECTIONS.flatMap(leaves);
 const secHours = (e, s) => leaves(s).reduce((t, k) => t + (e[k] || 0), 0);
 const dayTotal = e => SECTIONS.reduce((t, s) => t + secHours(e, s), 0);
@@ -292,26 +294,31 @@ function toast(msg) {
 
 // Build form inputs
 const hoursInput = key => `<input type="number" min="0" max="24" step="0.25" inputmode="decimal" id="f-${key}" placeholder="0">`;
-$('fields').innerHTML = SECTIONS.map((s, i) => s.subs ? `
-  <fieldset class="sub">
-    <legend><span class="dot" style="background:${COLORS[i]}"></span>${s.name}</legend>
-    <div class="subfields">
-      ${s.subs.map(x => `<label>${x.name} ${hoursInput(x.key)}</label>`).join('')}
-      <label id="unsorted-${s.id}" hidden>Unsorted ${hoursInput(s.id)}</label>
-    </div>
-  </fieldset>` : `
-  <label><span class="dot" style="background:${COLORS[i]}"></span>${s.name} ${hoursInput(s.id)}</label>`).join('');
+// One numbered step per section, in the order of the daily routine
+$('fields').innerHTML = SECTIONS.map((s, i) => `
+  <div class="step">
+    <span class="num" style="background:${COLORS[i]}">${i + 1}</span>
+    ${s.subs ? `
+      <span class="name">${s.name}</span>
+      <span class="sec-total" id="t-${s.id}"></span>
+      <div class="subs">
+        ${s.subs.map(x => `<label>${x.name} ${hoursInput(x.key)}</label>`).join('')}
+      </div>` : `
+      <label class="name" for="f-${s.id}">${s.name}</label>
+      ${hoursInput(s.id)}`}
+  </div>`).join('');
 
 function fillForm(date) {
   const e = data[date] || {};
   ALL_KEYS.forEach(k => $('f-' + k).value = e[k] || '');
-  // only show the unsorted box on old days that still have unsplit hours, so they can be moved
-  SECTIONS.filter(s => s.subs).forEach(s => $('unsorted-' + s.id).hidden = !e[s.id]);
   $('note').value = e.note || '';
   updateDayTotal();
 }
 function updateDayTotal() {
-  const t = ALL_KEYS.reduce((sum, k) => sum + (parseFloat($('f-' + k).value) || 0), 0);
+  const e = {};
+  ALL_KEYS.forEach(k => e[k] = parseFloat($('f-' + k).value) || 0);
+  SECTIONS.filter(s => s.subs).forEach(s => { const h = secHours(e, s); $('t-' + s.id).textContent = h ? fmt(h) : ''; });
+  const t = dayTotal(e);
   $('day-total').textContent = t ? `${fmt(t)} for this day` : '';
 }
 
@@ -405,7 +412,6 @@ function render() {
       <div class="track"><div class="fill" style="width:${totals[s.id] / max * 100}%;background:${COLORS[i]}"></div></div>
       <div class="val">${fmt(totals[s.id])}</div>
     </div>${s.subs ? `<div class="subline">${leaves(s)
-      .filter(k => k !== s.id || keyTotals[k] > 0)
       .map(k => `${subName(s, k)} ${fmt(keyTotals[k])}`).join(' · ')}</div>` : ''}`).join('');
 
   // 14-day stacked chart
@@ -440,8 +446,7 @@ function render() {
         ${SECTIONS.map(s => {
           const h = secHours(e, s);
           if (!h) return '<td><span class="muted">–</span></td>';
-          const used = leaves(s).filter(k => e[k] > 0);
-          const parts = s.subs && !(used.length === 1 && used[0] === s.id) ? subBreakdown(e, s) : '';
+          const parts = s.subs ? subBreakdown(e, s) : '';
           return `<td>${fmt(h)}${parts ? `<div class="sub-note">${parts}</div>` : ''}</td>`;
         }).join('')}
         <td><b>${fmt(dayTotal(e))}</b></td>
