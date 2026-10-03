@@ -1285,5 +1285,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791041270562",
+    "word": "開発者",
+    "kana": "かいはつしゃ",
+    "meaning": "developer",
+    "examples": [
+      {
+        "jp": "わたしは ソフトウェアかいはつしゃです。",
+        "kanji": "私はソフトウェア開発者です。",
+        "en": "I'm a software developer."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]

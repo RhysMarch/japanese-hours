@@ -387,5 +387,29 @@
     "reading": "しろ",
     "meaning": "White",
     "added": "2026-10-03"
+  },
+  {
+    "k": "誰",
+    "reading": "だれ",
+    "meaning": "Who",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "開",
+    "reading": "かい / あ(ける)",
+    "meaning": "Open",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "発",
+    "reading": "はつ",
+    "meaning": "Depart / emit (as in 開発, development)",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "者",
+    "reading": "しゃ / もの",
+    "meaning": "Person (someone who…)",
+    "added": "2026-10-03"
   }
 ]
