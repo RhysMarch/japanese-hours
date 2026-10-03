@@ -97,8 +97,8 @@
 </main>
 <div class="toast" id="toast"></div>
 
-<script src="github.js"></script>
-<script src="anki.js"></script>
+<script src="github.js?v=20261003b"></script>
+<script src="anki.js?v=20261003b"></script>
 <script>
 const FILE = 'kanji.json';
 const $ = id => document.getElementById(id);
@@ -142,8 +142,10 @@ $('file').addEventListener('change', async ev => {
   const f = ev.target.files[0]; ev.target.value = '';
   if (!f) return;
   let incoming;
-  try { incoming = parseAnkiKanji(await f.text()); } catch { incoming = []; }
-  if (!incoming.length) return toast('No kanji found in that file');
+  // an old cached copy of anki.js won't have the parser — say so instead of "nothing found"
+  if (typeof parseAnkiKanji !== 'function') return toast('This page is out of date — press Ctrl+F5 to refresh, then try again');
+  try { incoming = parseAnkiKanji(await f.text()); } catch (e) { return toast('Couldn\x27t read that file: ' + e.message); }
+  if (!incoming.length) return toast('No kanji found in that file — is it a Notes in Plain Text export?');
   let added = [];
   await save(list => {
     added = [];
