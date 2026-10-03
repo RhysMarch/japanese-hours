@@ -67,7 +67,9 @@ function parseAnkiNotes(text) {
 function parseAnkiExport(text) {
   return parseAnkiNotes(text).map(({ id, deck, fields }) => {
     const front = stripEmoji(htmlLines(fields[0] || '').join(' '));
-    const [left, right] = front.includes('·') ? front.split('·').map(s => s.trim()) : ['', front.trim()];
+    // separator: "·" (middle dot), or " ・ " (the Japanese keyboard's dot, with spaces — katakana words can contain ・ themselves)
+    const sep = front.match(/^(.*?)\s*(?:·|\s・\s)\s*(.*)$/);
+    const [left, right] = sep ? [sep[1].trim(), sep[2].trim()] : ['', front.trim()];
     const word = left === '—' || left === '-' ? '' : left;
     const back = htmlLines(fields[1] || '').filter(l => !/^example:?$/i.test(l));
     const examples = [];
