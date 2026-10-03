@@ -44,7 +44,7 @@
   .vhead { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding-top: 0; padding-bottom: 6px; }
   .vrow { border-bottom: 1px solid var(--line); cursor: pointer; }
   .vrow:hover { background: var(--bg); }
-  .vrow .word { font-size: 17px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; color: var(--muted); }
+  .vrow .word { font-size: 19px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; color: var(--ink); }
   .vrow .kana { font-size: 21px; font-weight: 600; overflow-wrap: anywhere; }
   .vrow .ex { font-size: 15px; overflow-wrap: anywhere; }
   .vrow .en { font-size: 14px; visibility: hidden; }
@@ -300,7 +300,9 @@ $('file').addEventListener('change', async ev => {
   await save(list => {
     added = updated = 0;
     for (const v of incoming) {
-      const i = list.findIndex(x => x.id === v.id);
+      // match on Anki's note id, or failing that the same word + kana (cards added on either side get different ids)
+      let i = list.findIndex(x => x.id === v.id);
+      if (i < 0) i = list.findIndex(x => x.word === v.word && x.kana === v.kana);
       if (i < 0) { list.push(v); added++; }
       else if (JSON.stringify(list[i]) !== JSON.stringify(v)) { list[i] = v; updated++; }
     }
