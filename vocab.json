@@ -1299,5 +1299,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-hoshii",
+    "word": "欲しい",
+    "kana": "ほしい",
+    "meaning": "want (a thing)",
+    "examples": [
+      {
+        "jp": "ねこが ほしいです。",
+        "kanji": "猫が欲しいです。",
+        "en": "I want a cat."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
