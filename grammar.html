@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>文法 Grammar</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23c8102e'/></svg>">
+<style>
+  :root {
+    --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
+    --accent: #c8102e; --accent-soft: #fbe9ec; --great: #2e8b57;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; --great: #4caf7a; }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  a { color: var(--accent); }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
+  h1 span { color: var(--accent); }
+  h2 { font-size: 20px; margin: 28px 0 4px; }
+  .muted { color: var(--muted); }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  input { width: 100%; font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; }
+  input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+  .jump a { text-decoration: none; color: var(--ink); border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 3px 12px; font-size: 14px; }
+  .jump a:hover { border-color: var(--accent); }
+  .jump a.ja { font-size: 17px; font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif; }
+  .intro { margin: 0 0 12px; font-size: 14px; }
+  .g { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; scroll-margin-top: 16px; }
+  .g-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .g-title { font-size: 26px; font-weight: 700; font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif; }
+  .patterns .g-title { font-size: 20px; }
+  .g-reading { color: var(--muted); font-size: 14px; }
+  .g-gist { font-weight: 600; }
+  .covered { margin-left: auto; font-size: 12px; font-weight: 600; color: var(--great); border: 1px solid var(--great); border-radius: 999px; padding: 1px 9px; }
+  .g-note { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+  .use { margin-top: 12px; }
+  .use-label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--accent); }
+  .use-note { font-size: 13px; color: var(--muted); }
+  .ex { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px 16px; padding: 8px 10px; background: var(--bg); border-radius: 8px; margin-top: 6px; align-items: baseline; }
+  .ex .jp { font-size: 16px; }
+  .ex .kj { font-size: 16px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
+  .ex .en { color: var(--muted); font-size: 14px; }
+  mark { background: var(--accent-soft); color: var(--accent); font-weight: 700; border-radius: 3px; padding: 0 2px; }
+  .tip { margin-top: 10px; font-size: 14px; background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; }
+  .tip b { color: var(--accent); }
+  .empty { color: var(--muted); padding: 20px 0; text-align: center; }
+  @media (max-width: 720px) {
+    .ex { grid-template-columns: 1fr; gap: 0; }
+    .ex .en { margin-top: 2px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><span>文法</span> Grammar</h1>
+    <div class="row">
+      <a href="./">Hours</a>
+      <a href="kanji.html">Kanji</a>
+      <a href="vocab.html">Vocab</a>
+    </div>
+  </header>
+
+  <input type="search" id="q" placeholder="Search a particle, pattern or English…" autocomplete="off">
+  <nav class="jump" id="jump"></nav>
+  <div id="content"><p class="empty">Loading…</p></div>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+// [x] in an example → highlighted
+const marked = s => esc(s).replace(/\[([^\]]+)\]/g, '<mark>$1</mark>');
+const plain = s => (s || '').replace(/[\[\]]/g, '');
+
+let data = { sections: [] };
+
+function itemText(it) {
+  return [it.title, it.reading, it.gist, it.note, it.tip,
+    ...it.uses.flatMap(u => [u.label, u.note, ...u.examples.flatMap(e => [plain(e.jp), plain(e.kj), e.en])])].join(' ').toLowerCase();
+}
+
+function render() {
+  const q = $('q').value.trim().toLowerCase();
+  $('jump').innerHTML = data.sections.map(s => s.items.map(it =>
+    `<a href="#${it.id}" class="${/[぀-鿿]/.test(it.title) && it.title.length <= 5 ? 'ja' : ''}">${esc(it.title)}</a>`).join('')).join('<span style="width:12px"></span>');
+
+  const html = data.sections.map(s => {
+    const items = s.items.filter(it => !q || itemText(it).includes(q));
+    if (!items.length) return '';
+    return `<section class="${s.id}">
+      <h2>${esc(s.title)}</h2><p class="intro muted">${esc(s.intro)}</p>
+      ${items.map(it => `
+        <article class="g" id="${it.id}">
+          <div class="g-head">
+            <span class="g-title" lang="ja">${esc(it.title)}</span>
+            ${it.reading ? `<span class="g-reading">${esc(it.reading)}</span>` : ''}
+            <span class="g-gist">${esc(it.gist)}</span>
+            ${it.covered ? '<span class="covered" title="Covered in your lessons">✓ Covered</span>' : ''}
+          </div>
+          ${it.note ? `<p class="g-note">${esc(it.note)}</p>` : ''}
+          ${it.uses.map(u => `<div class="use">
+            ${u.label ? `<div class="use-label">${esc(u.label)}</div>` : ''}
+            ${u.note ? `<div class="use-note">${esc(u.note)}</div>` : ''}
+            ${u.examples.map(e => `<div class="ex">
+              <span class="jp" lang="ja">${marked(e.jp)}</span>
+              <span class="kj" lang="ja">${marked(e.kj)}</span>
+              <span class="en">${esc(e.en)}</span></div>`).join('')}
+          </div>`).join('')}
+          ${it.tip ? `<div class="tip"><b>Tip</b> ${esc(it.tip)}</div>` : ''}
+        </article>`).join('')}
+    </section>`;
+  }).join('');
+  $('content').innerHTML = html || '<p class="empty">Nothing matches.</p>';
+}
+
+$('q').addEventListener('input', render);
+fetch('grammar.json?t=' + Date.now(), { cache: 'no-store' })
+  .then(r => r.json())
+  .then(d => { data = d; render(); if (location.hash) document.querySelector(location.hash)?.scrollIntoView(); })
+  .catch(() => { $('content').innerHTML = '<p class="empty">Couldn\'t load grammar.</p>'; });
+</script>
+</body>
+</html>

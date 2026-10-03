@@ -1,0 +1,505 @@
+{
+  "sections": [
+    {
+      "id": "particles",
+      "title": "Particles",
+      "intro": "Small words that come after a word and show its job in the sentence.",
+      "items": [
+        {
+          "id": "wa",
+          "title": "は",
+          "reading": "wa",
+          "covered": true,
+          "gist": "Topic — \"as for…\"",
+          "note": "Says what the sentence is about. Written は, said \"wa\".",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "わたし[は] リースです。",
+                  "kj": "私[は]リースです。",
+                  "en": "I'm Rhys."
+                },
+                {
+                  "jp": "しごと[は] たのしいです。",
+                  "kj": "仕事[は]楽しいです。",
+                  "en": "Work is fun."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ga",
+          "title": "が",
+          "reading": "ga",
+          "covered": true,
+          "gist": "Subject — \"the one that…\"",
+          "note": "Points at who or what does / is something. Used with あります・います, すき, ほしい, and after question words (だれが, なにが).",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "こうえんに ねこ[が] います。",
+                  "kj": "公園に猫[が]います。",
+                  "en": "There's a cat in the park."
+                },
+                {
+                  "jp": "ラーメン[が] すきです。",
+                  "kj": "ラーメン[が]好きです。",
+                  "en": "I like ramen."
+                },
+                {
+                  "jp": "だれ[が] きますか。",
+                  "kj": "誰[が]来ますか。",
+                  "en": "Who's coming?"
+                }
+              ]
+            }
+          ],
+          "tip": "は vs が: は = \"talking about X…\", が = \"it's X (that…)\". Question words always take が, never は."
+        },
+        {
+          "id": "o",
+          "title": "を",
+          "reading": "o",
+          "covered": true,
+          "gist": "Object — the thing the action is done to",
+          "note": "Written を (wo), said \"o\".",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "しごとで コーヒー[を] のみます。",
+                  "kj": "仕事でコーヒー[を]飲みます。",
+                  "en": "I drink coffee at work."
+                },
+                {
+                  "jp": "きのう コード[を] かきました。",
+                  "kj": "昨日コード[を]書きました。",
+                  "en": "I wrote code yesterday."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ka",
+          "title": "か",
+          "reading": "ka",
+          "covered": true,
+          "gist": "Question — goes at the end",
+          "note": "Turns a polite sentence into a question. No ? needed.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "えきは どこです[か]。",
+                  "kj": "駅はどこです[か]。",
+                  "en": "Where is the station?"
+                },
+                {
+                  "jp": "コーヒーを のみます[か]。",
+                  "kj": "コーヒーを飲みます[か]。",
+                  "en": "Do you drink coffee?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ni",
+          "title": "に",
+          "reading": "ni",
+          "covered": true,
+          "gist": "A point — where to, where something is, when, what for",
+          "uses": [
+            {
+              "label": "Destination — to",
+              "examples": [
+                {
+                  "jp": "かいしゃ[に] いきます。",
+                  "kj": "会社[に]行きます。",
+                  "en": "I go to the office."
+                },
+                {
+                  "jp": "しごとの あとで うち[に] かえります。",
+                  "kj": "仕事の後で家[に]帰ります。",
+                  "en": "I go home after work."
+                }
+              ]
+            },
+            {
+              "label": "Place of existence — in / at (with あります・います)",
+              "examples": [
+                {
+                  "jp": "へや[に] コンピューターが あります。",
+                  "kj": "部屋[に]コンピューターがあります。",
+                  "en": "There's a computer in my room."
+                },
+                {
+                  "jp": "こうえん[に] いぬが います。",
+                  "kj": "公園[に]犬がいます。",
+                  "en": "There's a dog in the park."
+                }
+              ]
+            },
+            {
+              "label": "Time — at / on",
+              "note": "Only for specific times and days — not with きょう, あした, まいにち.",
+              "examples": [
+                {
+                  "jp": "どようび[に] バレーボールを します。",
+                  "kj": "土曜日[に]バレーボールをします。",
+                  "en": "I play volleyball on Saturdays."
+                },
+                {
+                  "jp": "くじ[に] かいしゃに いきます。",
+                  "kj": "九時[に]会社に行きます。",
+                  "en": "I go to the office at 9."
+                }
+              ]
+            },
+            {
+              "label": "Purpose of movement — go (somewhere) to do",
+              "note": "Verb stem (ます form minus ます) + に + いきます / きます / かえります.",
+              "examples": [
+                {
+                  "jp": "ラーメンを たべ[に] いきます。",
+                  "kj": "ラーメンを食べ[に]行きます。",
+                  "en": "I'm going to eat ramen."
+                },
+                {
+                  "jp": "みずを のみ[に] いきます。",
+                  "kj": "水を飲み[に]行きます。",
+                  "en": "I'm going for some water."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "de",
+          "title": "で",
+          "reading": "de",
+          "covered": true,
+          "gist": "Where an action happens, or what you use",
+          "uses": [
+            {
+              "label": "Place of action — at / in",
+              "examples": [
+                {
+                  "jp": "カフェ[で] にほんごを べんきょうします。",
+                  "kj": "カフェ[で]日本語を勉強します。",
+                  "en": "I study Japanese at a café."
+                },
+                {
+                  "jp": "たいいくかん[で] れんしゅうします。",
+                  "kj": "体育館[で]練習します。",
+                  "en": "I practise at the gym."
+                }
+              ]
+            },
+            {
+              "label": "Means — by / with / using",
+              "examples": [
+                {
+                  "jp": "じてんしゃ[で] かいしゃに いきます。",
+                  "kj": "自転車[で]会社に行きます。",
+                  "en": "I go to the office by bicycle."
+                },
+                {
+                  "jp": "スマホ[で] しゃしんを とります。",
+                  "kj": "スマホ[で]写真を撮ります。",
+                  "en": "I take photos with my smartphone."
+                }
+              ]
+            }
+          ],
+          "tip": "に vs で for places: に = where something IS or where you GO. で = where you DO something."
+        },
+        {
+          "id": "no",
+          "title": "の",
+          "reading": "no",
+          "gist": "Links two nouns — X's Y",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "これは わたし[の] かさです。",
+                  "kj": "これは私[の]傘です。",
+                  "en": "This is my umbrella."
+                },
+                {
+                  "jp": "にほんご[の] せんせい",
+                  "kj": "日本語[の]先生",
+                  "en": "Japanese teacher"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "to",
+          "title": "と",
+          "reading": "to",
+          "gist": "And (between nouns) / with",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "ねこ[と] いぬが すきです。",
+                  "kj": "猫[と]犬が好きです。",
+                  "en": "I like cats and dogs."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kara",
+          "title": "から・まで",
+          "reading": "kara / made",
+          "gist": "From… until / to…",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "くじ[から] ごじ[まで] しごとです。",
+                  "kj": "九時[から]五時[まで]仕事です。",
+                  "en": "I work from 9 to 5."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "patterns",
+      "title": "Patterns",
+      "intro": "Sentence frames — swap in your own words.",
+      "items": [
+        {
+          "id": "desu",
+          "title": "X は Y です",
+          "gist": "X is Y",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "せんせいは にほんじん[です]。",
+                  "kj": "先生は日本人[です]。",
+                  "en": "The teacher is Japanese."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "janai",
+          "title": "X は Y じゃないです",
+          "gist": "X is not Y",
+          "note": "Casual: じゃない. Very polite: ではありません.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "これは わたしの かさ[じゃないです]。",
+                  "kj": "これは私の傘[じゃないです]。",
+                  "en": "This isn't my umbrella."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "masu",
+          "title": "〜ます / 〜ません",
+          "gist": "Do / don't (polite, present & future)",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "まいにち アンキを し[ます]。",
+                  "kj": "毎日アンキをし[ます]。",
+                  "en": "I do Anki every day."
+                },
+                {
+                  "jp": "きょうは かいしゃに いき[ません]。",
+                  "kj": "今日は会社に行き[ません]。",
+                  "en": "I'm not going to the office today."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mashita",
+          "title": "〜ました / 〜ませんでした",
+          "gist": "Did / didn't (polite past)",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "こうえんで バレーボールを し[ました]。",
+                  "kj": "公園でバレーボールをし[ました]。",
+                  "en": "I played volleyball in the park."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aru-iru",
+          "title": "に X が あります・います",
+          "gist": "There is X — あります for things, います for people & animals",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "へやに コンピューターが [あります]。",
+                  "kj": "部屋にコンピューターが[あります]。",
+                  "en": "There's a computer in my room."
+                },
+                {
+                  "jp": "こうえんに ねこが [います]。",
+                  "kj": "公園に猫が[います]。",
+                  "en": "There's a cat in the park."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "suki",
+          "title": "X が すきです・ほしいです",
+          "gist": "I like X / I want X (a thing)",
+          "note": "The thing takes が, not を.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "ねこが [すきです]。",
+                  "kj": "猫が[好きです]。",
+                  "en": "I like cats."
+                },
+                {
+                  "jp": "くろい コートが [ほしいです]。",
+                  "kj": "黒いコートが[欲しいです]。",
+                  "en": "I want a black coat."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tai",
+          "title": "〜たい(です)",
+          "gist": "Want to do",
+          "note": "Stem + たい: いきます → いきたい.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "にほんへ いき[たいです]。",
+                  "kj": "日本へ行き[たいです]。",
+                  "en": "I want to go to Japan."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tekudasai",
+          "title": "〜てください",
+          "gist": "Please do…",
+          "note": "て form + ください.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "ここに かい[てください]。",
+                  "kj": "ここに書い[てください]。",
+                  "en": "Please write here."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "teimasu",
+          "title": "〜ています",
+          "gist": "Is doing (right now)",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "いま にほんごを べんきょうし[ています]。",
+                  "kj": "今、日本語を勉強し[ています]。",
+                  "en": "I'm studying Japanese right now."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adj",
+          "title": "い-adjectives: 〜くない・〜かった",
+          "gist": "Not… / was…",
+          "note": "Drop い, add くない or かった. いい → よくない / よかった.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "この ねこは おおき[くない]です。",
+                  "kj": "この猫は大き[くない]です。",
+                  "en": "This cat isn't big."
+                },
+                {
+                  "jp": "ラーメンは おいし[かった]です。",
+                  "kj": "ラーメンは美味し[かった]です。",
+                  "en": "The ramen was delicious."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yori",
+          "title": "A は B より (adj)",
+          "gist": "A is more… than B",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "いぬは ねこ[より] おおきいです。",
+                  "kj": "犬は猫[より]大きいです。",
+                  "en": "Dogs are bigger than cats."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mashou",
+          "title": "〜ましょう",
+          "gist": "Let's…",
+          "note": "As a question 〜ましょうか = \"Shall we…?\"",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "ラーメンを たべ[ましょう]。",
+                  "kj": "ラーメンを食べ[ましょう]。",
+                  "en": "Let's eat ramen."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
