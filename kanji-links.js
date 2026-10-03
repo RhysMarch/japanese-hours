@@ -26,7 +26,8 @@ function kanjiCoverage(vocab, kanjiList) {
 const VOWEL_OF = { あ: 'あかさたなはまやらわがざだばぱぁゃ', い: 'いきしちにひみりぎじぢびぴぃ', う: 'うくすつぬふむゆるぐずづぶぷぅゅ', え: 'えけせてねへめれげぜでべぺぇ', お: 'おこそとのほもよろをごぞどぼぽぉょ' };
 // Katakana → hiragana, and a long-vowel mark spelled out: カード → かあど
 function kanaKey(s) {
-  const hira = s.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+  const hira = s.replace(/[()（）\s]/g, '')   // た(べる) → たべる
+    .replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
   return hira.replace(/(.)ー/g, (m, c) => c + (Object.keys(VOWEL_OF).find(v => VOWEL_OF[v].includes(c)) || 'ー'));
 }
 

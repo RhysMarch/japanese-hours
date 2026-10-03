@@ -97,6 +97,8 @@ const KANA = {
   ha:'は',hi:'ひ',fu:'ふ',he:'へ',ho:'ほ',ma:'ま',mi:'み',mu:'む',me:'め',mo:'も',ya:'や',yu:'ゆ',yo:'よ',ra:'ら',ri:'り',ru:'る',re:'れ',ro:'ろ',
   wa:'わ',wo:'を',ga:'が',gi:'ぎ',gu:'ぐ',ge:'げ',go:'ご',za:'ざ',ji:'じ',zu:'ず',ze:'ぜ',zo:'ぞ',da:'だ',de:'で',do:'ど',
   ba:'ば',bi:'び',bu:'ぶ',be:'べ',bo:'ぼ',pa:'ぱ',pi:'ぴ',pu:'ぷ',pe:'ぺ',po:'ぽ',a:'あ',i:'い',u:'う',e:'え',o:'お',
+  // sounds used in katakana loanwords (カフェ, パーティー, シェア)
+  fa:'ふぁ',fi:'ふぃ',fe:'ふぇ',fo:'ふぉ',ti:'てぃ',di:'でぃ',she:'しぇ',je:'じぇ',che:'ちぇ',wi:'うぃ',we:'うぇ',
 };
 function romajiToKana(romaji) {
   let s = romaji.toLowerCase().replace(/ā/g, 'aa').replace(/ī/g, 'ii').replace(/ū/g, 'uu').replace(/ē/g, 'ei').replace(/ō/g, 'ou').replace(/\s+/g, '');
