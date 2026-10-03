@@ -31,29 +31,22 @@
   .row { display: flex; gap: 10px; align-items: end; flex-wrap: wrap; }
   button { font: inherit; cursor: pointer; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 8px 14px; }
   button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
-  button.danger { color: var(--accent); }
   button.link { border: none; background: none; color: var(--muted); padding: 2px 6px; }
   button.link:hover { color: var(--accent); }
-  .kform { display: grid; grid-template-columns: 90px 1fr 1fr 160px; gap: 10px; align-items: end; }
-  .kform #f-k { font-size: 28px; text-align: center; padding: 2px; height: 46px; }
-  .kform input, .kform select { height: 46px; }
-  .actions { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
   .kbox { position: relative; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 10px 6px 8px; text-align: center; }
-  .owner .kbox { cursor: pointer; }
-  .owner .kbox:hover { border-color: var(--accent); }
-  .kbox.sel { outline: 2px solid var(--accent); }
   .kbox .k { font-size: 44px; line-height: 1.15; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
   .kbox .r { font-size: 13px; color: var(--ink); min-height: 1.4em; }
   .kbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; visibility: hidden; }
   .kbox { cursor: pointer; }
-  .kbox:hover .m, .kbox.reveal .m, .kbox.sel .m { visibility: visible; }
+  .kbox:hover .m, .kbox.reveal .m { visibility: visible; }
+  .kbox .rm { position: absolute; top: 2px; right: 4px; border: none; background: none; color: var(--muted); font-size: 16px; line-height: 1; padding: 2px 4px; opacity: 0; }
+  .kbox:hover .rm, .kbox.reveal .rm { opacity: 1; }
+  .kbox .rm:hover { color: var(--accent); }
   .empty { color: var(--muted); padding: 20px 0; text-align: center; }
   .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
   .toast.show { opacity: 1; }
   @media (max-width: 720px) {
-    .kform { grid-template-columns: 76px 1fr; }
-    .kform .wide { grid-column: 1 / -1; }
     .grid { grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); }
     .kbox .k { font-size: 38px; }
   }
@@ -83,20 +76,15 @@
   </div>
 
   <div class="card owner-only" hidden>
-    <h2 id="form-title">Add a kanji</h2>
-    <form id="kform">
-      <div class="kform">
-        <label>Kanji <input id="f-k" maxlength="2" required autocomplete="off" lang="ja"></label>
-        <label>Reading <input id="f-r" placeholder="e.g. くすり" autocomplete="off" lang="ja"></label>
-        <label class="wide">Meaning <input id="f-m" placeholder="e.g. medicine" autocomplete="off"></label>
-      </div>
-      <div class="actions">
-        <button type="submit" class="primary" id="f-save">Add</button>
-        <button type="button" id="f-cancel" hidden>Cancel</button>
-        <button type="button" class="danger" id="f-del" hidden>Remove</button>
-        <span class="muted" style="font-size:13px" id="f-hint">Tip: click any box below to edit it.</span>
-      </div>
-    </form>
+    <h2>Import from Anki</h2>
+    <p class="muted" style="margin:0 0 12px;font-size:14px">
+      In Anki: <b>Browse</b> → select the kanji deck → <b>Notes → Export Notes</b> → <i>Notes in Plain Text</i>, with
+      <i>Include HTML</i>, <i>Include deck name</i> and <i>Include unique identifier</i> ticked.
+      Cards should have just the kanji on the front, and romaji then meaning on the back.
+      Only kanji that aren't already here get added.
+    </p>
+    <button type="button" class="primary" id="import">Choose Anki export (.txt)</button>
+    <input type="file" id="file" accept=".txt,text/plain" hidden>
   </div>
 
   <div class="card">
@@ -110,6 +98,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="github.js"></script>
+<script src="anki.js"></script>
 <script>
 const FILE = 'kanji.json';
 const $ = id => document.getElementById(id);
@@ -117,9 +106,8 @@ const pad = n => String(n).padStart(2, '0');
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-let kanji = [];        // [{ k, reading, meaning, added: 'YYYY-MM-DD' }]
+let kanji = [];        // [{ k, reading, meaning, added: 'YYYY-MM-DD', id? (Anki note id) }]
 let token = store.get(TOKEN_KEY);
-let editing = null;    // the kanji character being edited, or null when adding
 
 function toast(msg) {
   const t = $('toast'); t.textContent = msg; t.classList.add('show');
@@ -129,7 +117,8 @@ function toast(msg) {
 function render() {
   $('s-total').textContent = kanji.length;
   $('grid').innerHTML = kanji.length ? kanji.map(x => `
-    <div class="kbox${x.k === editing ? ' sel' : ''}" data-k="${esc(x.k)}">
+    <div class="kbox" data-k="${esc(x.k)}">
+      ${token ? `<button type="button" class="rm" data-rm="${esc(x.k)}" title="Remove ${esc(x.k)}">×</button>` : ''}
       <div class="k" lang="ja">${esc(x.k)}</div>
       <div class="r" lang="ja">${esc(x.reading)}</div>
       <div class="m">${esc(x.meaning)}</div>
@@ -137,57 +126,45 @@ function render() {
     : '<div class="empty">No kanji yet.</div>';
 }
 
-function setEditing(k) {
-  editing = k;
-  const x = kanji.find(x => x.k === k);
-  $('form-title').textContent = x ? `Edit ${x.k}` : 'Add a kanji';
-  $('f-k').value = x?.k || '';
-  $('f-r').value = x?.reading || '';
-  $('f-m').value = x?.meaning || '';
-  $('f-save').textContent = x ? 'Save' : 'Add';
-  $('f-cancel').hidden = $('f-del').hidden = !x;
-  $('f-hint').hidden = !!x;
-  render();
-}
-
 async function save(mutate, message, okMsg) {
   if (!token) { toast('Sign in to edit'); return false; }
   document.querySelectorAll('button').forEach(b => b.disabled = true);
   try {
     kanji = await ghWrite(FILE, list => mutate(list) ?? list, message, token, { empty: [] });
-    toast(okMsg); return true;
+    toast(typeof okMsg === 'function' ? okMsg() : okMsg); return true;
   } catch (e) { toast(e.message); return false; }
   finally { document.querySelectorAll('button').forEach(b => b.disabled = false); render(); }
 }
 
-$('kform').addEventListener('submit', async ev => {
-  ev.preventDefault();
-  const k = $('f-k').value.trim();
-  if (!k) return;
-  const entry = { k, reading: $('f-r').value.trim(), meaning: $('f-m').value.trim() };
-  const was = editing;
-  if (k !== was && kanji.some(x => x.k === k)) { toast(k + ' is already on your list'); setEditing(k); return; }
-  const ok = await save(list => {
-    const i = list.findIndex(x => x.k === (was || k));
-    if (i >= 0) list[i] = { ...list[i], ...entry };
-    else list.push({ ...entry, added: today() });
-  }, (was ? 'Update kanji ' : 'Add kanji ') + k, (was ? 'Saved ' : 'Added ') + k);
-  if (ok) { setEditing(null); $('f-k').focus(); }
-});
-$('f-cancel').addEventListener('click', () => setEditing(null));
-$('f-del').addEventListener('click', async () => {
-  const k = editing;
-  if (!k || !confirm(`Remove ${k} from your list?`)) return;
-  if (await save(list => list.filter(x => x.k !== k), 'Remove kanji ' + k, 'Removed ' + k)) setEditing(null);
+// Merge an Anki export: a kanji already on the page (by Anki note id or by the character itself) is left as-is
+$('import').addEventListener('click', () => $('file').click());
+$('file').addEventListener('change', async ev => {
+  const f = ev.target.files[0]; ev.target.value = '';
+  if (!f) return;
+  let incoming;
+  try { incoming = parseAnkiKanji(await f.text()); } catch { incoming = []; }
+  if (!incoming.length) return toast('No kanji found in that file');
+  let added = [];
+  await save(list => {
+    added = [];
+    for (const x of incoming) {
+      const existing = list.find(y => (x.id && y.id === x.id) || y.k === x.k);
+      if (existing) { existing.id ??= x.id; continue; }
+      list.push({ k: x.k, reading: x.reading, meaning: x.meaning, added: today(), id: x.id });
+      added.push(x.k);
+    }
+  }, `Import kanji from Anki (${f.name})`,
+     () => added.length ? `Added ${added.length}: ${added.join(' ')}` : 'No new kanji — all already here');
 });
 
-$('grid').addEventListener('click', ev => {
-  const box = ev.target.closest('.kbox');
-  if (!box) return;
-  // visitors: tap reveals the meaning (no hover on phones); owner: tap edits
-  if (!token) { box.classList.toggle('reveal'); return; }
-  setEditing(box.dataset.k);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+$('grid').addEventListener('click', async ev => {
+  const rm = ev.target.dataset.rm;
+  if (rm) {
+    if (confirm(`Remove ${rm} from your list?`)) await save(list => list.filter(x => x.k !== rm), 'Remove kanji ' + rm, 'Removed ' + rm);
+    return;
+  }
+  // tap reveals the meaning (no hover on phones)
+  ev.target.closest('.kbox')?.classList.toggle('reveal');
 });
 
 // --- Owner sign-in (same token as the hours page) ---
@@ -195,7 +172,7 @@ function applyAuth() {
   document.querySelectorAll('.owner-only').forEach(el => el.hidden = !token);
   document.body.classList.toggle('owner', !!token);
   $('auth').textContent = token ? 'Sign out' : 'Sign in';
-  if (!token) setEditing(null); else render();
+  render();
 }
 $('auth').addEventListener('click', () => {
   if (token) { token = null; store.del(TOKEN_KEY); applyAuth(); toast('Signed out'); }
@@ -213,7 +190,7 @@ $('auth-form').addEventListener('submit', async ev => {
 
 applyAuth();
 ghRead(FILE, [], token)
-  .then(r => { kanji = r.data; render(); $('status').textContent = token ? 'Click a box to edit it.' : 'Hover or tap a kanji for its meaning.'; })
+  .then(r => { kanji = r.data; render(); $('status').textContent = 'Hover or tap a kanji for its meaning.'; })
   .catch(e => { $('status').textContent = 'Couldn\'t load kanji: ' + e.message; });
 </script>
 </body>
