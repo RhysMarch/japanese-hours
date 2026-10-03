@@ -39,20 +39,28 @@
   .decks { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
   .decks button { padding: 3px 12px; border-radius: 999px; font-size: 13px; }
   .decks button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-  .list { border-top: 1px solid var(--line); }
-  .w { border-bottom: 1px solid var(--line); padding: 10px 4px; cursor: pointer; }
-  .w .main { display: grid; grid-template-columns: minmax(90px, 160px) minmax(90px, 180px) 1fr; gap: 12px; align-items: baseline; }
-  .w .word { font-size: 20px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
-  .w .word.none { color: var(--muted); font-size: 15px; }
-  .w .kana { font-size: 15px; }
-  .w .meaning { color: var(--muted); font-size: 14px; visibility: hidden; }
-  .w:hover .meaning, .w.open .meaning { visibility: visible; }
-  .w .more { display: none; margin: 8px 0 2px; padding: 10px 12px; background: var(--bg); border-radius: 8px; font-size: 14px; }
-  .w.open .more { display: block; }
-  .w .ex-jp { font-size: 16px; }
-  .w .ex-en { color: var(--muted); margin-bottom: 6px; }
-  .w .ex-en:last-of-type { margin-bottom: 0; }
-  .w .meta { display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 12px; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 10px; }
+  .vbox { position: relative; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 12px 8px 10px; text-align: center; cursor: pointer; min-width: 0; }
+  .vbox:hover { border-color: var(--accent); }
+  .vbox .word { font-size: 26px; line-height: 1.25; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; overflow-wrap: anywhere; }
+  .vbox .word.long { font-size: 20px; }
+  .vbox .word.xlong { font-size: 16px; }
+  .vbox .kana { font-size: 13px; min-height: 1.4em; overflow-wrap: anywhere; }
+  .vbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; visibility: hidden; }
+  .vbox:hover .m { visibility: visible; }
+  #d-body { padding: 22px 20px 16px; }
+  dialog { border: 1px solid var(--line); border-radius: 12px; padding: 0; width: min(440px, calc(100% - 32px)); background: var(--card); color: var(--ink); }
+  dialog::backdrop { background: rgba(0, 0, 0, .4); }
+  dialog .x { position: absolute; top: 8px; right: 10px; border: none; background: none; font-size: 22px; color: var(--muted); padding: 2px 8px; }
+  dialog .x:hover { color: var(--accent); }
+  .d-word { font-size: 38px; line-height: 1.2; text-align: center; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
+  .d-kana { text-align: center; font-size: 17px; }
+  .d-meaning { text-align: center; font-weight: 600; margin: 6px 0 14px; }
+  .d-ex { background: var(--bg); border-radius: 8px; padding: 10px 12px; font-size: 14px; }
+  .d-ex .jp { font-size: 16px; }
+  .d-ex .en { color: var(--muted); margin-bottom: 8px; }
+  .d-ex .en:last-child { margin-bottom: 0; }
+  .d-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 12px; color: var(--muted); }
   .empty { color: var(--muted); padding: 20px 0; text-align: center; }
   .fmt { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; font-size: 14px; }
   .fmt summary { cursor: pointer; color: var(--accent); font-weight: 600; }
@@ -69,8 +77,7 @@
   .toast.show { opacity: 1; }
   @media (max-width: 720px) {
     .mock { grid-template-columns: 1fr; }
-    .w .main { grid-template-columns: 1fr 1fr; }
-    .w .meaning { grid-column: 1 / -1; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(108px, 1fr)); }
   }
 </style>
 </head>
@@ -155,9 +162,10 @@
       <input type="search" id="q" placeholder="Search Japanese or English…" autocomplete="off">
     </div>
     <div class="decks" id="decks"></div>
-    <div class="list" id="list"></div>
+    <div class="grid" id="list"></div>
   </div>
 </main>
+<dialog id="detail"><button type="button" class="x" id="d-close" aria-label="Close">×</button><div id="d-body"></div></dialog>
 <div class="toast" id="toast"></div>
 
 <script src="github.js?v=20261003b"></script>
@@ -170,7 +178,6 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 let vocab = [];        // [{ id, word, kana, meaning, examples: [{ jp, en }], deck }]
 let token = store.get(TOKEN_KEY);
 let deck = 'all';
-const open = new Set();
 
 function toast(msg) {
   const t = $('toast'); t.textContent = msg; t.classList.add('show');
@@ -189,17 +196,12 @@ function render() {
   const shown = vocab.filter(v => (deck === 'all' || v.deck === deck) &&
     (!q || [v.word, v.kana, v.meaning].some(f => (f || '').toLowerCase().includes(q))));
 
+  const size = s => s.length > 6 ? ' xlong' : s.length > 4 ? ' long' : '';
   $('list').innerHTML = shown.length ? shown.map(v => `
-    <div class="w${open.has(v.id) ? ' open' : ''}" data-id="${esc(v.id)}">
-      <div class="main">
-        <span class="word${v.word ? '' : ' none'}" lang="ja">${v.word ? esc(v.word) : '—'}</span>
-        <span class="kana" lang="ja">${esc(v.kana)}</span>
-        <span class="meaning">${esc(v.meaning)}</span>
-      </div>
-      <div class="more">
-        ${v.examples.map(e => `<div class="ex-jp" lang="ja">${esc(e.jp)}</div><div class="ex-en">${esc(e.en)}</div>`).join('') || '<span class="muted">No example sentence.</span>'}
-        <div class="meta"><span>${esc(v.deck)}</span>${token ? `<button type="button" class="link" data-del="${esc(v.id)}">remove</button>` : ''}</div>
-      </div>
+    <div class="vbox" data-id="${esc(v.id)}">
+      <div class="word${size(v.word || v.kana)}" lang="ja">${esc(v.word || v.kana)}</div>
+      <div class="kana" lang="ja">${v.word ? esc(v.kana) : ''}</div>
+      <div class="m">${esc(v.meaning)}</div>
     </div>`).join('')
     : `<div class="empty">${vocab.length ? 'No words match.' : 'No words yet.'}</div>`;
 }
@@ -209,17 +211,33 @@ $('decks').addEventListener('click', ev => {
   const d = ev.target.dataset.deck;
   if (d) { deck = d; render(); }
 });
-$('list').addEventListener('click', async ev => {
+// Click a box: popup with meaning, example sentences and deck
+function showWord(id) {
+  const v = vocab.find(x => x.id === id);
+  if (!v) return;
+  $('d-body').innerHTML = `
+    <div class="d-word" lang="ja">${esc(v.word || v.kana)}</div>
+    ${v.word ? `<div class="d-kana" lang="ja">${esc(v.kana)}</div>` : ''}
+    <div class="d-meaning">${esc(v.meaning)}</div>
+    <div class="d-ex">${v.examples.map(e => `<div class="jp" lang="ja">${esc(e.jp)}</div><div class="en">${esc(e.en)}</div>`).join('')
+      || '<span class="muted">No example sentence.</span>'}</div>
+    <div class="d-meta"><span>${esc(v.deck)}</span>${token ? `<button type="button" class="link" data-del="${esc(v.id)}">remove</button>` : ''}</div>`;
+  $('detail').showModal();
+}
+$('list').addEventListener('click', ev => {
+  const box = ev.target.closest('.vbox');
+  if (box) showWord(box.dataset.id);
+});
+$('d-close').addEventListener('click', () => $('detail').close());
+$('detail').addEventListener('click', async ev => {
+  if (ev.target === $('detail')) return $('detail').close();   // clicked the backdrop
   const del = ev.target.dataset.del;
-  if (del) {
-    const v = vocab.find(x => x.id === del);
-    if (v && confirm(`Remove ${v.word || v.kana}?`)) await save(list => list.filter(x => x.id !== del), 'Remove word ' + (v.word || v.kana), 'Removed');
-    return;
+  if (!del) return;
+  const v = vocab.find(x => x.id === del);
+  if (v && confirm(`Remove ${v.word || v.kana}?`)) {
+    $('detail').close();
+    await save(list => list.filter(x => x.id !== del), 'Remove word ' + (v.word || v.kana), 'Removed');
   }
-  const row = ev.target.closest('.w');
-  if (!row) return;
-  open.has(row.dataset.id) ? open.delete(row.dataset.id) : open.add(row.dataset.id);
-  row.classList.toggle('open');
 });
 
 async function save(mutate, message, okMsg) {
@@ -275,7 +293,7 @@ $('auth-form').addEventListener('submit', async ev => {
 
 applyAuth();
 ghRead(FILE, [], token)
-  .then(r => { vocab = r.data; render(); $('status').textContent = 'Hover or tap a word for its meaning.'; })
+  .then(r => { vocab = r.data; render(); $('status').textContent = 'Hover for the meaning, tap a word for examples.'; })
   .catch(e => { $('status').textContent = 'Couldn\'t load vocab: ' + e.message; });
 </script>
 </body>
