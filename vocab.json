@@ -864,5 +864,334 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024496",
+    "word": "面白い",
+    "kana": "おもしろい",
+    "meaning": "interesting",
+    "examples": [
+      {
+        "jp": "にほんごは おもしろいです。",
+        "en": "Japanese is interesting."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024497",
+    "word": "",
+    "kana": "かっこいい",
+    "meaning": "cool",
+    "examples": [
+      {
+        "jp": "その じてんしゃは かっこいいです。",
+        "en": "That bicycle is cool."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024498",
+    "word": "美味しい",
+    "kana": "おいしい",
+    "meaning": "tasty / delicious",
+    "examples": [
+      {
+        "jp": "この ラーメンは おいしいです。",
+        "en": "This ramen is delicious."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024499",
+    "word": "馬鹿",
+    "kana": "ばか",
+    "meaning": "idiot / stupid (rude)",
+    "examples": [
+      {
+        "jp": "わたしは ばかじゃないです。",
+        "en": "I'm not an idiot."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024500",
+    "word": "犬",
+    "kana": "いぬ",
+    "meaning": "dog",
+    "examples": [
+      {
+        "jp": "こうえんに いぬが います。",
+        "en": "There is a dog in the park."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024501",
+    "word": "大丈夫です",
+    "kana": "だいじょうぶです",
+    "meaning": "I'm okay / it's fine",
+    "examples": [
+      {
+        "jp": "だいじょうぶですか。",
+        "en": "Are you okay?"
+      },
+      {
+        "jp": "はい、だいじょうぶです。",
+        "en": "Yes, I'm okay."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024502",
+    "word": "",
+    "kana": "カード",
+    "meaning": "card",
+    "examples": [
+      {
+        "jp": "カードを つかいます。",
+        "en": "I'll use a card."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024503",
+    "word": "バス停",
+    "kana": "バスてい",
+    "meaning": "bus stop",
+    "examples": [
+      {
+        "jp": "バスていは どこですか。",
+        "en": "Where is the bus stop?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024504",
+    "word": "空港",
+    "kana": "くうこう",
+    "meaning": "airport",
+    "examples": [
+      {
+        "jp": "あした くうこうに いきます。",
+        "en": "I'm going to the airport tomorrow."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024505",
+    "word": "地下鉄",
+    "kana": "ちかてつ",
+    "meaning": "subway",
+    "examples": [
+      {
+        "jp": "ちかてつで かいしゃに いきます。",
+        "en": "I go to the office by subway."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024506",
+    "word": "手袋",
+    "kana": "てぶくろ",
+    "meaning": "gloves",
+    "examples": [
+      {
+        "jp": "へやに てぶくろが あります。",
+        "en": "There are gloves in my room."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024507",
+    "word": "赤",
+    "kana": "あか",
+    "meaning": "red",
+    "examples": [
+      {
+        "jp": "あかが すきです。",
+        "en": "I like red."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024508",
+    "word": "白",
+    "kana": "しろ",
+    "meaning": "white",
+    "examples": [
+      {
+        "jp": "しろい ねこが います。",
+        "en": "There is a white cat."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024509",
+    "word": "青",
+    "kana": "あお",
+    "meaning": "blue",
+    "examples": [
+      {
+        "jp": "あおい じてんしゃです。",
+        "en": "It's a blue bicycle."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024510",
+    "word": "黒",
+    "kana": "くろ",
+    "meaning": "black",
+    "examples": [
+      {
+        "jp": "くろい ねこが すきです。",
+        "en": "I like black cats."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024511",
+    "word": "",
+    "kana": "オレンジ",
+    "meaning": "orange",
+    "examples": [
+      {
+        "jp": "オレンジの カードです。",
+        "en": "It's an orange card."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024512",
+    "word": "緑",
+    "kana": "みどり",
+    "meaning": "green",
+    "examples": [
+      {
+        "jp": "みどりの じてんしゃです。",
+        "en": "It's a green bicycle."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024513",
+    "word": "紫",
+    "kana": "むらさき",
+    "meaning": "purple",
+    "examples": [
+      {
+        "jp": "むらさきが だいすきです。",
+        "en": "I love purple."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024514",
+    "word": "左",
+    "kana": "ひだり",
+    "meaning": "left",
+    "examples": [
+      {
+        "jp": "えきは ひだりです。",
+        "en": "The station is on the left."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024515",
+    "word": "右",
+    "kana": "みぎ",
+    "meaning": "right",
+    "examples": [
+      {
+        "jp": "カフェは みぎです。",
+        "en": "The café is on the right."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024516",
+    "word": "上",
+    "kana": "うえ",
+    "meaning": "up / on top",
+    "examples": [
+      {
+        "jp": "つくえの うえに ほんが あります。",
+        "en": "There's a book on the desk."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024517",
+    "word": "下",
+    "kana": "した",
+    "meaning": "down / under",
+    "examples": [
+      {
+        "jp": "つくえの したに ねこが います。",
+        "en": "There's a cat under the desk."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024518",
+    "word": "",
+    "kana": "これ",
+    "meaning": "this (near me)",
+    "examples": [
+      {
+        "jp": "これは なんですか。",
+        "en": "What is this?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024519",
+    "word": "",
+    "kana": "それ",
+    "meaning": "that (near you)",
+    "examples": [
+      {
+        "jp": "それは わたしの ほんです。",
+        "en": "That is my book."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791037024520",
+    "word": "",
+    "kana": "あれ",
+    "meaning": "that (over there)",
+    "examples": [
+      {
+        "jp": "あれは えきですか。",
+        "en": "Is that (over there) a station?"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
