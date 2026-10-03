@@ -120,6 +120,7 @@
     <h1><span>日本語</span> Hours</h1>
     <div class="row" style="align-items:center">
       <span class="muted" id="today"></span>
+      <a href="kanji.html" id="kanji-link">漢字 Kanji →</a>
       <button type="button" class="link" id="auth">Sign in</button>
     </div>
   </header>
@@ -213,6 +214,7 @@
 </main>
 <div class="toast" id="toast"></div>
 
+<script src="github.js"></script>
 <script src="insights.js"></script>
 <script>
 const SECTIONS = [
@@ -229,68 +231,19 @@ const SECTIONS = [
   { id: 'duolingo', name: 'Duolingo',          color: 'var(--c6)' },
 ];
 const COLORS = SECTIONS.map(s => s.color);
-const REPO = 'RhysMarch/japanese-hours';
 const FILE = 'data.json';
-const API = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
-const TOKEN_KEY = 'japanese-hours-token';
 const LEGACY_KEY = 'japanese-hours-v1';
-
-// localStorage can be unavailable (private mode etc.) — never let that break the page
-const store = {
-  get(k) { try { return localStorage.getItem(k); } catch { return null; } },
-  set(k, v) { try { localStorage.setItem(k, v); } catch {} },
-  del(k) { try { localStorage.removeItem(k); } catch {} },
-};
 
 let data = {};
 const HISTORY_PAGE = 14;
 let historyLimit = HISTORY_PAGE;
 let token = store.get(TOKEN_KEY);
 
-// UTF-8 safe base64, so Japanese in notes survives the round trip
-const b64encode = s => {
-  let bin = '';
-  new TextEncoder().encode(s).forEach(b => bin += String.fromCharCode(b));
-  return btoa(bin);
-};
-const b64decode = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g, '')), c => c.charCodeAt(0)));
-
-async function fetchRemote() {
-  const headers = { Accept: 'application/vnd.github+json' };
-  if (token) headers.Authorization = 'Bearer ' + token;
-  const res = await fetch(API + '?t=' + Date.now(), { headers, cache: 'no-store' });
-  if (res.status === 404) return { data: {}, sha: null };
-  if (!res.ok) {
-    // API rate limit for anonymous visitors is 60/hr — fall back to the Pages copy
-    const fallback = await fetch(FILE + '?t=' + Date.now(), { cache: 'no-store' });
-    if (fallback.ok) return { data: await fallback.json(), sha: null };
-    throw new Error('GitHub returned ' + res.status);
-  }
-  const json = await res.json();
-  return { data: JSON.parse(b64decode(json.content) || '{}'), sha: json.sha };
-}
-
-// Re-read the latest file, apply the change, write it back. Retries once if someone/something else committed in between.
-async function commit(mutate, message) {
-  for (let attempt = 0; attempt < 2; attempt++) {
-    const remote = await fetchRemote();
-    mutate(remote.data);
-    const res = await fetch(API, {
-      method: 'PUT',
-      headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token },
-      body: JSON.stringify({
-        message,
-        content: b64encode(JSON.stringify(sortKeys(remote.data), null, 2) + '\n'),
-        ...(remote.sha && { sha: remote.sha }),
-      }),
-    });
-    if (res.ok) { data = remote.data; return; }
-    if (res.status === 409 && attempt === 0) continue;
-    if (res.status === 401 || res.status === 403) throw new Error('Token rejected — sign in again');
-    throw new Error('Save failed (' + res.status + ')');
-  }
-}
+const fetchRemote = () => ghRead(FILE, {}, token);
 const sortKeys = o => Object.fromEntries(Object.keys(o).sort().map(k => [k, o[k]]));
+async function commit(mutate, message) {
+  data = await ghWrite(FILE, d => { mutate(d); return d; }, message, token, { normalize: sortKeys });
+}
 
 async function save(mutate, message, okMsg) {
   if (!token) { toast('Sign in to edit'); return false; }
@@ -550,11 +503,7 @@ $('auth-cancel').addEventListener('click', () => $('auth-card').hidden = true);
 $('auth-form').addEventListener('submit', async ev => {
   ev.preventDefault();
   const t = $('token').value.trim();
-  try {
-    const res = await fetch('https://api.github.com/repos/' + REPO, { headers: { Authorization: 'Bearer ' + t } });
-    const repo = res.ok ? await res.json() : null;
-    if (!repo?.permissions?.push) throw 0;
-  } catch { return toast('That token can\'t write to ' + REPO); }
+  if (!await ghCanWrite(t)) return toast('That token can\'t write to ' + REPO);
   token = t; store.set(TOKEN_KEY, t);
   $('token').value = ''; $('auth-card').hidden = true;
   applyAuth(); toast('Signed in');
@@ -575,6 +524,11 @@ applyAuth();
 fetchRemote()
   .then(r => { data = r.data; render(); fillForm($('date').value); migrateLegacy(); })
   .catch(e => toast('Couldn\'t load hours: ' + e.message));
+// Kanji count for the header link — the Pages copy is fine here and saves an API call
+fetch('kanji.json?t=' + Date.now(), { cache: 'no-store' })
+  .then(r => r.ok ? r.json() : [])
+  .then(list => { const n = list.filter(x => x.status === 'known').length; if (n) $('kanji-link').textContent = `漢字 ${n} kanji →`; })
+  .catch(() => {});
 </script>
 </body>
 </html>

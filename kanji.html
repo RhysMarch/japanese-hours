@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>漢字 Kanji</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23c8102e'/></svg>">
+<style>
+  :root {
+    --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
+    --accent: #c8102e; --accent-soft: #fbe9ec; --learn: #d08a1e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  a { color: var(--accent); }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
+  h1 span { color: var(--accent); }
+  h2 { font-size: 16px; margin: 0 0 12px; }
+  .muted { color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .stat b { display: block; font-size: 28px; }
+  .stat small { color: var(--muted); }
+  .stat.known b { color: var(--accent); }
+  .stat.learning b { color: var(--learn); }
+  label { display: block; font-size: 13px; color: var(--muted); }
+  input, select { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin-top: 4px; }
+  input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  .row { display: flex; gap: 10px; align-items: end; flex-wrap: wrap; }
+  button { font: inherit; cursor: pointer; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 8px 14px; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  button.danger { color: var(--accent); }
+  button.link { border: none; background: none; color: var(--muted); padding: 2px 6px; }
+  button.link:hover { color: var(--accent); }
+  .kform { display: grid; grid-template-columns: 90px 1fr 1fr 160px; gap: 10px; align-items: end; }
+  .kform #f-k { font-size: 28px; text-align: center; padding: 2px; height: 46px; }
+  .kform input, .kform select { height: 46px; }
+  .actions { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+  .filters { display: flex; gap: 6px; flex-wrap: wrap; }
+  .filters button { padding: 4px 12px; border-radius: 999px; font-size: 13px; }
+  .filters button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
+  .kbox { position: relative; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 10px 6px 8px; text-align: center; }
+  .kbox.learning { border-top-color: var(--learn); border-style: dashed solid solid; }
+  .owner .kbox { cursor: pointer; }
+  .owner .kbox:hover { border-color: var(--accent); }
+  .kbox.sel { outline: 2px solid var(--accent); }
+  .kbox .k { font-size: 44px; line-height: 1.15; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
+  .kbox .r { font-size: 13px; color: var(--ink); min-height: 1.4em; }
+  .kbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .empty { color: var(--muted); padding: 20px 0; text-align: center; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  @media (max-width: 720px) {
+    .kform { grid-template-columns: 76px 1fr; }
+    .kform .wide { grid-column: 1 / -1; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); }
+    .kbox .k { font-size: 38px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><span>漢字</span> Kanji</h1>
+    <div class="row" style="align-items:center">
+      <a href="./">← Hours</a>
+      <button type="button" class="link" id="auth">Sign in</button>
+    </div>
+  </header>
+
+  <div class="card" id="auth-card" hidden>
+    <h2>Sign in to edit</h2>
+    <p class="muted" style="margin:0 0 10px;font-size:14px">
+      Paste the same GitHub token you use on the hours page. It's stored in this browser only.
+    </p>
+    <form id="auth-form" class="row">
+      <label style="flex:1;min-width:160px">Token <input type="password" id="token" autocomplete="off" required></label>
+      <button type="submit" class="primary">Sign in</button>
+      <button type="button" id="auth-cancel">Cancel</button>
+    </form>
+  </div>
+
+  <div class="stats">
+    <div class="stat known"><small>Comfortable</small><b id="s-known">0</b></div>
+    <div class="stat learning"><small>Learning</small><b id="s-learning">0</b></div>
+    <div class="stat"><small>Total</small><b id="s-total">0</b></div>
+  </div>
+
+  <div class="card owner-only" hidden>
+    <h2 id="form-title">Add a kanji</h2>
+    <form id="kform">
+      <div class="kform">
+        <label>Kanji <input id="f-k" maxlength="2" required autocomplete="off" lang="ja"></label>
+        <label>Reading <input id="f-r" placeholder="e.g. くすり" autocomplete="off" lang="ja"></label>
+        <label class="wide">Meaning <input id="f-m" placeholder="e.g. medicine" autocomplete="off"></label>
+        <label class="wide">Status
+          <select id="f-s">
+            <option value="known">Comfortable</option>
+            <option value="learning">Still learning</option>
+          </select>
+        </label>
+      </div>
+      <div class="actions">
+        <button type="submit" class="primary" id="f-save">Add</button>
+        <button type="button" id="f-cancel" hidden>Cancel</button>
+        <button type="button" class="danger" id="f-del" hidden>Remove</button>
+        <span class="muted" style="font-size:13px" id="f-hint">Tip: click any box below to edit it.</span>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:14px">
+      <div class="filters" id="filters">
+        <button type="button" data-f="all" class="on">All</button>
+        <button type="button" data-f="known">Comfortable</button>
+        <button type="button" data-f="learning">Learning</button>
+      </div>
+      <span class="muted" style="font-size:13px" id="status">Loading…</span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</main>
+<div class="toast" id="toast"></div>
+
+<script src="github.js"></script>
+<script>
+const FILE = 'kanji.json';
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2, '0');
+const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+let kanji = [];        // [{ k, reading, meaning, status: 'known' | 'learning', added: 'YYYY-MM-DD' }]
+let token = store.get(TOKEN_KEY);
+let filter = 'all';
+let editing = null;    // the kanji character being edited, or null when adding
+
+function toast(msg) {
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+function render() {
+  const known = kanji.filter(x => x.status === 'known').length;
+  $('s-known').textContent = known;
+  $('s-learning').textContent = kanji.length - known;
+  $('s-total').textContent = kanji.length;
+
+  const shown = kanji.filter(x => filter === 'all' || x.status === filter);
+  $('grid').innerHTML = shown.length ? shown.map(x => `
+    <div class="kbox ${x.status}${x.k === editing ? ' sel' : ''}" data-k="${esc(x.k)}"
+         title="${esc(x.k)} · ${esc(x.reading)} · ${esc(x.meaning)} — ${x.status === 'known' ? 'comfortable' : 'still learning'} since ${esc(x.added)}">
+      <div class="k" lang="ja">${esc(x.k)}</div>
+      <div class="r" lang="ja">${esc(x.reading)}</div>
+      <div class="m">${esc(x.meaning)}</div>
+    </div>`).join('')
+    : `<div class="empty">${kanji.length ? 'Nothing in this filter.' : 'No kanji yet.'}</div>`;
+}
+
+function setEditing(k) {
+  editing = k;
+  const x = kanji.find(x => x.k === k);
+  $('form-title').textContent = x ? `Edit ${x.k}` : 'Add a kanji';
+  $('f-k').value = x?.k || '';
+  $('f-r').value = x?.reading || '';
+  $('f-m').value = x?.meaning || '';
+  $('f-s').value = x?.status || 'known';
+  $('f-save').textContent = x ? 'Save' : 'Add';
+  $('f-cancel').hidden = $('f-del').hidden = !x;
+  $('f-hint').hidden = !!x;
+  render();
+}
+
+async function save(mutate, message, okMsg) {
+  if (!token) { toast('Sign in to edit'); return false; }
+  document.querySelectorAll('button').forEach(b => b.disabled = true);
+  try {
+    kanji = await ghWrite(FILE, list => mutate(list) ?? list, message, token, { empty: [] });
+    toast(okMsg); return true;
+  } catch (e) { toast(e.message); return false; }
+  finally { document.querySelectorAll('button').forEach(b => b.disabled = false); render(); }
+}
+
+$('kform').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const k = $('f-k').value.trim();
+  if (!k) return;
+  const entry = { k, reading: $('f-r').value.trim(), meaning: $('f-m').value.trim(), status: $('f-s').value };
+  const was = editing;
+  if (k !== was && kanji.some(x => x.k === k)) { toast(k + ' is already on your list'); setEditing(k); return; }
+  const ok = await save(list => {
+    const i = list.findIndex(x => x.k === (was || k));
+    if (i >= 0) list[i] = { ...list[i], ...entry };
+    else list.push({ ...entry, added: today() });
+  }, (was ? 'Update kanji ' : 'Add kanji ') + k, (was ? 'Saved ' : 'Added ') + k);
+  if (ok) { setEditing(null); $('f-k').focus(); }
+});
+$('f-cancel').addEventListener('click', () => setEditing(null));
+$('f-del').addEventListener('click', async () => {
+  const k = editing;
+  if (!k || !confirm(`Remove ${k} from your list?`)) return;
+  if (await save(list => list.filter(x => x.k !== k), 'Remove kanji ' + k, 'Removed ' + k)) setEditing(null);
+});
+
+$('grid').addEventListener('click', ev => {
+  const box = ev.target.closest('.kbox');
+  if (!box || !token) return;
+  setEditing(box.dataset.k);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+$('filters').addEventListener('click', ev => {
+  const f = ev.target.dataset.f;
+  if (!f) return;
+  filter = f;
+  document.querySelectorAll('#filters button').forEach(b => b.classList.toggle('on', b.dataset.f === f));
+  render();
+});
+
+// --- Owner sign-in (same token as the hours page) ---
+function applyAuth() {
+  document.querySelectorAll('.owner-only').forEach(el => el.hidden = !token);
+  document.body.classList.toggle('owner', !!token);
+  $('auth').textContent = token ? 'Sign out' : 'Sign in';
+  if (!token) setEditing(null); else render();
+}
+$('auth').addEventListener('click', () => {
+  if (token) { token = null; store.del(TOKEN_KEY); applyAuth(); toast('Signed out'); }
+  else { $('auth-card').hidden = false; $('token').focus(); }
+});
+$('auth-cancel').addEventListener('click', () => $('auth-card').hidden = true);
+$('auth-form').addEventListener('submit', async ev => {
+  ev.preventDefault();
+  const t = $('token').value.trim();
+  if (!await ghCanWrite(t)) return toast('That token can\'t write to ' + REPO);
+  token = t; store.set(TOKEN_KEY, t);
+  $('token').value = ''; $('auth-card').hidden = true;
+  applyAuth(); toast('Signed in');
+});
+
+applyAuth();
+ghRead(FILE, [], token)
+  .then(r => { kanji = r.data; render(); $('status').textContent = token ? 'Click a box to edit it.' : ''; })
+  .catch(e => { $('status').textContent = 'Couldn\'t load kanji: ' + e.message; });
+</script>
+</body>
+</html>
