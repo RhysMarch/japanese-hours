@@ -61,6 +61,41 @@
   .chart .col:hover::after { content: attr(data-tip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 11px; padding: 3px 6px; border-radius: 4px; white-space: nowrap; }
   .subline { font-size: 12px; color: var(--muted); margin: -4px 0 8px 150px; }
   .sub-note { font-size: 11px; color: var(--muted); white-space: nowrap; }
+  .insight { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+  .insight b { color: var(--ink); }
+  .callout { font-size: 13px; background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; margin-top: 12px; }
+  /* JLPT */
+  .lvl { display: grid; grid-template-columns: 34px 1fr 150px; gap: 10px; align-items: center; margin: 10px 0; }
+  .lvl .tag { font-weight: 700; font-size: 14px; }
+  .lvl .track { position: relative; height: 14px; background: var(--line); border-radius: 7px; overflow: hidden; }
+  .lvl .band { position: absolute; top: 0; bottom: 0; background: color-mix(in srgb, var(--accent) 22%, transparent); }
+  .lvl .done { position: absolute; top: 0; bottom: 0; left: 0; background: var(--accent); border-radius: 7px; }
+  .lvl .eta { font-size: 12px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+  .lvl .eta b { color: var(--ink); font-weight: 600; }
+  .lvl.reached .tag { color: var(--accent); }
+  /* Routine grid */
+  .routine-wrap { overflow-x: auto; }
+  .routine { display: grid; grid-template-columns: 130px repeat(30, 12px) 56px; gap: 4px 3px; align-items: center; width: max-content; }
+  .routine .rname { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 6px; }
+  .routine .dot { width: 12px; height: 12px; border-radius: 3px; background: var(--line); }
+  .routine .dot.pre { background: transparent; border: 1px dashed var(--line); }
+  .routine .rate { font-size: 12px; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+  .routine .dlbl { font-size: 9px; color: var(--muted); text-align: center; }
+  /* Genki pace */
+  .ch-bars { display: flex; align-items: flex-end; gap: 3px; height: 90px; margin-top: 12px; }
+  .ch-bars .cb { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; min-width: 0; }
+  .ch-bars .cb div { background: var(--c0); border-radius: 3px 3px 0 0; min-height: 2px; }
+  .ch-bars .cb.cur div { background: color-mix(in srgb, var(--c0) 45%, var(--line)); }
+  .ch-bars .cb span { font-size: 9px; color: var(--muted); text-align: center; margin-top: 3px; }
+  .progress { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; margin: 8px 0 4px; }
+  .progress div { height: 100%; background: var(--c0); }
+  /* Study diet */
+  .diet-row { margin: 10px 0; }
+  .diet-row small { color: var(--muted); font-size: 12px; }
+  .stack { display: flex; height: 22px; border-radius: 6px; overflow: hidden; background: var(--line); margin-top: 4px; }
+  .stack div { height: 100%; color: #fff; font-size: 11px; font-weight: 600; display: grid; place-items: center; overflow: hidden; white-space: nowrap; }
+  .step .ch { font-size: 12px; font-weight: 400; color: var(--muted); margin-left: 10px; display: inline-flex; align-items: center; gap: 4px; }
+  .step .ch input { width: 58px; padding: 4px 6px; margin: 0; }
   .heat-wrap { overflow-x: auto; padding-bottom: 4px; }
   .heat { display: grid; grid-template-rows: 14px repeat(7, 12px); grid-auto-flow: column; grid-auto-columns: 12px; gap: 3px; width: max-content; }
   .heat .cell { border-radius: 2px; background: var(--line); }
@@ -90,6 +125,8 @@
     .step { grid-template-columns: 28px 1fr 90px; }
     .bar .name { width: 110px; }
     .subline { margin-left: 120px; }
+    .lvl { grid-template-columns: 30px 1fr 112px; }
+    .routine { grid-template-columns: 96px repeat(30, 12px) 48px; }
   }
 </style>
 </head>
@@ -154,6 +191,27 @@
     More</div>
   </div>
 
+  <div class="card">
+    <h2>Road to JLPT</h2>
+    <div id="jlpt"></div>
+  </div>
+
+  <div class="card">
+    <h2>Routine — last 30 days</h2>
+    <div id="routine"></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>Genki pace</h2>
+      <div id="genki-pace"></div>
+    </div>
+    <div class="card">
+      <h2>Study diet</h2>
+      <div id="diet"></div>
+    </div>
+  </div>
+
   <div class="grid2">
     <div class="card">
       <h2>Totals by section</h2>
@@ -181,6 +239,7 @@
 </main>
 <div class="toast" id="toast"></div>
 
+<script src="insights.js"></script>
 <script>
 const SECTIONS = [
   { id: 'genki',    name: 'Genki',             color: 'var(--c0)' },
@@ -304,13 +363,17 @@ $('fields').innerHTML = SECTIONS.map((s, i) => `
       <div class="subs">
         ${s.subs.map(x => `<label>${x.name} ${hoursInput(x.key)}</label>`).join('')}
       </div>` : `
-      <label class="name" for="f-${s.id}">${s.name}</label>
+      <span class="name"><label for="f-${s.id}">${s.name}</label>${s.id === 'genki' ? `
+        <label class="ch">Ch <input type="number" min="1" max="23" step="1" inputmode="numeric" id="f-genki_ch" placeholder="–"></label>` : ''}</span>
       ${hoursInput(s.id)}`}
   </div>`).join('');
 
 function fillForm(date) {
   const e = data[date] || {};
   ALL_KEYS.forEach(k => $('f-' + k).value = e[k] || '');
+  // Genki chapter carries forward from the most recent earlier day, since you're usually still on it
+  const prev = Object.keys(data).filter(d => d < date && data[d].genki_ch).sort().pop();
+  $('f-genki_ch').value = e.genki_ch || (prev ? data[prev].genki_ch : '');
   $('note').value = e.note || '';
   updateDayTotal();
 }
@@ -334,6 +397,9 @@ $('entry').addEventListener('submit', ev => {
   if (!date) return;
   const e = {};
   ALL_KEYS.forEach(k => { const v = parseFloat($('f-' + k).value); if (v > 0) e[k] = v; });
+  // chapter only means something on days you actually did Genki
+  const ch = parseInt($('f-genki_ch').value, 10);
+  if (e.genki && ch >= 1 && ch <= 23) e.genki_ch = ch;
   const note = $('note').value.trim();
   if (note) e.note = note;
   const has = Object.keys(e).length > 0;
@@ -430,6 +496,7 @@ function render() {
   $('legend').innerHTML = SECTIONS.map((s, i) => `<span><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${COLORS[i]};margin-right:4px"></span>${s.name}</span>`).join('');
 
   renderHeatmap(now);
+  renderInsights(now);
 
   // History table
   if (!dates.length) {
@@ -446,7 +513,7 @@ function render() {
         ${SECTIONS.map(s => {
           const h = secHours(e, s);
           if (!h) return '<td><span class="muted">–</span></td>';
-          const parts = s.subs ? subBreakdown(e, s) : '';
+          const parts = s.subs ? subBreakdown(e, s) : s.id === 'genki' && e.genki_ch ? 'ch ' + e.genki_ch : '';
           return `<td>${fmt(h)}${parts ? `<div class="sub-note">${parts}</div>` : ''}</td>`;
         }).join('')}
         <td><b>${fmt(dayTotal(e))}</b></td>
