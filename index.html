@@ -207,6 +207,7 @@
       </div>
     </div>
     <div class="table-wrap"><table id="history"></table></div>
+    <div class="row" id="history-more" style="justify-content:center;align-items:center;margin-top:12px" hidden></div>
     <p class="muted" style="font-size:12px;margin:12px 0 0" id="status">Loading…</p>
   </div>
 </main>
@@ -242,6 +243,8 @@ const store = {
 };
 
 let data = {};
+const HISTORY_PAGE = 14;
+let historyLimit = HISTORY_PAGE;
 let token = store.get(TOKEN_KEY);
 
 // UTF-8 safe base64, so Japanese in notes survives the round trip
@@ -468,12 +471,13 @@ function render() {
   // History table
   if (!dates.length) {
     $('history').innerHTML = `<tr><td class="muted">Nothing logged yet${token ? ' — add your first day above.' : '.'}</td></tr>`;
+    $('history-more').hidden = true;
     return;
   }
   const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   $('history').innerHTML = `
     <tr><th>Date</th>${SECTIONS.map(s => `<th>${s.name}</th>`).join('')}<th>Total</th><th>Notes</th>${token ? '<th></th>' : ''}</tr>
-    ${dates.map(d => {
+    ${dates.slice(0, historyLimit).map(d => {
       const e = data[d];
       return `<tr>
         <td>${parseDate(d).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}</td>
@@ -488,7 +492,20 @@ function render() {
         ${token ? `<td style="white-space:nowrap"><button class="link" data-edit="${d}">edit</button><button class="link" data-del="${d}">delete</button></td>` : ''}
       </tr>`;
     }).join('')}`;
+  const more = dates.length - historyLimit;
+  $('history-more').hidden = more <= 0;
+  $('history-more').innerHTML = more <= 0 ? '' : `
+    <span class="muted">Showing ${historyLimit} of ${dates.length} days</span>
+    <button type="button" data-more="${HISTORY_PAGE}">Show ${Math.min(more, HISTORY_PAGE)} more</button>
+    ${more > HISTORY_PAGE ? `<button type="button" data-more="all">Show all</button>` : ''}`;
 }
+
+$('history-more').addEventListener('click', ev => {
+  const n = ev.target.dataset.more;
+  if (!n) return;
+  historyLimit = n === 'all' ? Infinity : historyLimit + Number(n);
+  render();
+});
 
 $('history').addEventListener('click', ev => {
   const edit = ev.target.dataset.edit, del = ev.target.dataset.del;
