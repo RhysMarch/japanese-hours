@@ -838,5 +838,31 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791036682940",
+    "word": "何時",
+    "kana": "なんじ",
+    "meaning": "what time",
+    "examples": [
+      {
+        "jp": "いま なんじですか。",
+        "en": "What time is it now?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791036682941",
+    "word": "日本人",
+    "kana": "にほんじん",
+    "meaning": "Japanese person",
+    "examples": [
+      {
+        "jp": "ともだちは にほんじんです。",
+        "en": "My friend is Japanese."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]

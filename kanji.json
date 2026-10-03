@@ -285,5 +285,53 @@
     "reading": "いま / こん",
     "meaning": "Now",
     "added": "2026-10-03"
+  },
+  {
+    "k": "何",
+    "reading": "なに / なん",
+    "meaning": "What",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "食",
+    "reading": "た(べる)",
+    "meaning": "Eat",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "飲",
+    "reading": "の(む)",
+    "meaning": "Drink",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "見",
+    "reading": "み(る)",
+    "meaning": "See / look",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "行",
+    "reading": "い(く)",
+    "meaning": "Go",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "来",
+    "reading": "く(る) / き(ます)",
+    "meaning": "Come",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "水",
+    "reading": "みず",
+    "meaning": "Water",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "名",
+    "reading": "な",
+    "meaning": "Name",
+    "added": "2026-10-03"
   }
 ]
