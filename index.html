@@ -53,6 +53,12 @@
   .chart .col .seg:first-child { border-radius: 4px 4px 0 0; }
   .chart .lbl { font-size: 10px; color: var(--muted); text-align: center; margin-top: 4px; }
   .chart .col:hover::after { content: attr(data-tip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 11px; padding: 3px 6px; border-radius: 4px; white-space: nowrap; }
+  fieldset.sub { grid-column: 1 / -1; border: 1px solid var(--line); border-radius: 8px; padding: 4px 12px 12px; margin: 0; }
+  fieldset.sub legend { font-size: 13px; color: var(--muted); padding: 0 4px; }
+  fieldset.sub legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .subfields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .subline { font-size: 12px; color: var(--muted); margin: -4px 0 8px 150px; }
+  .sub-note { font-size: 11px; color: var(--muted); white-space: nowrap; }
   .heat-wrap { overflow-x: auto; padding-bottom: 4px; }
   .heat { display: grid; grid-template-rows: 14px repeat(7, 12px); grid-auto-flow: column; grid-auto-columns: 12px; gap: 3px; width: max-content; }
   .heat .cell { border-radius: 2px; background: var(--line); }
@@ -81,6 +87,7 @@
     .grid2 { grid-template-columns: 1fr; }
     form .fields { grid-template-columns: repeat(2, 1fr); }
     .bar .name { width: 110px; }
+    .subline { margin-left: 120px; }
   }
 </style>
 </head>
@@ -176,7 +183,12 @@
 const SECTIONS = [
   { id: 'genki',    name: 'Genki' },
   { id: 'writing',  name: 'Writing / Grammar' },
-  { id: 'anki',     name: 'Anki' },
+  // Anki is split by what you're drilling. Hours logged before the split live under plain `anki` ("unsorted").
+  { id: 'anki',     name: 'Anki', subs: [
+    { key: 'anki_kana',  name: 'Kana' },
+    { key: 'anki_kanji', name: 'Kanji' },
+    { key: 'anki_vocab', name: 'Vocab' },
+  ] },
   { id: 'kana',     name: 'Kana' },
   { id: 'kanji',    name: 'Kanji' },
   { id: 'listening',name: 'Listening / Anime' },
@@ -261,7 +273,19 @@ const fmt = h => {
   const r = Math.round(h * 100) / 100;
   return (Number.isInteger(r) ? r : r.toFixed(2).replace(/0$/, '')) + 'h';
 };
-const dayTotal = e => SECTIONS.reduce((s, x) => s + (e[x.id] || 0), 0);
+// Every key a section's hours can be stored under; for split sections the bare id holds unsorted (pre-split) hours
+const leaves = s => s.subs ? [...s.subs.map(x => x.key), s.id] : [s.id];
+const subName = (s, key) => (s.subs.find(x => x.key === key) || { name: 'Unsorted' }).name;
+const ALL_KEYS = SECTIONS.flatMap(leaves);
+const secHours = (e, s) => leaves(s).reduce((t, k) => t + (e[k] || 0), 0);
+const dayTotal = e => SECTIONS.reduce((t, s) => t + secHours(e, s), 0);
+// "vocab" or "vocab 1h · kana 0.5h" — which parts of a split section were used
+const subBreakdown = (e, s, lower = true) => {
+  const used = leaves(s).filter(k => e[k] > 0);
+  const name = k => lower ? subName(s, k).toLowerCase() : subName(s, k);
+  if (used.length === 1) return name(used[0]);
+  return used.map(k => `${name(k)} ${fmt(e[k])}`).join(' · ');
+};
 
 function toast(msg) {
   const t = $('toast'); t.textContent = msg; t.classList.add('show');
@@ -269,19 +293,27 @@ function toast(msg) {
 }
 
 // Build form inputs
-$('fields').innerHTML = SECTIONS.map((s, i) => `
-  <label><span class="dot" style="background:${COLORS[i]}"></span>${s.name}
-    <input type="number" min="0" max="24" step="0.25" inputmode="decimal" id="f-${s.id}" placeholder="0">
-  </label>`).join('');
+const hoursInput = key => `<input type="number" min="0" max="24" step="0.25" inputmode="decimal" id="f-${key}" placeholder="0">`;
+$('fields').innerHTML = SECTIONS.map((s, i) => s.subs ? `
+  <fieldset class="sub">
+    <legend><span class="dot" style="background:${COLORS[i]}"></span>${s.name}</legend>
+    <div class="subfields">
+      ${s.subs.map(x => `<label>${x.name} ${hoursInput(x.key)}</label>`).join('')}
+      <label id="unsorted-${s.id}" hidden>Unsorted ${hoursInput(s.id)}</label>
+    </div>
+  </fieldset>` : `
+  <label><span class="dot" style="background:${COLORS[i]}"></span>${s.name} ${hoursInput(s.id)}</label>`).join('');
 
 function fillForm(date) {
   const e = data[date] || {};
-  SECTIONS.forEach(s => $('f-' + s.id).value = e[s.id] || '');
+  ALL_KEYS.forEach(k => $('f-' + k).value = e[k] || '');
+  // only show the unsorted box on old days that still have unsplit hours, so they can be moved
+  SECTIONS.filter(s => s.subs).forEach(s => $('unsorted-' + s.id).hidden = !e[s.id]);
   $('note').value = e.note || '';
   updateDayTotal();
 }
 function updateDayTotal() {
-  const t = SECTIONS.reduce((sum, s) => sum + (parseFloat($('f-' + s.id).value) || 0), 0);
+  const t = ALL_KEYS.reduce((sum, k) => sum + (parseFloat($('f-' + k).value) || 0), 0);
   $('day-total').textContent = t ? `${fmt(t)} for this day` : '';
 }
 
@@ -296,7 +328,7 @@ $('entry').addEventListener('submit', ev => {
   const date = $('date').value;
   if (!date) return;
   const e = {};
-  SECTIONS.forEach(s => { const v = parseFloat($('f-' + s.id).value); if (v > 0) e[s.id] = v; });
+  ALL_KEYS.forEach(k => { const v = parseFloat($('f-' + k).value); if (v > 0) e[k] = v; });
   const note = $('note').value.trim();
   if (note) e.note = note;
   const has = Object.keys(e).length > 0;
@@ -346,9 +378,10 @@ $('heat').addEventListener('click', ev => {
 
 function render() {
   const dates = Object.keys(data).sort().reverse();
-  const totals = Object.fromEntries(SECTIONS.map(s => [s.id, 0]));
-  let total = 0;
-  dates.forEach(d => SECTIONS.forEach(s => { const v = data[d][s.id] || 0; totals[s.id] += v; total += v; }));
+  const keyTotals = Object.fromEntries(ALL_KEYS.map(k => [k, 0]));
+  dates.forEach(d => ALL_KEYS.forEach(k => keyTotals[k] += data[d][k] || 0));
+  const totals = Object.fromEntries(SECTIONS.map(s => [s.id, secHours(keyTotals, s)]));
+  const total = Object.values(totals).reduce((a, b) => a + b, 0);
 
   // Week (Mon–Sun)
   const now = new Date();
@@ -373,7 +406,9 @@ function render() {
       <div class="name">${s.name}</div>
       <div class="track"><div class="fill" style="width:${totals[s.id] / max * 100}%;background:${COLORS[i]}"></div></div>
       <div class="val">${fmt(totals[s.id])}</div>
-    </div>`).join('');
+    </div>${s.subs ? `<div class="subline">${leaves(s)
+      .filter(k => k !== s.id || keyTotals[k] > 0)
+      .map(k => `${subName(s, k)} ${fmt(keyTotals[k])}`).join(' · ')}</div>` : ''}`).join('');
 
   // 14-day stacked chart
   const days = [];
@@ -381,8 +416,8 @@ function render() {
   const dayMax = Math.max(1, ...days.map(d => dayTotal(data[isoDate(d)] || {})));
   $('chart').innerHTML = days.map(d => {
     const e = data[isoDate(d)] || {};
-    const segs = SECTIONS.map((s, i) => e[s.id]
-      ? `<div class="seg" style="height:${e[s.id] / dayMax * 100}%;background:${COLORS[i]}"></div>` : '').reverse().join('');
+    const segs = SECTIONS.map((s, i) => secHours(e, s)
+      ? `<div class="seg" style="height:${secHours(e, s) / dayMax * 100}%;background:${COLORS[i]}"></div>` : '').reverse().join('');
     const tip = `${d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}: ${fmt(dayTotal(e))}`;
     return `<div style="flex:1;display:flex;flex-direction:column;height:100%">
       <div class="col" data-tip="${tip}">${segs}</div>
@@ -404,7 +439,13 @@ function render() {
       const e = data[d];
       return `<tr>
         <td>${parseDate(d).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}</td>
-        ${SECTIONS.map(s => `<td>${e[s.id] ? fmt(e[s.id]) : '<span class="muted">–</span>'}</td>`).join('')}
+        ${SECTIONS.map(s => {
+          const h = secHours(e, s);
+          if (!h) return '<td><span class="muted">–</span></td>';
+          const used = leaves(s).filter(k => e[k] > 0);
+          const parts = s.subs && !(used.length === 1 && used[0] === s.id) ? subBreakdown(e, s) : '';
+          return `<td>${fmt(h)}${parts ? `<div class="sub-note">${parts}</div>` : ''}</td>`;
+        }).join('')}
         <td><b>${fmt(dayTotal(e))}</b></td>
         <td class="note" title="${esc(e.note || '')}">${esc(e.note || '')}</td>
         ${token ? `<td style="white-space:nowrap"><button class="link" data-edit="${d}">edit</button><button class="link" data-del="${d}">delete</button></td>` : ''}
