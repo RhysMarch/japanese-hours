@@ -177,7 +177,7 @@
       <span class="muted" style="font-size:13px" id="status">Loading…</span>
     </div>
     <div class="tools">
-      <input type="search" id="q" placeholder="Search Japanese or English…" autocomplete="off">
+      <input type="search" id="q" placeholder="Search Japanese, English or romaji…" autocomplete="off">
     </div>
     <div class="decks" id="decks"></div>
     <div class="vhead"><span>Kanji</span><span>Kana</span><span>Example</span><span>English <span style="text-transform:none;letter-spacing:0">(hover)</span></span></div>
@@ -189,7 +189,7 @@
 
 <script src="github.js?v=20261003b"></script>
 <script src="anki.js?v=20261003d"></script>
-<script src="kanji-links.js?v=20261003e"></script>
+<script src="kanji-links.js?v=20261003g"></script>
 <script>
 const FILE = 'vocab.json';
 const $ = id => document.getElementById(id);
@@ -235,7 +235,7 @@ function render() {
 
   const q = $('q').value.trim().toLowerCase();
   const shown = vocab.filter(v => (deck === 'all' || v.deck === deck) &&
-    (!q || [v.word, v.kana, v.meaning].some(f => (f || '').toLowerCase().includes(q))));
+    matchesQuery(q, [v.word, v.kana, v.meaning]));
 
   $('list').innerHTML = shown.length ? shown.map(v => {
     const ex = v.examples[0];

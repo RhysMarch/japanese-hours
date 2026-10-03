@@ -21,6 +21,28 @@ function kanjiCoverage(vocab, kanjiList) {
   return { total: uses.size, known: uses.size - next.length, next };
 }
 
+// Search: does the query appear in any of the fields? Romaji queries ("kusuri", "tabe") are also
+// tried as hiragana and katakana, so you can search readings without a Japanese keyboard.
+const VOWEL_OF = { あ: 'あかさたなはまやらわがざだばぱぁゃ', い: 'いきしちにひみりぎじぢびぴぃ', う: 'うくすつぬふむゆるぐずづぶぷぅゅ', え: 'えけせてねへめれげぜでべぺぇ', お: 'おこそとのほもよろをごぞどぼぽぉょ' };
+// Katakana → hiragana, and a long-vowel mark spelled out: カード → かあど
+function kanaKey(s) {
+  const hira = s.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+  return hira.replace(/(.)ー/g, (m, c) => c + (Object.keys(VOWEL_OF).find(v => VOWEL_OF[v].includes(c)) || 'ー'));
+}
+
+function matchesQuery(query, fields) {
+  const q = (query || '').trim().toLowerCase();
+  if (!q) return true;
+  // romaji query → hiragana; "-" means a long vowel ("ka-do" = "kaado")
+  const romaji = q.replace(/([aiueo])-/g, '$1$1');
+  const fromRomaji = /^[a-zāīūēō' ]+$/.test(romaji) && typeof romajiToKana === 'function' ? romajiToKana(romaji) : '';
+  const key = fromRomaji || (/[぀-ヿ]/.test(q) ? kanaKey(q) : '');
+  return fields.some(f => {
+    const s = (f || '').toLowerCase();
+    return s.includes(q) || (key && kanaKey(s).includes(key));
+  });
+}
+
 // Pages copy of another page's data — saves an API call; fine for read-only cross-links
 const loadJson = file => fetch(file + '?t=' + Date.now(), { cache: 'no-store' })
   .then(r => r.ok ? r.json() : []).catch(() => []);

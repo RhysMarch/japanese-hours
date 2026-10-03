@@ -66,7 +66,8 @@
   .d-words .dm { font-size: 13px; color: var(--muted); margin-left: auto; text-align: right; }
   .d-meta { display: flex; justify-content: flex-end; margin-top: 12px; }
   .kbox .rm:hover { color: var(--accent); }
-  .empty { color: var(--muted); padding: 20px 0; text-align: center; }
+  .empty { color: var(--muted); padding: 20px 0; text-align: center; grid-column: 1 / -1; }
+  .search { margin: 0 0 14px; }
   .fmt { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; font-size: 14px; }
   .fmt summary { cursor: pointer; color: var(--accent); font-weight: 600; }
   .fmt h3 { font-size: 14px; margin: 16px 0 8px; }
@@ -163,6 +164,7 @@
       <div class="count"><b id="s-total">–</b> kanji</div>
       <span class="muted" style="font-size:13px" id="status">Loading…</span>
     </div>
+    <input type="search" id="q" class="search" placeholder="Search kanji, reading or meaning… (romaji works too)" autocomplete="off">
     <div class="grid" id="grid"></div>
   </div>
 </main>
@@ -171,7 +173,7 @@
 
 <script src="github.js?v=20261003b"></script>
 <script src="anki.js?v=20261003d"></script>
-<script src="kanji-links.js?v=20261003e"></script>
+<script src="kanji-links.js?v=20261003g"></script>
 <script>
 const FILE = 'kanji.json';
 const $ = id => document.getElementById(id);
@@ -190,13 +192,15 @@ function toast(msg) {
 
 function render() {
   $('s-total').textContent = kanji.length;
-  $('grid').innerHTML = kanji.length ? kanji.map(x => `
+  const q = $('q').value;
+  const shown = kanji.filter(x => matchesQuery(q, [x.k, x.reading, x.meaning]));
+  $('grid').innerHTML = shown.length ? shown.map(x => `
     <div class="kbox" data-k="${esc(x.k)}">
       <div class="k" lang="ja">${esc(x.k)}</div>
       <div class="r" lang="ja">${esc(x.reading)}</div>
       <div class="m">${esc(x.meaning)}</div>
     </div>`).join('')
-    : '<div class="empty">No kanji yet.</div>';
+    : `<div class="empty">${kanji.length ? 'No kanji match.' : 'No kanji yet.'}</div>`;
   renderCoverage();
 }
 
@@ -263,6 +267,7 @@ $('file').addEventListener('change', async ev => {
      () => added.length ? `Added ${added.length}: ${added.join(' ')}` : 'No new kanji — all already here');
 });
 
+$('q').addEventListener('input', render);
 $('grid').addEventListener('click', ev => {
   const box = ev.target.closest('.kbox');
   if (box) showKanji(box.dataset.k);
