@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日本語 Hours</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23c8102e'/></svg>">
+<style>
+  :root {
+    --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
+    --accent: #c8102e; --accent-soft: #fbe9ec;
+    --c0: #c8102e; --c1: #2f6f9f; --c2: #3b8f5a; --c3: #d08a1e; --c4: #7b4fa8; --c5: #58a700;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
+  h1 span { color: var(--accent); }
+  h2 { font-size: 16px; margin: 0 0 12px; }
+  .muted { color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+  .stat b { display: block; font-size: 24px; }
+  .stat small { color: var(--muted); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  form .fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
+  label { display: block; font-size: 13px; color: var(--muted); }
+  label .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  input, textarea { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin-top: 4px; }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  textarea { resize: vertical; min-height: 60px; }
+  .row { display: flex; gap: 10px; align-items: end; flex-wrap: wrap; }
+  .row > label { flex: 1; min-width: 160px; }
+  button { font: inherit; cursor: pointer; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); padding: 8px 14px; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  button.link { border: none; background: none; color: var(--muted); padding: 2px 6px; }
+  button.link:hover { color: var(--accent); }
+  .bar { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+  .bar .name { width: 140px; font-size: 14px; }
+  .bar .track { flex: 1; height: 10px; background: var(--line); border-radius: 6px; overflow: hidden; }
+  .bar .fill { height: 100%; border-radius: 6px; }
+  .bar .val { width: 60px; text-align: right; font-variant-numeric: tabular-nums; font-size: 14px; }
+  .chart { display: flex; align-items: flex-end; gap: 4px; height: 160px; padding-top: 8px; }
+  .chart .col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; position: relative; }
+  .chart .seg { width: 100%; }
+  .chart .col .seg:first-child { border-radius: 4px 4px 0 0; }
+  .chart .lbl { font-size: 10px; color: var(--muted); text-align: center; margin-top: 4px; }
+  .chart .col:hover::after { content: attr(data-tip); position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 11px; padding: 3px 6px; border-radius: 4px; white-space: nowrap; }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--muted); margin-top: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: right; padding: 8px 6px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; }
+  th { font-weight: 600; font-size: 12px; color: var(--muted); }
+  td.note { text-align: left; color: var(--muted); max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .table-wrap { overflow-x: auto; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.show { opacity: 1; }
+  @media (max-width: 720px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .grid2 { grid-template-columns: 1fr; }
+    form .fields { grid-template-columns: repeat(2, 1fr); }
+    .bar .name { width: 110px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><span>日本語</span> Hours</h1>
+    <div class="muted" id="today"></div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><small>Total</small><b id="s-total">0h</b></div>
+    <div class="stat"><small>This week</small><b id="s-week">0h</b></div>
+    <div class="stat"><small>Current streak</small><b id="s-streak">0 days</b></div>
+    <div class="stat"><small>Days logged</small><b id="s-days">0</b></div>
+  </div>
+
+  <div class="card">
+    <h2>Log a day</h2>
+    <form id="entry">
+      <div class="row">
+        <label>Date <input type="date" id="date" required></label>
+      </div>
+      <div class="fields" id="fields"></div>
+      <label>Notes <textarea id="note" placeholder="What did you study? e.g. Genki Ch. 5 vocab, 2 eps of Frieren"></textarea></label>
+      <div class="row" style="margin-top:12px">
+        <button type="submit" class="primary">Save day</button>
+        <span class="muted" id="day-total"></span>
+      </div>
+    </form>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>Totals by section</h2>
+      <div id="bars"></div>
+    </div>
+    <div class="card">
+      <h2>Last 14 days</h2>
+      <div class="chart" id="chart"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;margin-bottom:8px">
+      <h2 style="margin:0">History</h2>
+      <div class="row">
+        <button type="button" id="export">Export</button>
+        <button type="button" id="import">Import</button>
+        <input type="file" id="file" accept="application/json" hidden>
+      </div>
+    </div>
+    <div class="table-wrap"><table id="history"></table></div>
+    <p class="muted" style="font-size:12px;margin:12px 0 0">Data is saved in this browser. Use Export now and then to back it up or move it to another device.</p>
+  </div>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+const SECTIONS = [
+  { id: 'genki',    name: 'Genki' },
+  { id: 'writing',  name: 'Writing / Grammar' },
+  { id: 'anki',     name: 'Anki' },
+  { id: 'kana',     name: 'Kana' },
+  { id: 'listening',name: 'Listening / Anime' },
+  { id: 'duolingo', name: 'Duolingo' },
+];
+const COLORS = SECTIONS.map((_, i) => `var(--c${i})`);
+const KEY = 'japanese-hours-v1';
+
+let data = load();
+
+function load() {
+  try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; }
+}
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(data)); } catch { toast('Could not save — storage unavailable'); }
+}
+
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2, '0');
+const isoDate = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const parseDate = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const fmt = h => {
+  const r = Math.round(h * 100) / 100;
+  return (Number.isInteger(r) ? r : r.toFixed(2).replace(/0$/, '')) + 'h';
+};
+const dayTotal = e => SECTIONS.reduce((s, x) => s + (e[x.id] || 0), 0);
+
+function toast(msg) {
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+// Build form inputs
+$('fields').innerHTML = SECTIONS.map((s, i) => `
+  <label><span class="dot" style="background:${COLORS[i]}"></span>${s.name}
+    <input type="number" min="0" max="24" step="0.25" inputmode="decimal" id="f-${s.id}" placeholder="0">
+  </label>`).join('');
+
+function fillForm(date) {
+  const e = data[date] || {};
+  SECTIONS.forEach(s => $('f-' + s.id).value = e[s.id] || '');
+  $('note').value = e.note || '';
+  updateDayTotal();
+}
+function updateDayTotal() {
+  const t = SECTIONS.reduce((sum, s) => sum + (parseFloat($('f-' + s.id).value) || 0), 0);
+  $('day-total').textContent = t ? `${fmt(t)} for this day` : '';
+}
+
+$('date').value = isoDate(new Date());
+$('today').textContent = new Date().toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+fillForm($('date').value);
+$('date').addEventListener('change', () => fillForm($('date').value));
+$('fields').addEventListener('input', updateDayTotal);
+
+$('entry').addEventListener('submit', ev => {
+  ev.preventDefault();
+  const date = $('date').value;
+  if (!date) return;
+  const e = {};
+  SECTIONS.forEach(s => { const v = parseFloat($('f-' + s.id).value); if (v > 0) e[s.id] = v; });
+  const note = $('note').value.trim();
+  if (note) e.note = note;
+  if (Object.keys(e).length) data[date] = e; else delete data[date];
+  save(); render();
+  toast(Object.keys(e).length ? 'Saved ' + date : 'Cleared ' + date);
+});
+
+function render() {
+  const dates = Object.keys(data).sort().reverse();
+  const totals = Object.fromEntries(SECTIONS.map(s => [s.id, 0]));
+  let total = 0;
+  dates.forEach(d => SECTIONS.forEach(s => { const v = data[d][s.id] || 0; totals[s.id] += v; total += v; }));
+
+  // Week (Mon–Sun)
+  const now = new Date();
+  const monday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - ((now.getDay() + 6) % 7));
+  const week = dates.filter(d => parseDate(d) >= monday).reduce((s, d) => s + dayTotal(data[d]), 0);
+
+  // Streak: consecutive days with time logged, ending today (or yesterday if today not yet logged)
+  let streak = 0;
+  const cur = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  if (!(data[isoDate(cur)] && dayTotal(data[isoDate(cur)]) > 0)) cur.setDate(cur.getDate() - 1);
+  while (data[isoDate(cur)] && dayTotal(data[isoDate(cur)]) > 0) { streak++; cur.setDate(cur.getDate() - 1); }
+
+  $('s-total').textContent = fmt(total);
+  $('s-week').textContent = fmt(week);
+  $('s-streak').textContent = streak + (streak === 1 ? ' day' : ' days');
+  $('s-days').textContent = dates.filter(d => dayTotal(data[d]) > 0).length;
+
+  // Section bars
+  const max = Math.max(...Object.values(totals), 0.0001);
+  $('bars').innerHTML = SECTIONS.map((s, i) => `
+    <div class="bar">
+      <div class="name">${s.name}</div>
+      <div class="track"><div class="fill" style="width:${totals[s.id] / max * 100}%;background:${COLORS[i]}"></div></div>
+      <div class="val">${fmt(totals[s.id])}</div>
+    </div>`).join('');
+
+  // 14-day stacked chart
+  const days = [];
+  for (let i = 13; i >= 0; i--) days.push(new Date(now.getFullYear(), now.getMonth(), now.getDate() - i));
+  const dayMax = Math.max(1, ...days.map(d => dayTotal(data[isoDate(d)] || {})));
+  $('chart').innerHTML = days.map(d => {
+    const e = data[isoDate(d)] || {};
+    const segs = SECTIONS.map((s, i) => e[s.id]
+      ? `<div class="seg" style="height:${e[s.id] / dayMax * 100}%;background:${COLORS[i]}"></div>` : '').reverse().join('');
+    const tip = `${d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}: ${fmt(dayTotal(e))}`;
+    return `<div style="flex:1;display:flex;flex-direction:column;height:100%">
+      <div class="col" data-tip="${tip}">${segs}</div>
+      <div class="lbl">${d.getDate()}</div></div>`;
+  }).join('');
+  $('legend').innerHTML = SECTIONS.map((s, i) => `<span><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${COLORS[i]};margin-right:4px"></span>${s.name}</span>`).join('');
+
+  // History table
+  if (!dates.length) {
+    $('history').innerHTML = '<tr><td class="muted">Nothing logged yet — add your first day above.</td></tr>';
+    return;
+  }
+  const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  $('history').innerHTML = `
+    <tr><th>Date</th>${SECTIONS.map(s => `<th>${s.name}</th>`).join('')}<th>Total</th><th>Notes</th><th></th></tr>
+    ${dates.map(d => {
+      const e = data[d];
+      return `<tr>
+        <td>${parseDate(d).toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}</td>
+        ${SECTIONS.map(s => `<td>${e[s.id] ? fmt(e[s.id]) : '<span class="muted">–</span>'}</td>`).join('')}
+        <td><b>${fmt(dayTotal(e))}</b></td>
+        <td class="note" title="${esc(e.note || '')}">${esc(e.note || '')}</td>
+        <td style="white-space:nowrap"><button class="link" data-edit="${d}">edit</button><button class="link" data-del="${d}">delete</button></td>
+      </tr>`;
+    }).join('')}`;
+}
+
+$('history').addEventListener('click', ev => {
+  const edit = ev.target.dataset.edit, del = ev.target.dataset.del;
+  if (edit) { $('date').value = edit; fillForm(edit); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  if (del && confirm('Delete entry for ' + del + '?')) { delete data[del]; save(); render(); fillForm($('date').value); }
+});
+
+$('export').addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `japanese-hours-${isoDate(new Date())}.json`;
+  a.click(); URL.revokeObjectURL(a.href);
+});
+$('import').addEventListener('click', () => $('file').click());
+$('file').addEventListener('change', async ev => {
+  const f = ev.target.files[0]; if (!f) return;
+  try {
+    const incoming = JSON.parse(await f.text());
+    if (typeof incoming !== 'object' || Array.isArray(incoming)) throw 0;
+    Object.assign(data, incoming); save(); render(); fillForm($('date').value);
+    toast('Imported ' + Object.keys(incoming).length + ' days');
+  } catch { toast('That file doesn\'t look like an export'); }
+  ev.target.value = '';
+});
+
+render();
+</script>
+</body>
+</html>
