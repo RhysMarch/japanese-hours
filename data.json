@@ -1,4 +1,10 @@
 {
+  "2026-09-30": {
+    "writing": 1,
+    "anki_kana": 0.25,
+    "anki_vocab": 0.25,
+    "duolingo": 0.5
+  },
   "2026-10-01": {
     "genki": 1,
     "writing": 0.25,
