@@ -411,5 +411,35 @@
     "reading": "しゃ / もの",
     "meaning": "Person (someone who…)",
     "added": "2026-10-03"
+  },
+  {
+    "k": "月",
+    "reading": "つき / げつ",
+    "meaning": "Moon / month",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "火",
+    "reading": "ひ / か",
+    "meaning": "Fire",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "金",
+    "reading": "かね / きん",
+    "meaning": "Gold / money",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "土",
+    "reading": "つち / ど",
+    "meaning": "Earth / soil",
+    "added": "2026-10-03"
+  },
+  {
+    "k": "曜",
+    "reading": "よう",
+    "meaning": "Day of the week",
+    "added": "2026-10-03"
   }
 ]

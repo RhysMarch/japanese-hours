@@ -1313,5 +1313,75 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791043845271",
+    "word": "月曜日",
+    "kana": "げつようび",
+    "meaning": "Monday",
+    "examples": [
+      {
+        "jp": "げつようびに かいしゃに いきます。",
+        "kanji": "月曜日に会社に行きます。",
+        "en": "I go to the office on Monday."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791043845272",
+    "word": "火曜日",
+    "kana": "かようび",
+    "meaning": "Tuesday",
+    "examples": [
+      {
+        "jp": "かようびに にほんごを べんきょうします。",
+        "kanji": "火曜日に日本語を勉強します。",
+        "en": "I study Japanese on Tuesdays."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791043845273",
+    "word": "水曜日",
+    "kana": "すいようび",
+    "meaning": "Wednesday",
+    "examples": [
+      {
+        "jp": "すいようびに たいいくかんで れんしゅうします。",
+        "kanji": "水曜日に体育館で練習します。",
+        "en": "I practise at the gym on Wednesdays."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791043845274",
+    "word": "木曜日",
+    "kana": "もくようび",
+    "meaning": "Thursday",
+    "examples": [
+      {
+        "jp": "もくようびは しごとです。",
+        "kanji": "木曜日は仕事です。",
+        "en": "I'm working on Thursday."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791043845275",
+    "word": "金曜日",
+    "kana": "きんようび",
+    "meaning": "Friday",
+    "examples": [
+      {
+        "jp": "きんようびに カフェに いきます。",
+        "kanji": "金曜日にカフェに行きます。",
+        "en": "I'm going to a café on Friday."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
