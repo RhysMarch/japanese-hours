@@ -1965,5 +1965,128 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315600",
+    "word": "",
+    "kana": "これを ください",
+    "meaning": "This one, please (pointing at the menu)",
+    "examples": [
+      {
+        "jp": "すみません、これを ください。",
+        "en": "Excuse me, this one please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315601",
+    "word": "お願いします",
+    "kana": "おねがいします",
+    "meaning": "please (when asking for something / accepting an offer)",
+    "examples": [
+      {
+        "jp": "みずを おねがいします。",
+        "kanji": "水をお願いします。",
+        "en": "Water, please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315602",
+    "word": "",
+    "kana": "いただきます",
+    "meaning": "(said before eating) — \"I humbly receive\"",
+    "examples": [
+      {
+        "jp": "いただきます！",
+        "en": "(Before the first bite) Let's eat!"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315603",
+    "word": "",
+    "kana": "ごちそうさまでした",
+    "meaning": "Thank you for the meal (after eating / when leaving)",
+    "examples": [
+      {
+        "jp": "ごちそうさまでした。おいしかったです。",
+        "en": "Thank you for the meal. It was delicious."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315604",
+    "word": "お会計お願いします",
+    "kana": "おかいけい おねがいします",
+    "meaning": "The bill, please",
+    "examples": [
+      {
+        "jp": "すみません、おかいけい おねがいします。",
+        "kanji": "すみません、お会計お願いします。",
+        "en": "Excuse me, the bill please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315605",
+    "word": "袋は要りますか",
+    "kana": "ふくろは いりますか",
+    "meaning": "Do you need a bag? (asked at the till)",
+    "examples": [
+      {
+        "jp": "ふくろは いりますか。— いりません。",
+        "kanji": "袋は要りますか。— 要りません。",
+        "en": "Do you need a bag? — No, I don't."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315606",
+    "word": "要りません",
+    "kana": "いりません",
+    "meaning": "I don't need it / no thanks",
+    "examples": [
+      {
+        "jp": "ふくろは いりません。",
+        "kanji": "袋は要りません。",
+        "en": "I don't need a bag."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315607",
+    "word": "温めますか",
+    "kana": "あたためますか",
+    "meaning": "Shall I heat it up? (konbini)",
+    "examples": [
+      {
+        "jp": "あたためますか。— はい、おねがいします。",
+        "kanji": "温めますか。— はい、お願いします。",
+        "en": "Shall I heat it up? — Yes, please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791058315608",
+    "word": "現金",
+    "kana": "げんきん",
+    "meaning": "cash",
+    "examples": [
+      {
+        "jp": "げんきんで おねがいします。",
+        "kanji": "現金でお願いします。",
+        "en": "Cash, please."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
