@@ -3,84 +3,72 @@
     "k": "薬",
     "reading": "くすり",
     "meaning": "medicine",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "円",
     "reading": "えん",
     "meaning": "yen",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "女",
     "reading": "おんな",
     "meaning": "woman",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "男",
     "reading": "おとこ",
     "meaning": "man",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "車",
     "reading": "くるま",
     "meaning": "car",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "人",
     "reading": "ひと",
     "meaning": "person",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "酒",
     "reading": "さけ",
     "meaning": "sake / alcohol",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "駅",
     "reading": "えき",
     "meaning": "station",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "木",
     "reading": "き",
     "meaning": "tree",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "山",
     "reading": "やま",
     "meaning": "mountain",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "川",
     "reading": "かわ",
     "meaning": "river",
-    "status": "known",
     "added": "2026-10-03"
   },
   {
     "k": "囚",
     "reading": "しゅう",
     "meaning": "prisoner",
-    "status": "known",
     "added": "2026-10-03"
   }
 ]

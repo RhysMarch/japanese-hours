@@ -8,8 +8,7 @@
 <style>
   :root {
     --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
-    --accent: #c8102e; --accent-soft: #fbe9ec; --learn: #d08a1e;
-  }
+    --accent: #c8102e; --accent-soft: #fbe9ec;  }
   @media (prefers-color-scheme: dark) {
     :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; }
   }
@@ -24,12 +23,8 @@
   h2 { font-size: 16px; margin: 0 0 12px; }
   .muted { color: var(--muted); }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 16px; }
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
-  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
-  .stat b { display: block; font-size: 28px; }
-  .stat small { color: var(--muted); }
-  .stat.known b { color: var(--accent); }
-  .stat.learning b { color: var(--learn); }
+  .count { font-size: 15px; color: var(--muted); }
+  .count b { font-size: 28px; color: var(--accent); margin-right: 4px; }
   label { display: block; font-size: 13px; color: var(--muted); }
   input, select { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin-top: 4px; }
   input:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
@@ -43,18 +38,16 @@
   .kform #f-k { font-size: 28px; text-align: center; padding: 2px; height: 46px; }
   .kform input, .kform select { height: 46px; }
   .actions { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
-  .filters { display: flex; gap: 6px; flex-wrap: wrap; }
-  .filters button { padding: 4px 12px; border-radius: 999px; font-size: 13px; }
-  .filters button.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
   .kbox { position: relative; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 10px 6px 8px; text-align: center; }
-  .kbox.learning { border-top-color: var(--learn); border-style: dashed solid solid; }
   .owner .kbox { cursor: pointer; }
   .owner .kbox:hover { border-color: var(--accent); }
   .kbox.sel { outline: 2px solid var(--accent); }
   .kbox .k { font-size: 44px; line-height: 1.15; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
   .kbox .r { font-size: 13px; color: var(--ink); min-height: 1.4em; }
-  .kbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .kbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; visibility: hidden; }
+  .kbox { cursor: pointer; }
+  .kbox:hover .m, .kbox.reveal .m, .kbox.sel .m { visibility: visible; }
   .empty { color: var(--muted); padding: 20px 0; text-align: center; }
   .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
   .toast.show { opacity: 1; }
@@ -88,12 +81,6 @@
     </form>
   </div>
 
-  <div class="stats">
-    <div class="stat known"><small>Comfortable</small><b id="s-known">0</b></div>
-    <div class="stat learning"><small>Learning</small><b id="s-learning">0</b></div>
-    <div class="stat"><small>Total</small><b id="s-total">0</b></div>
-  </div>
-
   <div class="card owner-only" hidden>
     <h2 id="form-title">Add a kanji</h2>
     <form id="kform">
@@ -101,12 +88,6 @@
         <label>Kanji <input id="f-k" maxlength="2" required autocomplete="off" lang="ja"></label>
         <label>Reading <input id="f-r" placeholder="e.g. くすり" autocomplete="off" lang="ja"></label>
         <label class="wide">Meaning <input id="f-m" placeholder="e.g. medicine" autocomplete="off"></label>
-        <label class="wide">Status
-          <select id="f-s">
-            <option value="known">Comfortable</option>
-            <option value="learning">Still learning</option>
-          </select>
-        </label>
       </div>
       <div class="actions">
         <button type="submit" class="primary" id="f-save">Add</button>
@@ -118,12 +99,8 @@
   </div>
 
   <div class="card">
-    <div class="row" style="justify-content:space-between;align-items:center;margin-bottom:14px">
-      <div class="filters" id="filters">
-        <button type="button" data-f="all" class="on">All</button>
-        <button type="button" data-f="known">Comfortable</button>
-        <button type="button" data-f="learning">Learning</button>
-      </div>
+    <div class="row" style="justify-content:space-between;align-items:baseline;margin-bottom:14px">
+      <div class="count"><b id="s-total">–</b> kanji</div>
       <span class="muted" style="font-size:13px" id="status">Loading…</span>
     </div>
     <div class="grid" id="grid"></div>
@@ -139,9 +116,8 @@ const pad = n => String(n).padStart(2, '0');
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-let kanji = [];        // [{ k, reading, meaning, status: 'known' | 'learning', added: 'YYYY-MM-DD' }]
+let kanji = [];        // [{ k, reading, meaning, added: 'YYYY-MM-DD' }]
 let token = store.get(TOKEN_KEY);
-let filter = 'all';
 let editing = null;    // the kanji character being edited, or null when adding
 
 function toast(msg) {
@@ -150,20 +126,14 @@ function toast(msg) {
 }
 
 function render() {
-  const known = kanji.filter(x => x.status === 'known').length;
-  $('s-known').textContent = known;
-  $('s-learning').textContent = kanji.length - known;
   $('s-total').textContent = kanji.length;
-
-  const shown = kanji.filter(x => filter === 'all' || x.status === filter);
-  $('grid').innerHTML = shown.length ? shown.map(x => `
-    <div class="kbox ${x.status}${x.k === editing ? ' sel' : ''}" data-k="${esc(x.k)}"
-         title="${esc(x.k)} · ${esc(x.reading)} · ${esc(x.meaning)} — ${x.status === 'known' ? 'comfortable' : 'still learning'} since ${esc(x.added)}">
+  $('grid').innerHTML = kanji.length ? kanji.map(x => `
+    <div class="kbox${x.k === editing ? ' sel' : ''}" data-k="${esc(x.k)}">
       <div class="k" lang="ja">${esc(x.k)}</div>
       <div class="r" lang="ja">${esc(x.reading)}</div>
       <div class="m">${esc(x.meaning)}</div>
     </div>`).join('')
-    : `<div class="empty">${kanji.length ? 'Nothing in this filter.' : 'No kanji yet.'}</div>`;
+    : '<div class="empty">No kanji yet.</div>';
 }
 
 function setEditing(k) {
@@ -173,7 +143,6 @@ function setEditing(k) {
   $('f-k').value = x?.k || '';
   $('f-r').value = x?.reading || '';
   $('f-m').value = x?.meaning || '';
-  $('f-s').value = x?.status || 'known';
   $('f-save').textContent = x ? 'Save' : 'Add';
   $('f-cancel').hidden = $('f-del').hidden = !x;
   $('f-hint').hidden = !!x;
@@ -194,7 +163,7 @@ $('kform').addEventListener('submit', async ev => {
   ev.preventDefault();
   const k = $('f-k').value.trim();
   if (!k) return;
-  const entry = { k, reading: $('f-r').value.trim(), meaning: $('f-m').value.trim(), status: $('f-s').value };
+  const entry = { k, reading: $('f-r').value.trim(), meaning: $('f-m').value.trim() };
   const was = editing;
   if (k !== was && kanji.some(x => x.k === k)) { toast(k + ' is already on your list'); setEditing(k); return; }
   const ok = await save(list => {
@@ -213,16 +182,11 @@ $('f-del').addEventListener('click', async () => {
 
 $('grid').addEventListener('click', ev => {
   const box = ev.target.closest('.kbox');
-  if (!box || !token) return;
+  if (!box) return;
+  // visitors: tap reveals the meaning (no hover on phones); owner: tap edits
+  if (!token) { box.classList.toggle('reveal'); return; }
   setEditing(box.dataset.k);
   window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-$('filters').addEventListener('click', ev => {
-  const f = ev.target.dataset.f;
-  if (!f) return;
-  filter = f;
-  document.querySelectorAll('#filters button').forEach(b => b.classList.toggle('on', b.dataset.f === f));
-  render();
 });
 
 // --- Owner sign-in (same token as the hours page) ---
@@ -248,7 +212,7 @@ $('auth-form').addEventListener('submit', async ev => {
 
 applyAuth();
 ghRead(FILE, [], token)
-  .then(r => { kanji = r.data; render(); $('status').textContent = token ? 'Click a box to edit it.' : ''; })
+  .then(r => { kanji = r.data; render(); $('status').textContent = token ? 'Click a box to edit it.' : 'Hover or tap a kanji for its meaning.'; })
   .catch(e => { $('status').textContent = 'Couldn\'t load kanji: ' + e.message; });
 </script>
 </body>
