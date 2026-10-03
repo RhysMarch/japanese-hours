@@ -106,15 +106,15 @@
         </div>
         <div class="side">
           <div class="lbl">Back</div>
-          <div>Kusuri <span class="ann">← line 1: reading in romaji</span></div>
+          <div lang="ja">くすり <span class="ann">← line 1: reading in kana</span></div>
           <div>Medicine <span class="ann">← line 2: meaning</span></div>
         </div>
       </div>
       <ul>
         <li><b>Front:</b> only the kanji — a single character (<span lang="ja">薬</span>) or a word (<span lang="ja">大学</span>). No romaji, brackets like <span lang="ja">「」</span> or other text.</li>
-        <li><b>Back, line 1:</b> the reading in romaji. Long vowels can be <i>ō / ū</i> or <i>ou / uu</i> (<i>Shū</i>, <i>Eigyōchū</i>). It's shown here in hiragana — <i>Kusuri</i> becomes <span lang="ja">くすり</span>.</li>
+        <li><b>Back, line 1:</b> the reading in kana (<span lang="ja">くすり</span>). Romaji like <i>Kusuri</i> still works — it gets converted to hiragana.</li>
         <li><b>Back, line 2:</b> the meaning in English.</li>
-        <li>Press <b>Enter</b> between the romaji and the meaning in the Anki editor so they're on separate lines.</li>
+        <li>Press <b>Enter</b> between the reading and the meaning in the Anki editor so they're on separate lines.</li>
         <li><b>One word per card</b> — make separate cards for <span lang="ja">入口</span> and <span lang="ja">出口</span> rather than one for both.</li>
         <li>Note type <b>Basic</b>; any deck name works.</li>
       </ul>
@@ -141,7 +141,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="github.js?v=20261003b"></script>
-<script src="anki.js?v=20261003c"></script>
+<script src="anki.js?v=20261003d"></script>
 <script>
 const FILE = 'kanji.json';
 const $ = id => document.getElementById(id);

@@ -111,13 +111,13 @@ function romajiToKana(romaji) {
   return out;
 }
 
-// Kanji card style: front = just the kanji ("薬"), back = romaji on the first line, meaning below ("Kusuri<br>Medicine").
-// Reading is shown in hiragana when the romaji converts cleanly.
+// Kanji card style: front = just the kanji ("薬"), back = reading in kana on the first line, meaning below ("くすり<br>Medicine").
+// A romaji reading ("Kusuri") is still accepted and converted to hiragana.
 function parseAnkiKanji(text) {
   return parseAnkiNotes(text).map(({ id, deck, fields }) => {
     const k = stripEmoji(htmlLines(fields[0] || '').join('')).replace(/\s+/g, '');
-    const [romaji = '', ...meaning] = htmlLines(fields[1] || '');
-    return { k, reading: romajiToKana(romaji) || romaji, meaning: meaning.join(' '), id: id || k, deck };
+    const [reading = '', ...meaning] = htmlLines(fields[1] || '');
+    return { k, reading: hasJapanese(reading) ? reading : (romajiToKana(reading) || reading), meaning: meaning.join(' '), id: id || k, deck };
   }).filter(x => x.k);
 }
 
