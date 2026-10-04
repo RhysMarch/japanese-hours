@@ -2088,5 +2088,287 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492376",
+    "word": "",
+    "kana": "どれ",
+    "meaning": "which one (of three or more)",
+    "examples": [
+      {
+        "jp": "どれが わたしの かさですか。",
+        "en": "Which one is my umbrella?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492377",
+    "word": "",
+    "kana": "この",
+    "meaning": "this … (+ noun, near me)",
+    "examples": [
+      {
+        "jp": "この ラーメンは おいしいです。",
+        "en": "This ramen is delicious."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492378",
+    "word": "",
+    "kana": "その",
+    "meaning": "that … (+ noun, near you)",
+    "examples": [
+      {
+        "jp": "その かばんは たかいです。",
+        "en": "That bag is expensive."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492379",
+    "word": "",
+    "kana": "あの",
+    "meaning": "that … over there (+ noun)",
+    "examples": [
+      {
+        "jp": "あの ひとは せんせいです。",
+        "en": "That person over there is a teacher."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492380",
+    "word": "",
+    "kana": "どの",
+    "meaning": "which … (+ noun)",
+    "examples": [
+      {
+        "jp": "どの バスですか。",
+        "en": "Which bus is it?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492381",
+    "word": "",
+    "kana": "そこ",
+    "meaning": "there (near you)",
+    "examples": [
+      {
+        "jp": "そこに いぬが います。",
+        "en": "There's a dog there (by you)."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492382",
+    "word": "財布",
+    "kana": "さいふ",
+    "meaning": "wallet",
+    "examples": [
+      {
+        "jp": "さいふは かばんに あります。",
+        "kanji": "財布はかばんにあります。",
+        "en": "My wallet is in my bag."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492383",
+    "word": "",
+    "kana": "Tシャツ",
+    "meaning": "T-shirt",
+    "examples": [
+      {
+        "jp": "しろい Tシャツが ほしいです。",
+        "en": "I want a white T-shirt."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492384",
+    "word": "時計",
+    "kana": "とけい",
+    "meaning": "watch / clock",
+    "examples": [
+      {
+        "jp": "この とけいは たかいです。",
+        "kanji": "この時計は高いです。",
+        "en": "This watch is expensive."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492385",
+    "word": "帽子",
+    "kana": "ぼうし",
+    "meaning": "hat",
+    "examples": [
+      {
+        "jp": "くろい ぼうしが すきです。",
+        "kanji": "黒い帽子が好きです。",
+        "en": "I like black hats."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492386",
+    "word": "銀行",
+    "kana": "ぎんこう",
+    "meaning": "bank",
+    "examples": [
+      {
+        "jp": "ぎんこうは どこですか。",
+        "kanji": "銀行はどこですか。",
+        "en": "Where is the bank?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492387",
+    "word": "",
+    "kana": "トイレ",
+    "meaning": "toilet / restroom",
+    "examples": [
+      {
+        "jp": "すみません、トイレは どこですか。",
+        "en": "Excuse me, where's the toilet?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492388",
+    "word": "図書館",
+    "kana": "としょかん",
+    "meaning": "library",
+    "examples": [
+      {
+        "jp": "としょかんで ほんを よみます。",
+        "kanji": "図書館で本を読みます。",
+        "en": "I read books at the library."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492389",
+    "word": "郵便局",
+    "kana": "ゆうびんきょく",
+    "meaning": "post office",
+    "examples": [
+      {
+        "jp": "ゆうびんきょくは えきの ひだりです。",
+        "kanji": "郵便局は駅の左です。",
+        "en": "The post office is to the left of the station."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492390",
+    "word": "お母さん",
+    "kana": "おかあさん",
+    "meaning": "mother (someone's, or Mum when talking to her)",
+    "examples": [
+      {
+        "jp": "おかあさんは やさしいです。",
+        "kanji": "お母さんは優しいです。",
+        "en": "Mum is kind."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492391",
+    "word": "お父さん",
+    "kana": "おとうさん",
+    "meaning": "father (someone's, or Dad when talking to him)",
+    "examples": [
+      {
+        "jp": "おとうさんは べんごしです。",
+        "kanji": "お父さんは弁護士です。",
+        "en": "Dad is a lawyer."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492392",
+    "word": "",
+    "kana": "いくら",
+    "meaning": "how much? (price)",
+    "examples": [
+      {
+        "jp": "これは いくらですか。",
+        "en": "How much is this?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492393",
+    "word": "高い",
+    "kana": "たかい",
+    "meaning": "expensive / high / tall",
+    "examples": [
+      {
+        "jp": "ホテルは たかいです。",
+        "kanji": "ホテルは高いです。",
+        "en": "The hotel is expensive."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492394",
+    "word": "",
+    "kana": "じゃあ",
+    "meaning": "well then / so",
+    "examples": [
+      {
+        "jp": "じゃあ、これを ください。",
+        "en": "Well then, I'll have this one."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492395",
+    "word": "",
+    "kana": "どうぞ",
+    "meaning": "here you go / please, go ahead",
+    "examples": [
+      {
+        "jp": "コーヒーを どうぞ。",
+        "en": "Here's your coffee."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791133492396",
+    "word": "",
+    "kana": "どうも",
+    "meaning": "thanks (casual)",
+    "examples": [
+      {
+        "jp": "コーヒーを どうぞ。— どうも。",
+        "en": "Here's your coffee. — Thanks."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
