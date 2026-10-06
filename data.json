@@ -157,5 +157,12 @@
     "anki_vocab": 0.25,
     "listening": 0.5,
     "duolingo": 0.25
+  },
+  "2026-10-06": {
+    "genki": 1.25,
+    "writing": 0.25,
+    "anki_kanji": 0.25,
+    "anki_vocab": 0.25,
+    "duolingo": 0.25
   }
 }
