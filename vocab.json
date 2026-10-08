@@ -2370,5 +2370,348 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115633",
+    "word": "靴下",
+    "kana": "くつした",
+    "meaning": "socks",
+    "examples": [
+      {
+        "jp": "くろい くつしたが ほしいです。",
+        "kanji": "黒い靴下が欲しいです。",
+        "en": "I want black socks."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115634",
+    "word": "",
+    "kana": "ズボン",
+    "meaning": "trousers / pants (パンツ usually means underwear)",
+    "examples": [
+      {
+        "jp": "あおい ズボンです。",
+        "en": "They're blue trousers."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115635",
+    "word": "眼鏡",
+    "kana": "めがね",
+    "meaning": "glasses (often written めがね / メガネ)",
+    "examples": [
+      {
+        "jp": "めがねは どこですか。",
+        "kanji": "眼鏡はどこですか。",
+        "en": "Where are my glasses?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115636",
+    "word": "髪",
+    "kana": "かみ",
+    "meaning": "hair (on your head)",
+    "examples": [
+      {
+        "jp": "かみは くろいです。",
+        "kanji": "髪は黒いです。",
+        "en": "My hair is black."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115637",
+    "word": "",
+    "kana": "ノートパソコン",
+    "meaning": "laptop",
+    "examples": [
+      {
+        "jp": "しごとで ノートパソコンを つかいます。",
+        "en": "I use a laptop at work."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115638",
+    "word": "ゴミ箱",
+    "kana": "ごみばこ",
+    "meaning": "bin / rubbish bin",
+    "examples": [
+      {
+        "jp": "ごみばこは どこですか。",
+        "kanji": "ゴミ箱はどこですか。",
+        "en": "Where's the bin?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115639",
+    "word": "明るい",
+    "kana": "あかるい",
+    "meaning": "bright / light (also: cheerful)",
+    "examples": [
+      {
+        "jp": "この へやは あかるいです。",
+        "kanji": "この部屋は明るいです。",
+        "en": "This room is bright."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115640",
+    "word": "暗い",
+    "kana": "くらい",
+    "meaning": "dark / gloomy",
+    "examples": [
+      {
+        "jp": "よるの こうえんは くらいです。",
+        "kanji": "夜の公園は暗いです。",
+        "en": "The park is dark at night."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115641",
+    "word": "道",
+    "kana": "みち",
+    "meaning": "road / street / way",
+    "examples": [
+      {
+        "jp": "この みちは おおきいです。",
+        "kanji": "この道は大きいです。",
+        "en": "This road is big."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115642",
+    "word": "木",
+    "kana": "き",
+    "meaning": "tree",
+    "examples": [
+      {
+        "jp": "こうえんに おおきい きが あります。",
+        "kanji": "公園に大きい木があります。",
+        "en": "There's a big tree in the park."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115643",
+    "word": "看板",
+    "kana": "かんばん",
+    "meaning": "sign / signboard",
+    "examples": [
+      {
+        "jp": "あの かんばんは あかいです。",
+        "kanji": "あの看板は赤いです。",
+        "en": "That sign is red."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115644",
+    "word": "",
+    "kana": "スイカ",
+    "meaning": "watermelon (also the name of the Suica train card)",
+    "examples": [
+      {
+        "jp": "スイカが だいすきです。",
+        "en": "I love watermelon."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115645",
+    "word": "醤油",
+    "kana": "しょうゆ",
+    "meaning": "soy sauce",
+    "examples": [
+      {
+        "jp": "しょうゆを ください。",
+        "kanji": "醤油をください。",
+        "en": "Soy sauce, please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115646",
+    "word": "卵",
+    "kana": "たまご",
+    "meaning": "egg / eggs",
+    "examples": [
+      {
+        "jp": "あさごはんに たまごを たべます。",
+        "kanji": "朝ご飯に卵を食べます。",
+        "en": "I eat eggs for breakfast."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115647",
+    "word": "お菓子",
+    "kana": "おかし",
+    "meaning": "sweets / snacks",
+    "examples": [
+      {
+        "jp": "おかしが だいすきです。",
+        "kanji": "お菓子が大好きです。",
+        "en": "I love sweets."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115648",
+    "word": "神社",
+    "kana": "じんじゃ",
+    "meaning": "shrine (Shinto)",
+    "examples": [
+      {
+        "jp": "どようびに じんじゃに いきます。",
+        "kanji": "土曜日に神社に行きます。",
+        "en": "I'm going to a shrine on Saturday."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115649",
+    "word": "パン屋",
+    "kana": "パンや",
+    "meaning": "bakery",
+    "examples": [
+      {
+        "jp": "パンやは えきの みぎです。",
+        "kanji": "パン屋は駅の右です。",
+        "en": "The bakery is to the right of the station."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115650",
+    "word": "",
+    "kana": "パン",
+    "meaning": "bread",
+    "examples": [
+      {
+        "jp": "あさごはんに パンを たべます。",
+        "en": "I eat bread for breakfast."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115651",
+    "word": "",
+    "kana": "ベッド",
+    "meaning": "bed",
+    "examples": [
+      {
+        "jp": "へやに おおきい ベッドが あります。",
+        "en": "There's a big bed in my room."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115652",
+    "word": "自動販売機",
+    "kana": "じどうはんばいき",
+    "meaning": "vending machine (short: じはんき)",
+    "examples": [
+      {
+        "jp": "えきに じどうはんばいきが あります。",
+        "kanji": "駅に自動販売機があります。",
+        "en": "There's a vending machine at the station."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115653",
+    "word": "電子レンジ",
+    "kana": "でんしレンジ",
+    "meaning": "microwave (often just レンジ)",
+    "examples": [
+      {
+        "jp": "でんしレンジは あそこです。",
+        "kanji": "電子レンジはあそこです。",
+        "en": "The microwave is over there."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115654",
+    "word": "飛行機",
+    "kana": "ひこうき",
+    "meaning": "aeroplane",
+    "examples": [
+      {
+        "jp": "ひこうきで にほんへ いきます。",
+        "kanji": "飛行機で日本へ行きます。",
+        "en": "I'm going to Japan by plane."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115655",
+    "word": "電車",
+    "kana": "でんしゃ",
+    "meaning": "train",
+    "examples": [
+      {
+        "jp": "でんしゃで かいしゃに いきます。",
+        "kanji": "電車で会社に行きます。",
+        "en": "I go to the office by train."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115656",
+    "word": "",
+    "kana": "スーツケース",
+    "meaning": "suitcase",
+    "examples": [
+      {
+        "jp": "スーツケースは へやに あります。",
+        "en": "My suitcase is in my room."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501115657",
+    "word": "",
+    "kana": "ベンチ",
+    "meaning": "bench",
+    "examples": [
+      {
+        "jp": "こうえんの ベンチで ほんを よみます。",
+        "en": "I read a book on a bench in the park."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
