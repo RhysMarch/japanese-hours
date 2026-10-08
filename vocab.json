@@ -2713,5 +2713,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501186390",
+    "word": "お金",
+    "kana": "おかね",
+    "meaning": "money",
+    "examples": [
+      {
+        "jp": "おかねは さいふに あります。",
+        "kanji": "お金は財布にあります。",
+        "en": "The money is in my wallet."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
