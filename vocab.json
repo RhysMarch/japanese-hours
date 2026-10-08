@@ -2794,5 +2794,33 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501500001",
+    "word": "買います",
+    "kana": "かいます",
+    "meaning": "to buy",
+    "examples": [
+      {
+        "jp": "コンビニで みずを かいます。",
+        "kanji": "コンビニで水を買います。",
+        "en": "I buy water at the convenience store."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501500002",
+    "word": "前",
+    "kana": "まえ",
+    "meaning": "in front (of) / before",
+    "examples": [
+      {
+        "jp": "えきの まえに バスていが あります。",
+        "kanji": "駅の前にバス停があります。",
+        "en": "There's a bus stop in front of the station."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
