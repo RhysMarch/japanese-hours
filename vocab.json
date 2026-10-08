@@ -2727,5 +2727,72 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501300000",
+    "word": "",
+    "kana": "スーパー",
+    "meaning": "supermarket",
+    "examples": [
+      {
+        "jp": "スーパーで たまごを かいます。",
+        "en": "I buy eggs at the supermarket."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501300001",
+    "word": "駐車場",
+    "kana": "ちゅうしゃじょう",
+    "meaning": "car park / parking (lot)",
+    "examples": [
+      {
+        "jp": "ちゅうしゃじょうは どこですか。",
+        "kanji": "駐車場はどこですか。",
+        "en": "Where is the car park?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501300002",
+    "word": "",
+    "kana": "ポスト",
+    "meaning": "postbox",
+    "examples": [
+      {
+        "jp": "ゆうびんきょくの まえに ポストが あります。",
+        "en": "There's a postbox in front of the post office."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501300003",
+    "word": "",
+    "kana": "ビール",
+    "meaning": "beer",
+    "examples": [
+      {
+        "jp": "ビールを おねがいします。",
+        "en": "A beer, please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501300004",
+    "word": "冷蔵庫",
+    "kana": "れいぞうこ",
+    "meaning": "fridge / refrigerator",
+    "examples": [
+      {
+        "jp": "れいぞうこに ビールが あります。",
+        "kanji": "冷蔵庫にビールがあります。",
+        "en": "There's beer in the fridge."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
