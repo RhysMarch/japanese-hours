@@ -2836,5 +2836,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-mon",
+    "word": "門",
+    "kana": "もん",
+    "meaning": "gate (of a building, temple, school…) — airport gate = ゲート, shrine gate = 鳥居 (とりい)",
+    "examples": [
+      {
+        "jp": "もんの まえに いぬが います。",
+        "kanji": "門の前に犬がいます。",
+        "en": "There's a dog in front of the gate."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
