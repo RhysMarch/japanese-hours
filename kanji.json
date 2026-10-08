@@ -454,5 +454,83 @@
     "reading": "め",
     "meaning": "Eye",
     "added": "2026-10-03"
+  },
+  {
+    "k": "上",
+    "reading": "うえ / じょう",
+    "meaning": "Up / above",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "下",
+    "reading": "した / か",
+    "meaning": "Down / below",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "左",
+    "reading": "ひだり",
+    "meaning": "Left",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "右",
+    "reading": "みぎ",
+    "meaning": "Right",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "子",
+    "reading": "こ / し",
+    "meaning": "Child",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "先",
+    "reading": "せん / さき",
+    "meaning": "Ahead / previous",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "生",
+    "reading": "せい / い(きる)",
+    "meaning": "Life / birth",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "朝",
+    "reading": "あさ",
+    "meaning": "Morning",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "夜",
+    "reading": "よる",
+    "meaning": "Night",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "書",
+    "reading": "か(く)",
+    "meaning": "Write",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "読",
+    "reading": "よ(む)",
+    "meaning": "Read",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "話",
+    "reading": "はな(す) / わ",
+    "meaning": "Talk / story",
+    "added": "2026-10-09"
+  },
+  {
+    "k": "好",
+    "reading": "す(き)",
+    "meaning": "Like / fond of",
+    "added": "2026-10-09"
   }
 ]
