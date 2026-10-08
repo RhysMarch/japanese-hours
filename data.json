@@ -170,5 +170,12 @@
     "anki_kanji": 0.25,
     "anki_vocab": 0.5,
     "duolingo": 0.25
+  },
+  "2026-10-08": {
+    "writing": 0.25,
+    "anki_kana": 0.25,
+    "anki_kanji": 0.25,
+    "anki_vocab": 0.25,
+    "duolingo": 0.25
   }
 }
