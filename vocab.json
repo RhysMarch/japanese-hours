@@ -2850,5 +2850,358 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977178",
+    "word": "",
+    "kana": "ありがとうございます",
+    "meaning": "thank you (polite — casual: ありがとう)",
+    "examples": [
+      {
+        "jp": "コーヒーを どうぞ。— ありがとうございます。",
+        "en": "Here's your coffee. — Thank you."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977179",
+    "word": "",
+    "kana": "はい",
+    "meaning": "yes",
+    "examples": [
+      {
+        "jp": "コーヒーを のみますか。— はい、のみます。",
+        "en": "Do you drink coffee? — Yes, I do."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977180",
+    "word": "",
+    "kana": "いいえ",
+    "meaning": "no",
+    "examples": [
+      {
+        "jp": "ビールを のみますか。— いいえ、のみません。",
+        "en": "Do you drink beer? — No, I don't."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977181",
+    "word": "",
+    "kana": "こんにちは",
+    "meaning": "hello / good afternoon",
+    "examples": [
+      {
+        "jp": "こんにちは、リースです。",
+        "en": "Hello, I'm Rhys."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977182",
+    "word": "",
+    "kana": "おはようございます",
+    "meaning": "good morning (casual: おはよう)",
+    "examples": [
+      {
+        "jp": "おはようございます、せんせい。",
+        "en": "Good morning, teacher."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977183",
+    "word": "",
+    "kana": "おやすみなさい",
+    "meaning": "good night (casual: おやすみ)",
+    "examples": [
+      {
+        "jp": "じゃあ、おやすみなさい。",
+        "en": "Well then, good night."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977184",
+    "word": "",
+    "kana": "さようなら",
+    "meaning": "goodbye (friends usually say じゃあね / またね)",
+    "examples": [
+      {
+        "jp": "せんせい、さようなら。",
+        "en": "Goodbye, teacher."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977185",
+    "word": "分かります",
+    "kana": "わかります",
+    "meaning": "to understand",
+    "examples": [
+      {
+        "jp": "わかりますか。— はい、わかります。",
+        "kanji": "分かりますか。— はい、分かります。",
+        "en": "Do you understand? — Yes, I do."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977186",
+    "word": "分かりません",
+    "kana": "わかりません",
+    "meaning": "I don't understand",
+    "examples": [
+      {
+        "jp": "すみません、わかりません。",
+        "kanji": "すみません、分かりません。",
+        "en": "Sorry, I don't understand."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977187",
+    "word": "",
+    "kana": "いい",
+    "meaning": "good / nice (not: よくない, was: よかった)",
+    "examples": [
+      {
+        "jp": "この カフェは いいです。",
+        "en": "This café is nice."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977188",
+    "word": "",
+    "kana": "きれい",
+    "meaning": "beautiful / clean (きれいな + noun: きれいな へや)",
+    "examples": [
+      {
+        "jp": "この へやは きれいです。",
+        "en": "This room is clean."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977189",
+    "word": "暑い",
+    "kana": "あつい",
+    "meaning": "hot (weather — hot things are 熱い)",
+    "examples": [
+      {
+        "jp": "きょうは あついです。",
+        "kanji": "今日は暑いです。",
+        "en": "It's hot today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977190",
+    "word": "寒い",
+    "kana": "さむい",
+    "meaning": "cold (weather)",
+    "examples": [
+      {
+        "jp": "きょうは さむいです。てぶくろが ほしいです。",
+        "kanji": "今日は寒いです。手袋が欲しいです。",
+        "en": "It's cold today. I want gloves."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977191",
+    "word": "今",
+    "kana": "いま",
+    "meaning": "now",
+    "examples": [
+      {
+        "jp": "いま カフェに います。",
+        "kanji": "今、カフェにいます。",
+        "en": "I'm at a café now."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977192",
+    "word": "",
+    "kana": "ちょっと",
+    "meaning": "a little / just a moment",
+    "examples": [
+      {
+        "jp": "ちょっと まってください。",
+        "en": "Just a moment, please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977193",
+    "word": "人",
+    "kana": "ひと",
+    "meaning": "person",
+    "examples": [
+      {
+        "jp": "あの ひとは だれですか。",
+        "kanji": "あの人は誰ですか。",
+        "en": "Who is that person?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977194",
+    "word": "毎日",
+    "kana": "まいにち",
+    "meaning": "every day",
+    "examples": [
+      {
+        "jp": "まいにち アンキを します。",
+        "kanji": "毎日アンキをします。",
+        "en": "I do Anki every day."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977195",
+    "word": "朝",
+    "kana": "あさ",
+    "meaning": "morning",
+    "examples": [
+      {
+        "jp": "あさ コーヒーを のみます。",
+        "kanji": "朝コーヒーを飲みます。",
+        "en": "I drink coffee in the morning."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977196",
+    "word": "夜",
+    "kana": "よる",
+    "meaning": "night / evening",
+    "examples": [
+      {
+        "jp": "よる ユーチューブを みます。",
+        "kanji": "夜ユーチューブを見ます。",
+        "en": "I watch YouTube at night."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977197",
+    "word": "",
+    "kana": "コーヒー",
+    "meaning": "coffee",
+    "examples": [
+      {
+        "jp": "コーヒーが だいすきです。",
+        "en": "I love coffee."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977198",
+    "word": "お茶",
+    "kana": "おちゃ",
+    "meaning": "(green) tea",
+    "examples": [
+      {
+        "jp": "おちゃを ください。",
+        "kanji": "お茶をください。",
+        "en": "Tea, please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977199",
+    "word": "店",
+    "kana": "みせ",
+    "meaning": "shop / restaurant",
+    "examples": [
+      {
+        "jp": "この みせの ラーメンは おいしいです。",
+        "kanji": "この店のラーメンは美味しいです。",
+        "en": "The ramen at this shop is delicious."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977200",
+    "word": "時間",
+    "kana": "じかん",
+    "meaning": "time / hours",
+    "examples": [
+      {
+        "jp": "きょうは じかんが ありません。",
+        "kanji": "今日は時間がありません。",
+        "en": "I don't have time today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977201",
+    "word": "寝ます",
+    "kana": "ねます",
+    "meaning": "to sleep / go to bed",
+    "examples": [
+      {
+        "jp": "じゅういちじに ねます。",
+        "kanji": "十一時に寝ます。",
+        "en": "I go to bed at 11."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977202",
+    "word": "起きます",
+    "kana": "おきます",
+    "meaning": "to wake up / get up",
+    "examples": [
+      {
+        "jp": "しちじに おきます。",
+        "kanji": "七時に起きます。",
+        "en": "I get up at 7."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791501977203",
+    "word": "話します",
+    "kana": "はなします",
+    "meaning": "to speak / talk",
+    "examples": [
+      {
+        "jp": "ともだちと にほんごを はなします。",
+        "kanji": "友達と日本語を話します。",
+        "en": "I speak Japanese with my friend."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
