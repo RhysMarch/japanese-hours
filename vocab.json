@@ -2822,5 +2822,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-tsuki",
+    "word": "月",
+    "kana": "つき",
+    "meaning": "moon",
+    "examples": [
+      {
+        "jp": "きょうは つきが きれいです。",
+        "kanji": "今日は月がきれいです。",
+        "en": "The moon is beautiful today."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
