@@ -3203,5 +3203,22 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-yabai",
+    "word": "",
+    "kana": "やばい",
+    "meaning": "oh no! / crap! / dangerous — also \"amazing!\" (casual slang, not for polite situations)",
+    "examples": [
+      {
+        "jp": "やばい！パスポートが ありません！",
+        "en": "Oh crap! I don't have my passport!"
+      },
+      {
+        "jp": "この ラーメン、やばい！",
+        "en": "This ramen is insane! (amazing)"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
