@@ -3276,5 +3276,143 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600000",
+    "word": "",
+    "kana": "ドア",
+    "meaning": "door",
+    "examples": [
+      {
+        "jp": "ドアの まえに ねこが います。",
+        "en": "There's a cat in front of the door."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600001",
+    "word": "電気",
+    "kana": "でんき",
+    "meaning": "light (the one you switch on) / electricity",
+    "examples": [
+      {
+        "jp": "へやの でんきは あかるいです。",
+        "kanji": "部屋の電気は明るいです。",
+        "en": "The light in my room is bright."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600002",
+    "word": "机",
+    "kana": "つくえ",
+    "meaning": "desk",
+    "examples": [
+      {
+        "jp": "つくえの うえに ノートパソコンが あります。",
+        "kanji": "机の上にノートパソコンがあります。",
+        "en": "There's a laptop on the desk."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600003",
+    "word": "鉛筆",
+    "kana": "えんぴつ",
+    "meaning": "pencil",
+    "examples": [
+      {
+        "jp": "えんぴつで かきます。",
+        "kanji": "鉛筆で書きます。",
+        "en": "I write with a pencil."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600004",
+    "word": "椅子",
+    "kana": "いす",
+    "meaning": "chair",
+    "examples": [
+      {
+        "jp": "いすに ねこが います。",
+        "kanji": "椅子に猫がいます。",
+        "en": "There's a cat on the chair."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600005",
+    "word": "窓",
+    "kana": "まど",
+    "meaning": "window",
+    "examples": [
+      {
+        "jp": "へやに おおきい まどが あります。",
+        "kanji": "部屋に大きい窓があります。",
+        "en": "My room has a big window."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600006",
+    "word": "分かりました",
+    "kana": "わかりました",
+    "meaning": "I understood / got it / OK (past of わかります)",
+    "examples": [
+      {
+        "jp": "はい、わかりました。",
+        "kanji": "はい、分かりました。",
+        "en": "Yes, got it."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600007",
+    "word": "",
+    "kana": "ゆっくり",
+    "meaning": "slowly (ゆっくり おねがいします = slower, please)",
+    "examples": [
+      {
+        "jp": "すみません、ゆっくり おねがいします。",
+        "en": "Sorry, slowly please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600008",
+    "word": "聞いてください",
+    "kana": "きいてください",
+    "meaning": "please listen",
+    "examples": [
+      {
+        "jp": "ちょっと きいてください。",
+        "kanji": "ちょっと聞いてください。",
+        "en": "Listen for a moment, please."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568600009",
+    "word": "もう一度言ってください",
+    "kana": "もういちど いってください",
+    "meaning": "please say it again",
+    "examples": [
+      {
+        "jp": "すみません、もういちど いってください。",
+        "kanji": "すみません、もう一度言ってください。",
+        "en": "Sorry, please say that again."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
