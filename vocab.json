@@ -3414,5 +3414,60 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568700000",
+    "word": "私も",
+    "kana": "わたしも",
+    "meaning": "me too! (neutral — politer: わたしもです)",
+    "examples": [
+      {
+        "jp": "バレーボールを します。— えっ、わたしも！",
+        "kanji": "バレーボールをします。— えっ、私も！",
+        "en": "I play volleyball. — Oh, me too!"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568700001",
+    "word": "僕も",
+    "kana": "ぼくも",
+    "meaning": "me too! (casual — used by guys)",
+    "examples": [
+      {
+        "jp": "ラーメンが すきです。— ぼくも！",
+        "kanji": "ラーメンが好きです。— 僕も！",
+        "en": "I like ramen. — Me too!"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568700002",
+    "word": "俺も",
+    "kana": "おれも",
+    "meaning": "me too! (very casual — guys, with friends)",
+    "examples": [
+      {
+        "jp": "コーヒーを のみます。— おれも！",
+        "kanji": "コーヒーを飲みます。— 俺も！",
+        "en": "I'm having a coffee. — Me too!"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568700003",
+    "word": "",
+    "kana": "まじで",
+    "meaning": "seriously? / for real? (slang — friends only)",
+    "examples": [
+      {
+        "jp": "えー、まじで？ぼくも！",
+        "en": "Whoa, seriously? Me too!"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
