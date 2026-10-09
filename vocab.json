@@ -3220,5 +3220,61 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568393513",
+    "word": "〜年生",
+    "kana": "〜ねんせい",
+    "meaning": "___-year student (いちねんせい, にねんせい, さんねんせい, よねんせい)",
+    "examples": [
+      {
+        "jp": "わたしは だいがくの にねんせいです。",
+        "kanji": "私は大学の二年生です。",
+        "en": "I'm a second-year at university."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568393514",
+    "word": "何年生",
+    "kana": "なんねんせい",
+    "meaning": "what year (student)?",
+    "examples": [
+      {
+        "jp": "なんねんせいですか。— さんねんせいです。",
+        "kanji": "何年生ですか。— 三年生です。",
+        "en": "What year are you? — I'm a third-year."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568393515",
+    "word": "学生",
+    "kana": "がくせい",
+    "meaning": "student",
+    "examples": [
+      {
+        "jp": "ともだちは がくせいです。",
+        "kanji": "友達は学生です。",
+        "en": "My friend is a student."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791568393516",
+    "word": "大学生",
+    "kana": "だいがくせい",
+    "meaning": "university student",
+    "examples": [
+      {
+        "jp": "あの ひとは だいがくせいです。",
+        "kanji": "あの人は大学生です。",
+        "en": "That person is a university student."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
