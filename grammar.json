@@ -224,9 +224,11 @@
           "reading": "mo",
           "covered": true,
           "gist": "Too / also",
-          "note": "Replaces は, が or を — never stacks with them (わたしも, not わたしはも).",
+          "note": "Five rules — the first is the one you'll use most.",
           "uses": [
             {
+              "label": "1. Replaces は・が・を",
+              "note": "Never stacks with them: わたしも, not わたしはも. In conversation you can stop there — わたしも！ = Me too!",
               "examples": [
                 {
                   "jp": "ねこが すきです。— わたし[も] すきです。",
@@ -234,9 +236,67 @@
                   "en": "I like cats. — I like them too."
                 },
                 {
-                  "jp": "この とけいは たかいです。その とけい[も] たかいです。",
-                  "kj": "この時計は高いです。その時計[も]高いです。",
-                  "en": "This watch is expensive. That one is too."
+                  "jp": "バレーボールを します。— えっ、わたし[も]！",
+                  "kj": "バレーボールをします。— えっ、私[も]！",
+                  "en": "I play volleyball. — Oh, me too!"
+                }
+              ]
+            },
+            {
+              "label": "2. Comes after に and で",
+              "note": "に and で stay: にも, でも.",
+              "examples": [
+                {
+                  "jp": "こうえん[にも] ねこが います。",
+                  "kj": "公園[にも]猫がいます。",
+                  "en": "There are cats in the park too."
+                },
+                {
+                  "jp": "カフェ[でも] べんきょうします。",
+                  "kj": "カフェ[でも]勉強します。",
+                  "en": "I also study at cafés."
+                }
+              ]
+            },
+            {
+              "label": "3. Position matters",
+              "note": "“Also” attaches to the word right before も.",
+              "examples": [
+                {
+                  "jp": "わたし[も] コーヒーを のみます。",
+                  "kj": "私[も]コーヒーを飲みます。",
+                  "en": "I drink coffee too (me, as well as others)."
+                },
+                {
+                  "jp": "わたしは コーヒー[も] のみます。",
+                  "kj": "私はコーヒー[も]飲みます。",
+                  "en": "I drink coffee too (coffee, as well as other drinks)."
+                }
+              ]
+            },
+            {
+              "label": "4. With a negative = either / neither",
+              "examples": [
+                {
+                  "jp": "きのう かいしゃに いきませんでした。— わたし[も] いきませんでした。",
+                  "kj": "昨日会社に行きませんでした。— 私[も]行きませんでした。",
+                  "en": "I didn't go to the office yesterday. — I didn't go either."
+                }
+              ]
+            },
+            {
+              "label": "5. X も Y も = both X and Y",
+              "note": "With a negative: neither X nor Y.",
+              "examples": [
+                {
+                  "jp": "コーヒー[も] おちゃ[も] のみます。",
+                  "kj": "コーヒー[も]お茶[も]飲みます。",
+                  "en": "I drink both coffee and tea."
+                },
+                {
+                  "jp": "ビール[も] おさけ[も] のみません。",
+                  "kj": "ビール[も]お酒[も]飲みません。",
+                  "en": "I drink neither beer nor sake."
                 }
               ]
             }
