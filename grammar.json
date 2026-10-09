@@ -461,6 +461,75 @@
           ]
         },
         {
+          "id": "kudasai",
+          "title": "〜を ください vs 〜を おねがいします",
+          "covered": true,
+          "gist": "Please give me… vs I'd like…, please",
+          "note": "ください is direct — “give me (a thing)”. おねがいします is softer and more polite (best for ordering), and also works for services and abstract things, and for accepting an offer. To ask someone to DO something, use 〜てください.",
+          "uses": [
+            {
+              "label": "ください — please give me (a thing)",
+              "examples": [
+                {
+                  "jp": "みずを [ください]。",
+                  "kj": "水を[ください]。",
+                  "en": "Water, please."
+                },
+                {
+                  "jp": "これを [ください]。",
+                  "kj": "これを[ください]。",
+                  "en": "This one, please."
+                }
+              ]
+            },
+            {
+              "label": "おねがいします — politer ordering",
+              "examples": [
+                {
+                  "jp": "ラーメンを [おねがいします]。",
+                  "kj": "ラーメンを[お願いします]。",
+                  "en": "I'll have the ramen, please."
+                },
+                {
+                  "jp": "コーヒーを ふたつ [おねがいします]。",
+                  "kj": "コーヒーを二つ[お願いします]。",
+                  "en": "Two coffees, please."
+                }
+              ]
+            },
+            {
+              "label": "おねがいします — services & abstract things",
+              "examples": [
+                {
+                  "jp": "おかいけい [おねがいします]。",
+                  "kj": "お会計[お願いします]。",
+                  "en": "The bill, please."
+                },
+                {
+                  "jp": "しゅうりを [おねがいします]。",
+                  "kj": "修理を[お願いします]。",
+                  "en": "Could you repair it, please?"
+                },
+                {
+                  "jp": "せつめいを [おねがいします]。",
+                  "kj": "説明を[お願いします]。",
+                  "en": "Could you explain, please?"
+                }
+              ]
+            },
+            {
+              "label": "おねがいします — accepting an offer",
+              "examples": [
+                {
+                  "jp": "あたためますか。— はい、[おねがいします]。",
+                  "kj": "温めますか。— はい、[お願いします]。",
+                  "en": "Shall I heat it up? — Yes, please."
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "masu",
           "title": "〜ます / 〜ません",
           "gist": "Do / don't (polite, present & future)",
