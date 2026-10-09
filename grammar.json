@@ -219,6 +219,79 @@
           "tip": "に vs で for places: に = where something IS or where you GO. で = where you DO something."
         },
         {
+          "id": "mo",
+          "title": "も",
+          "reading": "mo",
+          "covered": true,
+          "gist": "Too / also",
+          "note": "Replaces は, が or を — never stacks with them (わたしも, not わたしはも).",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "ねこが すきです。— わたし[も] すきです。",
+                  "kj": "猫が好きです。— 私[も]好きです。",
+                  "en": "I like cats. — I like them too."
+                },
+                {
+                  "jp": "この とけいは たかいです。その とけい[も] たかいです。",
+                  "kj": "この時計は高いです。その時計[も]高いです。",
+                  "en": "This watch is expensive. That one is too."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ne",
+          "title": "ね",
+          "reading": "ne",
+          "covered": true,
+          "gist": "…, right? / isn't it?",
+          "note": "Looks for agreement — you expect the listener to feel the same.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "この ラーメン、おいしいです[ね]。",
+                  "kj": "このラーメン、美味しいです[ね]。",
+                  "en": "This ramen is delicious, isn't it?"
+                },
+                {
+                  "jp": "きょうは さむいです[ね]。",
+                  "kj": "今日は寒いです[ね]。",
+                  "en": "It's cold today, isn't it?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yo",
+          "title": "よ",
+          "reading": "yo",
+          "covered": true,
+          "gist": "…, you know / I'm telling you",
+          "note": "Gives the listener new information, with confidence.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "あの みせの ピザは おいしいです[よ]。",
+                  "kj": "あの店のピザは美味しいです[よ]。",
+                  "en": "That shop's pizza is delicious, you know."
+                },
+                {
+                  "jp": "えきは あそこです[よ]。",
+                  "kj": "駅はあそこです[よ]。",
+                  "en": "The station's over there (I'm telling you)."
+                }
+              ]
+            }
+          ],
+          "tip": "ね vs よ: ね = we both already feel this (agreement). よ = I'm telling you something you might not know."
+        },
+        {
           "id": "no",
           "title": "の",
           "reading": "no",
@@ -309,6 +382,79 @@
                   "jp": "これは わたしの かさ[じゃないです]。",
                   "kj": "これは私の傘[じゃないです]。",
                   "en": "This isn't my umbrella."
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "id": "kosoado",
+          "title": "こ・そ・あ・ど words",
+          "covered": true,
+          "gist": "this / that / that over there / which",
+          "note": "こ = near me · そ = near you · あ = far from both of us · ど = question.",
+          "uses": [
+            {
+              "label": "Things — これ・それ・あれ・どれ (stand alone)",
+              "examples": [
+                {
+                  "jp": "[これ]は なんですか。— [それ]は さいふです。",
+                  "kj": "[これ]は何ですか。— [それ]は財布です。",
+                  "en": "What's this? — That's a wallet."
+                },
+                {
+                  "jp": "[どれ]が わたしの かさですか。",
+                  "kj": "[どれ]が私の傘ですか。",
+                  "en": "Which one is my umbrella?"
+                }
+              ]
+            },
+            {
+              "label": "+ noun — この・その・あの・どの (must have a noun after)",
+              "examples": [
+                {
+                  "jp": "[この] とけいは いくらですか。",
+                  "kj": "[この]時計はいくらですか。",
+                  "en": "How much is this watch?"
+                },
+                {
+                  "jp": "[あの] ひとは せんせいです。",
+                  "kj": "[あの]人は先生です。",
+                  "en": "That person over there is a teacher."
+                }
+              ]
+            },
+            {
+              "label": "Places — ここ・そこ・あそこ・どこ",
+              "examples": [
+                {
+                  "jp": "トイレは [どこ]ですか。— [あそこ]です。",
+                  "kj": "トイレは[どこ]ですか。— [あそこ]です。",
+                  "en": "Where's the toilet? — Over there."
+                },
+                {
+                  "jp": "[ここ]は えきです。",
+                  "kj": "[ここ]は駅です。",
+                  "en": "This (place) is the station."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dareno",
+          "title": "だれの + noun",
+          "covered": true,
+          "gist": "Whose …?",
+          "note": "Answer with person + の: わたしのです (it's mine), リースさんのです (it's Rhys's).",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "これは [だれの] かさですか。— [わたしの]です。",
+                  "kj": "これは[誰の]傘ですか。— [私の]です。",
+                  "en": "Whose umbrella is this? — It's mine."
                 }
               ]
             }
