@@ -224,7 +224,7 @@
           "reading": "mo",
           "covered": true,
           "gist": "Too / also",
-          "note": "Five rules — the first is the one you'll use most.",
+          "note": "Six rules — the first is the one you'll use most.",
           "uses": [
             {
               "label": "1. Replaces は・が・を",
@@ -297,6 +297,27 @@
                   "jp": "ビール[も] おさけ[も] のみません。",
                   "kj": "ビール[も]お酒[も]飲みません。",
                   "en": "I drink neither beer nor sake."
+                }
+              ]
+            },
+            {
+              "label": "6. Question word + も + negative = nobody / nothing / nowhere",
+              "note": "も makes the question word mean “any… at all”, and the negative cancels it. Needs a negative verb. に stays: どこにも. Everyone = みんな.",
+              "examples": [
+                {
+                  "jp": "へやに [だれも] いません。",
+                  "kj": "部屋に[誰も]いません。",
+                  "en": "There's nobody in the room."
+                },
+                {
+                  "jp": "[なにも] たべませんでした。",
+                  "kj": "[何も]食べませんでした。",
+                  "en": "I didn't eat anything."
+                },
+                {
+                  "jp": "どようびは [どこにも] いきません。",
+                  "kj": "土曜日は[どこにも]行きません。",
+                  "en": "I'm not going anywhere on Saturday."
                 }
               ]
             }
