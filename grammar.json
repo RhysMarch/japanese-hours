@@ -660,6 +660,28 @@
           ]
         },
         {
+          "id": "years",
+          "title": "(number) 年 + 〜ています",
+          "gist": "I've been doing … for ___ years",
+          "note": "Put the time straight before the verb, with no particle. いちねん, にねん, さんねん, よねん (4!), ごねん… Add かん (年間) to stress the length. How long? = なんねん. For a job: [job] を しています.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "ソフトウェアかいはつしゃを [にねん] しています。",
+                  "kj": "ソフトウェア開発者を[二年]しています。",
+                  "en": "I've been a software developer for 2 years."
+                },
+                {
+                  "jp": "にほんごを [いちねん] べんきょうしています。",
+                  "kj": "日本語を[一年]勉強しています。",
+                  "en": "I've been studying Japanese for 1 year."
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "adj",
           "title": "い-adjectives: 〜くない・〜かった",
           "gist": "Not… / was…",
