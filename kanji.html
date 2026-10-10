@@ -37,10 +37,10 @@
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
   .kbox { position: relative; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 10px 6px 8px; text-align: center; }
   .kbox .k { font-size: 44px; line-height: 1.15; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
-  .kbox .r { font-size: 16px; color: var(--ink); min-height: 1.4em; }
+  .kbox .r { font-size: 16px; color: var(--ink); min-height: 1.4em; visibility: hidden; }
   .kbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; visibility: hidden; }
   .kbox { cursor: pointer; }
-  .kbox:hover .m { visibility: visible; }
+  .kbox:hover .r, .kbox:hover .m { visibility: visible; }
   .kbox:hover { border-color: var(--accent); }
   .cov-bar { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; margin: 8px 0 14px; }
   .cov-bar div { height: 100%; background: var(--accent); }
