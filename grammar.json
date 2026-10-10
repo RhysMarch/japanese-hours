@@ -243,8 +243,8 @@
               ]
             },
             {
-              "label": "2. Comes after に and で",
-              "note": "に and で stay: にも, でも.",
+              "label": "2. Comes after に, で and と",
+              "note": "に, で and と stay: にも, でも, ともだちとも.",
               "examples": [
                 {
                   "jp": "こうえん[にも] ねこが います。",
@@ -461,14 +461,80 @@
           "id": "to",
           "title": "と",
           "reading": "to",
-          "gist": "And (between nouns) / with",
+          "covered": true,
+          "gist": "Joins two things — \"and\" between nouns, \"with\" after a person",
           "uses": [
             {
+              "label": "1. \"And\" between nouns",
+              "note": "noun と noun. Only joins nouns, not sentences.",
               "examples": [
                 {
-                  "jp": "ねこ[と] いぬが すきです。",
-                  "kj": "猫[と]犬が好きです。",
-                  "en": "I like cats and dogs."
+                  "jp": "コーヒー[と] おちゃ",
+                  "kj": "コーヒー[と]お茶",
+                  "en": "coffee and tea"
+                },
+                {
+                  "jp": "アニメ[と] ゲームが すきです。",
+                  "kj": "アニメ[と]ゲームが好きです。",
+                  "en": "I like anime and games."
+                },
+                {
+                  "jp": "パン[と] たまごを たべました。",
+                  "kj": "パン[と]卵を食べました。",
+                  "en": "I ate bread and eggs."
+                }
+              ]
+            },
+            {
+              "label": "2. \"With\" a person",
+              "note": "person と + verb. The opposite, on your own, is ひとりで.",
+              "examples": [
+                {
+                  "jp": "ともだち[と] いきます。",
+                  "kj": "友達[と]行きます。",
+                  "en": "I'm going with a friend."
+                },
+                {
+                  "jp": "ともだち[と] ごはんを たべました。",
+                  "kj": "友達[と]ご飯を食べました。",
+                  "en": "I ate with a friend."
+                },
+                {
+                  "jp": "だれ[と] いきますか。",
+                  "kj": "誰[と]行きますか。",
+                  "en": "Who are you going with?"
+                },
+                {
+                  "jp": "[ひとりで] いきます。",
+                  "kj": "[一人で]行きます。",
+                  "en": "I'm going on my own."
+                }
+              ]
+            },
+            {
+              "label": "と vs で — two kinds of \"with\"",
+              "note": "Is it a companion or a tool? A companion takes と, a tool takes で.",
+              "examples": [
+                {
+                  "jp": "ともだち[と] かきます。",
+                  "kj": "友達[と]書きます。",
+                  "en": "I write with a friend. (companion)"
+                },
+                {
+                  "jp": "ペン[で] かきます。",
+                  "kj": "ペン[で]書きます。",
+                  "en": "I write with a pen. (tool)"
+                }
+              ]
+            },
+            {
+              "label": "と + も",
+              "note": "と works like に and で: it stays, and も goes after it.",
+              "examples": [
+                {
+                  "jp": "ともだち[とも] いきます。",
+                  "kj": "友達[とも]行きます。",
+                  "en": "I'm going with my friend too."
                 }
               ]
             }
