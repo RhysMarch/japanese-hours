@@ -57,6 +57,8 @@
   .d-k { font-size: 64px; line-height: 1.15; text-align: center; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
   .d-r { text-align: center; font-size: 17px; }
   .d-m { text-align: center; font-weight: 600; margin: 4px 0 14px; }
+  .d-story { background: var(--bg); border-radius: 8px; padding: 8px 12px; margin: 0 0 14px; font-size: 14px; }
+  .d-story .parts { font-size: 18px; margin-bottom: 2px; }
   .d-h { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 6px; }
   .d-words { background: var(--bg); border-radius: 8px; padding: 6px 12px; }
   .d-words a { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
@@ -147,12 +149,15 @@
           <div class="lbl">Back</div>
           <div lang="ja">くすり <span class="ann">← line 1: reading in kana</span></div>
           <div>Medicine <span class="ann">← line 2: meaning</span></div>
+          <div lang="ja">十 + 口 <span class="ann">← line 3 (optional): the parts it's built from</span></div>
+          <div>Looks like a tombstone <span class="ann">← line 4 (optional): a story to remember it</span></div>
         </div>
       </div>
       <ul>
         <li><b>Front:</b> one single kanji (<span lang="ja">薬</span>). No romaji, brackets like <span lang="ja">「」</span> or other text.</li>
         <li><b>Back, line 1:</b> the reading in kana (<span lang="ja">くすり</span>). Romaji like <i>Kusuri</i> still works — it gets converted to hiragana.</li>
         <li><b>Back, line 2:</b> the meaning in English.</li>
+        <li><b>Back, lines 3–4 (optional):</b> the parts joined with <b>+</b> (<span lang="ja">十 + 口</span>), then a short story. Both show when you click the kanji.</li>
         <li>Press <b>Enter</b> between the reading and the meaning in the Anki editor so they're on separate lines.</li>
         <li><b>Words made of several kanji</b> (<span lang="ja">大学</span>, <span lang="ja">入口</span>) belong in your <a href="vocab.html">vocab</a> deck — give each kanji in them its own card here instead (<span lang="ja">大</span>, <span lang="ja">学</span>).</li>
         <li>Note type <b>Basic</b>; any deck name works.</li>
@@ -188,7 +193,7 @@
 <div class="toast" id="toast"></div>
 
 <script src="github.js?v=20261003b"></script>
-<script src="anki.js?v=20261003i"></script>
+<script src="anki.js?v=20261010a"></script>
 <script src="kanji-links.js?v=20261003h"></script>
 <script>
 const FILE = 'kanji.json';
@@ -197,7 +202,7 @@ const pad = n => String(n).padStart(2, '0');
 const today = () => { const d = new Date(); return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; };
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-let kanji = [];        // [{ k, reading, meaning, added: 'YYYY-MM-DD', id? (Anki note id) }]
+let kanji = [];        // [{ k, reading, meaning, parts?, story?, added: 'YYYY-MM-DD', id? (Anki note id) }]
 let vocab = [];        // from vocab.json, for "used in your vocab"
 let token = store.get(TOKEN_KEY);
 let levelFilter = 'all';
@@ -221,7 +226,7 @@ function render() {
   const counts = Object.fromEntries(LEVELS.map(l => [l.id, kanji.filter(x => levelOf(x) === l.id).length]));
   $('levels').innerHTML = [{ id: 'all', name: 'All' }, ...LEVELS].map(l => `<button type="button" data-filter="${l.id}" class="${levelFilter === l.id ? 'on' : ''}">
     ${l.id === 'all' ? '' : `<span class="dot" style="background:var(--${l.id})"></span>`}${l.name} <span class="muted">${l.id === 'all' ? kanji.length : counts[l.id]}</span></button>`).join('');
-  const shown = kanji.filter(x => (levelFilter === 'all' || levelOf(x) === levelFilter) && matchesQuery(q, [x.k, x.reading, x.meaning]));
+  const shown = kanji.filter(x => (levelFilter === 'all' || levelOf(x) === levelFilter) && matchesQuery(q, [x.k, x.reading, x.meaning, x.parts, x.story]));
   $('grid').innerHTML = shown.length ? shown.map(x => `
     <div class="kbox ${levelOf(x)}" data-k="${esc(x.k)}" title="${LEVELS.find(l => l.id === levelOf(x)).name}">
       <div class="k" lang="ja">${esc(x.k)}</div>
@@ -252,7 +257,8 @@ function showKanji(char) {
   const words = wordsUsing(char, vocab);
   $('d-body').innerHTML = `
     <div class="d-k" lang="ja">${esc(char)}</div>
-    ${x ? `<div class="d-r" lang="ja">${esc(x.reading)}</div><div class="d-m">${esc(x.meaning)}</div>`
+    ${x ? `<div class="d-r" lang="ja">${esc(x.reading)}</div><div class="d-m">${esc(x.meaning)}</div>
+      ${x.parts || x.story ? `<div class="d-story">${x.parts ? `<div class="parts" lang="ja">${esc(x.parts)}</div>` : ''}${esc(x.story)}</div>` : ''}`
         : '<div class="d-m muted" style="font-weight:400">Not in your kanji list yet</div>'}
     ${x && token ? `<div class="d-h">How well do you know it?</div>
       <div class="rate">${LEVELS.map(l => `<button type="button" data-level="${l.id}" class="${levelOf(x) === l.id ? 'on' : ''}">${l.name}</button>`).join('')}</div>`
@@ -290,8 +296,13 @@ $('file').addEventListener('change', async ev => {
     added = [];
     for (const x of incoming) {
       const existing = list.find(y => (x.id && y.id === x.id) || y.k === x.k);
-      if (existing) { existing.id ??= x.id; continue; }
-      list.push({ k: x.k, reading: x.reading, meaning: x.meaning, added: today(), id: x.id });
+      if (existing) {
+        existing.id ??= x.id;
+        if (x.parts && !existing.parts) existing.parts = x.parts;
+        if (x.story && !existing.story) existing.story = x.story;
+        continue;
+      }
+      list.push({ k: x.k, reading: x.reading, meaning: x.meaning, ...(x.parts && { parts: x.parts }), ...(x.story && { story: x.story }), added: today(), id: x.id });
       added.push(x.k);
     }
   }, `Import kanji from Anki (${f.name})`,

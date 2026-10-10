@@ -574,5 +574,174 @@
     "reading": "まえ / ぜん",
     "meaning": "Before / in front",
     "added": "2026-10-10"
+  },
+  {
+    "k": "古",
+    "reading": "ふる(い) / こ",
+    "meaning": "Old",
+    "parts": "十 + 口",
+    "story": "Looks like a tombstone: a cross (十) standing over a grave (口). Old.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887616"
+  },
+  {
+    "k": "吾",
+    "reading": "われ / ご",
+    "meaning": "I (literary)",
+    "parts": "五 + 口",
+    "story": "The five (五) senses are concentrated in the head, where the mouth (口) is. That's \"I\".",
+    "added": "2026-10-10",
+    "id": "anki-1791647887617"
+  },
+  {
+    "k": "冒",
+    "reading": "おか(す) / ぼう",
+    "meaning": "Risk",
+    "parts": "日 + 目",
+    "story": "Don't risk looking into the sun (日) with your eye (目).",
+    "added": "2026-10-10",
+    "id": "anki-1791647887618"
+  },
+  {
+    "k": "朋",
+    "reading": "とも / ほう",
+    "meaning": "Companion",
+    "parts": "月 + 月",
+    "story": "Two moons side by side, like two friends walking home together at night. Companions.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887619"
+  },
+  {
+    "k": "明",
+    "reading": "あか(るい) / めい",
+    "meaning": "Bright",
+    "parts": "日 + 月",
+    "story": "The sun and the moon together: the two brightest things in the sky.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887620"
+  },
+  {
+    "k": "唱",
+    "reading": "とな(える) / しょう",
+    "meaning": "Chant",
+    "parts": "口 + 昌",
+    "story": "A bunch of mouths (口 + the two 日 of 昌) all going at once. Chanting.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887621"
+  },
+  {
+    "k": "晶",
+    "reading": "しょう",
+    "meaning": "Sparkle",
+    "parts": "日 + 日 + 日",
+    "story": "Three suns: so much light it sparkles.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887622"
+  },
+  {
+    "k": "品",
+    "reading": "しな / ひん",
+    "meaning": "Goods",
+    "parts": "口 + 口 + 口",
+    "story": "Three mouths that look like boxes stacked up in a shop. Goods.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887623"
+  },
+  {
+    "k": "呂",
+    "reading": "ろ",
+    "meaning": "Spine",
+    "parts": "口 + 口",
+    "story": "Two vertebrae (口) linked by a single stroke. A spine.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887624"
+  },
+  {
+    "k": "昌",
+    "reading": "しょう",
+    "meaning": "Prosperous",
+    "parts": "日 + 日",
+    "story": "Two suns: double the sunshine, double the harvest. Prosperous.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887625"
+  },
+  {
+    "k": "早",
+    "reading": "はや(い) / そう",
+    "meaning": "Early",
+    "parts": "日 + 十",
+    "story": "Looks like a flower: the sun (日) as its head on a stem (十). Flowers rise early to face the sun.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887626"
+  },
+  {
+    "k": "旭",
+    "reading": "あさひ / きょく",
+    "meaning": "Rising sun",
+    "parts": "九 + 日",
+    "story": "The sun (日) is well up by nine o'clock (九). The rising sun.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887627"
+  },
+  {
+    "k": "世",
+    "reading": "よ / せ",
+    "meaning": "Generation",
+    "parts": "十 + 十 + 十",
+    "story": "Three tens (十) joined together make thirty: about 30 years to a generation.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887628"
+  },
+  {
+    "k": "胃",
+    "reading": "い",
+    "meaning": "Stomach",
+    "parts": "田 + 月",
+    "story": "The rice field (田) is like the brain, and the stomach is what keeps the brain working. (月 at the bottom or left of a kanji usually means a body part, not moon.)",
+    "added": "2026-10-10",
+    "id": "anki-1791647887629"
+  },
+  {
+    "k": "旦",
+    "reading": "たん / だん",
+    "meaning": "Nightbreak",
+    "parts": "日 + 一",
+    "story": "The sun (日) coming up over the horizon (一). Nightbreak / dawn.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887630"
+  },
+  {
+    "k": "胆",
+    "reading": "たん",
+    "meaning": "Gall bladder",
+    "parts": "月 + 旦",
+    "story": "月 on the left means a body part, not moon. A body part + nightbreak (旦): it takes real gall to get up at nightbreak.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887631"
+  },
+  {
+    "k": "亘",
+    "reading": "わた(る) / こう",
+    "meaning": "Span",
+    "parts": "一 + 日 + 一",
+    "story": "The sun (日) between the ground (bottom 一) and the sky (top 一). Its path spans the whole day.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887632"
+  },
+  {
+    "k": "凹",
+    "reading": "へこ(む) / おう",
+    "meaning": "Concave",
+    "story": "Literally looks like a dent. Concave.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887633"
+  },
+  {
+    "k": "凸",
+    "reading": "でこ / とつ",
+    "meaning": "Convex",
+    "story": "The opposite of 凹: it bulges out. Convex.",
+    "added": "2026-10-10",
+    "id": "anki-1791647887634"
   }
 ]

@@ -117,12 +117,14 @@ function romajiToKana(romaji) {
 }
 
 // Kanji card style: front = just the kanji ("薬"), back = reading in kana on the first line, meaning below ("くすり<br>Medicine").
+// Optional extra lines: the parts it's built from ("十 + 口"), then a short story to remember it by.
 // A romaji reading ("Kusuri") is still accepted and converted to hiragana.
 function parseAnkiKanji(text) {
   return parseAnkiNotes(text).map(({ id, deck, fields }) => {
     const k = stripEmoji(htmlLines(fields[0] || '').join('')).replace(/\s+/g, '');
-    const [reading = '', ...meaning] = htmlLines(fields[1] || '');
-    return { k, reading: hasJapanese(reading) ? reading : (romajiToKana(reading) || reading), meaning: meaning.join(' '), id: id || k, deck };
+    const [reading = '', meaning = '', ...extra] = htmlLines(fields[1] || '');
+    const parts = extra[0] && extra[0].includes('+') ? extra.shift() : '';
+    return { k, reading: hasJapanese(reading) ? reading : (romajiToKana(reading) || reading), meaning, parts, story: extra.join(' '), id: id || k, deck };
   }).filter(x => x.k);
 }
 
