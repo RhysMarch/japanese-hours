@@ -74,7 +74,13 @@
   .t-ans .r { font-size: 20px; }
   .t-ans .m { font-weight: 600; }
   .t-btns { display: flex; gap: 10px; justify-content: center; }
-  .t-btns button { min-width: 110px; }
+  .t-btns { align-items: center; flex-wrap: wrap; }
+  .t-btns > button { min-width: 90px; }
+  .t-btns .rate button { min-width: 84px; }
+  .t-btns .rate button.now { outline: 2px solid var(--ink); outline-offset: 1px; }
+  .t-btns .rate button[data-rate="great"] { border-color: var(--great); color: var(--great); }
+  .t-btns .rate button[data-rate="neutral"] { border-color: var(--neutral); color: var(--neutral); }
+  .t-btns .rate button[data-rate="bad"] { border-color: var(--bad); color: var(--bad); }
   .d-h { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 6px; }
   .d-words { background: var(--bg); border-radius: 8px; padding: 6px 12px; }
   .d-words a { display: flex; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
@@ -366,30 +372,40 @@ async function rate(char, level) {
   if ($('detail').open) showKanji(char);
 }
 
-// --- Test: random kanji, no repeats in a session; timed mode reveals the answer after 5 seconds ---
+// --- Test: random kanji, no repeats in a session; timed mode reveals the answer after 5 seconds.
+// After the answer you rate it Great / Neutral / Bad, which saves its level and moves on.
 const TEST_SECONDS = 5;
-let test = null;   // { mode: 'timed' | 'untimed', queue: [kanji], i, revealed, timer }
+let test = null;        // { mode: 'timed' | 'untimed', queue: [kanji], i, revealed, timer, rated }
+let testPool = 'all';   // which kanji to test: 'all' or a level id
+let rateChain = Promise.resolve();   // ratings save one after another in the background
 
 const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const poolKanji = pool => kanji.filter(x => pool === 'all' || levelOf(x) === pool);
 
 function testSetup() {
   clearTimeout(test?.timer); test = null;
-  const pool = visibleKanji();
-  const scope = pool.length === kanji.length ? `all ${pool.length} kanji` : `the ${pool.length} kanji currently shown`;
+  if (testPool !== 'all' && !poolKanji(testPool).length) testPool = 'all';
   $('t-body').innerHTML = `
     <h2 style="margin:0">Test yourself</h2>
-    <div class="muted" style="font-size:14px">A random kanji each time, no repeats. Using ${scope}.</div>
+    <div class="muted" style="font-size:14px">A random kanji each time, no repeats. Rate each one to update its level.</div>
+    <div class="d-h" style="margin-top:16px">Which kanji</div>
+    <div class="levels" style="justify-content:center">${[{ id: 'all', name: 'All' }, ...LEVELS].map(l => {
+      const n = poolKanji(l.id).length;
+      return `<button type="button" data-pool="${l.id}" class="${testPool === l.id ? 'on' : ''}"${n ? '' : ' disabled'}>
+        ${l.id === 'all' ? '' : `<span class="dot" style="background:var(--${l.id})"></span>`}${l.name} <span class="muted">${n}</span></button>`;
+    }).join('')}</div>
     <div class="t-modes">
       <button type="button" data-mode="untimed"><b>Untimed</b><small>Reveal when you're ready</small></button>
       <button type="button" data-mode="timed"><b>Timed</b><small>${TEST_SECONDS} seconds each</small></button>
-    </div>`;
+    </div>
+    ${token ? '' : '<div class="muted" style="font-size:13px">Not signed in, so ratings won\'t be saved.</div>'}`;
   if (!$('test').open) $('test').showModal();
 }
 
 function testStart(mode) {
-  const pool = visibleKanji();
-  if (!pool.length) return toast('No kanji to test — clear the search or filter');
-  test = { mode, queue: shuffle([...pool]), i: 0, revealed: false, timer: null };
+  const pool = poolKanji(testPool);
+  if (!pool.length) return toast('No kanji in that group');
+  test = { mode, queue: shuffle([...pool]), i: 0, revealed: false, timer: null, rated: 0 };
   testShow();
 }
 
@@ -402,9 +418,9 @@ function testShow() {
     ${test.mode === 'timed' ? '<div class="t-bar"><div id="t-bar"></div></div>' : ''}
     <div class="t-k" lang="ja">${esc(x.k)}</div>
     <div class="t-ans" id="t-ans"></div>
-    <div class="t-btns">
+    <div class="t-btns" id="t-btns">
       <button type="button" data-t="end">End</button>
-      <button type="button" class="primary" data-t="${test.mode === 'timed' ? 'next' : 'reveal'}" id="t-main"${test.mode === 'timed' ? ' disabled' : ''}>${test.mode === 'timed' ? 'Next' : 'Show answer'}</button>
+      ${test.mode === 'untimed' ? '<button type="button" class="primary" data-t="reveal" id="t-main">Show answer</button>' : ''}
     </div>`;
   if (test.mode === 'timed') {
     const bar = $('t-bar');
@@ -422,25 +438,36 @@ function testReveal() {
   const x = test.queue[test.i];
   test.revealed = true;
   $('t-ans').innerHTML = `<div class="r" lang="ja">${esc(x.reading)}</div><div class="m">${esc(x.meaning)}</div>`;
-  const b = $('t-main');
-  b.disabled = false; b.dataset.t = 'next'; b.textContent = test.i + 1 < test.queue.length ? 'Next' : 'Finish';
-  b.focus();
+  $('t-btns').innerHTML = `
+    <button type="button" data-t="end">End</button>
+    <div class="rate" style="margin:0">${LEVELS.map((l, n) => `<button type="button" data-rate="${l.id}" class="${levelOf(x) === l.id ? 'now' : ''}" title="Key ${n + 1}">${l.name}</button>`).join('')}</div>`;
+  document.activeElement?.blur();
 }
 
-function testNext() {
+// Rate the current kanji, save it in the background, and go to the next one
+function testRate(level) {
   if (!test || !test.revealed) return;
+  const x = test.queue[test.i];
+  test.rated++;
+  if (levelOf(x) !== level) {
+    x.level = level; render();
+    if (token) rateChain = rateChain
+      .then(() => ghWrite(FILE, list => { const y = list.find(z => z.k === x.k); if (y) y.level = level; }, `Rate ${x.k}: ${level} (test)`, token, { empty: [] }))
+      .catch(e => toast(`Couldn't save ${x.k}: ${e.message}`));
+  }
   if (++test.i < test.queue.length) testShow(); else testEnd(true);
 }
 
 function testEnd(finished) {
   if (!test) return $('test').close();
   clearTimeout(test.timer);
-  const seen = test.i + (finished ? 0 : test.revealed ? 1 : 0);
-  const total = test.queue.length;
+  const { rated } = test, total = test.queue.length;
   test = null;
+  const counts = LEVELS.map(l => `<span><span class="dot" style="background:var(--${l.id})"></span> ${l.name} ${poolKanji(l.id).length}</span>`).join(' &nbsp; ');
   $('t-body').innerHTML = `
     <h2 style="margin:0 0 6px">${finished ? 'That\'s all of them!' : 'Test ended'}</h2>
-    <div class="muted" style="margin-bottom:16px">You went through <b style="color:var(--ink)">${seen}</b> of ${total} kanji.</div>
+    <div class="muted" style="margin-bottom:6px">You rated <b style="color:var(--ink)">${rated}</b> of ${total} kanji.</div>
+    <div class="muted" style="font-size:13px;margin-bottom:16px">Now: ${counts}</div>
     <div class="t-btns">
       <button type="button" data-t="close">Close</button>
       <button type="button" class="primary" data-t="again">Test again</button>
@@ -451,20 +478,24 @@ $('test-open').addEventListener('click', testSetup);
 $('t-close').addEventListener('click', () => $('test').close());
 $('test').addEventListener('close', () => { clearTimeout(test?.timer); test = null; });
 $('t-body').addEventListener('click', ev => {
+  const pool = ev.target.closest('[data-pool]')?.dataset.pool;
+  if (pool) { testPool = pool; return testSetup(); }
   const mode = ev.target.closest('[data-mode]')?.dataset.mode;
   if (mode) return testStart(mode);
+  const level = ev.target.closest('[data-rate]')?.dataset.rate;
+  if (level) return testRate(level);
   const act = ev.target.closest('[data-t]')?.dataset.t;
   if (act === 'reveal') testReveal();
-  else if (act === 'next') testNext();
   else if (act === 'end') testEnd(false);
   else if (act === 'again') testSetup();
   else if (act === 'close') $('test').close();
 });
-// Space / Enter: show the answer (untimed), then next — a focused button handles the key itself
+// Keys: Space / Enter shows the answer (untimed); 1 / 2 / 3 rate Great / Neutral / Bad
 document.addEventListener('keydown', ev => {
-  if (!test || !$('test').open || (ev.key !== ' ' && ev.key !== 'Enter') || ev.target.closest('button')) return;
-  ev.preventDefault();
-  if (test.revealed) testNext(); else if (test.mode === 'untimed') testReveal();
+  if (!test || !$('test').open || ev.target.closest('button')) return;
+  const n = '123'.indexOf(ev.key);
+  if (test.revealed && n >= 0) { ev.preventDefault(); return testRate(LEVELS[n].id); }
+  if (!test.revealed && test.mode === 'untimed' && (ev.key === ' ' || ev.key === 'Enter')) { ev.preventDefault(); testReveal(); }
 });
 
 // kanji.html#日 opens that kanji (links from the vocab page)
