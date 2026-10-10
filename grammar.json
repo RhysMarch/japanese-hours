@@ -376,23 +376,86 @@
           "id": "no",
           "title": "の",
           "reading": "no",
-          "gist": "Links two nouns — X's Y",
+          "covered": true,
+          "gist": "Links two nouns — in A の B, B is the main thing and A describes it",
+          "note": "Four rules. の only ever joins nouns.",
           "uses": [
             {
+              "label": "1. Possession — whose is it?",
+              "note": "owner の thing",
               "examples": [
                 {
-                  "jp": "これは わたし[の] かさです。",
-                  "kj": "これは私[の]傘です。",
-                  "en": "This is my umbrella."
+                  "jp": "わたし[の] じてんしゃです。",
+                  "kj": "私[の]自転車です。",
+                  "en": "It's my bicycle."
                 },
                 {
-                  "jp": "にほんご[の] せんせい",
-                  "kj": "日本語[の]先生",
-                  "en": "Japanese teacher"
+                  "jp": "ともだち[の] ボールです。",
+                  "kj": "友達[の]ボールです。",
+                  "en": "It's my friend's ball."
+                },
+                {
+                  "jp": "だれ[の] ボールですか。",
+                  "kj": "誰[の]ボールですか。",
+                  "en": "Whose ball is it?"
+                }
+              ]
+            },
+            {
+              "label": "2. Description — what kind?",
+              "note": "describing noun の thing. The first noun tells you what kind of thing the second one is.",
+              "examples": [
+                {
+                  "jp": "にほんご[の] ほん",
+                  "kj": "日本語[の]本",
+                  "en": "a Japanese(-language) book"
+                },
+                {
+                  "jp": "にほん[の] アニメ",
+                  "kj": "日本[の]アニメ",
+                  "en": "Japanese anime (anime from Japan)"
+                },
+                {
+                  "jp": "かいしゃ[の] ともだち",
+                  "kj": "会社[の]友達",
+                  "en": "a friend from work"
+                }
+              ]
+            },
+            {
+              "label": "3. Drop the second noun when it's obvious",
+              "note": "の stands in for the thing: わたしの = mine.",
+              "examples": [
+                {
+                  "jp": "だれの ボールですか。→ だれ[の]ですか。",
+                  "kj": "誰のボールですか。→ 誰[の]ですか。",
+                  "en": "Whose ball is it? → Whose is it?"
+                },
+                {
+                  "jp": "これは わたし[の]です。",
+                  "kj": "これは私[の]です。",
+                  "en": "This is mine."
+                },
+                {
+                  "jp": "ともだち[の]です。",
+                  "kj": "友達[の]です。",
+                  "en": "It's my friend's."
+                }
+              ]
+            },
+            {
+              "label": "4. You can chain の",
+              "note": "Each の narrows it down; the last noun is the main thing.",
+              "examples": [
+                {
+                  "jp": "わたし[の] ともだち[の] ねこです。",
+                  "kj": "私[の]友達[の]猫です。",
+                  "en": "It's my friend's cat."
                 }
               ]
             }
-          ]
+          ],
+          "tip": "Common mistake: no の with adjectives. \"A fun game\" is たのしい ゲーム, not たのしいの ゲーム."
         },
         {
           "id": "to",
