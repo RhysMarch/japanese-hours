@@ -34,11 +34,11 @@
   button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
   button.link { border: none; background: none; color: var(--muted); padding: 2px 6px; }
   button.link:hover { color: var(--accent); }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; }
-  .kbox { position: relative; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 10px 6px 8px; text-align: center; }
-  .kbox .k { font-size: 44px; line-height: 1.15; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
-  .kbox .r { font-size: 16px; color: var(--ink); min-height: 1.4em; visibility: hidden; }
-  .kbox .m { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; visibility: hidden; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .kbox { position: relative; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 10px; padding: 10px 8px; text-align: center; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-width: 0; }
+  .kbox .k { font-size: 64px; line-height: 1.15; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
+  .kbox .r { font-size: 15px; color: var(--ink); min-height: 1.4em; visibility: hidden; }
+  .kbox .m { font-size: 13px; color: var(--muted); min-height: 1.4em; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; visibility: hidden; }
   .kbox { cursor: pointer; }
   .kbox:hover .r, .kbox:hover .m { visibility: visible; }
   .kbox:hover { border-color: var(--accent); }
@@ -99,8 +99,8 @@
   .toast.show { opacity: 1; }
   @media (max-width: 720px) {
     .mock { grid-template-columns: 1fr; }
-    .grid { grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); }
-    .kbox .k { font-size: 38px; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+    .kbox .k { font-size: 48px; }
   }
 </style>
 </head>
@@ -229,8 +229,8 @@ function render() {
   const shown = kanji.filter(x => (levelFilter === 'all' || levelOf(x) === levelFilter) && matchesQuery(q, [x.k, x.reading, x.meaning, x.parts, x.story]));
   $('grid').innerHTML = shown.length ? shown.map(x => `
     <div class="kbox ${levelOf(x)}" data-k="${esc(x.k)}" title="${LEVELS.find(l => l.id === levelOf(x)).name}">
-      <div class="k" lang="ja">${esc(x.k)}</div>
       <div class="r" lang="ja">${esc(x.reading)}</div>
+      <div class="k" lang="ja">${esc(x.k)}</div>
       <div class="m">${esc(x.meaning)}</div>
     </div>`).join('')
     : `<div class="empty">${kanji.length ? 'No kanji match.' : 'No kanji yet.'}</div>`;
