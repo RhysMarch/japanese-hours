@@ -3469,5 +3469,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791309242655",
+    "word": "誰の",
+    "kana": "だれの",
+    "meaning": "whose",
+    "examples": [
+      {
+        "jp": "これは だれの かばんですか。",
+        "kanji": "これは誰のかばんですか。",
+        "en": "Whose bag is this?"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
