@@ -3483,5 +3483,128 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000000",
+    "word": "嘘",
+    "kana": "うそ",
+    "meaning": "a lie / \"No way!\" (when surprised)",
+    "examples": [
+      {
+        "jp": "うそ！ほんとう？",
+        "kanji": "嘘！本当？",
+        "en": "No way! Really?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000001",
+    "word": "最高",
+    "kana": "さいこう",
+    "meaning": "the best! / awesome",
+    "examples": [
+      {
+        "jp": "この ラーメン、さいこう！",
+        "kanji": "このラーメン、最高！",
+        "en": "This ramen is the best!"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000002",
+    "word": "腹減った",
+    "kana": "はらへった",
+    "meaning": "I'm starving (very casual, mostly guys — polite: おなかが すきました)",
+    "examples": [
+      {
+        "jp": "はらへった！ごはんを たべに いきます。",
+        "kanji": "腹減った！ご飯を食べに行きます。",
+        "en": "I'm starving! I'm going to get food."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000003",
+    "word": "面倒くさい",
+    "kana": "めんどくさい",
+    "meaning": "what a pain / too much effort (casual — full form: めんどうくさい)",
+    "examples": [
+      {
+        "jp": "そうじは めんどくさい。",
+        "kanji": "掃除は面倒くさい。",
+        "en": "Cleaning is such a pain."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000004",
+    "word": "",
+    "kana": "でかい",
+    "meaning": "huge / massive (casual — neutral: おおきい)",
+    "examples": [
+      {
+        "jp": "あの いぬ、でかい！",
+        "en": "That dog is huge!"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000005",
+    "word": "眠い",
+    "kana": "ねむい",
+    "meaning": "sleepy",
+    "examples": [
+      {
+        "jp": "きょうは ねむいです。",
+        "kanji": "今日は眠いです。",
+        "en": "I'm sleepy today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000006",
+    "word": "",
+    "kana": "うるさい",
+    "meaning": "noisy / annoying (said to a person: \"shut up!\" — rude)",
+    "examples": [
+      {
+        "jp": "よるの バスていは うるさいです。",
+        "en": "The bus stop is noisy at night."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000007",
+    "word": "",
+    "kana": "すごい",
+    "meaning": "amazing / incredible (guys casually say すげえ / すげー)",
+    "examples": [
+      {
+        "jp": "この はなび、すごい！",
+        "en": "These fireworks are amazing!"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791800000008",
+    "word": "疲れた",
+    "kana": "つかれた",
+    "meaning": "I'm exhausted / worn out (casual — polite: つかれました)",
+    "examples": [
+      {
+        "jp": "きょうは しごとで つかれた。",
+        "kanji": "今日は仕事で疲れた。",
+        "en": "Work wore me out today."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
