@@ -239,8 +239,8 @@
   },
   {
     "k": "入",
-    "reading": "い(る) / はい(る)",
-    "meaning": "Enter",
+    "reading": "い / はい",
+    "meaning": "Enter — as in 入口 (いりぐち), 入ります (はいります)",
     "added": "2026-10-03",
     "id": "lDD-Jd(?I9"
   },
@@ -254,8 +254,8 @@
   },
   {
     "k": "出",
-    "reading": "で(る)",
-    "meaning": "Exit / go out",
+    "reading": "で",
+    "meaning": "Exit / go out — as in 出口 (でぐち)",
     "added": "2026-10-03",
     "id": "SGpe3Dws5w",
     "level": "great"
@@ -347,32 +347,32 @@
   },
   {
     "k": "食",
-    "reading": "た(べる)",
-    "meaning": "Eat",
+    "reading": "た",
+    "meaning": "Eat — as in 食べます (たべます)",
     "added": "2026-10-03"
   },
   {
     "k": "飲",
-    "reading": "の(む)",
-    "meaning": "Drink",
+    "reading": "の",
+    "meaning": "Drink — as in 飲みます (のみます)",
     "added": "2026-10-03"
   },
   {
     "k": "見",
-    "reading": "み(る)",
-    "meaning": "See / look",
+    "reading": "み",
+    "meaning": "See / look — as in 見ます (みます)",
     "added": "2026-10-03"
   },
   {
     "k": "行",
-    "reading": "い(く)",
-    "meaning": "Go",
+    "reading": "い",
+    "meaning": "Go — as in 行きます (いきます)",
     "added": "2026-10-03"
   },
   {
     "k": "来",
-    "reading": "く(る) / き(ます)",
-    "meaning": "Come",
+    "reading": "き / く",
+    "meaning": "Come — as in 来ます (きます), 来る (くる)",
     "added": "2026-10-03"
   },
   {
@@ -401,8 +401,8 @@
   },
   {
     "k": "開",
-    "reading": "かい / あ(ける)",
-    "meaning": "Open",
+    "reading": "かい / あ",
+    "meaning": "Open — as in 開発者 (かいはつしゃ), 開けます (あけます)",
     "added": "2026-10-03"
   },
   {
@@ -497,8 +497,8 @@
   },
   {
     "k": "生",
-    "reading": "せい / い(きる)",
-    "meaning": "Life / birth",
+    "reading": "せい / い",
+    "meaning": "Life / birth — as in 先生 (せんせい), 学生 (がくせい), 生きる (いきる, to live)",
     "added": "2026-10-09"
   },
   {
@@ -515,26 +515,26 @@
   },
   {
     "k": "書",
-    "reading": "か(く)",
-    "meaning": "Write",
+    "reading": "か",
+    "meaning": "Write — as in 書きます (かきます)",
     "added": "2026-10-09"
   },
   {
     "k": "読",
-    "reading": "よ(む)",
-    "meaning": "Read",
+    "reading": "よ",
+    "meaning": "Read — as in 読みます (よみます)",
     "added": "2026-10-09"
   },
   {
     "k": "話",
-    "reading": "はな(す) / わ",
-    "meaning": "Talk / story",
+    "reading": "はな / わ",
+    "meaning": "Talk / story — as in 話します (はなします), 電話 (でんわ, phone)",
     "added": "2026-10-09"
   },
   {
     "k": "好",
-    "reading": "す(き)",
-    "meaning": "Like / fond of",
+    "reading": "す",
+    "meaning": "Like / fond of — as in 好き (すき), 大好き (だいすき)",
     "added": "2026-10-09"
   },
   {
@@ -581,8 +581,8 @@
   },
   {
     "k": "古",
-    "reading": "ふる(い) / こ",
-    "meaning": "Old",
+    "reading": "ふる / こ",
+    "meaning": "Old — as in 古い (ふるい)",
     "parts": "十 + 口",
     "story": "Looks like a tombstone: a cross (十) standing over a grave (口). Old.",
     "added": "2026-10-10",
@@ -599,8 +599,8 @@
   },
   {
     "k": "冒",
-    "reading": "おか(す) / ぼう",
-    "meaning": "Risk",
+    "reading": "おか / ぼう",
+    "meaning": "Risk — as in 冒険 (ぼうけん, adventure)",
     "parts": "日 + 目",
     "story": "Don't risk looking into the sun (日) with your eye (目).",
     "added": "2026-10-10",
@@ -617,8 +617,8 @@
   },
   {
     "k": "明",
-    "reading": "あか(るい) / めい",
-    "meaning": "Bright",
+    "reading": "あか / めい",
+    "meaning": "Bright — as in 明るい (あかるい)",
     "parts": "日 + 月",
     "story": "The sun and the moon together: the two brightest things in the sky.",
     "added": "2026-10-10",
@@ -626,8 +626,8 @@
   },
   {
     "k": "唱",
-    "reading": "とな(える) / しょう",
-    "meaning": "Chant",
+    "reading": "とな / しょう",
+    "meaning": "Chant — as in 唱える (となえる)",
     "parts": "口 + 昌",
     "story": "A bunch of mouths (口 + the two 日 of 昌) all going at once. Chanting.",
     "added": "2026-10-10",
@@ -671,8 +671,8 @@
   },
   {
     "k": "早",
-    "reading": "はや(い) / そう",
-    "meaning": "Early",
+    "reading": "はや / そう",
+    "meaning": "Early — as in 早い (はやい)",
     "parts": "日 + 十",
     "story": "Looks like a flower: the sun (日) as its head on a stem (十). Flowers rise early to face the sun.",
     "added": "2026-10-10",
@@ -725,8 +725,8 @@
   },
   {
     "k": "亘",
-    "reading": "わた(る) / こう",
-    "meaning": "Span",
+    "reading": "わた / こう",
+    "meaning": "Span — as in 亘る (わたる)",
     "parts": "一 + 日 + 一",
     "story": "The sun (日) between the ground (bottom 一) and the sky (top 一). Its path spans the whole day.",
     "added": "2026-10-10",
@@ -734,8 +734,8 @@
   },
   {
     "k": "凹",
-    "reading": "へこ(む) / おう",
-    "meaning": "Concave",
+    "reading": "へこ / おう",
+    "meaning": "Concave / dent — as in 凹む (へこむ)",
     "story": "Literally looks like a dent. Concave.",
     "added": "2026-10-10",
     "id": "anki-1791647887633"
