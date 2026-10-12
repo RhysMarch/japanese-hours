@@ -25,7 +25,9 @@
   h2 { font-size: 16px; margin: 0 0 12px; }
   .muted { color: var(--muted); }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 16px; }
-  .stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-bottom: 16px; }
+  .stats { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; margin-bottom: 16px; }
+  .stat .mini { height: 4px; background: var(--line); border-radius: 2px; margin: 6px 0 2px; overflow: hidden; }
+  .stat .mini i { display: block; height: 100%; width: 0; background: var(--accent); }
   .stat-link { color: inherit; text-decoration: none; }
   .stat-link:hover { border-color: var(--accent); }
   .stat-link b { color: var(--accent); }
@@ -108,6 +110,7 @@
   .toast.show { opacity: 1; }
   @media (max-width: 720px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
+    .stat-wide { grid-column: span 2; }
     .grid2 { grid-template-columns: 1fr; }
     .step { grid-template-columns: 28px 1fr 90px; }
     .bar .name { width: 110px; }
@@ -123,7 +126,6 @@
     <h1><span>日本語</span> Hours</h1>
     <div class="row" style="align-items:center">
       <span class="muted" id="today"></span>
-      <a href="grammar.html">文法 Grammar →</a>
       <button type="button" class="link" id="auth">Sign in</button>
     </div>
   </header>
@@ -149,6 +151,7 @@
     <div class="stat"><small>Days logged</small><b id="s-days">0</b></div>
     <a class="stat stat-link" href="kanji.html"><small>Kanji →</small><b id="s-kanji">–</b></a>
     <a class="stat stat-link" href="vocab.html"><small>Vocab →</small><b id="s-vocab">–</b></a>
+    <a class="stat stat-link stat-wide" href="grammar.html" title="Grammar points covered in lessons, out of roughly 80 for JLPT N5"><small>Grammar →</small><b id="s-grammar">–</b><div class="mini"><i id="s-grammar-bar"></i></div><small>of ~80 N5 points</small></a>
   </div>
 
   <div class="card owner-only" hidden>
@@ -537,6 +540,16 @@ for (const [file, el] of [['kanji.json', 's-kanji'], ['vocab.json', 's-vocab']])
     .then(list => $(el).textContent = list.length)
     .catch(() => $(el).textContent = '0');
 }
+// Grammar: points marked covered on the grammar page, against roughly 80 for JLPT N5
+const N5_GRAMMAR = 80;
+fetch('grammar.json?t=' + Date.now(), { cache: 'no-store' })
+  .then(r => r.ok ? r.json() : { sections: [] })
+  .then(g => {
+    const covered = g.sections.flatMap(s => s.items).filter(x => x.covered).length;
+    $('s-grammar').textContent = covered;
+    $('s-grammar-bar').style.width = Math.min(100, covered / N5_GRAMMAR * 100) + '%';
+  })
+  .catch(() => $('s-grammar').textContent = '0');
 </script>
 </body>
 </html>
