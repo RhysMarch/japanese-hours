@@ -179,6 +179,42 @@
           ]
         },
         {
+          "id": "he",
+          "title": "へ",
+          "reading": "e",
+          "covered": true,
+          "gist": "Towards — the direction of movement",
+          "note": "Written へ, said \"e\". Only with movement verbs: いきます, きます, かえります.",
+          "uses": [
+            {
+              "label": "Direction — towards",
+              "examples": [
+                {
+                  "jp": "にほん[へ] いきます。",
+                  "kj": "日本[へ]行きます。",
+                  "en": "I'll go to Japan."
+                },
+                {
+                  "jp": "どこ[へ] いきますか。",
+                  "kj": "どこ[へ]行きますか。",
+                  "en": "Where are you going?"
+                }
+              ]
+            },
+            {
+              "label": "\"To\" on letters and gifts",
+              "examples": [
+                {
+                  "jp": "ともだち[へ]",
+                  "kj": "友達[へ]",
+                  "en": "To my friend"
+                }
+              ]
+            }
+          ],
+          "tip": "へ can only replace に's destination use — not existence, time or purpose. With も: へも. When in doubt, use に."
+        },
+        {
           "id": "de",
           "title": "で",
           "reading": "de",
@@ -329,7 +365,7 @@
           "reading": "ne",
           "covered": true,
           "gist": "…, right? / isn't it?",
-          "note": "Looks for agreement — you expect the listener to feel the same.",
+          "note": "You expect the listener to already know or agree — shared feelings, checking, agreeing.",
           "uses": [
             {
               "examples": [
@@ -342,10 +378,21 @@
                   "jp": "きょうは さむいです[ね]。",
                   "kj": "今日は寒いです[ね]。",
                   "en": "It's cold today, isn't it?"
+                },
+                {
+                  "jp": "あしたです[ね]。",
+                  "kj": "明日です[ね]。",
+                  "en": "It's tomorrow, right? (checking)"
+                },
+                {
+                  "jp": "そうです[ね]。",
+                  "kj": "そうです[ね]。",
+                  "en": "Yeah, that's true. (agreeing)"
                 }
               ]
             }
-          ]
+          ],
+          "tip": "か is a real question; ね expects a \"yes\". Don't use ね for things the listener can't know."
         },
         {
           "id": "yo",
@@ -353,7 +400,7 @@
           "reading": "yo",
           "covered": true,
           "gist": "…, you know / I'm telling you",
-          "note": "Gives the listener new information, with confidence.",
+          "note": "You're telling the listener something new — informing, reassuring, correcting, recommending.",
           "uses": [
             {
               "examples": [
@@ -366,11 +413,31 @@
                   "jp": "えきは あそこです[よ]。",
                   "kj": "駅はあそこです[よ]。",
                   "en": "The station's over there (I'm telling you)."
+                },
+                {
+                  "jp": "あしたは やすみです[よ]。",
+                  "kj": "明日は休みです[よ]。",
+                  "en": "Tomorrow's a day off, you know."
+                },
+                {
+                  "jp": "だいじょうぶです[よ]。",
+                  "kj": "大丈夫です[よ]。",
+                  "en": "It's fine, really."
+                }
+              ]
+            },
+            {
+              "label": "よね — fairly sure, but checking",
+              "examples": [
+                {
+                  "jp": "あしたです[よね]。",
+                  "kj": "明日です[よね]。",
+                  "en": "It's tomorrow, isn't it? (I think so.)"
                 }
               ]
             }
           ],
-          "tip": "ね vs よ: ね = we both already feel this (agreement). よ = I'm telling you something you might not know."
+          "tip": "ね vs よ: ね = we both already feel this (agreement). よ = I'm telling you something you might not know. Don't overuse よ — it can sound pushy."
         },
         {
           "id": "no",
@@ -539,6 +606,47 @@
               ]
             }
           ]
+        },
+        {
+          "id": "ya",
+          "title": "や",
+          "reading": "ya",
+          "covered": true,
+          "gist": "X, Y, and so on — a list of examples",
+          "note": "Nouns only. The particle (が, を…) goes after the whole list. Add など at the end for \"etc.\"",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "アニメ[や] ゲームが すきです。",
+                  "kj": "アニメ[や]ゲームが好きです。",
+                  "en": "I like things like anime and games."
+                },
+                {
+                  "jp": "アニメ[や] ゲーム[など]が すきです。",
+                  "kj": "アニメ[や]ゲーム[など]が好きです。",
+                  "en": "I like anime, games, etc."
+                }
+              ]
+            },
+            {
+              "label": "と vs や",
+              "note": "と is the complete list; や is just some examples.",
+              "examples": [
+                {
+                  "jp": "パン[と] たまごを たべました。",
+                  "kj": "パン[と]卵を食べました。",
+                  "en": "I ate bread and eggs. (that's all)"
+                },
+                {
+                  "jp": "パン[や] たまごを たべました。",
+                  "kj": "パン[や]卵を食べました。",
+                  "en": "I ate bread, eggs and so on."
+                }
+              ]
+            }
+          ],
+          "tip": "や can't mean \"with\": ともだちと いきます, never ともだちや."
         },
         {
           "id": "kara",
