@@ -3606,5 +3606,145 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000000",
+    "word": "駅",
+    "kana": "えき",
+    "meaning": "station (train)",
+    "examples": [
+      {
+        "jp": "えきは どこですか。",
+        "kanji": "駅はどこですか。",
+        "en": "Where is the station?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000001",
+    "word": "電話",
+    "kana": "でんわ",
+    "meaning": "phone / phone call (to call: でんわします)",
+    "examples": [
+      {
+        "jp": "あとで でんわします。",
+        "kanji": "後で電話します。",
+        "en": "I'll call you later."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000002",
+    "word": "天気",
+    "kana": "てんき",
+    "meaning": "weather",
+    "examples": [
+      {
+        "jp": "きょうは いい てんきですね。",
+        "kanji": "今日はいい天気ですね。",
+        "en": "Nice weather today, isn't it?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000003",
+    "word": "雨",
+    "kana": "あめ",
+    "meaning": "rain",
+    "examples": [
+      {
+        "jp": "あめが ふっています。",
+        "kanji": "雨が降っています。",
+        "en": "It's raining."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000004",
+    "word": "安い",
+    "kana": "やすい",
+    "meaning": "cheap",
+    "examples": [
+      {
+        "jp": "この みせは やすいです。",
+        "kanji": "この店は安いです。",
+        "en": "This shop is cheap."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000005",
+    "word": "新しい",
+    "kana": "あたらしい",
+    "meaning": "new",
+    "examples": [
+      {
+        "jp": "あたらしい スマホを かいました。",
+        "kanji": "新しいスマホを買いました。",
+        "en": "I bought a new smartphone."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000006",
+    "word": "待ちます",
+    "kana": "まちます",
+    "meaning": "to wait (wait a moment, please: ちょっと まってください)",
+    "examples": [
+      {
+        "jp": "えきで ともだちを まちます。",
+        "kanji": "駅で友達を待ちます。",
+        "en": "I'll wait for my friend at the station."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000007",
+    "word": "会います",
+    "kana": "あいます",
+    "meaning": "to meet (a person takes に: ともだちに あいます)",
+    "examples": [
+      {
+        "jp": "あした ともだちに あいます。",
+        "kanji": "明日友達に会います。",
+        "en": "I'm meeting a friend tomorrow."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000008",
+    "word": "病院",
+    "kana": "びょういん",
+    "meaning": "hospital",
+    "examples": [
+      {
+        "jp": "びょういんは どこですか。",
+        "kanji": "病院はどこですか。",
+        "en": "Where's the hospital?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1791900000009",
+    "word": "薬",
+    "kana": "くすり",
+    "meaning": "medicine (you \"drink\" it: くすりを のみます)",
+    "examples": [
+      {
+        "jp": "くすりを のみます。",
+        "kanji": "薬を飲みます。",
+        "en": "I take medicine."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
