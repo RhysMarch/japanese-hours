@@ -650,15 +650,87 @@
         },
         {
           "id": "kara",
-          "title": "から・まで",
-          "reading": "kara / made",
-          "gist": "From… until / to…",
+          "title": "から",
+          "reading": "kara",
+          "covered": true,
+          "gist": "From — a starting point",
+          "note": "Goes after the word: くじから, never からくじ.",
+          "uses": [
+            {
+              "label": "1. From a time",
+              "examples": [
+                {
+                  "jp": "くじ[から] しごとです。",
+                  "kj": "九時[から]仕事です。",
+                  "en": "I work from 9."
+                },
+                {
+                  "jp": "あした[から] やすみです。",
+                  "kj": "明日[から]休みです。",
+                  "en": "I'm off from tomorrow."
+                },
+                {
+                  "jp": "なんじ[から] ですか。",
+                  "kj": "何時[から]ですか。",
+                  "en": "From what time?"
+                }
+              ]
+            },
+            {
+              "label": "2. From a place",
+              "examples": [
+                {
+                  "jp": "イギリス[から] きました。",
+                  "kj": "イギリス[から]来ました。",
+                  "en": "I'm from the UK. (lit. I came from the UK)"
+                },
+                {
+                  "jp": "どこ[から] きましたか。",
+                  "kj": "どこ[から]来ましたか。",
+                  "en": "Where are you from?"
+                },
+                {
+                  "jp": "うち[から] あるきます。",
+                  "kj": "家[から]歩きます。",
+                  "en": "I'll walk from home."
+                }
+              ]
+            },
+            {
+              "label": "3. From a person — the source",
+              "examples": [
+                {
+                  "jp": "ともだち[から] メールが きました。",
+                  "kj": "友達[から]メールが来ました。",
+                  "en": "I got an email from a friend."
+                }
+              ]
+            },
+            {
+              "label": "から + も",
+              "note": "から stays, and も goes after it.",
+              "examples": [
+                {
+                  "jp": "ともだち[からも] メールが きました。",
+                  "kj": "友達[からも]メールが来ました。",
+                  "en": "I got an email from a friend too."
+                }
+              ]
+            }
+          ],
+          "tip": "After a whole sentence, から means \"because\" — see 〜から under Patterns."
+        },
+        {
+          "id": "made",
+          "title": "まで",
+          "reading": "made",
+          "gist": "Until / as far as — an end point",
           "uses": [
             {
               "examples": [
                 {
-                  "jp": "くじ[から] ごじ[まで] しごとです。",
-                  "kj": "九時[から]五時[まで]仕事です。",
+                  "jp": "くじから ごじ[まで] しごとです。",
+                  "kj": "九時から五時[まで]仕事です。",
                   "en": "I work from 9 to 5."
                 }
               ]
@@ -846,6 +918,46 @@
               ]
             }
           ]
+        },
+        {
+          "id": "kara-because",
+          "title": "〜から、〜 (because / so)",
+          "covered": true,
+          "gist": "[reason] から、[result] — \"X, so Y\"",
+          "note": "The reason comes first — the opposite order to English \"because\".",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "さむいです[から]、 うちに います。",
+                  "kj": "寒いです[から]、家にいます。",
+                  "en": "It's cold, so I'm staying home."
+                },
+                {
+                  "jp": "つかれました[から]、 かえります。",
+                  "kj": "疲れました[から]、帰ります。",
+                  "en": "I'm tired, so I'm going home."
+                }
+              ]
+            },
+            {
+              "label": "Answering \"why?\" (どうして)",
+              "note": "Give just the reason and end with から.",
+              "examples": [
+                {
+                  "jp": "どうして にほんごを べんきょうしますか。",
+                  "kj": "どうして日本語を勉強しますか。",
+                  "en": "Why do you study Japanese?"
+                },
+                {
+                  "jp": "アニメが すきです[から]。",
+                  "kj": "アニメが好きです[から]。",
+                  "en": "Because I like anime."
+                }
+              ]
+            }
+          ],
+          "tip": "Casual speech uses plain forms: さむいから (no です). ので also means \"because\" — softer and more polite, good for explaining yourself."
         },
         {
           "id": "masu",
