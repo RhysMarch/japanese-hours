@@ -74,6 +74,20 @@
   .kc small { display: block; font-size: 11px; color: var(--muted); line-height: 1.3; }
   .cov-line { font-size: 13px; color: var(--muted); }
   .d-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 12px; color: var(--muted); }
+  .d-hook { text-align: center; font-size: 14px; color: var(--muted); margin: -8px 0 14px; }
+  details.card > summary { cursor: pointer; list-style: none; }
+  details.card > summary::-webkit-details-marker { display: none; }
+  details.card > summary h2 { display: inline; margin: 0; }
+  details.card > summary::before { content: '▸ '; color: var(--muted); }
+  details.card[open] > summary::before { content: '▾ '; }
+  .sa-group { margin-top: 18px; }
+  .sa-group h3 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 4px; font-weight: 600; }
+  .sa-row { display: grid; grid-template-columns: minmax(110px, 1fr) minmax(90px, 1fr) minmax(0, 1.4fr) minmax(0, 2.4fr); gap: 14px; align-items: baseline; padding: 8px 6px; border-bottom: 1px solid var(--line); cursor: pointer; }
+  .sa-row:hover { background: var(--bg); }
+  .sa-row .kana { font-size: 21px; font-weight: 600; }
+  .sa-row .word { font-size: 17px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; color: var(--muted); }
+  .sa-row .mean { font-weight: 600; }
+  .sa-row .hook { font-size: 14px; color: var(--muted); }
   .empty { color: var(--muted); padding: 20px 0; text-align: center; }
   .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; pointer-events: none; }
   .toast.show { opacity: 1; }
@@ -82,6 +96,8 @@
     .vrow { grid-template-columns: auto 1fr; gap: 2px 12px; }
     .vrow .ex { grid-column: 1 / -1; font-size: 14px; color: var(--muted); }
     .vrow .en { display: none; }
+    .sa-row { grid-template-columns: auto 1fr; gap: 2px 12px; }
+    .sa-row .hook { grid-column: 1 / -1; }
   }
 </style>
 </head>
@@ -124,6 +140,11 @@
     <div class="vhead"><span>Kanji</span><span>Kana</span><span>Example</span><span>English <span style="text-transform:none;letter-spacing:0">(hover)</span></span></div>
     <div class="rows" id="list"></div>
   </div>
+
+  <details class="card" id="sa">
+    <summary><h2>Sound-alike verbs</h2> <span class="muted" style="font-size:14px">— easy to mix up, with a memory hook for each</span></summary>
+    <div id="sa-body"></div>
+  </details>
 </main>
 <dialog id="detail"><button type="button" class="x" id="d-close" aria-label="Close">×</button><div id="d-body"></div></dialog>
 <div class="toast" id="toast"></div>
@@ -162,7 +183,28 @@ function toast(msg) {
   clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2200);
 }
 
+// Verbs that sound alike, in groups — rows come from vocab.json (meaning, example, hook)
+const SOUND_ALIKES = [
+  { title: 'Built on "ki"', words: ['来ます', '聞きます', '書きます', '行きます', '起きます'] },
+  { title: 'Built on "ai" / "kai"', words: ['買います', '会います', '使います', '帰ります'] },
+  { title: 'Same sound, different kanji', words: ['取ります', '撮ります'] },
+  { title: 'Short and simple', words: ['見ます', '寝ます', '飲みます', '読みます'] },
+  { title: 'For people vs things', words: ['います', 'あります'] },
+];
+function renderSoundAlikes() {
+  const find = w => vocab.find(v => (v.word || v.kana) === w);
+  $('sa-body').innerHTML = SOUND_ALIKES.map(g => `
+    <div class="sa-group"><h3>${esc(g.title)}</h3>${g.words.map(find).filter(Boolean).map(v => `
+      <div class="sa-row" data-id="${esc(v.id)}">
+        <span class="kana" lang="ja">${esc(v.kana)}</span>
+        <span class="word" lang="ja">${v.word !== v.kana ? esc(v.word) : ''}</span>
+        <span class="mean">${esc(v.meaning.replace(/ \(.*$/, ''))}</span>
+        <span class="hook">${v.hook ? '💡 ' + esc(v.hook) : ''}</span>
+      </div>`).join('')}</div>`).join('');
+}
+
 function render() {
+  renderSoundAlikes();
   $('s-total').textContent = vocab.length;
   const cov = kanjiCoverage(vocab, kanji);
   $('cov').hidden = !cov.total;
@@ -203,6 +245,7 @@ function showWord(id) {
     <div class="d-word" lang="ja">${esc(v.word || v.kana)}</div>
     ${v.word ? `<div class="d-kana" lang="ja">${esc(v.kana)}</div>` : ''}
     <div class="d-meaning">${esc(v.meaning)}</div>
+    ${v.hook ? `<div class="d-hook">💡 ${esc(v.hook)}</div>` : ''}
     ${kanjiIn(v.word).length ? `<div class="d-h" style="margin-top:0">Kanji in this word</div>
     <div class="d-kanji">${kanjiIn(v.word).map(c => {
       const k = kanji.find(x => x.k === c);
@@ -219,6 +262,10 @@ function showWord(id) {
 $('list').addEventListener('click', ev => {
   const box = ev.target.closest('.vrow');
   if (box) showWord(box.dataset.id);
+});
+$('sa-body').addEventListener('click', ev => {
+  const row = ev.target.closest('.sa-row');
+  if (row) showWord(row.dataset.id);
 });
 $('d-close').addEventListener('click', () => $('detail').close());
 const openFromHash = () => { const id = decodeURIComponent(location.hash.slice(1)); if (id) showWord(id); };

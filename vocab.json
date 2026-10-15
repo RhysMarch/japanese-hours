@@ -328,7 +328,8 @@
         "kanji": "朝ご飯を食べます。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "TABle: you eat at the TABle (tabe)"
   },
   {
     "id": "uI%1pvUl%b",
@@ -342,7 +343,8 @@
         "kanji": "仕事でコーヒーを飲みます。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "NOM… gulp: a gnome (no-mi) drinking from a giant mug"
   },
   {
     "id": "h{O2;)GT[r",
@@ -356,7 +358,8 @@
         "kanji": "ノートに日本語を書きます。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "KHAKI: write it in your khaki notebook (kaki)"
   },
   {
     "id": "PaA6*<yBi1",
@@ -370,7 +373,8 @@
         "kanji": "げんきの本を読みます。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "\"YO, ME! I'm reading here!\" (yomi)"
   },
   {
     "id": "cIX2U4:d:2",
@@ -384,7 +388,8 @@
         "kanji": "音楽を聞きます。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "KI-KI: two \"ki\" sounds = two ears, listening"
   },
   {
     "id": "x5;On;Gkzk",
@@ -398,7 +403,8 @@
         "kanji": "夜にユーチューブを見ます。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "\"Look at ME!\" (mi = see)"
   },
   {
     "id": "r6i(4XU-NH",
@@ -412,7 +418,8 @@
         "kanji": "机から本を取ります。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "TORe it off the shelf: take it (tori)"
   },
   {
     "id": "c#KO&Z5hAW",
@@ -426,7 +433,8 @@
         "kanji": "仕事でコンピューターを使います。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "\"SUE, can I use it?\" (tsu-kai)"
   },
   {
     "id": "D5]a]Dk7Hb",
@@ -440,7 +448,8 @@
         "kanji": "仕事でソフトウェアを作ります。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "SUE COOKs: Sue makes things (tsu-kuri)"
   },
   {
     "id": "A4ude@{Um6",
@@ -453,7 +462,8 @@
         "en": "I use Anki every day."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "SHE does it (shi = do)"
   },
   {
     "id": "EY-Zv.,Piy",
@@ -467,7 +477,8 @@
         "kanji": "毎日日本語を勉強します。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "BEN in KYOto: Ben studies in Kyoto (ben-kyou)"
   },
   {
     "id": "J{{k(wpijW",
@@ -481,7 +492,8 @@
         "kanji": "自転車で公園へ行きます。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "\"EEK! KEYS!\" Grab them, we have to go (iki)"
   },
   {
     "id": "wlPDw+LHp/",
@@ -495,7 +507,8 @@
         "kanji": "友達が家に来ます。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "KEY: \"Come in, here's the key\" (ki)"
   },
   {
     "id": "Mw)dt)S~|B",
@@ -508,7 +521,8 @@
         "en": "There is a cat in the park."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "\"EE! A spider!\" Living things (i)"
   },
   {
     "id": "Eqq!xxW=br",
@@ -676,7 +690,8 @@
         "kanji": "仕事の後で家に帰ります。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "KAERU means frog: frogs always hop back home (kaeri)"
   },
   {
     "id": "KD]oF$gbh/",
@@ -689,7 +704,8 @@
         "en": "There's a ball in the gym."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "ARe: objects just ARe there (ari)"
   },
   {
     "id": "P5~G/51U-*",
@@ -786,7 +802,8 @@
         "kanji": "体育館で練習します。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "\"RUN, SHOO!\" Practising sprint drills (ren-shuu)"
   },
   {
     "id": "KtWF;NgXV:",
@@ -1284,7 +1301,8 @@
         "en": "I take a photo of my bicycle."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "Same sound as \"take an object\"; only the kanji differs. Snap a phoTO (tori)"
   },
   {
     "id": "anki-1791041270562",
@@ -2807,7 +2825,8 @@
         "en": "I buy water at the convenience store."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "KITE: buy a kite (kai)"
   },
   {
     "id": "anki-1791501500002",
@@ -2954,7 +2973,8 @@
         "en": "Do you understand? — Yes, I do."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "WAKA WAKA: Pac-Man finally gets it (waka)"
   },
   {
     "id": "anki-1791501977186",
@@ -3174,7 +3194,8 @@
         "en": "I go to bed at 11."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "\"NEver wake me, I'm sleeping\" (ne)"
   },
   {
     "id": "anki-1791501977202",
@@ -3188,7 +3209,8 @@
         "en": "I get up at 7."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "\"OK! I'm up!\" (oki)"
   },
   {
     "id": "anki-1791501977203",
@@ -3202,7 +3224,8 @@
         "en": "I speak Japanese with my friend."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "HANNAH SHE talks… and talks (hana-shi)"
   },
   {
     "id": "anki-yabai",
@@ -3703,7 +3726,8 @@
         "en": "I'll wait for my friend at the station."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "MATCH: wait for the match to start (machi)"
   },
   {
     "id": "anki-1791900000007",
@@ -3717,7 +3741,8 @@
         "en": "I'm meeting a friend tomorrow."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "hook": "EYE: meet eye to eye (ai)"
   },
   {
     "id": "anki-1791900000008",
