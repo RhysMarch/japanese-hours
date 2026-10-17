@@ -318,8 +318,11 @@
   },
   {
     "id": "yS7|_m[Ra3",
-    "word": "食べます",
-    "kana": "たべます",
+    "word": "食べる",
+    "kana": "たべる",
+    "masu": "食べます",
+    "masuKana": "たべます",
+    "group": "ru-verb",
     "meaning": "to eat",
     "examples": [
       {
@@ -333,8 +336,11 @@
   },
   {
     "id": "uI%1pvUl%b",
-    "word": "飲みます",
-    "kana": "のみます",
+    "word": "飲む",
+    "kana": "のむ",
+    "masu": "飲みます",
+    "masuKana": "のみます",
+    "group": "u-verb",
     "meaning": "to drink",
     "examples": [
       {
@@ -348,8 +354,11 @@
   },
   {
     "id": "h{O2;)GT[r",
-    "word": "書きます",
-    "kana": "かきます",
+    "word": "書く",
+    "kana": "かく",
+    "masu": "書きます",
+    "masuKana": "かきます",
+    "group": "u-verb",
     "meaning": "to write",
     "examples": [
       {
@@ -363,8 +372,11 @@
   },
   {
     "id": "PaA6*<yBi1",
-    "word": "読みます",
-    "kana": "よみます",
+    "word": "読む",
+    "kana": "よむ",
+    "masu": "読みます",
+    "masuKana": "よみます",
+    "group": "u-verb",
     "meaning": "to read",
     "examples": [
       {
@@ -378,8 +390,11 @@
   },
   {
     "id": "cIX2U4:d:2",
-    "word": "聞きます",
-    "kana": "ききます",
+    "word": "聞く",
+    "kana": "きく",
+    "masu": "聞きます",
+    "masuKana": "ききます",
+    "group": "u-verb",
     "meaning": "to listen / to ask",
     "examples": [
       {
@@ -393,8 +408,11 @@
   },
   {
     "id": "x5;On;Gkzk",
-    "word": "見ます",
-    "kana": "みます",
+    "word": "見る",
+    "kana": "みる",
+    "masu": "見ます",
+    "masuKana": "みます",
+    "group": "ru-verb",
     "meaning": "to see / to watch",
     "examples": [
       {
@@ -408,8 +426,11 @@
   },
   {
     "id": "r6i(4XU-NH",
-    "word": "取ります",
-    "kana": "とります",
+    "word": "取る",
+    "kana": "とる",
+    "masu": "取ります",
+    "masuKana": "とります",
+    "group": "u-verb",
     "meaning": "to take / pick up (an object — for photos it's 撮ります)",
     "examples": [
       {
@@ -423,8 +444,11 @@
   },
   {
     "id": "c#KO&Z5hAW",
-    "word": "使います",
-    "kana": "つかいます",
+    "word": "使う",
+    "kana": "つかう",
+    "masu": "使います",
+    "masuKana": "つかいます",
+    "group": "u-verb",
     "meaning": "to use",
     "examples": [
       {
@@ -438,8 +462,11 @@
   },
   {
     "id": "D5]a]Dk7Hb",
-    "word": "作ります",
-    "kana": "つくります",
+    "word": "作る",
+    "kana": "つくる",
+    "masu": "作ります",
+    "masuKana": "つくります",
+    "group": "u-verb",
     "meaning": "to make / create",
     "examples": [
       {
@@ -454,7 +481,10 @@
   {
     "id": "A4ude@{Um6",
     "word": "",
-    "kana": "します",
+    "kana": "する",
+    "masu": "",
+    "masuKana": "します",
+    "group": "irregular",
     "meaning": "to do",
     "examples": [
       {
@@ -467,8 +497,11 @@
   },
   {
     "id": "EY-Zv.,Piy",
-    "word": "勉強します",
-    "kana": "べんきょうします",
+    "word": "勉強する",
+    "kana": "べんきょうする",
+    "masu": "勉強します",
+    "masuKana": "べんきょうします",
+    "group": "irregular",
     "meaning": "to study",
     "examples": [
       {
@@ -482,8 +515,11 @@
   },
   {
     "id": "J{{k(wpijW",
-    "word": "行きます",
-    "kana": "いきます",
+    "word": "行く",
+    "kana": "いく",
+    "masu": "行きます",
+    "masuKana": "いきます",
+    "group": "u-verb",
     "meaning": "to go",
     "examples": [
       {
@@ -497,8 +533,11 @@
   },
   {
     "id": "wlPDw+LHp/",
-    "word": "来ます",
-    "kana": "きます",
+    "word": "来る",
+    "kana": "くる",
+    "masu": "来ます",
+    "masuKana": "きます",
+    "group": "irregular",
     "meaning": "to come",
     "examples": [
       {
@@ -513,7 +552,10 @@
   {
     "id": "Mw)dt)S~|B",
     "word": "",
-    "kana": "います",
+    "kana": "いる",
+    "masu": "",
+    "masuKana": "います",
+    "group": "ru-verb",
     "meaning": "to exist / be, for living things",
     "examples": [
       {
@@ -680,8 +722,12 @@
   },
   {
     "id": "sEp{UqTI]b",
-    "word": "帰ります",
-    "kana": "かえります",
+    "word": "帰る",
+    "kana": "かえる",
+    "masu": "帰ります",
+    "masuKana": "かえります",
+    "group": "u-verb",
+    "groupNote": "ends in -eru but is NOT a ru-verb",
     "meaning": "to go home / to return",
     "examples": [
       {
@@ -696,7 +742,10 @@
   {
     "id": "KD]oF$gbh/",
     "word": "",
-    "kana": "あります",
+    "kana": "ある",
+    "masu": "",
+    "masuKana": "あります",
+    "group": "u-verb",
     "meaning": "to exist / be, for objects",
     "examples": [
       {
@@ -792,8 +841,11 @@
   },
   {
     "id": "c/3HIHwXWu",
-    "word": "練習します",
-    "kana": "れんしゅうします",
+    "word": "練習する",
+    "kana": "れんしゅうする",
+    "masu": "練習します",
+    "masuKana": "れんしゅうします",
+    "group": "irregular",
     "meaning": "to practise",
     "examples": [
       {
@@ -1291,8 +1343,11 @@
   },
   {
     "id": "anki-1791039279617",
-    "word": "撮ります",
-    "kana": "とります",
+    "word": "撮る",
+    "kana": "とる",
+    "masu": "撮ります",
+    "masuKana": "とります",
+    "group": "u-verb",
     "meaning": "to take (a photo / video)",
     "examples": [
       {
@@ -2815,8 +2870,11 @@
   },
   {
     "id": "anki-1791501500001",
-    "word": "買います",
-    "kana": "かいます",
+    "word": "買う",
+    "kana": "かう",
+    "masu": "買います",
+    "masuKana": "かいます",
+    "group": "u-verb",
     "meaning": "to buy",
     "examples": [
       {
@@ -2963,8 +3021,11 @@
   },
   {
     "id": "anki-1791501977185",
-    "word": "分かります",
-    "kana": "わかります",
+    "word": "分かる",
+    "kana": "わかる",
+    "masu": "分かります",
+    "masuKana": "わかります",
+    "group": "u-verb",
     "meaning": "to understand",
     "examples": [
       {
@@ -3184,8 +3245,11 @@
   },
   {
     "id": "anki-1791501977201",
-    "word": "寝ます",
-    "kana": "ねます",
+    "word": "寝る",
+    "kana": "ねる",
+    "masu": "寝ます",
+    "masuKana": "ねます",
+    "group": "ru-verb",
     "meaning": "to sleep / go to bed",
     "examples": [
       {
@@ -3199,8 +3263,11 @@
   },
   {
     "id": "anki-1791501977202",
-    "word": "起きます",
-    "kana": "おきます",
+    "word": "起きる",
+    "kana": "おきる",
+    "masu": "起きます",
+    "masuKana": "おきます",
+    "group": "ru-verb",
     "meaning": "to wake up / get up",
     "examples": [
       {
@@ -3214,8 +3281,11 @@
   },
   {
     "id": "anki-1791501977203",
-    "word": "話します",
-    "kana": "はなします",
+    "word": "話す",
+    "kana": "はなす",
+    "masu": "話します",
+    "masuKana": "はなします",
+    "group": "u-verb",
     "meaning": "to speak / talk",
     "examples": [
       {
@@ -3716,8 +3786,11 @@
   },
   {
     "id": "anki-1791900000006",
-    "word": "待ちます",
-    "kana": "まちます",
+    "word": "待つ",
+    "kana": "まつ",
+    "masu": "待ちます",
+    "masuKana": "まちます",
+    "group": "u-verb",
     "meaning": "to wait (wait a moment, please: ちょっと まってください)",
     "examples": [
       {
@@ -3731,8 +3804,11 @@
   },
   {
     "id": "anki-1791900000007",
-    "word": "会います",
-    "kana": "あいます",
+    "word": "会う",
+    "kana": "あう",
+    "masu": "会います",
+    "masuKana": "あいます",
+    "group": "u-verb",
     "meaning": "to meet (a person takes に: ともだちに あいます)",
     "examples": [
       {

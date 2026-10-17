@@ -46,6 +46,12 @@
   .vrow:hover { background: var(--bg); }
   .vrow .word { font-size: 19px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; color: var(--ink); }
   .vrow .kana { font-size: 21px; font-weight: 600; overflow-wrap: anywhere; }
+  .vrow .kana small, .sa-row .kana small { display: block; font-size: 13px; font-weight: 400; color: var(--muted); }
+  .grp { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .03em; border-radius: 999px; padding: 0 7px; margin-left: 6px; vertical-align: middle; border: 1px solid var(--line); color: var(--muted); }
+  .grp.u-verb { color: #2f6fb0; border-color: #2f6fb055; }
+  .grp.ru-verb { color: #2e8a57; border-color: #2e8a5755; }
+  .grp.irregular { color: #b0602f; border-color: #b0602f55; }
+  .d-masu { text-align: center; font-size: 14px; color: var(--muted); }
   .vrow .ex { font-size: 15px; overflow-wrap: anywhere; }
   mark { background: var(--accent-soft); color: var(--accent); font-weight: 600; border-radius: 3px; padding: 0 2px; }
   .vrow .en { font-size: 14px; visibility: hidden; }
@@ -137,6 +143,7 @@
       <input type="search" id="q" placeholder="Search Japanese, English or romaji…" autocomplete="off">
     </div>
     <div class="decks" id="decks"></div>
+    <div class="decks" id="groups"></div>
     <div class="vhead"><span>Kanji</span><span>Kana</span><span>Example</span><span>English <span style="text-transform:none;letter-spacing:0">(hover)</span></span></div>
     <div class="rows" id="list"></div>
   </div>
@@ -158,8 +165,8 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 
 // Forms of a word to look for in its example sentence, longest first — the sentence may be conjugated
 function wordForms(v) {
-  const forms = [v.word, v.kana];
-  for (const f of [v.word, v.kana]) {
+  const forms = [v.word, v.kana, v.masu, v.masuKana];
+  for (const f of [v.word, v.kana, v.masu, v.masuKana]) {
     if (!f) continue;
     if (f.endsWith('ます') && f.length >= 4) forms.push(f.slice(0, -2));     // たべます → たべ (たべました, たべに…)
     else if (f.endsWith('い') && f.length >= 3) forms.push(f.slice(0, -1));   // たのしい → たのし (たのしかった)
@@ -176,6 +183,10 @@ function highlight(sentence, v) {
 let vocab = [];        // [{ id, word, kana, meaning, examples: [{ jp, en }], deck }]
 let token = store.get(TOKEN_KEY);
 let deck = 'all';
+let group = 'all';     // verb group filter
+const GROUPS = { 'u-verb': 'u-verbs', 'ru-verb': 'ru-verbs', 'irregular': 'Irregular' };
+const grpTag = v => v.group ? `<span class="grp ${esc(v.group)}" title="${esc(v.groupNote || '')}">${esc(v.group)}</span>` : '';
+const masuLine = v => v.masuKana ? `<small>${esc(v.masuKana)}</small>` : '';
 let kanji = [];        // from kanji.json, to mark which of a word's kanji you know
 
 function toast(msg) {
@@ -185,18 +196,18 @@ function toast(msg) {
 
 // Verbs that sound alike, in groups — rows come from vocab.json (meaning, example, hook)
 const SOUND_ALIKES = [
-  { title: 'Built on "ki"', words: ['来ます', '聞きます', '書きます', '行きます', '起きます'] },
-  { title: 'Built on "ai" / "kai"', words: ['買います', '会います', '使います', '帰ります'] },
-  { title: 'Same sound, different kanji', words: ['取ります', '撮ります'] },
-  { title: 'Short and simple', words: ['見ます', '寝ます', '飲みます', '読みます'] },
-  { title: 'For people vs things', words: ['います', 'あります'] },
+  { title: 'Built on "ki"', words: ['来る', '聞く', '書く', '行く', '起きる'] },
+  { title: 'Built on "ai" / "kai"', words: ['買う', '会う', '使う', '帰る'] },
+  { title: 'Same sound, different kanji', words: ['取る', '撮る'] },
+  { title: 'Short and simple', words: ['見る', '寝る', '飲む', '読む'] },
+  { title: 'For people vs things', words: ['いる', 'ある'] },
 ];
 function renderSoundAlikes() {
   const find = w => vocab.find(v => (v.word || v.kana) === w);
   $('sa-body').innerHTML = SOUND_ALIKES.map(g => `
     <div class="sa-group"><h3>${esc(g.title)}</h3>${g.words.map(find).filter(Boolean).map(v => `
       <div class="sa-row" data-id="${esc(v.id)}">
-        <span class="kana" lang="ja">${esc(v.kana)}</span>
+        <span class="kana" lang="ja">${esc(v.kana)}${masuLine(v)}</span>
         <span class="word" lang="ja">${v.word !== v.kana ? esc(v.word) : ''}</span>
         <span class="mean">${esc(v.meaning.replace(/ \(.*$/, ''))}</span>
         <span class="hook">${v.hook ? '💡 ' + esc(v.hook) : ''}</span>
@@ -215,16 +226,20 @@ function render() {
   $('decks').innerHTML = ['all', ...decks].map(d =>
     `<button type="button" data-deck="${esc(d)}" class="${d === deck ? 'on' : ''}">${d === 'all' ? 'All' : esc(d)}</button>`).join('');
 
+  const counts = Object.fromEntries(Object.keys(GROUPS).map(g => [g, vocab.filter(v => v.group === g).length]));
+  $('groups').innerHTML = [['all', 'All words'], ...Object.entries(GROUPS).map(([g, n]) => [g, `${n} (${counts[g]})`])].map(([g, n]) =>
+    `<button type="button" data-group="${esc(g)}" class="${g === group ? 'on' : ''}">${esc(n)}</button>`).join('');
+
   const q = $('q').value.trim().toLowerCase();
-  const shown = vocab.filter(v => (deck === 'all' || v.deck === deck) &&
-    matchesQuery(q, [v.word, v.kana, v.meaning]));
+  const shown = vocab.filter(v => (deck === 'all' || v.deck === deck) && (group === 'all' || v.group === group) &&
+    matchesQuery(q, [v.word, v.kana, v.masu, v.masuKana, v.meaning]));
 
   $('list').innerHTML = shown.length ? shown.map(v => {
     const ex = v.examples[0];
     return `
     <div class="vrow" data-id="${esc(v.id)}">
       <span class="word" lang="ja">${esc(v.word) || '—'}</span>
-      <span class="kana" lang="ja">${esc(v.kana)}</span>
+      <span class="kana" lang="ja">${esc(v.kana)}${grpTag(v)}${masuLine(v)}</span>
       <span class="ex" lang="ja">${ex ? highlight(ex.jp, v) : ''}</span>
       <span class="en"><b>${esc(v.meaning)}</b>${ex?.en ? `<span>${esc(ex.en)}</span>` : ''}</span>
     </div>`;
@@ -233,6 +248,10 @@ function render() {
 }
 
 $('q').addEventListener('input', render);
+$('groups').addEventListener('click', ev => {
+  const g = ev.target.dataset.group;
+  if (g) { group = g; render(); }
+});
 $('decks').addEventListener('click', ev => {
   const d = ev.target.dataset.deck;
   if (d) { deck = d; render(); }
@@ -244,7 +263,9 @@ function showWord(id) {
   $('d-body').innerHTML = `
     <div class="d-word" lang="ja">${esc(v.word || v.kana)}</div>
     ${v.word ? `<div class="d-kana" lang="ja">${esc(v.kana)}</div>` : ''}
-    <div class="d-meaning">${esc(v.meaning)}</div>
+    ${v.masuKana ? `<div class="d-masu" lang="ja">ます form: ${esc(v.masu && v.masu !== v.masuKana ? v.masu + ' · ' + v.masuKana : v.masuKana)}</div>` : ''}
+    <div class="d-meaning">${esc(v.meaning)}${grpTag(v)}</div>
+    ${v.groupNote ? `<div class="d-hook">${esc(v.groupNote)}</div>` : ''}
     ${v.hook ? `<div class="d-hook">💡 ${esc(v.hook)}</div>` : ''}
     ${kanjiIn(v.word).length ? `<div class="d-h" style="margin-top:0">Kanji in this word</div>
     <div class="d-kanji">${kanjiIn(v.word).map(c => {
