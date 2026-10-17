@@ -3771,5 +3771,328 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000000",
+    "word": "映画",
+    "kana": "えいが",
+    "meaning": "movie",
+    "examples": [
+      {
+        "jp": "こんばん えいがを みます。",
+        "kanji": "今晩映画を見ます。",
+        "en": "I'm watching a movie tonight."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000001",
+    "word": "雑誌",
+    "kana": "ざっし",
+    "meaning": "magazine",
+    "examples": [
+      {
+        "jp": "でんしゃで ざっしを よみます。",
+        "kanji": "電車で雑誌を読みます。",
+        "en": "I read a magazine on the train."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000002",
+    "word": "",
+    "kana": "スポーツ",
+    "meaning": "sports",
+    "examples": [
+      {
+        "jp": "スポーツを しますか。",
+        "en": "Do you play any sports?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000003",
+    "word": "",
+    "kana": "デート",
+    "meaning": "date (romantic)",
+    "examples": [
+      {
+        "jp": "どようびに デートを します。",
+        "en": "I'm going on a date on Saturday."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000004",
+    "word": "",
+    "kana": "テニス",
+    "meaning": "tennis",
+    "examples": [
+      {
+        "jp": "ともだちと テニスを します。",
+        "en": "I play tennis with my friend."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000005",
+    "word": "",
+    "kana": "アイスクリーム",
+    "meaning": "ice cream",
+    "examples": [
+      {
+        "jp": "アイスクリームが だいすきです。",
+        "en": "I love ice cream."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000006",
+    "word": "",
+    "kana": "ハンバーガー",
+    "meaning": "hamburger",
+    "examples": [
+      {
+        "jp": "ひるごはんに ハンバーガーを たべます。",
+        "en": "I eat a hamburger for lunch."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000007",
+    "word": "昼ご飯",
+    "kana": "ひるごはん",
+    "meaning": "lunch",
+    "examples": [
+      {
+        "jp": "ひるごはんを たべましたか。",
+        "kanji": "昼ご飯を食べましたか。",
+        "en": "Did you eat lunch?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000008",
+    "word": "晩ご飯",
+    "kana": "ばんごはん",
+    "meaning": "dinner",
+    "examples": [
+      {
+        "jp": "うちで ばんごはんを たべます。",
+        "kanji": "家で晩ご飯を食べます。",
+        "en": "I eat dinner at home."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000009",
+    "word": "学校",
+    "kana": "がっこう",
+    "meaning": "school",
+    "examples": [
+      {
+        "jp": "まいにち がっこうに いきます。",
+        "kanji": "毎日学校に行きます。",
+        "en": "I go to school every day."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000010",
+    "word": "今晩",
+    "kana": "こんばん",
+    "meaning": "tonight (こんばんは = good evening)",
+    "examples": [
+      {
+        "jp": "こんばん なにを しますか。",
+        "kanji": "今晩何をしますか。",
+        "en": "What are you doing tonight?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000011",
+    "word": "毎晩",
+    "kana": "まいばん",
+    "meaning": "every night",
+    "examples": [
+      {
+        "jp": "まいばん ほんを よみます。",
+        "kanji": "毎晩本を読みます。",
+        "en": "I read a book every night."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000012",
+    "word": "週末",
+    "kana": "しゅうまつ",
+    "meaning": "weekend",
+    "examples": [
+      {
+        "jp": "しゅうまつに なにを しますか。",
+        "kanji": "週末に何をしますか。",
+        "en": "What do you do on the weekend?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000013",
+    "word": "",
+    "kana": "〜ごろ",
+    "meaning": "at about (a time) — goes right after the time: 7じごろ",
+    "examples": [
+      {
+        "jp": "7じごろ おきます。",
+        "en": "I get up at about 7."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000014",
+    "word": "早い",
+    "kana": "はやい",
+    "meaning": "early (fast = 速い, same sound)",
+    "examples": [
+      {
+        "jp": "あしたは あさが はやいです。",
+        "kanji": "明日は朝が早いです。",
+        "en": "I have an early morning tomorrow."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000015",
+    "word": "",
+    "kana": "あまり",
+    "meaning": "not much / not very (+ negative verb)",
+    "examples": [
+      {
+        "jp": "あまり テレビを みません。",
+        "en": "I don't watch TV much."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000016",
+    "word": "全然",
+    "kana": "ぜんぜん",
+    "meaning": "not at all (+ negative verb)",
+    "examples": [
+      {
+        "jp": "ぜんぜん わかりません。",
+        "kanji": "全然分かりません。",
+        "en": "I don't understand at all."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000017",
+    "word": "",
+    "kana": "たいてい",
+    "meaning": "usually",
+    "examples": [
+      {
+        "jp": "たいてい うちで ばんごはんを たべます。",
+        "en": "I usually eat dinner at home."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000018",
+    "word": "時々",
+    "kana": "ときどき",
+    "meaning": "sometimes",
+    "examples": [
+      {
+        "jp": "ときどき コーヒーを のみます。",
+        "kanji": "時々コーヒーを飲みます。",
+        "en": "I sometimes drink coffee."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000019",
+    "word": "",
+    "kana": "よく",
+    "meaning": "often",
+    "examples": [
+      {
+        "jp": "よく としょかんに いきます。",
+        "en": "I often go to the library."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000020",
+    "word": "",
+    "kana": "そうですね",
+    "meaning": "that's right / let me see… (agreeing, or thinking)",
+    "examples": [
+      {
+        "jp": "いい てんきですね。— そうですね。",
+        "en": "Nice weather, isn't it? — It is."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000021",
+    "word": "",
+    "kana": "でも",
+    "meaning": "but (at the start of a sentence)",
+    "examples": [
+      {
+        "jp": "でも、じかんが ありません。",
+        "en": "But I don't have time."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000022",
+    "word": "",
+    "kana": "どうですか",
+    "meaning": "how about…? / how is…?",
+    "examples": [
+      {
+        "jp": "コーヒーは どうですか。",
+        "en": "How about some coffee?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792200000023",
+    "word": "",
+    "kana": "ええ",
+    "meaning": "yes (softer, more casual than はい)",
+    "examples": [
+      {
+        "jp": "ええ、そうです。",
+        "en": "Yeah, that's right."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
