@@ -4170,5 +4170,18 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792288226536",
+    "word": "",
+    "kana": "どんな",
+    "meaning": "what kind of (+ noun)",
+    "examples": [
+      {
+        "jp": "どんな えいがを みますか。",
+        "en": "What kind of movies do you watch?"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
