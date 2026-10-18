@@ -4183,5 +4183,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792288940647",
+    "word": "米",
+    "kana": "こめ",
+    "meaning": "rice (uncooked grain — cooked rice is ご飯; usually said politely as お米 おこめ)",
+    "examples": [
+      {
+        "jp": "スーパーで おこめを かいます。",
+        "en": "I buy rice at the supermarket.",
+        "kanji": "スーパーでお米を買います。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
