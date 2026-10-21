@@ -3123,11 +3123,15 @@
     "id": "anki-1791501977192",
     "word": "",
     "kana": "ちょっと",
-    "meaning": "a little / just a moment",
+    "meaning": "a little / just a moment — also a soft \"no\": ちょっと… = that's a bit (difficult)",
     "examples": [
       {
         "jp": "ちょっと まってください。",
         "en": "Just a moment, please."
+      },
+      {
+        "jp": "「あしたは どうですか。」「あしたは ちょっと…」",
+        "en": "\"How about tomorrow?\" \"Tomorrow's a bit…\" (a polite no)"
       }
     ],
     "deck": "Vocab"
