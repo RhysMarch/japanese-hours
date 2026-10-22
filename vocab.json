@@ -4285,5 +4285,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792703857435",
+    "word": "趣味",
+    "kana": "しゅみ",
+    "meaning": "hobby (to ask: しゅみは なんですか)",
+    "examples": [
+      {
+        "jp": "しゅみは バレーボールです。",
+        "en": "My hobby is volleyball.",
+        "kanji": "趣味はバレーボールです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
