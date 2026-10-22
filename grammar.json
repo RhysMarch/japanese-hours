@@ -146,7 +146,7 @@
             },
             {
               "label": "Time — at / on",
-              "note": "Only for specific times and days — not with きょう, あした, まいにち.",
+              "note": "Only for specific times and days (くじに, どようびに). No に with words relative to now (きょう, あした, こんばん), regular intervals (まいにち, まいばん) or いつ.",
               "examples": [
                 {
                   "jp": "どようび[に] バレーボールを します。",
@@ -975,6 +975,90 @@
                   "jp": "きょうは かいしゃに いき[ません]。",
                   "kj": "今日は会社に行き[ません]。",
                   "en": "I'm not going to the office today."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "verb-groups",
+          "title": "Verb groups: ru / u / irregular",
+          "covered": true,
+          "gist": "How a verb changes depends on its group",
+          "note": "ru-verbs end in an e or i sound + る: drop る, add ます (たべる → たべます). u-verbs: change the last u sound to i, add ます (のむ → のみます, はなす → はなします, かえる → かえります). Irregular: する → します, くる → きます. Watch out: かえる ends in -eru but is a u-verb.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "まいにち 7じに [おき]ます。",
+                  "kj": "毎日7時に[起き]ます。",
+                  "en": "I get up at 7 every day. (おきる, ru-verb)"
+                },
+                {
+                  "jp": "よる ほんを [よみ]ます。",
+                  "kj": "夜本を[読み]ます。",
+                  "en": "I read books at night. (よむ, u-verb)"
+                },
+                {
+                  "jp": "ともだちが うちに [き]ます。",
+                  "kj": "友達が家に[来]ます。",
+                  "en": "A friend is coming to my house. (くる, irregular)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "masenka",
+          "title": "〜ませんか",
+          "covered": true,
+          "gist": "Won't you…? / Would you like to…? (invitation)",
+          "note": "Turn the ません form into a question to invite someone. Accept with ええ、いいですね; turn it down softly with ちょっと…",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "しゅうまつに テニスを [しませんか]。— ええ、いいですね。",
+                  "kj": "週末にテニスを[しませんか]。— ええ、いいですね。",
+                  "en": "Would you like to play tennis this weekend? — Yes, sounds good."
+                },
+                {
+                  "jp": "こんばん えいがを [みませんか]。— こんばんは ちょっと…",
+                  "kj": "今晩映画を[見ませんか]。— 今晩はちょっと…",
+                  "en": "Want to see a movie tonight? — Tonight's a bit…"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "frequency",
+          "title": "How often: よく・ときどき・あまり・ぜんぜん",
+          "covered": true,
+          "gist": "often / sometimes / not much / not at all",
+          "note": "まいにち (every day), よく (often), たいてい (usually), ときどき (sometimes) go with a positive verb. あまり (not much) and ぜんぜん (not at all) need a negative verb.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "[よく] としょかんに いきます。",
+                  "kj": "[よく]図書館に行きます。",
+                  "en": "I often go to the library."
+                },
+                {
+                  "jp": "[ときどき] コーヒーを のみます。",
+                  "kj": "[時々]コーヒーを飲みます。",
+                  "en": "I sometimes drink coffee."
+                },
+                {
+                  "jp": "[あまり] テレビを みません。",
+                  "kj": "[あまり]テレビを見ません。",
+                  "en": "I don't watch TV much."
+                },
+                {
+                  "jp": "[ぜんぜん] わかりません。",
+                  "kj": "[全然]分かりません。",
+                  "en": "I don't understand at all."
                 }
               ]
             }
