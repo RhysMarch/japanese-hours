@@ -3055,7 +3055,7 @@
     "id": "anki-1791501977187",
     "word": "",
     "kana": "いい",
-    "meaning": "good / nice (not: よくない, was: よかった)",
+    "meaning": "good / nice — よい (良い) is the more formal, written form; the endings come from よい (not: よくない, was: よかった)",
     "examples": [
       {
         "jp": "この カフェは いいです。",
@@ -4198,6 +4198,90 @@
         "jp": "スーパーで おこめを かいます。",
         "en": "I buy rice at the supermarket.",
         "kanji": "スーパーでお米を買います。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792703804132",
+    "word": "醜い",
+    "kana": "みにくい",
+    "meaning": "ugly (a strong word — rarely said about people; 見にくい with the same sound = hard to see)",
+    "examples": [
+      {
+        "jp": "みにくい アヒルの こ",
+        "en": "The Ugly Duckling",
+        "kanji": "醜いアヒルの子"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792703804133",
+    "word": "簡単",
+    "kana": "かんたん",
+    "meaning": "easy / simple (な-adjective: かんたんな もんだい = an easy question)",
+    "examples": [
+      {
+        "jp": "この テストは かんたんです。",
+        "en": "This test is easy.",
+        "kanji": "このテストは簡単です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792703804134",
+    "word": "悪い",
+    "kana": "わるい",
+    "meaning": "bad",
+    "examples": [
+      {
+        "jp": "きょうは てんきが わるいです。",
+        "en": "The weather is bad today.",
+        "kanji": "今日は天気が悪いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792703804135",
+    "word": "お元気ですか",
+    "kana": "おげんきですか",
+    "meaning": "how are you? (lit. are you well? — for someone you haven't seen in a while, not an everyday hello)",
+    "examples": [
+      {
+        "jp": "「おげんきですか。」「はい、げんきです。」",
+        "en": "\"How are you?\" \"I'm fine.\"",
+        "kanji": "「お元気ですか。」「はい、元気です。」"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792703804136",
+    "word": "警察",
+    "kana": "けいさつ",
+    "meaning": "police (a police box on the street = 交番 こうばん)",
+    "examples": [
+      {
+        "jp": "けいさつに でんわします。",
+        "en": "I'll call the police.",
+        "kanji": "警察に電話します。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792703804137",
+    "word": "〜月",
+    "kana": "〜がつ",
+    "meaning": "the months: number + がつ — いちがつ, にがつ, さんがつ, しがつ (April), ごがつ, ろくがつ, しちがつ (July), はちがつ, くがつ (September), じゅうがつ, じゅういちがつ, じゅうにがつ",
+    "examples": [
+      {
+        "jp": "たんじょうびは しがつです。",
+        "en": "My birthday is in April.",
+        "kanji": "誕生日は四月です。"
       }
     ],
     "deck": "Vocab"
