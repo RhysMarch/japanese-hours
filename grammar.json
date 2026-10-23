@@ -1102,6 +1102,28 @@
           ]
         },
         {
+          "id": "location",
+          "title": "X の うえ / した / なか… に",
+          "gist": "Saying where something is — on, under, inside, next to…",
+          "note": "うえ on · した under · なか inside · となり next to · まえ in front · うしろ behind. To answer \"where?\": つくえの うえです。",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "つくえの [うえに] ペンが あります。",
+                  "kj": "机の[上に]ペンがあります。",
+                  "en": "There's a pen on the desk."
+                },
+                {
+                  "jp": "がっこうの [となりに] コンビニが あります。",
+                  "kj": "学校の[隣に]コンビニがあります。",
+                  "en": "There's a konbini next to the school."
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "suki",
           "title": "X が すきです・ほしいです",
           "gist": "I like X / I want X (a thing)",

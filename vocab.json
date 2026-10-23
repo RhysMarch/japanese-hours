@@ -4492,5 +4492,47 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792796575305",
+    "word": "中",
+    "kana": "なか",
+    "meaning": "inside / in",
+    "examples": [
+      {
+        "jp": "かばんの なかに ペンが あります。",
+        "en": "There's a pen in the bag.",
+        "kanji": "かばんの中にペンがあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792796575306",
+    "word": "隣",
+    "kana": "となり",
+    "meaning": "next to",
+    "examples": [
+      {
+        "jp": "がっこうの となりに コンビニが あります。",
+        "en": "There's a konbini next to the school.",
+        "kanji": "学校の隣にコンビニがあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792796575307",
+    "word": "後ろ",
+    "kana": "うしろ",
+    "meaning": "behind / back",
+    "examples": [
+      {
+        "jp": "ドアの うしろに いぬが います。",
+        "en": "There's a dog behind the door.",
+        "kanji": "ドアの後ろに犬がいます。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
