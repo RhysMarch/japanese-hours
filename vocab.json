@@ -4299,5 +4299,33 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792788407852",
+    "word": "入れる",
+    "kana": "いれる",
+    "masu": "入れます",
+    "masuKana": "いれます",
+    "group": "ru-verb",
+    "meaning": "to put in / to add",
+    "examples": [
+      {
+        "jp": "コーヒーに さとうを いれます。",
+        "en": "I put sugar in my coffee. (positive)",
+        "kanji": "コーヒーに砂糖を入れます。"
+      },
+      {
+        "jp": "ミルクは いれません。",
+        "en": "I don't add milk. (negative)",
+        "kanji": "ミルクは入れません。"
+      },
+      {
+        "jp": "かばんに いれましょう。",
+        "en": "Let's put it in the bag. (let's)",
+        "kanji": "かばんに入れましょう。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "put it IN-ray: IN = ire"
   }
 ]
