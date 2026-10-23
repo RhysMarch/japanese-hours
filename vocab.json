@@ -4478,5 +4478,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792791833549",
+    "word": "一緒に",
+    "kana": "いっしょに",
+    "meaning": "together (〜と いっしょに = together with 〜)",
+    "examples": [
+      {
+        "jp": "いっしょに えいがを みませんか。",
+        "en": "Would you like to watch a movie together?",
+        "kanji": "一緒に映画を見ませんか。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
