@@ -4355,5 +4355,128 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508834",
+    "word": "中国",
+    "kana": "ちゅうごく",
+    "meaning": "China",
+    "examples": [
+      {
+        "jp": "ちゅうごくに いきます。",
+        "en": "I'm going to China.",
+        "kanji": "中国に行きます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508835",
+    "word": "韓国",
+    "kana": "かんこく",
+    "meaning": "South Korea",
+    "examples": [
+      {
+        "jp": "かんこくの りょうりが すきです。",
+        "en": "I like Korean food.",
+        "kanji": "韓国の料理が好きです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508836",
+    "word": "静か",
+    "kana": "しずか",
+    "meaning": "quiet (な-adjective: しずかな へや = a quiet room)",
+    "examples": [
+      {
+        "jp": "としょかんは しずかです。",
+        "en": "The library is quiet.",
+        "kanji": "図書館は静かです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508837",
+    "word": "古い",
+    "kana": "ふるい",
+    "meaning": "old (things, not people)",
+    "examples": [
+      {
+        "jp": "この くるまは ふるいです。",
+        "en": "This car is old.",
+        "kanji": "この車は古いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508838",
+    "word": "",
+    "kana": "にぎやか",
+    "meaning": "lively / busy (a place) (な-adjective)",
+    "examples": [
+      {
+        "jp": "とうきょうは にぎやかです。",
+        "en": "Tokyo is lively."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508839",
+    "word": "服",
+    "kana": "ふく",
+    "meaning": "clothes",
+    "examples": [
+      {
+        "jp": "あたらしい ふくを かいます。",
+        "en": "I buy new clothes.",
+        "kanji": "新しい服を買います。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508840",
+    "word": "野球",
+    "kana": "やきゅう",
+    "meaning": "baseball",
+    "examples": [
+      {
+        "jp": "テレビで やきゅうを みます。",
+        "en": "I watch baseball on TV.",
+        "kanji": "テレビで野球を見ます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508841",
+    "word": "",
+    "kana": "パソコン",
+    "meaning": "PC / computer (desktop; laptop = ノートパソコン)",
+    "examples": [
+      {
+        "jp": "パソコンで しごとを します。",
+        "en": "I work on my PC."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790508842",
+    "word": "",
+    "kana": "アラーム",
+    "meaning": "alarm (on a phone; alarm clock = めざましどけい)",
+    "examples": [
+      {
+        "jp": "しちじに アラームを かけます。",
+        "en": "I set an alarm for 7."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
