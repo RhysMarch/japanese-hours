@@ -4327,5 +4327,33 @@
     ],
     "deck": "Vocab",
     "hook": "put it IN-ray: IN = ire"
+  },
+  {
+    "id": "anki-1792790075042",
+    "word": "彼氏",
+    "kana": "かれし",
+    "meaning": "boyfriend",
+    "examples": [
+      {
+        "jp": "かれしは にほんじんです。",
+        "en": "My boyfriend is Japanese.",
+        "kanji": "彼氏は日本人です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1792790075043",
+    "word": "彼女",
+    "kana": "かのじょ",
+    "meaning": "girlfriend (also means \"she\")",
+    "examples": [
+      {
+        "jp": "かのじょと えいがを みます。",
+        "en": "I watch a movie with my girlfriend.",
+        "kanji": "彼女と映画を見ます。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
