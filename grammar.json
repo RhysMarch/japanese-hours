@@ -173,6 +173,11 @@
                   "jp": "みずを のみ[に] いきます。",
                   "kj": "水を飲み[に]行きます。",
                   "en": "I'm going for some water."
+                },
+                {
+                  "jp": "コンビニに パンを かい[に] いきます。",
+                  "kj": "コンビニにパンを買い[に]行きます。",
+                  "en": "I'm going to the konbini to buy bread."
                 }
               ]
             }
