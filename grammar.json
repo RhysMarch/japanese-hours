@@ -988,6 +988,34 @@
           "tip": "Casual speech uses plain forms: さむいから (no です). ので also means \"because\" — softer and more polite, good for explaining yourself."
         },
         {
+          "id": "ga-but",
+          "title": "〜が、〜 (but)",
+          "gist": "[sentence 1] が、[sentence 2] — \"X, but Y\"",
+          "note": "が after です / ます = but; が after a noun = subject marker. Say it as one word (むずかしいですが), with a small pause after が.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "にほんごは むずかしいです[が]、おもしろいです。",
+                  "kj": "日本語は難しいです[が]、面白いです。",
+                  "en": "Japanese is difficult, but it's interesting."
+                },
+                {
+                  "jp": "コーヒーは のみます[が]、こうちゃは のみません。",
+                  "kj": "コーヒーは飲みます[が]、紅茶は飲みません。",
+                  "en": "I drink coffee, but I don't drink tea."
+                },
+                {
+                  "jp": "やきゅうは すきです[が]、サッカーは すきじゃないです。",
+                  "kj": "野球は好きです[が]、サッカーは好きじゃないです。",
+                  "en": "I like baseball, but I don't like football."
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
           "id": "masu",
           "title": "〜ます / 〜ません",
           "gist": "Do / don't (polite, present & future)",
