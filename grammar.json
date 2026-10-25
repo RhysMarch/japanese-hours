@@ -803,7 +803,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "covered": true
         },
         {
           "id": "kosoado",
@@ -1148,7 +1149,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "covered": true
         },
         {
           "id": "suki",
