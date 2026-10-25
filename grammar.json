@@ -779,6 +779,33 @@
           "covered": true
         },
         {
+          "id": "deshita",
+          "title": "X は Y でした / じゃなかったです",
+          "gist": "X was Y / X wasn't Y (past of です)",
+          "note": "Nouns and な-adjectives only. い-adjectives change themselves: たかかったです.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "きのうは にちようび[でした]。",
+                  "kj": "昨日は日曜日[でした]。",
+                  "en": "Yesterday was Sunday."
+                },
+                {
+                  "jp": "テストは かんたん[でした]。",
+                  "kj": "テストは簡単[でした]。",
+                  "en": "The test was easy."
+                },
+                {
+                  "jp": "しゅうまつは しずか[じゃなかったです]。",
+                  "kj": "週末は静か[じゃなかったです]。",
+                  "en": "The weekend wasn't quiet."
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "kosoado",
           "title": "こ・そ・あ・ど words",
           "covered": true,
