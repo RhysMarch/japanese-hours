@@ -4534,5 +4534,193 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243237",
+    "word": "",
+    "kana": "アルバイト",
+    "meaning": "part-time job (バイト for short)",
+    "examples": [
+      {
+        "jp": "しゅうまつに アルバイトを します。",
+        "en": "I work part-time at the weekend."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243238",
+    "word": "買い物",
+    "kana": "かいもの",
+    "meaning": "shopping",
+    "examples": [
+      {
+        "jp": "とうきょうで かいものを します。",
+        "en": "I go shopping in Tokyo.",
+        "kanji": "東京で買い物をします。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243239",
+    "word": "",
+    "kana": "クラス",
+    "meaning": "class",
+    "examples": [
+      {
+        "jp": "きょうは クラスが あります。",
+        "en": "I have class today."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243240",
+    "word": "子供",
+    "kana": "こども",
+    "meaning": "child",
+    "examples": [
+      {
+        "jp": "こどもが ふたり います。",
+        "en": "I have two children.",
+        "kanji": "子供が二人います。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243241",
+    "word": "",
+    "kana": "あなた",
+    "meaning": "you (sounds distant; use the person's name + さん instead)",
+    "examples": [
+      {
+        "jp": "これは あなたの かさですか。",
+        "en": "Is this your umbrella?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243242",
+    "word": "先週",
+    "kana": "せんしゅう",
+    "meaning": "last week (no に)",
+    "examples": [
+      {
+        "jp": "せんしゅう ともだちに あいました。",
+        "en": "I met a friend last week.",
+        "kanji": "先週友達に会いました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243243",
+    "word": "",
+    "kana": "ぐらい",
+    "meaning": "about (amounts / how long; for clock times use ごろ)",
+    "examples": [
+      {
+        "jp": "いちじかんぐらい べんきょうしました。",
+        "en": "I studied for about an hour."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243244",
+    "word": "",
+    "kana": "それから",
+    "meaning": "and then",
+    "examples": [
+      {
+        "jp": "あさごはんを たべます。それから がっこうに いきます。",
+        "en": "I eat breakfast. And then I go to school."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243245",
+    "word": "",
+    "kana": "だから",
+    "meaning": "so / therefore (starts a new sentence)",
+    "examples": [
+      {
+        "jp": "あしたは テストです。だから べんきょうします。",
+        "en": "There's a test tomorrow. So I'll study."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243246",
+    "word": "",
+    "kana": "たくさん",
+    "meaning": "many / a lot",
+    "examples": [
+      {
+        "jp": "しゃしんを たくさん とりました。",
+        "en": "I took a lot of photos."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243247",
+    "word": "一人で",
+    "kana": "ひとりで",
+    "meaning": "alone / by yourself (ひとりです = \"just one person\")",
+    "examples": [
+      {
+        "jp": "ひとりで えいがを みました。",
+        "en": "I watched a movie by myself.",
+        "kanji": "一人で映画を見ました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243248",
+    "word": "",
+    "kana": "もしもし",
+    "meaning": "hello (on the phone)",
+    "examples": [
+      {
+        "jp": "もしもし、やまだです。",
+        "en": "Hello, this is Yamada."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243249",
+    "word": "近く",
+    "kana": "ちかく",
+    "meaning": "near / nearby (place の ちかく)",
+    "examples": [
+      {
+        "jp": "うちの ちかくに コンビニが あります。",
+        "en": "There's a konbini near my house.",
+        "kanji": "家の近くにコンビニがあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793150243250",
+    "word": "間",
+    "kana": "あいだ",
+    "meaning": "between (A と B の あいだ)",
+    "examples": [
+      {
+        "jp": "えきと がっこうの あいだに こうえんが あります。",
+        "en": "There's a park between the station and the school.",
+        "kanji": "駅と学校の間に公園があります。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
