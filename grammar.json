@@ -1259,6 +1259,34 @@
           ]
         },
         {
+          "id": "jikan",
+          "title": "(number) じかん — for … hours",
+          "gist": "How long you do something — no particle after it",
+          "note": "+ ぐらい = about · + はん = and a half · 4 hours = よじかん, 9 hours = くじかん. しちじに = at 7 o'clock (takes に); しちじかん = for 7 hours (no particle).",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "きのう、[にじかん] べんきょうしました。",
+                  "kj": "昨日、[二時間]勉強しました。",
+                  "en": "Yesterday I studied for two hours."
+                },
+                {
+                  "jp": "テレビを [いちじかんぐらい] みました。",
+                  "kj": "テレビを[一時間ぐらい]見ました。",
+                  "en": "I watched TV for about an hour."
+                },
+                {
+                  "jp": "[にじかんはん] ねました。",
+                  "kj": "[二時間半]寝ました。",
+                  "en": "I slept for two and a half hours."
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
           "id": "years",
           "title": "(number) 年 + 〜ています",
           "gist": "I've been doing … for ___ years",
