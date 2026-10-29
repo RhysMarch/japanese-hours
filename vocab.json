@@ -4722,5 +4722,32 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793234614083",
+    "word": "横",
+    "kana": "よこ",
+    "meaning": "beside / at the side (works for anything; となり is for two of the same kind side by side, like houses or people)",
+    "examples": [
+      {
+        "jp": "つくえの よこに かばんが あります。",
+        "en": "There's a bag beside the desk.",
+        "kanji": "机の横にかばんがあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793234614084",
+    "word": "",
+    "kana": "そば",
+    "meaning": "near / close by (very common, a bit closer and more casual than ちかく; also means soba noodles)",
+    "examples": [
+      {
+        "jp": "えきの そばに コンビニが あります。",
+        "en": "There's a konbini near the station."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
