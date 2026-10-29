@@ -884,6 +884,39 @@
           ]
         },
         {
+          "id": "question-ka",
+          "title": "Question word + か",
+          "gist": "なにか・だれか・どこか・いつか — something / someone / somewhere / someday",
+          "note": "か = some- ; も + negative = no- (なにか たべました \"I ate something\" vs なにも たべませんでした \"I didn't eat anything\").",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "[なにか] のみませんか。",
+                  "kj": "[何か]飲みませんか。",
+                  "en": "Would you like to drink something?"
+                },
+                {
+                  "jp": "[だれか] いますか。",
+                  "kj": "[誰か]いますか。",
+                  "en": "Is anyone there?"
+                },
+                {
+                  "jp": "しゅうまつ、[どこか]に いきましたか。",
+                  "kj": "週末、[どこか]に行きましたか。",
+                  "en": "Did you go somewhere at the weekend?"
+                },
+                {
+                  "jp": "[なにか] たべましたか。— いいえ、[なにも] たべませんでした。",
+                  "kj": "[何か]食べましたか。— いいえ、[何も]食べませんでした。",
+                  "en": "Did you eat something? — No, nothing."
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
           "id": "kudasai",
           "title": "〜を ください vs 〜を おねがいします",
           "covered": true,
