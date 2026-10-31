@@ -4762,5 +4762,18 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793410018836",
+    "word": "",
+    "kana": "モニター",
+    "meaning": "monitor (computer screen; the picture on it = がめん)",
+    "examples": [
+      {
+        "jp": "つくえの うえに モニターが ふたつ あります。",
+        "en": "There are two monitors on my desk."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
