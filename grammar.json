@@ -1342,6 +1342,34 @@
           ]
         },
         {
+          "id": "adj-noun",
+          "title": "Adjective + noun (たかい くるま・しずかな へや)",
+          "gist": "Describing a noun — い-adjectives go straight on, な-adjectives add な",
+          "note": "な only appears before a noun: しずかな へや (a quiet room), but へやは しずかです (the room is quiet).",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "[たかい] くるまです。",
+                  "kj": "[高い]車です。",
+                  "en": "It's an expensive car."
+                },
+                {
+                  "jp": "[しずかな] へやです。",
+                  "kj": "[静かな]部屋です。",
+                  "en": "It's a quiet room."
+                },
+                {
+                  "jp": "とうきょうは [にぎやかな] まちです。",
+                  "kj": "東京は[賑やかな]町です。",
+                  "en": "Tokyo is a lively town."
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
           "id": "adj",
           "title": "い-adjectives: 〜くない・〜かった",
           "gist": "Not… / was…",
