@@ -4749,5 +4749,18 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793407996605",
+    "word": "",
+    "kana": "あなたの",
+    "meaning": "your / yours (sounds distant; usually name + さんの instead, e.g. やまださんの)",
+    "examples": [
+      {
+        "jp": "これは あなたの かばんですか。",
+        "en": "Is this your bag?"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
