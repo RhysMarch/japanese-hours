@@ -1370,6 +1370,34 @@
           "covered": true
         },
         {
+          "id": "donna",
+          "title": "どんな + noun",
+          "gist": "What kind of …?",
+          "note": "Answer with adjective + noun: にぎやかな まちです.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "[どんな] えいがが すきですか。— こわい えいがが すきです。",
+                  "kj": "[どんな]映画が好きですか。— 怖い映画が好きです。",
+                  "en": "What kind of movies do you like? — I like scary movies."
+                },
+                {
+                  "jp": "とうきょうは [どんな] まちですか。— にぎやかな まちです。",
+                  "kj": "東京は[どんな]町ですか。— 賑やかな町です。",
+                  "en": "What kind of town is Tokyo? — It's a lively town."
+                },
+                {
+                  "jp": "[どんな] おんがくを ききますか。",
+                  "kj": "[どんな]音楽を聞きますか。",
+                  "en": "What kind of music do you listen to?"
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
           "id": "adj",
           "title": "い-adjectives: 〜くない・〜かった",
           "gist": "Not… / was…",
