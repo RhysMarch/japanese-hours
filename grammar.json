@@ -1398,6 +1398,34 @@
           "covered": true
         },
         {
+          "id": "doudesuka",
+          "title": "X は どうですか",
+          "gist": "How is X? / How about X? (asking or offering)",
+          "note": "Answer with an adjective, or yes / no to an offer. いかがですか = politer (you'll hear it from shop staff).",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "にほんごの クラスは [どうですか]。— おもしろいです。",
+                  "kj": "日本語のクラスは[どうですか]。— 面白いです。",
+                  "en": "How's your Japanese class? — It's interesting."
+                },
+                {
+                  "jp": "コーヒーは [どうですか]。— はい、おねがいします。",
+                  "kj": "コーヒーは[どうですか]。— はい、お願いします。",
+                  "en": "How about some coffee? — Yes, please."
+                },
+                {
+                  "jp": "あしたは [どうですか]。",
+                  "kj": "明日は[どうですか]。",
+                  "en": "How about tomorrow?"
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
           "id": "adj",
           "title": "い-adjectives: 〜くない・〜かった",
           "gist": "Not… / was…",
