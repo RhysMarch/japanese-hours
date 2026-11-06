@@ -4913,5 +4913,33 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793992818454",
+    "word": "住む",
+    "kana": "すむ",
+    "masu": "住みます",
+    "masuKana": "すみます",
+    "group": "u-verb",
+    "meaning": "to live (in a place) — place + に; \"I live in\" = すんで います",
+    "examples": [
+      {
+        "jp": "ロンドンに すんで います。",
+        "en": "I live in London.",
+        "kanji": "ロンドンに住んでいます。"
+      },
+      {
+        "jp": "にほんに すみたいです。",
+        "en": "I want to live in Japan.",
+        "kanji": "日本に住みたいです。"
+      },
+      {
+        "jp": "どこに すんで いますか。",
+        "en": "Where do you live?",
+        "kanji": "どこに住んでいますか。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "you live in your SUMmer house: SUM = sumu"
   }
 ]
