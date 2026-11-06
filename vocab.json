@@ -4775,5 +4775,143 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615114",
+    "word": "乗り換え",
+    "kana": "のりかえ",
+    "meaning": "transfer / changing trains",
+    "examples": [
+      {
+        "jp": "つぎの えきで のりかえです。",
+        "en": "You change trains at the next station.",
+        "kanji": "次の駅で乗り換えです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615115",
+    "word": "予約",
+    "kana": "よやく",
+    "meaning": "reservation / booking (よやくを します = make a booking)",
+    "examples": [
+      {
+        "jp": "よやくを したいです。",
+        "en": "I would like to make a reservation.",
+        "kanji": "予約をしたいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615116",
+    "word": "鍵",
+    "kana": "かぎ",
+    "meaning": "key / lock",
+    "examples": [
+      {
+        "jp": "かぎを なくしました。",
+        "en": "I lost my key.",
+        "kanji": "鍵をなくしました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615117",
+    "word": "住所",
+    "kana": "じゅうしょ",
+    "meaning": "address (where you live)",
+    "examples": [
+      {
+        "jp": "じゅうしょを かいて ください。",
+        "en": "Please write your address.",
+        "kanji": "住所を書いてください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615118",
+    "word": "荷物",
+    "kana": "にもつ",
+    "meaning": "luggage / bags / parcel",
+    "examples": [
+      {
+        "jp": "にもつが おおいです。",
+        "en": "I have a lot of luggage.",
+        "kanji": "荷物が多いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615119",
+    "word": "",
+    "kana": "まっすぐ",
+    "meaning": "straight (ahead) — まっすぐ いって ください = go straight",
+    "examples": [
+      {
+        "jp": "まっすぐ いって ください。",
+        "en": "Please go straight."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615120",
+    "word": "",
+    "kana": "レジ",
+    "meaning": "till / checkout (cash register)",
+    "examples": [
+      {
+        "jp": "レジは どこですか。",
+        "en": "Where is the checkout?"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615121",
+    "word": "席",
+    "kana": "せき",
+    "meaning": "seat",
+    "examples": [
+      {
+        "jp": "この せきは あいて いますか。",
+        "en": "Is this seat free?",
+        "kanji": "この席は空いていますか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615122",
+    "word": "両替",
+    "kana": "りょうがえ",
+    "meaning": "currency exchange / changing money",
+    "examples": [
+      {
+        "jp": "りょうがえは どこで できますか。",
+        "en": "Where can I exchange money?",
+        "kanji": "両替はどこでできますか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1793986615123",
+    "word": "交番",
+    "kana": "こうばん",
+    "meaning": "police box (small local police post)",
+    "examples": [
+      {
+        "jp": "こうばんで みちを ききました。",
+        "en": "I asked for directions at the police box.",
+        "kanji": "交番で道を聞きました。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
