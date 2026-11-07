@@ -1479,6 +1479,40 @@
               ]
             }
           ]
+        },
+        {
+          "id": "quote-to",
+          "title": "「…」と いいました",
+          "gist": "said \"…\" (quoting someone)",
+          "note": "「」 are Japanese quotation marks. と after the quote is required — it is the spoken quote mark. 『』 = quote inside a quote, or titles.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "ともだちは 「こんにちは」[と いいました]。",
+                  "kj": "友達は「こんにちは」[と言いました]。",
+                  "en": "My friend said \"hi\"."
+                },
+                {
+                  "jp": "せんせいは 「しずかに して ください」[と いいました]。",
+                  "kj": "先生は「静かにしてください」[と言いました]。",
+                  "en": "The teacher said \"please be quiet\"."
+                }
+              ]
+            },
+            {
+              "label": "Thought",
+              "note": "Same と with おもいました (thought).",
+              "examples": [
+                {
+                  "jp": "「すごい」[と おもいました]。",
+                  "kj": "「すごい」[と思いました]。",
+                  "en": "I thought \"wow\"."
+                }
+              ]
+            }
+          ],
+          "covered": true
         }
       ]
     }

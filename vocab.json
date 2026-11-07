@@ -4941,5 +4941,28 @@
     ],
     "deck": "Vocab",
     "hook": "you live in your SUMmer house: SUM = sumu"
+  },
+  {
+    "id": "anki-1794014603768",
+    "word": "言う",
+    "kana": "いう",
+    "masu": "言います",
+    "masuKana": "いいます",
+    "group": "u-verb",
+    "meaning": "to say — quote + と いいます",
+    "examples": [
+      {
+        "jp": "「ありがとう」と いいました。",
+        "en": "I said \"thank you\".",
+        "kanji": "「ありがとう」と言いました。"
+      },
+      {
+        "jp": "にほんごで なんと いいますか。",
+        "en": "How do you say it in Japanese?",
+        "kanji": "日本語で何と言いますか。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"EE-YOU!\" is what you say: ii = say"
   }
 ]
