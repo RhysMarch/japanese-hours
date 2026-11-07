@@ -4964,5 +4964,226 @@
     ],
     "deck": "Vocab",
     "hook": "\"EE-YOU!\" is what you say: ii = say"
+  },
+  {
+    "id": "anki-1794065293041",
+    "word": "思う",
+    "kana": "おもう",
+    "masu": "思います",
+    "masuKana": "おもいます",
+    "group": "u-verb",
+    "meaning": "to think — 〜と おもいます = I think that…",
+    "examples": [
+      {
+        "jp": "すごいと おもいます。",
+        "en": "I think it's amazing.",
+        "kanji": "すごいと思います。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"OH, MOO?\" I think that's a cow: omou = think"
+  },
+  {
+    "id": "anki-1794065293042",
+    "word": "知る",
+    "kana": "しる",
+    "masu": "知ります",
+    "masuKana": "しります",
+    "group": "u-verb",
+    "meaning": "to know — \"I know\" = しって います; \"I don't know\" = しりません",
+    "examples": [
+      {
+        "jp": "その みせを しって います。",
+        "en": "I know that shop.",
+        "kanji": "その店を知っています。"
+      },
+      {
+        "jp": "しりません。",
+        "en": "I don't know.",
+        "kanji": "知りません。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "SHE RUles because she knows everything: shiru = know"
+  },
+  {
+    "id": "anki-1794065293043",
+    "word": "働く",
+    "kana": "はたらく",
+    "masu": "働きます",
+    "masuKana": "はたらきます",
+    "group": "u-verb",
+    "meaning": "to work (at a job) — place + で",
+    "examples": [
+      {
+        "jp": "とうきょうで はたらきたいです。",
+        "en": "I want to work in Tokyo.",
+        "kanji": "東京で働きたいです。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "I work at a HAT RACK factory: hataraku = work"
+  },
+  {
+    "id": "anki-1794065293044",
+    "word": "乗る",
+    "kana": "のる",
+    "masu": "乗ります",
+    "masuKana": "のります",
+    "group": "u-verb",
+    "meaning": "to get on / to ride — vehicle + に",
+    "examples": [
+      {
+        "jp": "でんしゃに のります。",
+        "en": "I get on the train.",
+        "kanji": "電車に乗ります。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "NO RUnning — just get on the train: noru = ride"
+  },
+  {
+    "id": "anki-1794065293045",
+    "word": "降りる",
+    "kana": "おりる",
+    "masu": "降ります",
+    "masuKana": "おります",
+    "group": "ru-verb",
+    "meaning": "to get off (a train, bus) — station + で",
+    "examples": [
+      {
+        "jp": "つぎの えきで おります。",
+        "en": "I get off at the next station.",
+        "kanji": "次の駅で降ります。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"OH, REALLY? This is my stop!\": oriru = get off"
+  },
+  {
+    "id": "anki-1794065293046",
+    "word": "払う",
+    "kana": "はらう",
+    "masu": "払います",
+    "masuKana": "はらいます",
+    "group": "u-verb",
+    "meaning": "to pay — カードで / げんきんで = by card / in cash",
+    "examples": [
+      {
+        "jp": "カードで はらいます。",
+        "en": "I'll pay by card.",
+        "kanji": "カードで払います。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "HA! RAW deal — I have to pay: harau = pay"
+  },
+  {
+    "id": "anki-1794065293047",
+    "word": "持つ",
+    "kana": "もつ",
+    "masu": "持ちます",
+    "masuKana": "もちます",
+    "group": "u-verb",
+    "meaning": "to hold / to carry — もって います = have (on you)",
+    "examples": [
+      {
+        "jp": "かさを もって いますか。",
+        "en": "Do you have an umbrella (with you)?",
+        "kanji": "傘を持っていますか。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "MOThers always hold the bags: motsu = hold"
+  },
+  {
+    "id": "anki-1794065293048",
+    "word": "探す",
+    "kana": "さがす",
+    "masu": "探します",
+    "masuKana": "さがします",
+    "group": "u-verb",
+    "meaning": "to look for / to search",
+    "examples": [
+      {
+        "jp": "かぎを さがして います。",
+        "en": "I'm looking for my key.",
+        "kanji": "鍵を探しています。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "the SAGA of searching for my keys: sagasu = search"
+  },
+  {
+    "id": "anki-1794065293049",
+    "word": "忘れる",
+    "kana": "わすれる",
+    "masu": "忘れます",
+    "masuKana": "わすれます",
+    "group": "ru-verb",
+    "meaning": "to forget / to leave something behind",
+    "examples": [
+      {
+        "jp": "かさを わすれました。",
+        "en": "I forgot my umbrella.",
+        "kanji": "傘を忘れました。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"WAS U REally the one who forgot?\": wasureru = forget"
+  },
+  {
+    "id": "anki-1794065293050",
+    "word": "休む",
+    "kana": "やすむ",
+    "masu": "休みます",
+    "masuKana": "やすみます",
+    "group": "u-verb",
+    "meaning": "to rest / to take a day off",
+    "examples": [
+      {
+        "jp": "きょうは やすみます。",
+        "en": "I'm taking today off.",
+        "kanji": "今日は休みます。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"YAS, MOOd!\" — day off: yasumu = rest"
+  },
+  {
+    "id": "anki-1794065293051",
+    "word": "遊ぶ",
+    "kana": "あそぶ",
+    "masu": "遊びます",
+    "masuKana": "あそびます",
+    "group": "u-verb",
+    "meaning": "to play / to hang out (with friends)",
+    "examples": [
+      {
+        "jp": "ともだちと あそびます。",
+        "en": "I hang out with friends.",
+        "kanji": "友達と遊びます。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"A SO-BUsy day of hanging out\": asobu = play"
+  },
+  {
+    "id": "anki-1794065293052",
+    "word": "",
+    "kana": "できる",
+    "masu": "できます",
+    "masuKana": "できます",
+    "group": "ru-verb",
+    "meaning": "can / to be able to — thing + が できます",
+    "examples": [
+      {
+        "jp": "にほんごが すこし できます。",
+        "en": "I can speak a little Japanese.",
+        "kanji": "日本語が少しできます。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"DECK it — I can do it!\": dekiru = can"
   }
 ]
