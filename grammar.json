@@ -1494,9 +1494,9 @@
         },
         {
           "id": "adj",
-          "title": "い-adjectives: 〜くない・〜かった",
-          "gist": "Not… / was…",
-          "note": "Drop い, add くない or かった. いい → よくない / よかった.",
+          "title": "い-adjectives: 〜くない・〜かった・〜くなかった",
+          "gist": "Isn't… / was… / wasn't…",
+          "note": "The adjective changes, です stays. Drop い: くない (isn't) · かった (was) · くなかった (wasn't). な-adjectives don't change — the です does (じゃないです / でした / じゃなかったです).",
           "uses": [
             {
               "examples": [
@@ -1509,10 +1509,42 @@
                   "jp": "ラーメンは おいし[かった]です。",
                   "kj": "ラーメンは美味し[かった]です。",
                   "en": "The ramen was delicious."
+                },
+                {
+                  "jp": "きのうは さむ[くなかった]です。",
+                  "kj": "昨日は寒[くなかった]です。",
+                  "en": "Yesterday wasn't cold."
+                }
+              ]
+            },
+            {
+              "label": "Exception: いい (good) → よ",
+              "examples": [
+                {
+                  "jp": "えいがは [よかった]です。",
+                  "kj": "映画は[良かった]です。",
+                  "en": "The movie was good."
+                },
+                {
+                  "jp": "てんきが [よくない]です。",
+                  "kj": "天気が[良くない]です。",
+                  "en": "The weather isn't good."
+                }
+              ]
+            },
+            {
+              "label": "Trap: きれい・きらい are な-adjectives",
+              "examples": [
+                {
+                  "jp": "へやは きれい[じゃないです]。",
+                  "kj": "部屋はきれい[じゃないです]。",
+                  "en": "The room isn't clean."
                 }
               ]
             }
-          ]
+          ],
+          "covered": true,
+          "tip": "Casual: drop です. な-adjectives use だ / だった instead (しずかだ, しずかだった)."
         },
         {
           "id": "yori",
