@@ -4273,20 +4273,6 @@
     "deck": "Vocab"
   },
   {
-    "id": "anki-1794172534775",
-    "word": "〜月",
-    "kana": "〜がつ",
-    "meaning": "the months: number + がつ — いちがつ, にがつ, さんがつ, しがつ (April), ごがつ, ろくがつ, しちがつ (July), はちがつ, くがつ (September), じゅうがつ, じゅういちがつ, じゅうにがつ",
-    "examples": [
-      {
-        "jp": "たんじょうびは しがつです。",
-        "en": "My birthday is in April.",
-        "kanji": "誕生日は四月です。"
-      }
-    ],
-    "deck": "Vocab"
-  },
-  {
     "id": "anki-1792703857435",
     "word": "趣味",
     "kana": "しゅみ",
@@ -5187,16 +5173,123 @@
     "hook": "\"DECK it — I can do it!\": dekiru = can"
   },
   {
-    "id": "anki-1794172534776",
-    "word": "先・今・来・再来",
-    "kana": "せん・こん・らい・さらい",
-    "meaning": "last / this / next / after next — せんしゅう・こんしゅう・らいしゅう・さらいしゅう (week), せんげつ・こんげつ・らいげつ・さらいげつ (month); no に",
+    "id": "anki-1794172793239",
+    "word": "一月",
+    "kana": "いちがつ",
+    "meaning": "January (months = number + がつ (except April, July, September))",
+    "examples": [
+      {
+        "jp": "いちがつは さむいです。",
+        "en": "January is cold.",
+        "kanji": "一月は寒いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793240",
+    "word": "四月",
+    "kana": "しがつ",
+    "meaning": "April (not よんがつ)",
+    "examples": [
+      {
+        "jp": "たんじょうびは しがつです。",
+        "en": "My birthday is in April.",
+        "kanji": "誕生日は四月です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793241",
+    "word": "七月",
+    "kana": "しちがつ",
+    "meaning": "July (not なながつ)",
+    "examples": [
+      {
+        "jp": "しちがつは あついです。",
+        "en": "July is hot.",
+        "kanji": "七月は暑いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793242",
+    "word": "九月",
+    "kana": "くがつ",
+    "meaning": "September (not きゅうがつ)",
+    "examples": [
+      {
+        "jp": "くがつに にほんに いきます。",
+        "en": "I'm going to Japan in September.",
+        "kanji": "九月に日本に行きます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793243",
+    "word": "今週",
+    "kana": "こんしゅう",
+    "meaning": "this week (こん = this · no に)",
+    "examples": [
+      {
+        "jp": "こんしゅうは いそがしいです。",
+        "en": "This week is busy.",
+        "kanji": "今週は忙しいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793244",
+    "word": "来週",
+    "kana": "らいしゅう",
+    "meaning": "next week (らい = next · no に)",
     "examples": [
       {
         "jp": "らいしゅう にほんに いきます。",
         "en": "I'm going to Japan next week.",
         "kanji": "来週日本に行きます。"
-      },
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793245",
+    "word": "再来週",
+    "kana": "さらいしゅう",
+    "meaning": "the week after next (さらい = after next · no に)",
+    "examples": [
+      {
+        "jp": "さらいしゅう テストが あります。",
+        "en": "I have a test the week after next.",
+        "kanji": "再来週テストがあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793246",
+    "word": "先月",
+    "kana": "せんげつ",
+    "meaning": "last month (せん = last · げつ = month · no に)",
+    "examples": [
+      {
+        "jp": "せんげつ にほんに いきました。",
+        "en": "I went to Japan last month.",
+        "kanji": "先月日本に行きました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793247",
+    "word": "今月",
+    "kana": "こんげつ",
+    "meaning": "this month (no に)",
+    "examples": [
       {
         "jp": "こんげつは いそがしいです。",
         "en": "This month is busy.",
@@ -5206,10 +5299,52 @@
     "deck": "Vocab"
   },
   {
-    "id": "anki-1794172534777",
-    "word": "一昨日 · 明後日",
-    "kana": "おととい · あさって",
-    "meaning": "おととい = the day before yesterday · あさって = the day after tomorrow (no に)",
+    "id": "anki-1794172793248",
+    "word": "来月",
+    "kana": "らいげつ",
+    "meaning": "next month (no に)",
+    "examples": [
+      {
+        "jp": "らいげつ ともだちが きます。",
+        "en": "My friend is coming next month.",
+        "kanji": "来月友達が来ます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793249",
+    "word": "再来月",
+    "kana": "さらいげつ",
+    "meaning": "the month after next (no に)",
+    "examples": [
+      {
+        "jp": "さらいげつ にほんに いきます。",
+        "en": "I'm going to Japan the month after next.",
+        "kanji": "再来月日本に行きます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793250",
+    "word": "一昨日",
+    "kana": "おととい",
+    "meaning": "the day before yesterday (no に)",
+    "examples": [
+      {
+        "jp": "おととい えいがを みました。",
+        "en": "I watched a film the day before yesterday.",
+        "kanji": "一昨日映画を見ました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793251",
+    "word": "明後日",
+    "kana": "あさって",
+    "meaning": "the day after tomorrow (no に)",
     "examples": [
       {
         "jp": "あさって ともだちに あいます。",
@@ -5220,10 +5355,38 @@
     "deck": "Vocab"
   },
   {
-    "id": "anki-1794172534778",
-    "word": "去年・今年・来年",
-    "kana": "きょねん・ことし・らいねん",
-    "meaning": "last year · this year · next year — きょねん・ことし・らいねん (no に)",
+    "id": "anki-1794172793252",
+    "word": "去年",
+    "kana": "きょねん",
+    "meaning": "last year (no に)",
+    "examples": [
+      {
+        "jp": "きょねん にほんに いきました。",
+        "en": "I went to Japan last year.",
+        "kanji": "去年日本に行きました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793253",
+    "word": "今年",
+    "kana": "ことし",
+    "meaning": "this year (not こんねん · no に)",
+    "examples": [
+      {
+        "jp": "ことしは いそがしいです。",
+        "en": "This year is busy.",
+        "kanji": "今年は忙しいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793254",
+    "word": "来年",
+    "kana": "らいねん",
+    "meaning": "next year (らい = next, like らいしゅう · no に)",
     "examples": [
       {
         "jp": "らいねん にほんに すみたいです。",
@@ -5234,10 +5397,108 @@
     "deck": "Vocab"
   },
   {
-    "id": "anki-1794172534779",
-    "word": "〜日",
-    "kana": "〜にち (dates)",
-    "meaning": "dates: number + にち (じゅういちにち = 11th), except ついたち 1st, ふつか 2nd, みっか 3rd, よっか 4th, いつか 5th, むいか 6th, なのか 7th, ようか 8th, ここのか 9th, とおか 10th, じゅうよっか 14th, はつか 20th, にじゅうよっか 24th",
+    "id": "anki-1794172793255",
+    "word": "一日",
+    "kana": "ついたち",
+    "meaning": "the 1st (date) (the odd one out — doesn't match ひとつ)",
+    "examples": [
+      {
+        "jp": "しがつ ついたちに にほんに いきます。",
+        "en": "I'm going to Japan on April 1st.",
+        "kanji": "四月一日に日本に行きます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793256",
+    "word": "二日",
+    "kana": "ふつか",
+    "meaning": "the 2nd (date) (ふ from ふたつ (two))",
+    "examples": [
+      {
+        "jp": "いちがつ ふつかは やすみです。",
+        "en": "January 2nd is a day off.",
+        "kanji": "一月二日は休みです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793257",
+    "word": "三日",
+    "kana": "みっか",
+    "meaning": "the 3rd (date) (み from みっつ (three))",
+    "examples": [
+      {
+        "jp": "みっかに かえります。",
+        "en": "I'm going home on the 3rd.",
+        "kanji": "三日に帰ります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793258",
+    "word": "四日",
+    "kana": "よっか",
+    "meaning": "the 4th (date) (よ from よっつ (four) · also in the 14th and 24th)",
+    "examples": [
+      {
+        "jp": "よっかに あいましょう。",
+        "en": "Let's meet on the 4th.",
+        "kanji": "四日に会いましょう。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793259",
+    "word": "五日",
+    "kana": "いつか",
+    "meaning": "the 5th (date) (いつ from いつつ (five))",
+    "examples": [
+      {
+        "jp": "ごがつ いつかは こどもの ひです。",
+        "en": "May 5th is Children's Day.",
+        "kanji": "五月五日は子供の日です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793260",
+    "word": "六日",
+    "kana": "むいか",
+    "meaning": "the 6th (date) (む from むっつ (six))",
+    "examples": [
+      {
+        "jp": "むいかに テストが あります。",
+        "en": "I have a test on the 6th.",
+        "kanji": "六日にテストがあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793261",
+    "word": "七日",
+    "kana": "なのか",
+    "meaning": "the 7th (date) (な from ななつ (seven))",
+    "examples": [
+      {
+        "jp": "しちがつ なのかは たなばたです。",
+        "en": "July 7th is Tanabata (the star festival).",
+        "kanji": "七月七日は七夕です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793262",
+    "word": "八日",
+    "kana": "ようか",
+    "meaning": "the 8th (date) (よ from やっつ (eight) · not ようび (weekday ending))",
     "examples": [
       {
         "jp": "きょうは じゅういちがつ ようかです。",
@@ -5248,15 +5509,225 @@
     "deck": "Vocab"
   },
   {
-    "id": "anki-1794172534780",
-    "word": "一つ〜十",
-    "kana": "ひとつ〜とお",
-    "meaning": "native numbers 1–10 for counting things: ひとつ, ふたつ, みっつ, よっつ, いつつ, むっつ, ななつ, やっつ, ここのつ, とお",
+    "id": "anki-1794172793263",
+    "word": "九日",
+    "kana": "ここのか",
+    "meaning": "the 9th (date) (ここの from ここのつ (nine))",
+    "examples": [
+      {
+        "jp": "ここのかに いきます。",
+        "en": "I'll go on the 9th.",
+        "kanji": "九日に行きます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793264",
+    "word": "十日",
+    "kana": "とおか",
+    "meaning": "the 10th (date) (とお from とお (ten))",
+    "examples": [
+      {
+        "jp": "とおかは にちようびです。",
+        "en": "The 10th is a Sunday.",
+        "kanji": "十日は日曜日です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793265",
+    "word": "十一日",
+    "kana": "じゅういちにち",
+    "meaning": "the 11th (date) (most dates are just number + にち)",
+    "examples": [
+      {
+        "jp": "じゅういちにちに かえります。",
+        "en": "I'm going home on the 11th.",
+        "kanji": "十一日に帰ります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793266",
+    "word": "十四日",
+    "kana": "じゅうよっか",
+    "meaning": "the 14th (date) (じゅう + よっか (4th) — not じゅうよんにち)",
+    "examples": [
+      {
+        "jp": "にがつ じゅうよっかは バレンタインデーです。",
+        "en": "February 14th is Valentine's Day.",
+        "kanji": "二月十四日はバレンタインデーです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793267",
+    "word": "二十日",
+    "kana": "はつか",
+    "meaning": "the 20th (date) (special, like はたち (20 years old))",
+    "examples": [
+      {
+        "jp": "はつかに にほんに いきます。",
+        "en": "I'm going to Japan on the 20th.",
+        "kanji": "二十日に日本に行きます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793268",
+    "word": "二十四日",
+    "kana": "にじゅうよっか",
+    "meaning": "the 24th (date) (にじゅう + よっか (4th))",
+    "examples": [
+      {
+        "jp": "じゅうにがつ にじゅうよっかは クリスマスイブです。",
+        "en": "December 24th is Christmas Eve.",
+        "kanji": "十二月二十四日はクリスマスイブです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793269",
+    "word": "一つ",
+    "kana": "ひとつ",
+    "meaning": "one (thing) (native number for counting things)",
+    "examples": [
+      {
+        "jp": "りんごを ひとつ ください。",
+        "en": "One apple, please.",
+        "kanji": "りんごを一つください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793270",
+    "word": "二つ",
+    "kana": "ふたつ",
+    "meaning": "two (things) (native number for counting things)",
     "examples": [
       {
         "jp": "コーヒーを ふたつ ください。",
         "en": "Two coffees, please.",
         "kanji": "コーヒーを二つください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793271",
+    "word": "三つ",
+    "kana": "みっつ",
+    "meaning": "three (things) (native number for counting things)",
+    "examples": [
+      {
+        "jp": "みっつ ください。",
+        "en": "Three, please.",
+        "kanji": "三つください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793272",
+    "word": "四つ",
+    "kana": "よっつ",
+    "meaning": "four (things) (native number for counting things)",
+    "examples": [
+      {
+        "jp": "ケーキを よっつ かいました。",
+        "en": "I bought four cakes.",
+        "kanji": "ケーキを四つ買いました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793273",
+    "word": "五つ",
+    "kana": "いつつ",
+    "meaning": "five (things) (native number for counting things)",
+    "examples": [
+      {
+        "jp": "いつつ あります。",
+        "en": "There are five.",
+        "kanji": "五つあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793274",
+    "word": "六つ",
+    "kana": "むっつ",
+    "meaning": "six (things) (native number for counting things)",
+    "examples": [
+      {
+        "jp": "たまごが むっつ あります。",
+        "en": "There are six eggs.",
+        "kanji": "卵が六つあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793275",
+    "word": "七つ",
+    "kana": "ななつ",
+    "meaning": "seven (things) (native number for counting things)",
+    "examples": [
+      {
+        "jp": "ななつ ください。",
+        "en": "Seven, please.",
+        "kanji": "七つください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793276",
+    "word": "八つ",
+    "kana": "やっつ",
+    "meaning": "eight (things) (native number for counting things)",
+    "examples": [
+      {
+        "jp": "やっつ あります。",
+        "en": "There are eight.",
+        "kanji": "八つあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793277",
+    "word": "九つ",
+    "kana": "ここのつ",
+    "meaning": "nine (things) (native number for counting things)",
+    "examples": [
+      {
+        "jp": "ここのつ ください。",
+        "en": "Nine, please.",
+        "kanji": "九つください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172793278",
+    "word": "十",
+    "kana": "とお",
+    "meaning": "ten (things) (native number for counting things · no つ)",
+    "examples": [
+      {
+        "jp": "とお あります。",
+        "en": "There are ten.",
+        "kanji": "十あります。"
       }
     ],
     "deck": "Vocab"
