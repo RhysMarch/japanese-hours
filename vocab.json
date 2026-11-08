@@ -4273,7 +4273,7 @@
     "deck": "Vocab"
   },
   {
-    "id": "anki-1792703804137",
+    "id": "anki-1794172534775",
     "word": "〜月",
     "kana": "〜がつ",
     "meaning": "the months: number + がつ — いちがつ, にがつ, さんがつ, しがつ (April), ごがつ, ろくがつ, しちがつ (July), はちがつ, くがつ (September), じゅうがつ, じゅういちがつ, じゅうにがつ",
@@ -5185,5 +5185,80 @@
     ],
     "deck": "Vocab",
     "hook": "\"DECK it — I can do it!\": dekiru = can"
+  },
+  {
+    "id": "anki-1794172534776",
+    "word": "先・今・来・再来",
+    "kana": "せん・こん・らい・さらい",
+    "meaning": "last / this / next / after next — せんしゅう・こんしゅう・らいしゅう・さらいしゅう (week), せんげつ・こんげつ・らいげつ・さらいげつ (month); no に",
+    "examples": [
+      {
+        "jp": "らいしゅう にほんに いきます。",
+        "en": "I'm going to Japan next week.",
+        "kanji": "来週日本に行きます。"
+      },
+      {
+        "jp": "こんげつは いそがしいです。",
+        "en": "This month is busy.",
+        "kanji": "今月は忙しいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172534777",
+    "word": "一昨日 · 明後日",
+    "kana": "おととい · あさって",
+    "meaning": "おととい = the day before yesterday · あさって = the day after tomorrow (no に)",
+    "examples": [
+      {
+        "jp": "あさって ともだちに あいます。",
+        "en": "I'm meeting a friend the day after tomorrow.",
+        "kanji": "明後日友達に会います。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172534778",
+    "word": "去年・今年・来年",
+    "kana": "きょねん・ことし・らいねん",
+    "meaning": "last year · this year · next year — きょねん・ことし・らいねん (no に)",
+    "examples": [
+      {
+        "jp": "らいねん にほんに すみたいです。",
+        "en": "I want to live in Japan next year.",
+        "kanji": "来年日本に住みたいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172534779",
+    "word": "〜日",
+    "kana": "〜にち (dates)",
+    "meaning": "dates: number + にち (じゅういちにち = 11th), except ついたち 1st, ふつか 2nd, みっか 3rd, よっか 4th, いつか 5th, むいか 6th, なのか 7th, ようか 8th, ここのか 9th, とおか 10th, じゅうよっか 14th, はつか 20th, にじゅうよっか 24th",
+    "examples": [
+      {
+        "jp": "きょうは じゅういちがつ ようかです。",
+        "en": "Today is the 8th of November.",
+        "kanji": "今日は十一月八日です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794172534780",
+    "word": "一つ〜十",
+    "kana": "ひとつ〜とお",
+    "meaning": "native numbers 1–10 for counting things: ひとつ, ふたつ, みっつ, よっつ, いつつ, むっつ, ななつ, やっつ, ここのつ, とお",
+    "examples": [
+      {
+        "jp": "コーヒーを ふたつ ください。",
+        "en": "Two coffees, please.",
+        "kanji": "コーヒーを二つください。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]

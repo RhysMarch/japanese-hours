@@ -1513,6 +1513,44 @@
             }
           ],
           "covered": true
+        },
+        {
+          "id": "dates",
+          "title": "Dates: month → day → weekday",
+          "gist": "Saying the date — biggest to smallest",
+          "note": "Year (ねん) → month (がつ) → day (ようか, にち…) → weekday (ようび). Don't mix up ようか (the 8th) and ようび (weekday ending). With a verb, dates and weekdays take に; relative words (らいしゅう, あした, きょねん) don't.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "きょうは [じゅういちがつ ようか]です。",
+                  "kj": "今日は[十一月八日]です。",
+                  "en": "Today is the 8th of November."
+                },
+                {
+                  "jp": "きょうは じゅういちがつ ようか、 [にちようび]です。",
+                  "kj": "今日は十一月八日、[日曜日]です。",
+                  "en": "Today is Sunday, the 8th of November."
+                }
+              ]
+            },
+            {
+              "label": "With に vs no に",
+              "examples": [
+                {
+                  "jp": "しがつ ついたち[に] にほんに いきます。",
+                  "kj": "四月一日[に]日本に行きます。",
+                  "en": "I'm going to Japan on April 1st."
+                },
+                {
+                  "jp": "らいしゅう にほんに いきます。",
+                  "kj": "来週日本に行きます。",
+                  "en": "I'm going to Japan next week. (no に)"
+                }
+              ]
+            }
+          ],
+          "covered": true
         }
       ]
     }
