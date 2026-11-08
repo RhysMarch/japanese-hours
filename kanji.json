@@ -757,5 +757,95 @@
     "story": "A roof (𠆢) with four people (人) huddled underneath, all held up by one handle (十). Umbrella.",
     "added": "2026-10-29",
     "id": "anki-1793233631149"
+  },
+  {
+    "k": "百",
+    "reading": "ひゃく",
+    "meaning": "Hundred — as in 百円 (ひゃくえん)",
+    "parts": "一 + 白",
+    "story": "One (一) line over white (白): a hundred white sheets of paper.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272162"
+  },
+  {
+    "k": "千",
+    "reading": "せん",
+    "meaning": "Thousand — as in 千円 (せんえん)",
+    "parts": "ノ + 十",
+    "story": "Ten (十) wearing a little hat (ノ) — ten got promoted to a thousand.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272163"
+  },
+  {
+    "k": "万",
+    "reading": "まん",
+    "meaning": "Ten thousand — as in 一万円 (いちまんえん)",
+    "parts": "一 + ノ + 𠃌",
+    "story": "One (一) big sweeping sword stroke with a hook — it cuts through ten thousand enemies.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272164"
+  },
+  {
+    "k": "半",
+    "reading": "はん",
+    "meaning": "Half — as in 三時半 (さんじはん)",
+    "parts": "丷 + 二 + 丨",
+    "story": "Two horns (丷) on a cow, sliced straight down the middle (丨). Half.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272165"
+  },
+  {
+    "k": "小",
+    "reading": "ちい / しょう",
+    "meaning": "Small — as in 小さい (ちいさい)",
+    "parts": "亅 + 八",
+    "story": "A tiny hook (亅) with a little drop on each side. Small.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272166"
+  },
+  {
+    "k": "高",
+    "reading": "たか / こう",
+    "meaning": "Tall / expensive — as in 高い (たかい)",
+    "parts": "亠 + 口 + 冂 + 口",
+    "story": "A lid (亠) on a mouth (口), on a big frame (冂) with another mouth (口) — a tall tower. Tall things are expensive.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272167"
+  },
+  {
+    "k": "安",
+    "reading": "やす / あん",
+    "meaning": "Cheap / safe — as in 安い (やすい)",
+    "parts": "宀 + 女",
+    "story": "A woman (女) safe under a roof (宀) — and the rent is cheap.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272168"
+  },
+  {
+    "k": "休",
+    "reading": "やす / きゅう",
+    "meaning": "Rest — as in 休む (やすむ)",
+    "parts": "亻 + 木",
+    "story": "A person (亻) leaning against a tree (木). Taking a rest.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272169"
+  },
+  {
+    "k": "店",
+    "reading": "みせ / てん",
+    "meaning": "Shop — as in 店 (みせ)",
+    "parts": "广 + 占",
+    "story": "A building (广) where someone tells fortunes (占) — a little shop.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272170"
+  },
+  {
+    "k": "後",
+    "reading": "うし / あと / ご",
+    "meaning": "Behind / after — as in 後ろ (うしろ)",
+    "parts": "彳 + 幺 + 夂",
+    "story": "Walking (彳) with a short thread (幺) tied round your dragging feet (夂) — you fall behind.",
+    "added": "2026-11-08",
+    "id": "anki-1794178272171"
   }
 ]
