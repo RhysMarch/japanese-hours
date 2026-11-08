@@ -1,0 +1,287 @@
+[
+  {
+    "p": "亻",
+    "m": "Person",
+    "n": "the side form of 人",
+    "seen": [
+      "休",
+      "何"
+    ],
+    "later": [
+      "体",
+      "住"
+    ]
+  },
+  {
+    "p": "氵",
+    "m": "Water",
+    "n": "three drops of water",
+    "seen": [
+      "酒"
+    ],
+    "later": [
+      "海",
+      "泳"
+    ]
+  },
+  {
+    "p": "口",
+    "m": "Mouth / box",
+    "n": "",
+    "seen": [
+      "名",
+      "品",
+      "高",
+      "唱"
+    ],
+    "later": [
+      "右",
+      "言"
+    ]
+  },
+  {
+    "p": "日",
+    "m": "Sun / day",
+    "n": "",
+    "seen": [
+      "明",
+      "早",
+      "時",
+      "曜"
+    ],
+    "later": [
+      "晴",
+      "暗"
+    ]
+  },
+  {
+    "p": "月",
+    "m": "Moon / flesh",
+    "n": "on the left or bottom it often means body (flesh)",
+    "seen": [
+      "明",
+      "朋",
+      "胃",
+      "胆",
+      "朝"
+    ],
+    "later": [
+      "服",
+      "期"
+    ]
+  },
+  {
+    "p": "木",
+    "m": "Tree",
+    "n": "",
+    "seen": [
+      "休",
+      "本",
+      "東",
+      "業"
+    ],
+    "later": [
+      "林",
+      "森"
+    ]
+  },
+  {
+    "p": "宀",
+    "m": "Roof",
+    "n": "a house roof",
+    "seen": [
+      "安"
+    ],
+    "later": [
+      "家",
+      "字"
+    ]
+  },
+  {
+    "p": "女",
+    "m": "Woman",
+    "n": "",
+    "seen": [
+      "安",
+      "好"
+    ],
+    "later": [
+      "姉",
+      "妹"
+    ]
+  },
+  {
+    "p": "子",
+    "m": "Child",
+    "n": "",
+    "seen": [
+      "好",
+      "学"
+    ],
+    "later": [
+      "字"
+    ]
+  },
+  {
+    "p": "訁",
+    "m": "Speech",
+    "n": "the side form of 言 (say)",
+    "seen": [
+      "話",
+      "読",
+      "誰"
+    ],
+    "later": [
+      "語",
+      "記"
+    ]
+  },
+  {
+    "p": "飠",
+    "m": "Food",
+    "n": "the side form of 食 (eat)",
+    "seen": [
+      "飲"
+    ],
+    "later": [
+      "飯",
+      "館"
+    ]
+  },
+  {
+    "p": "彳",
+    "m": "Going / walking",
+    "n": "a person taking steps",
+    "seen": [
+      "後",
+      "行"
+    ],
+    "later": [
+      "待"
+    ]
+  },
+  {
+    "p": "辶",
+    "m": "Road / movement",
+    "n": "always wraps under the bottom-left",
+    "seen": [],
+    "later": [
+      "近",
+      "週",
+      "道"
+    ]
+  },
+  {
+    "p": "广",
+    "m": "Building",
+    "n": "a roof with one wall",
+    "seen": [
+      "店"
+    ],
+    "later": [
+      "広",
+      "庭"
+    ]
+  },
+  {
+    "p": "扌",
+    "m": "Hand",
+    "n": "the side form of 手",
+    "seen": [],
+    "later": [
+      "持",
+      "払"
+    ]
+  },
+  {
+    "p": "艹",
+    "m": "Grass / plant",
+    "n": "always on top",
+    "seen": [
+      "薬"
+    ],
+    "later": [
+      "花",
+      "茶"
+    ]
+  },
+  {
+    "p": "糸",
+    "m": "Thread",
+    "n": "",
+    "seen": [],
+    "later": [
+      "紙",
+      "線"
+    ]
+  },
+  {
+    "p": "釒",
+    "m": "Metal / money",
+    "n": "the side form of 金",
+    "seen": [],
+    "later": [
+      "銀",
+      "鉄"
+    ]
+  },
+  {
+    "p": "刂",
+    "m": "Knife",
+    "n": "the side form of 刀",
+    "seen": [
+      "前"
+    ],
+    "later": [
+      "別",
+      "利"
+    ]
+  },
+  {
+    "p": "忄",
+    "m": "Heart / feelings",
+    "n": "the side form of 心",
+    "seen": [],
+    "later": [
+      "忙",
+      "性"
+    ]
+  },
+  {
+    "p": "門",
+    "m": "Gate",
+    "n": "",
+    "seen": [
+      "開"
+    ],
+    "later": [
+      "間",
+      "聞"
+    ]
+  },
+  {
+    "p": "田",
+    "m": "Rice field",
+    "n": "",
+    "seen": [
+      "男",
+      "田"
+    ],
+    "later": [
+      "町",
+      "番"
+    ]
+  },
+  {
+    "p": "力",
+    "m": "Power",
+    "n": "",
+    "seen": [
+      "男"
+    ],
+    "later": [
+      "動",
+      "働"
+    ]
+  }
+]

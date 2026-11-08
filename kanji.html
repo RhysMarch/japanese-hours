@@ -49,6 +49,8 @@
   .chip:hover { border-color: var(--accent); }
   .chip .c { font-size: 22px; font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif; }
   .chip small { color: var(--muted); font-size: 11px; }
+  .chip.plain { cursor: default; border-style: solid; }
+  .chip.plain:hover { border-color: var(--line); }
   #d-body { padding: 22px 20px 16px; }
   dialog { border: 1px solid var(--line); border-radius: 12px; padding: 0; width: min(440px, calc(100% - 32px)); background: var(--card); color: var(--ink); }
   dialog::backdrop { background: rgba(0, 0, 0, .4); }
@@ -143,6 +145,12 @@
     <div id="cov"></div>
   </div>
 
+  <div class="card" id="prim-card" hidden>
+    <h2>Primitives — the building blocks</h2>
+    <p class="muted" style="margin:-6px 0 10px;font-size:14px">Parts that show up inside many kanji. Tap one to see which of your kanji use it.</p>
+    <div class="chips" id="prim"></div>
+  </div>
+
   <div class="card">
     <div class="row" style="justify-content:space-between;align-items:baseline;margin-bottom:14px">
       <div class="count"><b id="s-total">–</b> kanji</div>
@@ -167,6 +175,7 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '
 
 let kanji = [];        // [{ k, reading, meaning, parts?, story?, added: 'YYYY-MM-DD', id? (Anki note id) }]
 let vocab = [];        // from vocab.json, for "used in your vocab"
+let prims = [];        // from primitives.json: [{ p, m (meaning), n (note), seen: [kanji you have], later: [kanji coming up] }]
 let token = store.get(TOKEN_KEY);
 let levelFilter = 'all';
 
@@ -201,6 +210,7 @@ function render() {
     </div>`).join('')
     : `<div class="empty">${kanji.length ? 'No kanji match.' : 'No kanji yet.'}</div>`;
   renderCoverage();
+  renderPrims();
 }
 
 // How many of the kanji in your vocab you know, and which unknown ones show up most
@@ -215,6 +225,27 @@ function renderCoverage() {
     ${cov.next.length ? `<div class="d-h">Learn next — most used in your vocab</div>
     <div class="chips">${cov.next.slice(0, 24).map(n => `<button type="button" class="chip" data-k="${esc(n.char)}" title="Used in ${n.words.length} word${n.words.length === 1 ? '' : 's'}">
       <span class="c" lang="ja">${esc(n.char)}</span><small>×${n.words.length}</small></button>`).join('')}</div>` : '<div class="muted">You know every kanji in your vocab.</div>'}`;
+}
+
+function renderPrims() {
+  $('prim-card').hidden = !prims.length;
+  $('prim').innerHTML = prims.map((x, i) => `<button type="button" class="chip" data-prim="${i}" title="${esc(x.m)}">
+    <span class="c" lang="ja">${esc(x.p)}</span><small>${esc(x.m)}</small></button>`).join('');
+}
+
+// Popup for a primitive: meaning, then the kanji that contain it (yours are tappable)
+function showPrim(i) {
+  const x = prims[i];
+  const chips = (list, own) => list.map(c => own
+    ? `<button type="button" class="chip" data-k="${esc(c)}"><span class="c" lang="ja">${esc(c)}</span><small>${esc(kanji.find(y => y.k === c)?.meaning.replace(/ — .*/, '') || '')}</small></button>`
+    : `<span class="chip plain"><span class="c" lang="ja">${esc(c)}</span></span>`).join('');
+  $('d-body').innerHTML = `
+    <div class="d-k" lang="ja">${esc(x.p)}</div>
+    <div class="d-m">${esc(x.m)}</div>
+    ${x.n ? `<div class="d-story">${esc(x.n)}</div>` : ''}
+    ${x.seen.length ? `<div class="d-h">In your kanji</div><div class="chips" style="margin-bottom:14px">${chips(x.seen, true)}</div>` : ''}
+    ${x.later.length ? `<div class="d-h">Coming up</div><div class="chips">${chips(x.later, false)}</div>` : ''}`;
+  if (!$('detail').open) $('detail').showModal();
 }
 
 // Popup for a kanji — known (reading, meaning) or not yet — with the vocab words that use it
@@ -260,9 +291,15 @@ $('cov').addEventListener('click', ev => {
   const chip = ev.target.closest('.chip');
   if (chip) showKanji(chip.dataset.k);
 });
+$('prim').addEventListener('click', ev => {
+  const chip = ev.target.closest('[data-prim]');
+  if (chip) showPrim(+chip.dataset.prim);
+});
 $('d-close').addEventListener('click', () => $('detail').close());
 $('detail').addEventListener('click', async ev => {
   if (ev.target === $('detail')) return $('detail').close();   // clicked the backdrop
+  const pk = ev.target.closest('.chip[data-k]')?.dataset.k;
+  if (pk) return showKanji(pk);   // a kanji inside a primitive popup
   const level = ev.target.dataset.level;
   if (level) return rate($('d-body').querySelector('.d-k').textContent, level);
   const rm = ev.target.dataset.rm;
@@ -435,8 +472,8 @@ $('auth-form').addEventListener('submit', async ev => {
 });
 
 applyAuth();
-Promise.all([ghRead(FILE, [], token), loadJson('vocab.json')])
-  .then(([r, v]) => { kanji = r.data; vocab = v; render(); openFromHash(); $('status').textContent = 'Hover for the meaning, tap a kanji for the words that use it.'; })
+Promise.all([ghRead(FILE, [], token), loadJson('vocab.json'), loadJson('primitives.json').catch(() => [])])
+  .then(([r, v, p]) => { kanji = r.data; vocab = v; prims = p; render(); openFromHash(); $('status').textContent = 'Hover for the meaning, tap a kanji for the words that use it.'; })
   .catch(e => { $('status').textContent = 'Couldn\'t load kanji: ' + e.message; });
 </script>
 </body>
