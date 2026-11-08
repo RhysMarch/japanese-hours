@@ -5800,5 +5800,33 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794175373886",
+    "word": "",
+    "kana": "ビル",
+    "meaning": "building (office / commercial block)",
+    "examples": [
+      {
+        "jp": "あの ビルの なかに カフェが あります。",
+        "en": "There's a café inside that building.",
+        "kanji": "あのビルの中にカフェがあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794175373887",
+    "word": "建物",
+    "kana": "たてもの",
+    "meaning": "building (any kind — temples, houses, offices)",
+    "examples": [
+      {
+        "jp": "あの たてものは ふるいです。",
+        "en": "That building is old.",
+        "kanji": "あの建物は古いです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
