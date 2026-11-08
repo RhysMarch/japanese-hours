@@ -5731,5 +5731,74 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794174751891",
+    "word": "",
+    "kana": "テレビ",
+    "meaning": "TV",
+    "examples": [
+      {
+        "jp": "テレビが ありません。",
+        "en": "I don't have a TV."
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794174751892",
+    "word": "",
+    "kana": "テスト",
+    "meaning": "test / exam",
+    "examples": [
+      {
+        "jp": "かようびに テストが あります。",
+        "en": "There's a test on Tuesday.",
+        "kanji": "火曜日にテストがあります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794174751893",
+    "word": "",
+    "kana": "テーブル",
+    "meaning": "table",
+    "examples": [
+      {
+        "jp": "さいふは テーブルの うえです。",
+        "en": "The wallet is on the table.",
+        "kanji": "財布はテーブルの上です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794174751894",
+    "word": "英語",
+    "kana": "えいご",
+    "meaning": "English (language)",
+    "examples": [
+      {
+        "jp": "えいごと にほんごを はなします。",
+        "en": "I speak English and Japanese.",
+        "kanji": "英語と日本語を話します。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794174751895",
+    "word": "高校生",
+    "kana": "こうこうせい",
+    "meaning": "high school student",
+    "examples": [
+      {
+        "jp": "じゅうねんまえ、 こうこうせいでした。",
+        "en": "Ten years ago, I was a high school student.",
+        "kanji": "十年前、高校生でした。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]

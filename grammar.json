@@ -763,7 +763,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "covered": true
         },
         {
           "id": "janai",
@@ -805,6 +806,16 @@
                   "jp": "しゅうまつは しずか[じゃなかったです]。",
                   "kj": "週末は静か[じゃなかったです]。",
                   "en": "The weekend wasn't quiet."
+                }
+              ]
+            },
+            {
+              "label": "Asking about the past — でしたか",
+              "examples": [
+                {
+                  "jp": "いい がくせい[でしたか]。— はい、いい がくせい[でした]。",
+                  "kj": "いい学生[でしたか]。— はい、いい学生[でした]。",
+                  "en": "Were you a good student? — Yes, I was."
                 }
               ]
             }
@@ -1169,10 +1180,17 @@
                   "jp": "こうえんで バレーボールを し[ました]。",
                   "kj": "公園でバレーボールをし[ました]。",
                   "en": "I played volleyball in the park."
+                },
+                {
+                  "jp": "きのう べんきょうし[ませんでした]。",
+                  "kj": "昨日勉強し[ませんでした]。",
+                  "en": "I didn't study yesterday."
                 }
               ]
             }
-          ]
+          ],
+          "covered": true,
+          "note": "Present: ます / ません → Past: ました / ませんでした"
         },
         {
           "id": "aru-iru",
@@ -1192,14 +1210,36 @@
                   "en": "There's a cat in the park."
                 }
               ]
+            },
+            {
+              "label": "Negative — don't have / there isn't",
+              "examples": [
+                {
+                  "jp": "テレビが [ありません]。",
+                  "kj": "テレビが[ありません]。",
+                  "en": "I don't have a TV."
+                }
+              ]
+            },
+            {
+              "label": "Events — something will take place",
+              "note": "Tests, classes, parties use あります.",
+              "examples": [
+                {
+                  "jp": "かようびに テストが [あります]。",
+                  "kj": "火曜日にテストが[あります]。",
+                  "en": "There's a test on Tuesday."
+                }
+              ]
             }
-          ]
+          ],
+          "covered": true
         },
         {
           "id": "location",
           "title": "X の うえ / した / なか… に",
           "gist": "Saying where something is — on, under, inside, next to…",
-          "note": "うえ on · した under · なか inside · となり next to · まえ in front · うしろ behind. To answer \"where?\": つくえの うえです。",
+          "note": "うえ on · した under · なか inside · まえ in front · うしろ behind · みぎ right · ひだり left · ちかく near · となり next to · よこ beside · A と B の あいだ between.",
           "uses": [
             {
               "examples": [
@@ -1214,9 +1254,36 @@
                   "en": "There's a konbini next to the school."
                 }
               ]
+            },
+            {
+              "label": "X は Y の (location) です — where X is",
+              "note": "Use when X is already the topic.",
+              "examples": [
+                {
+                  "jp": "さいふは テーブルの [うえです]。",
+                  "kj": "財布はテーブルの[上です]。",
+                  "en": "The wallet is on the table."
+                },
+                {
+                  "jp": "びょういんは だいがくの [うしろです]。",
+                  "kj": "病院は大学の[後ろです]。",
+                  "en": "The hospital is behind the university."
+                }
+              ]
+            },
+            {
+              "label": "Doing something at a place → で",
+              "examples": [
+                {
+                  "jp": "えきの まえ[で] メアリーさんを まちました。",
+                  "kj": "駅の前[で]メアリーさんを待ちました。",
+                  "en": "I waited for Mary in front of the station."
+                }
+              ]
             }
           ],
-          "covered": true
+          "covered": true,
+          "tip": "となり = two of the same kind side by side (people, buildings). よこ = beside, for anything."
         },
         {
           "id": "suki",
