@@ -5828,5 +5828,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794255508114",
+    "word": "",
+    "kana": "しょうがない",
+    "meaning": "it can't be helped / oh well — 仕方ない (しかたない) is the slightly more formal version",
+    "examples": [
+      {
+        "jp": "でんしゃが おくれた。しょうがないね。",
+        "en": "The train was late. Oh well, it can't be helped.",
+        "kanji": "電車が遅れた。しょうがないね。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
