@@ -1287,8 +1287,8 @@
         },
         {
           "id": "suki",
-          "title": "X が すきです・ほしいです",
-          "gist": "I like X / I want X (a thing)",
+          "title": "X が すき・きらいです / ほしいです",
+          "gist": "I like / dislike X · I want X (a thing)",
           "note": "The thing takes が, not を.",
           "uses": [
             {
@@ -1299,9 +1299,61 @@
                   "en": "I like cats."
                 },
                 {
+                  "jp": "やさいが [きらいです]。",
+                  "kj": "野菜が[嫌いです]。",
+                  "en": "I don't like vegetables."
+                },
+                {
                   "jp": "くろい コートが [ほしいです]。",
                   "kj": "黒いコートが[欲しいです]。",
                   "en": "I want a black coat."
+                }
+              ]
+            },
+            {
+              "label": "Strong: だいすき・だいきらい",
+              "note": "だい (大, big) — used more than とても すき",
+              "examples": [
+                {
+                  "jp": "すしが [だいすき]です。",
+                  "kj": "寿司が[大好き]です。",
+                  "en": "I love sushi."
+                },
+                {
+                  "jp": "むしが [だいきらい]です。",
+                  "kj": "虫が[大嫌い]です。",
+                  "en": "I hate bugs."
+                }
+              ]
+            },
+            {
+              "label": "Neutral",
+              "examples": [
+                {
+                  "jp": "コーヒーは [すきでも きらいでもないです]。",
+                  "kj": "コーヒーは[好きでも嫌いでもないです]。",
+                  "en": "I neither like nor dislike coffee."
+                }
+              ]
+            },
+            {
+              "label": "Before a noun: すきな・きらいな",
+              "note": "すき and きらい are な-adjectives",
+              "examples": [
+                {
+                  "jp": "これは わたしの [すきな] ほんです。",
+                  "kj": "これは私の[好きな]本です。",
+                  "en": "This is my favourite book."
+                }
+              ]
+            },
+            {
+              "label": "Comparing two things → は",
+              "examples": [
+                {
+                  "jp": "くだもの[は] すきですが、やさい[は] すきじゃないです。",
+                  "kj": "果物[は]好きですが、野菜[は]好きじゃないです。",
+                  "en": "I like fruit, but I don't like vegetables."
                 }
               ]
             }
@@ -1494,7 +1546,7 @@
         },
         {
           "id": "adj",
-          "title": "い-adjectives: 〜くない・〜かった・〜くなかった",
+          "title": "Adjectives: isn't / was / wasn't (い and な)",
           "gist": "Isn't… / was… / wasn't…",
           "note": "The adjective changes, です stays. Drop い: くない (isn't) · かった (was) · くなかった (wasn't). な-adjectives don't change — the です does (じゃないです / でした / じゃなかったです).",
           "uses": [
@@ -1518,6 +1570,27 @@
               ]
             },
             {
+              "label": "な-adjectives — only です changes",
+              "note": "げんき stays げんき. です → じゃないです (isn't) · でした (was) · じゃなかったです (wasn't)",
+              "examples": [
+                {
+                  "jp": "きょうは げんき[じゃないです]。",
+                  "kj": "今日は元気[じゃないです]。",
+                  "en": "I'm not well today."
+                },
+                {
+                  "jp": "きのうは ひま[でした]。",
+                  "kj": "昨日は暇[でした]。",
+                  "en": "I was free yesterday."
+                },
+                {
+                  "jp": "テストは かんたん[じゃなかったです]。",
+                  "kj": "テストは簡単[じゃなかったです]。",
+                  "en": "The test wasn't easy."
+                }
+              ]
+            },
+            {
               "label": "Exception: いい (good) → よ",
               "examples": [
                 {
@@ -1529,6 +1602,22 @@
                   "jp": "てんきが [よくない]です。",
                   "kj": "天気が[良くない]です。",
                   "en": "The weather isn't good."
+                }
+              ]
+            },
+            {
+              "label": "Words built from いい follow it too",
+              "note": "かっこいい (cool) → かっこよくない. But かわいい (cute) isn't built from いい → かわいくない.",
+              "examples": [
+                {
+                  "jp": "その かばんは かっこ[よくない]です。",
+                  "kj": "そのかばんはかっこ[よくない]です。",
+                  "en": "That bag isn't cool."
+                },
+                {
+                  "jp": "この ねこは かわい[くない]です。",
+                  "kj": "この猫は可愛[くない]です。",
+                  "en": "This cat isn't cute."
                 }
               ]
             },
@@ -1564,9 +1653,9 @@
         },
         {
           "id": "mashou",
-          "title": "〜ましょう",
-          "gist": "Let's…",
-          "note": "As a question 〜ましょうか = \"Shall we…?\"",
+          "title": "〜ましょう・〜ましょうか",
+          "gist": "Let's… / Shall we…?",
+          "note": "Take the ます form and change ます → ましょう (let's) or ましょうか (shall we?, a bit softer).",
           "uses": [
             {
               "examples": [
@@ -1574,10 +1663,39 @@
                   "jp": "ラーメンを たべ[ましょう]。",
                   "kj": "ラーメンを食べ[ましょう]。",
                   "en": "Let's eat ramen."
+                },
+                {
+                  "jp": "あそこで コーヒーを のみ[ましょうか]。",
+                  "kj": "あそこでコーヒーを飲み[ましょうか]。",
+                  "en": "Shall we drink coffee over there?"
                 }
               ]
             }
-          ]
+          ],
+          "covered": true
+        },
+        {
+          "id": "counters",
+          "title": "Counters: 〜まい",
+          "gist": "Counting flat things — paper, tickets, shirts, plates",
+          "note": "Japanese counts with a counter word that depends on the kind of thing — people, books and flat things all use different ones. Pattern: thing を + number + counter.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "かみを [さんまい] ください。",
+                  "kj": "紙を[三枚]ください。",
+                  "en": "Three sheets of paper, please."
+                },
+                {
+                  "jp": "きっぷを [にまい] ください。",
+                  "kj": "切符を[二枚]ください。",
+                  "en": "Two tickets, please."
+                }
+              ]
+            }
+          ],
+          "covered": true
         },
         {
           "id": "quote-to",
