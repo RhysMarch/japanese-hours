@@ -5842,5 +5842,24 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794428836157",
+    "word": "",
+    "kana": "やる",
+    "masu": "やります",
+    "masuKana": "やります",
+    "group": "u-verb",
+    "groupNote": "more casual than する · やりましょう! = let's do it!",
+    "meaning": "to do (casual)",
+    "examples": [
+      {
+        "jp": "しゅくだいを やります。",
+        "en": "I'll do my homework.",
+        "kanji": "宿題をやります。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"YAh, RUn it!\": yaru = do it"
   }
 ]
