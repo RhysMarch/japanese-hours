@@ -1378,6 +1378,123 @@
           ]
         },
         {
+          "id": "te-form",
+          "title": "The て-form",
+          "gist": "The connector form — joins a verb to ください, います, another verb…",
+          "note": "It has no tense of its own; whatever comes after it decides the tense. The casual past (た-form) is made exactly the same way with た/だ.",
+          "uses": [
+            {
+              "label": "ru-verbs — drop る, add て",
+              "examples": [
+                {
+                  "jp": "たべる → [たべて]",
+                  "kj": "食べる → [食べて]",
+                  "en": "eat"
+                },
+                {
+                  "jp": "みる → [みて]",
+                  "kj": "見る → [見て]",
+                  "en": "see"
+                }
+              ]
+            },
+            {
+              "label": "Irregular",
+              "examples": [
+                {
+                  "jp": "する → [して]",
+                  "kj": "する → [して]",
+                  "en": "do"
+                },
+                {
+                  "jp": "くる → [きて]",
+                  "kj": "来る → [来て]",
+                  "en": "come"
+                }
+              ]
+            },
+            {
+              "label": "u-verbs: う・つ・る → って",
+              "examples": [
+                {
+                  "jp": "かう → か[って]",
+                  "kj": "買う → 買[って]",
+                  "en": "buy"
+                },
+                {
+                  "jp": "かえる → かえ[って]",
+                  "kj": "帰る → 帰[って]",
+                  "en": "go home (u-verb!)"
+                }
+              ]
+            },
+            {
+              "label": "u-verbs: む・ぶ・ぬ → んで",
+              "examples": [
+                {
+                  "jp": "のむ → の[んで]",
+                  "kj": "飲む → 飲[んで]",
+                  "en": "drink"
+                },
+                {
+                  "jp": "あそぶ → あそ[んで]",
+                  "kj": "遊ぶ → 遊[んで]",
+                  "en": "play"
+                }
+              ]
+            },
+            {
+              "label": "u-verbs: く → いて · ぐ → いで",
+              "note": "Exception: いく → いって",
+              "examples": [
+                {
+                  "jp": "かく → か[いて]",
+                  "kj": "書く → 書[いて]",
+                  "en": "write"
+                },
+                {
+                  "jp": "およぐ → およ[いで]",
+                  "kj": "泳ぐ → 泳[いで]",
+                  "en": "swim"
+                },
+                {
+                  "jp": "いく → い[って]",
+                  "kj": "行く → 行[って]",
+                  "en": "go"
+                }
+              ]
+            },
+            {
+              "label": "u-verbs: す → して",
+              "examples": [
+                {
+                  "jp": "はなす → はな[して]",
+                  "kj": "話す → 話[して]",
+                  "en": "speak"
+                }
+              ]
+            },
+            {
+              "label": "Linking actions — \"and then\"",
+              "note": "The last verb sets the tense.",
+              "examples": [
+                {
+                  "jp": "[おきて]、たべます。",
+                  "kj": "[起きて]、食べます。",
+                  "en": "I get up and eat."
+                },
+                {
+                  "jp": "[かえって]、ねました。",
+                  "kj": "[帰って]、寝ました。",
+                  "en": "I went home and slept."
+                }
+              ]
+            }
+          ],
+          "tip": "て turns into で after a voiced sound (ん, ぐ): のんで, およいで.",
+          "covered": true
+        },
+        {
           "id": "tekudasai",
           "title": "〜てください",
           "gist": "Please do…",
