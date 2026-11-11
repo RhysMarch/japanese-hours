@@ -5861,5 +5861,237 @@
     ],
     "deck": "Vocab",
     "hook": "\"YAh, RUn it!\": yaru = do it"
+  },
+  {
+    "id": "anki-1794429663850",
+    "word": "食べ物",
+    "kana": "たべもの",
+    "meaning": "food — たべる (eat) + もの (thing)",
+    "examples": [
+      {
+        "jp": "どんな たべものが すきですか。",
+        "en": "What kind of food do you like?",
+        "kanji": "どんな食べ物が好きですか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663851",
+    "word": "飲み物",
+    "kana": "のみもの",
+    "meaning": "drink — のむ (drink) + もの (thing)",
+    "examples": [
+      {
+        "jp": "のみものは なにが いいですか。",
+        "en": "What would you like to drink?",
+        "kanji": "飲み物は何がいいですか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663852",
+    "word": "果物",
+    "kana": "くだもの",
+    "meaning": "fruit",
+    "examples": [
+      {
+        "jp": "くだものが だいすきです。",
+        "en": "I love fruit.",
+        "kanji": "果物が大好きです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663853",
+    "word": "休み",
+    "kana": "やすみ",
+    "meaning": "holiday / day off / absence — from やすむ (to rest)",
+    "examples": [
+      {
+        "jp": "あしたは やすみです。",
+        "en": "Tomorrow is my day off.",
+        "kanji": "明日は休みです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663854",
+    "word": "旅行",
+    "kana": "りょこう",
+    "meaning": "travel / trip — りょこうする = to travel",
+    "examples": [
+      {
+        "jp": "にほんに りょこうします。",
+        "en": "I'm travelling to Japan.",
+        "kanji": "日本に旅行します。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663855",
+    "word": "お土産",
+    "kana": "おみやげ",
+    "meaning": "souvenir — a gift you bring back from a trip",
+    "examples": [
+      {
+        "jp": "ともだちに おみやげを かいました。",
+        "en": "I bought a souvenir for my friend.",
+        "kanji": "友達にお土産を買いました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663856",
+    "word": "誕生日",
+    "kana": "たんじょうび",
+    "meaning": "birthday",
+    "examples": [
+      {
+        "jp": "たんじょうびは いつですか。",
+        "en": "When is your birthday?",
+        "kanji": "誕生日はいつですか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663857",
+    "word": "忙しい",
+    "kana": "いそがしい",
+    "meaning": "busy — い-adjective",
+    "examples": [
+      {
+        "jp": "きょうは いそがしいです。",
+        "en": "I'm busy today.",
+        "kanji": "今日は忙しいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663858",
+    "word": "",
+    "kana": "つまらない",
+    "meaning": "boring — い-adjective",
+    "examples": [
+      {
+        "jp": "この えいがは つまらないです。",
+        "en": "This film is boring.",
+        "kanji": "この映画はつまらないです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663859",
+    "word": "怖い",
+    "kana": "こわい",
+    "meaning": "scary / frightening — い-adjective · こわい! on its own = \"I'm scared!\"",
+    "examples": [
+      {
+        "jp": "この えいがは こわかったです。",
+        "en": "This film was scary.",
+        "kanji": "この映画は怖かったです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663860",
+    "word": "嫌い",
+    "kana": "きらい",
+    "meaning": "to dislike — な-adjective, even though it ends in い · thing が きらいです",
+    "examples": [
+      {
+        "jp": "やさいが きらいです。",
+        "en": "I don't like vegetables.",
+        "kanji": "野菜が嫌いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663861",
+    "word": "大嫌い",
+    "kana": "だいきらい",
+    "meaning": "to hate — な-adjective · thing が だいきらいです · opposite of だいすき",
+    "examples": [
+      {
+        "jp": "むしが だいきらいです。",
+        "en": "I hate bugs.",
+        "kanji": "虫が大嫌いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663862",
+    "word": "泳ぐ",
+    "kana": "およぐ",
+    "masu": "泳ぎます",
+    "masuKana": "およぎます",
+    "group": "u-verb",
+    "meaning": "to swim",
+    "examples": [
+      {
+        "jp": "うみで およぎます。",
+        "en": "I swim in the sea.",
+        "kanji": "海で泳ぎます。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"OH, YOU GOtta swim!\": oyogu = swim"
+  },
+  {
+    "id": "anki-1794429663863",
+    "word": "出かける",
+    "kana": "でかける",
+    "masu": "出かけます",
+    "masuKana": "でかけます",
+    "group": "ru-verb",
+    "meaning": "to go out",
+    "examples": [
+      {
+        "jp": "しゅうまつ ともだちと でかけます。",
+        "en": "I go out with friends at the weekend.",
+        "kanji": "週末友達と出かけます。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "出 (で) = out, as in 出口 (exit): dekakeru = go out"
+  },
+  {
+    "id": "anki-1794429663864",
+    "word": "",
+    "kana": "とても",
+    "meaning": "very — polite / neutral · casual: すごく",
+    "examples": [
+      {
+        "jp": "とても おいしいです。",
+        "en": "It's very tasty.",
+        "kanji": "とてもおいしいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794429663865",
+    "word": "",
+    "kana": "すごく",
+    "meaning": "extremely / really — casual, from すごい",
+    "examples": [
+      {
+        "jp": "すごく たのしかったです。",
+        "en": "It was really fun.",
+        "kanji": "すごく楽しかったです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
