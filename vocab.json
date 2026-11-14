@@ -6483,5 +6483,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794683393840",
+    "word": "",
+    "kana": "やりましょうか",
+    "meaning": "Shall I do it? / I'll do it (offering to help) — from やる · 〜ましょうか = shall I…? · politer: しましょうか · てつだいましょうか (shall I help?)",
+    "examples": [
+      {
+        "jp": "これ、むずかしいです。— やりましょうか。",
+        "en": "This is hard. — Shall I do it?",
+        "kanji": "これ、難しいです。— やりましょうか。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
