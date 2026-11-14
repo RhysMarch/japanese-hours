@@ -8,11 +8,11 @@
 <style>
   :root {
     --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
-    --accent: #c8102e; --accent-soft: #fbe9ec;
+    --accent: #c8102e; --accent-soft: #fbe9ec; --great: #2e8b57;
     --c0: #c8102e; --c1: #2f6f9f; --c2: #3b8f5a; --c3: #d08a1e; --c4: #1f9e9e; --c5: #7b4fa8; --c6: #58a700;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; }
+    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20; --great: #4caf7a; }
   }
   * { box-sizing: border-box; }
   [hidden] { display: none !important; }
@@ -34,6 +34,7 @@
   .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
   .stat b { display: block; font-size: 24px; }
   .stat small { color: var(--muted); }
+  .stat small.great { color: var(--great); font-weight: 600; }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   form .fields { margin: 8px 0 14px; border-top: 1px solid var(--line); }
   .step { display: grid; grid-template-columns: 28px 1fr 110px; align-items: center; column-gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
@@ -149,7 +150,7 @@
     <div class="stat"><small>This week</small><b id="s-week">0h</b></div>
     <div class="stat"><small>Current streak</small><b id="s-streak">0 days</b></div>
     <div class="stat"><small>Days logged</small><b id="s-days">0</b></div>
-    <a class="stat stat-link" href="kanji.html"><small>Kanji →</small><b id="s-kanji">–</b></a>
+    <a class="stat stat-link" href="kanji.html"><small>Kanji →</small><b id="s-kanji">–</b><small class="great" id="s-kanji-great"></small></a>
     <a class="stat stat-link" href="vocab.html"><small>Vocab →</small><b id="s-vocab">–</b></a>
     <a class="stat stat-link stat-wide" href="grammar.html" title="Grammar points covered in lessons, out of roughly 80 for JLPT N5"><small>Grammar →</small><b id="s-grammar">–</b><div class="mini"><i id="s-grammar-bar"></i></div><small>of ~80 N5 points</small></a>
   </div>
@@ -537,7 +538,11 @@ fetchRemote()
 for (const [file, el] of [['kanji.json', 's-kanji'], ['vocab.json', 's-vocab']]) {
   fetch(file + '?t=' + Date.now(), { cache: 'no-store' })
     .then(r => r.ok ? r.json() : [])
-    .then(list => $(el).textContent = list.length)
+    .then(list => {
+      $(el).textContent = list.length;
+      // Kanji rated Great on the kanji page
+      if (el === 's-kanji') $('s-kanji-great').textContent = list.filter(x => x.level === 'great').length + ' great';
+    })
     .catch(() => $(el).textContent = '0');
 }
 // Grammar: points marked covered on the grammar page, against roughly 80 for JLPT N5
