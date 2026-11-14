@@ -35,6 +35,10 @@
   .stat b { display: block; font-size: 24px; }
   .stat small { color: var(--muted); }
   .stat small.great { color: var(--great); font-weight: 600; }
+  .stat .vstats { display: block; font-size: 12px; }
+  .stat .vstats b { display: inline; font-size: inherit; color: var(--ink); }
+  .stat .vstats b.strong { color: var(--great); }
+  .stat .vstats b.young { color: var(--c3); }
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   form .fields { margin: 8px 0 14px; border-top: 1px solid var(--line); }
   .step { display: grid; grid-template-columns: 28px 1fr 110px; align-items: center; column-gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
@@ -151,7 +155,7 @@
     <div class="stat"><small>Current streak</small><b id="s-streak">0 days</b></div>
     <div class="stat"><small>Days logged</small><b id="s-days">0</b></div>
     <a class="stat stat-link" href="kanji.html"><small>Kanji →</small><b id="s-kanji">–</b><small class="great" id="s-kanji-great"></small></a>
-    <a class="stat stat-link" href="vocab.html"><small>Vocab →</small><b id="s-vocab">–</b></a>
+    <a class="stat stat-link" href="vocab.html"><small>Vocab →</small><b id="s-vocab">–</b><small class="vstats" id="s-vocab-anki"></small></a>
     <a class="stat stat-link stat-wide" href="grammar.html" title="Grammar points covered in lessons, out of roughly 80 for JLPT N5"><small>Grammar →</small><b id="s-grammar">–</b><div class="mini"><i id="s-grammar-bar"></i></div><small>of ~80 N5 points</small></a>
   </div>
 
@@ -545,6 +549,16 @@ for (const [file, el] of [['kanji.json', 's-kanji'], ['vocab.json', 's-vocab']])
     })
     .catch(() => $(el).textContent = '0');
 }
+// Vocab strength from Anki (Japanese → English deck): Claude writes anki-stats.json, since the page can't read Anki
+fetch('anki-stats.json?t=' + Date.now(), { cache: 'no-store' })
+  .then(r => r.ok ? r.json() : null)
+  .then(st => {
+    const v = st?.vocab; if (!v) return;
+    const el = $('s-vocab-anki');
+    el.innerHTML = `<b class="strong">${v.strong}</b> strong · <b class="young">${v.young}</b> young · <b>${v.new}</b> new`;
+    el.title = `From Anki: strong = review interval 3+ weeks, young = under 3 weeks, new = not studied yet. Updated ${st.updated}.`;
+  })
+  .catch(() => {});
 // Grammar: points marked covered on the grammar page, against roughly 80 for JLPT N5
 const N5_GRAMMAR = 80;
 fetch('grammar.json?t=' + Date.now(), { cache: 'no-store' })
