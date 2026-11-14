@@ -6093,5 +6093,395 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458627",
+    "word": "教科書",
+    "kana": "きょうかしょ",
+    "meaning": "textbook",
+    "examples": [
+      {
+        "jp": "にほんごの きょうかしょを わすれました。",
+        "en": "I forgot my Japanese textbook.",
+        "kanji": "日本語の教科書を忘れました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458628",
+    "word": "次",
+    "kana": "つぎ",
+    "meaning": "next — next in order (つぎの えき) · next week / year use らい: らいしゅう",
+    "examples": [
+      {
+        "jp": "つぎの えきで おります。",
+        "en": "I'm getting off at the next station.",
+        "kanji": "次の駅で降ります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458629",
+    "word": "国",
+    "kana": "くに",
+    "meaning": "country — polite when asking someone: おくに",
+    "examples": [
+      {
+        "jp": "おくには どこですか。",
+        "en": "Which country are you from?",
+        "kanji": "お国はどこですか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458630",
+    "word": "大変",
+    "kana": "たいへん",
+    "meaning": "tough / hard (situation) — na-adjective · about situations, not people",
+    "examples": [
+      {
+        "jp": "しごとは たいへんです。",
+        "en": "Work is tough.",
+        "kanji": "仕事は大変です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458631",
+    "word": "急ぐ",
+    "kana": "いそぐ",
+    "masu": "急ぎます",
+    "masuKana": "いそぎます",
+    "group": "u-verb",
+    "meaning": "to hurry",
+    "examples": [
+      {
+        "jp": "いそいで ください。",
+        "en": "Please hurry.",
+        "kanji": "急いでください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"I SO GOtta hurry!\": isogu = hurry"
+  },
+  {
+    "id": "anki-1794678458632",
+    "word": "返す",
+    "kana": "かえす",
+    "masu": "返します",
+    "masuKana": "かえします",
+    "group": "u-verb",
+    "groupNote": "a thing goes back · you going back home is かえる",
+    "meaning": "to return (a thing)",
+    "examples": [
+      {
+        "jp": "としょかんに ほんを かえします。",
+        "en": "I'm returning a book to the library.",
+        "kanji": "図書館に本を返します。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "KAE-SU: give it back to Sue"
+  },
+  {
+    "id": "anki-1794678458633",
+    "word": "消す",
+    "kana": "けす",
+    "masu": "消します",
+    "masuKana": "けします",
+    "group": "u-verb",
+    "meaning": "to turn off / to erase",
+    "examples": [
+      {
+        "jp": "でんきを けして ください。",
+        "en": "Please turn off the light.",
+        "kanji": "電気を消してください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "KESS: a kiss blows the candle out"
+  },
+  {
+    "id": "anki-1794678458634",
+    "word": "死ぬ",
+    "kana": "しぬ",
+    "masu": "死にます",
+    "masuKana": "しにます",
+    "group": "u-verb",
+    "groupNote": "the only verb that ends in ぬ",
+    "meaning": "to die",
+    "examples": [
+      {
+        "jp": "ゲームで しにました。",
+        "en": "I died in the game.",
+        "kanji": "ゲームで死にました。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "し sounds like 死 (death), which is why 4 (し) is unlucky in Japan"
+  },
+  {
+    "id": "anki-1794678458635",
+    "word": "座る",
+    "kana": "すわる",
+    "masu": "座ります",
+    "masuKana": "すわります",
+    "group": "u-verb",
+    "groupNote": "place + に",
+    "meaning": "to sit down",
+    "examples": [
+      {
+        "jp": "ここに すわって ください。",
+        "en": "Please sit here.",
+        "kanji": "ここに座ってください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"SUE, WAit, sit down!\": suwaru = sit"
+  },
+  {
+    "id": "anki-1794678458636",
+    "word": "立つ",
+    "kana": "たつ",
+    "masu": "立ちます",
+    "masuKana": "たちます",
+    "group": "u-verb",
+    "meaning": "to stand up",
+    "examples": [
+      {
+        "jp": "たって ください。",
+        "en": "Please stand up.",
+        "kanji": "立ってください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "TATtoo artist: \"Stand up!\" (tatsu)"
+  },
+  {
+    "id": "anki-1794678458637",
+    "word": "手伝う",
+    "kana": "てつだう",
+    "masu": "手伝います",
+    "masuKana": "てつだいます",
+    "group": "u-verb",
+    "meaning": "to help",
+    "examples": [
+      {
+        "jp": "しゅくだいを てつだって ください。",
+        "en": "Please help me with my homework.",
+        "kanji": "宿題を手伝ってください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "手 (te) means hand: lend a hand"
+  },
+  {
+    "id": "anki-1794678458638",
+    "word": "入る",
+    "kana": "はいる",
+    "masu": "入ります",
+    "masuKana": "はいります",
+    "group": "u-verb",
+    "groupNote": "ends in -iru but is NOT a ru-verb · place + に",
+    "meaning": "to enter",
+    "examples": [
+      {
+        "jp": "へやに はいります。",
+        "en": "I go into the room.",
+        "kanji": "部屋に入ります。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"HI!\" you say as you walk in (hai-ru)"
+  },
+  {
+    "id": "anki-1794678458639",
+    "word": "開ける",
+    "kana": "あける",
+    "masu": "開けます",
+    "masuKana": "あけます",
+    "group": "ru-verb",
+    "groupNote": "you open something: を",
+    "meaning": "to open (something)",
+    "examples": [
+      {
+        "jp": "まどを あけて ください。",
+        "en": "Please open the window.",
+        "kanji": "窓を開けてください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"Ah, KEy!\": open it with a key (ake-ru)"
+  },
+  {
+    "id": "anki-1794678458640",
+    "word": "閉める",
+    "kana": "しめる",
+    "masu": "閉めます",
+    "masuKana": "しめます",
+    "group": "ru-verb",
+    "groupNote": "you close something: を",
+    "meaning": "to close (something)",
+    "examples": [
+      {
+        "jp": "ドアを しめて ください。",
+        "en": "Please close the door.",
+        "kanji": "ドアを閉めてください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "SHIMMY the door shut (shime-ru)"
+  },
+  {
+    "id": "anki-1794678458641",
+    "word": "教える",
+    "kana": "おしえる",
+    "masu": "教えます",
+    "masuKana": "おしえます",
+    "group": "ru-verb",
+    "groupNote": "also: to tell (おしえて ください = please tell me)",
+    "meaning": "to teach / to instruct",
+    "examples": [
+      {
+        "jp": "にほんごを おしえて ください。",
+        "en": "Please teach me Japanese.",
+        "kanji": "日本語を教えてください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"OH, SHE taught me!\" (o-shie-ru)"
+  },
+  {
+    "id": "anki-1794678458642",
+    "word": "借りる",
+    "kana": "かりる",
+    "masu": "借ります",
+    "masuKana": "かります",
+    "group": "ru-verb",
+    "groupNote": "borrow FROM someone: person + に",
+    "meaning": "to borrow",
+    "examples": [
+      {
+        "jp": "としょかんで ほんを かります。",
+        "en": "I borrow books at the library.",
+        "kanji": "図書館で本を借ります。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "CARRY it home, you borrowed it (kari-ru)"
+  },
+  {
+    "id": "anki-1794678458643",
+    "word": "電話する",
+    "kana": "でんわする",
+    "masu": "電話します",
+    "masuKana": "でんわします",
+    "group": "irregular",
+    "groupNote": "call someone: person + に",
+    "meaning": "to call (on the phone)",
+    "examples": [
+      {
+        "jp": "ともだちに でんわします。",
+        "en": "I'll call my friend.",
+        "kanji": "友達に電話します。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458644",
+    "word": "連れてくる",
+    "kana": "つれてくる",
+    "masu": "連れてきます",
+    "masuKana": "つれてきます",
+    "group": "irregular",
+    "groupNote": "て-form of 連れる (take along) + くる",
+    "meaning": "to bring (a person)",
+    "examples": [
+      {
+        "jp": "ともだちを つれてきます。",
+        "en": "I'll bring a friend.",
+        "kanji": "友達を連れてきます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458645",
+    "word": "持ってくる",
+    "kana": "もってくる",
+    "masu": "持ってきます",
+    "masuKana": "もってきます",
+    "group": "irregular",
+    "groupNote": "て-form of 持つ (hold) + くる",
+    "meaning": "to bring (a thing)",
+    "examples": [
+      {
+        "jp": "かさを もってきました。",
+        "en": "I brought an umbrella.",
+        "kanji": "傘を持ってきました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458646",
+    "word": "後で",
+    "kana": "あとで",
+    "meaning": "later on",
+    "examples": [
+      {
+        "jp": "あとで たべます。",
+        "en": "I'll eat it later.",
+        "kanji": "後で食べます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458647",
+    "word": "",
+    "kana": "すぐ",
+    "meaning": "right away / soon",
+    "examples": [
+      {
+        "jp": "すぐ いきます。",
+        "en": "I'll go right away.",
+        "kanji": "すぐ行きます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458648",
+    "word": "結構です",
+    "kana": "けっこうです",
+    "meaning": "no, thank you / that would be fine — polite way to turn down an offer · can also mean \"that's fine\"",
+    "examples": [
+      {
+        "jp": "おちゃは？— けっこうです。",
+        "en": "Some tea? — No, thank you.",
+        "kanji": "お茶は？— 結構です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794678458649",
+    "word": "本当ですか",
+    "kana": "ほんとうですか",
+    "meaning": "Really? — casual: ほんとう？",
+    "examples": [
+      {
+        "jp": "あしたは やすみです。— ほんとうですか。",
+        "en": "I'm off tomorrow. — Really?",
+        "kanji": "明日は休みです。— 本当ですか。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
