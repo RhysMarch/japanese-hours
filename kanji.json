@@ -975,5 +975,95 @@
     "story": "A heart with drops around it — four strokes, beating.",
     "added": "2026-11-14",
     "id": "anki-1794621579339"
+  },
+  {
+    "k": "夕",
+    "reading": "ゆう",
+    "meaning": "Evening — as in 夕ご飯 (ゆうごはん)",
+    "parts": "pictograph",
+    "story": "The moon (月) with a stroke missing — half-risen in the evening.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665509"
+  },
+  {
+    "k": "外",
+    "reading": "そと / がい",
+    "meaning": "Outside — as in 外国人 (がいこくじん)",
+    "parts": "夕 + 卜",
+    "story": "In the evening (夕) the fortune-teller (卜) sets up outside.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665510"
+  },
+  {
+    "k": "林",
+    "reading": "はやし / りん",
+    "meaning": "Woods — as in 林 (はやし)",
+    "parts": "木 + 木",
+    "story": "Two trees (木 木) — a small wood.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665511"
+  },
+  {
+    "k": "森",
+    "reading": "もり / しん",
+    "meaning": "Forest — as in 森 (もり)",
+    "parts": "木 + 木 + 木",
+    "story": "Three trees — a whole forest.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665512"
+  },
+  {
+    "k": "石",
+    "reading": "いし",
+    "meaning": "Stone — as in 石 (いし)",
+    "parts": "丆 + 口",
+    "story": "A rock (口) tumbling down under a cliff (丆).",
+    "added": "2026-11-14",
+    "id": "anki-1794622665513"
+  },
+  {
+    "k": "空",
+    "reading": "そら / くう",
+    "meaning": "Sky — as in 空港 (くうこう)",
+    "parts": "穴 + 工",
+    "story": "Look up through a hole (穴) in the roof, past the builder’s tool (工) — the sky.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665514"
+  },
+  {
+    "k": "体",
+    "reading": "からだ / たい",
+    "meaning": "Body — as in 体 (からだ)",
+    "parts": "亻 + 本",
+    "story": "A person (亻) built from the root (本) up — the body.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665515"
+  },
+  {
+    "k": "青",
+    "reading": "あお / せい",
+    "meaning": "Blue — as in 青い (あおい)",
+    "parts": "龶 + 月",
+    "story": "A young plant (龶) growing under the moon (月) — fresh blue-green.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665516"
+  },
+  {
+    "k": "赤",
+    "reading": "あか",
+    "meaning": "Red — as in 赤い (あかい)",
+    "parts": "土 + flames",
+    "story": "Earth (土) with flames burning underneath — glowing red.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665517"
+  },
+  {
+    "k": "毎",
+    "reading": "まい",
+    "meaning": "Every — as in 毎日 (まいにち)",
+    "parts": "𠂉 + 母",
+    "story": "Mother (母) puts on her hat (𠂉) every day.",
+    "added": "2026-11-14",
+    "id": "anki-1794622665518"
   }
 ]
