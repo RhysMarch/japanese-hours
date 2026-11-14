@@ -847,5 +847,95 @@
     "story": "Walking (彳) with a short thread (幺) tied round your dragging feet (夂) — you fall behind.",
     "added": "2026-11-08",
     "id": "anki-1794178272171"
+  },
+  {
+    "k": "犬",
+    "reading": "いぬ / けん",
+    "meaning": "Dog — as in 犬 (いぬ)",
+    "parts": "大 + 丶",
+    "story": "A big (大) animal with one ear flopped up (丶) — a dog.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579330"
+  },
+  {
+    "k": "手",
+    "reading": "て / しゅ",
+    "meaning": "Hand — as in 上手 (じょうず)",
+    "parts": "pictograph",
+    "story": "An arm with three fingers spread out across it — a hand.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579331"
+  },
+  {
+    "k": "耳",
+    "reading": "みみ",
+    "meaning": "Ear — as in 耳 (みみ)",
+    "parts": "pictograph",
+    "story": "The outline of an ear, with lines inside for its folds.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579332"
+  },
+  {
+    "k": "足",
+    "reading": "あし / そく",
+    "meaning": "Foot / leg — as in 足 (あし)",
+    "parts": "口 + 止",
+    "story": "A kneecap (口) on top of a leg that stops (止) at the foot.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579333"
+  },
+  {
+    "k": "虫",
+    "reading": "むし",
+    "meaning": "Bug — as in 虫 (むし)",
+    "parts": "pictograph",
+    "story": "A bug with a big round body (口), a line down the middle and a little tail flick.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579334"
+  },
+  {
+    "k": "牛",
+    "reading": "うし / ぎゅう",
+    "meaning": "Cow / beef — as in 牛肉 (ぎゅうにく)",
+    "parts": "pictograph",
+    "story": "A cow from the front: one horn sticking up, a long face and legs.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579335"
+  },
+  {
+    "k": "米",
+    "reading": "こめ",
+    "meaning": "Rice — as in 米 (こめ)",
+    "parts": "pictograph",
+    "story": "Grains of rice scattered around a stalk.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579336"
+  },
+  {
+    "k": "花",
+    "reading": "はな / か",
+    "meaning": "Flower — as in 花火 (はなび)",
+    "parts": "艹 + 化",
+    "story": "Grass (艹) that changes (化) into something pretty — a flower.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579337"
+  },
+  {
+    "k": "天",
+    "reading": "てん",
+    "meaning": "Sky / heaven — as in 天気 (てんき)",
+    "parts": "一 + 大",
+    "story": "One (一) line above a big (大) person — the sky over his head.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579338"
+  },
+  {
+    "k": "心",
+    "reading": "こころ / しん",
+    "meaning": "Heart / mind — as in 安心 (あんしん)",
+    "parts": "pictograph",
+    "story": "A heart with drops around it — four strokes, beating.",
+    "added": "2026-11-14",
+    "id": "anki-1794621579339"
   }
 ]
