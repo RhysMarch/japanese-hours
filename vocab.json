@@ -6497,5 +6497,24 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1794785166745",
+    "word": "",
+    "kana": "つける",
+    "masu": "つけます",
+    "masuKana": "つけます",
+    "group": "ru-verb",
+    "groupNote": "opposite of けす (turn off) · usually written in kana",
+    "meaning": "to turn on (a light, TV, aircon)",
+    "examples": [
+      {
+        "jp": "でんきを つけて ください。",
+        "en": "Please turn on the light.",
+        "kanji": "電気をつけてください。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "TSUKE → \"SWITCH-a\": tsukeru = switch on"
   }
 ]
