@@ -412,5 +412,11 @@
     "anki_kanji": 0.5,
     "anki_vocab": 0.75,
     "duolingo": 0.25
+  },
+  "2026-11-15": {
+    "genki": 1,
+    "anki_kanji": 0.25,
+    "anki_vocab": 0.75,
+    "duolingo": 0.25
   }
 }
