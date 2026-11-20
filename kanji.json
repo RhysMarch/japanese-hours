@@ -1,7 +1,7 @@
 [
   {
     "k": "一",
-    "reading": "いち",
+    "reading": "いち / ひと",
     "meaning": "One",
     "added": "2026-10-03",
     "id": "XxkHciP83R",
@@ -9,7 +9,7 @@
   },
   {
     "k": "二",
-    "reading": "に",
+    "reading": "に / ふた",
     "meaning": "Two",
     "added": "2026-10-03",
     "id": "f5u99kyT2d",
@@ -17,7 +17,7 @@
   },
   {
     "k": "三",
-    "reading": "さん",
+    "reading": "さん / みっ",
     "meaning": "Three",
     "added": "2026-10-03",
     "id": "VVYGexpT8P",
@@ -25,7 +25,7 @@
   },
   {
     "k": "四",
-    "reading": "よん",
+    "reading": "よん / し / よ",
     "meaning": "Four",
     "added": "2026-10-03",
     "id": "8GS8RTmoXA",
@@ -33,14 +33,14 @@
   },
   {
     "k": "五",
-    "reading": "ご",
+    "reading": "ご / いつ",
     "meaning": "Five",
     "added": "2026-10-03",
     "level": "great"
   },
   {
     "k": "六",
-    "reading": "ろく",
+    "reading": "ろく / むっ",
     "meaning": "Six",
     "added": "2026-10-03",
     "level": "great"
@@ -54,7 +54,7 @@
   },
   {
     "k": "八",
-    "reading": "はち",
+    "reading": "はち / やっ",
     "meaning": "Eight",
     "added": "2026-10-03",
     "level": "great"
@@ -68,14 +68,14 @@
   },
   {
     "k": "十",
-    "reading": "じゅう",
+    "reading": "じゅう / とお",
     "meaning": "Ten",
     "added": "2026-10-03",
     "level": "great"
   },
   {
     "k": "薬",
-    "reading": "くすり",
+    "reading": "くすり / やく",
     "meaning": "Medicine",
     "added": "2026-10-03",
     "id": "f%><t)5l&%",
@@ -83,7 +83,7 @@
   },
   {
     "k": "円",
-    "reading": "えん",
+    "reading": "えん / まる",
     "meaning": "Yen",
     "added": "2026-10-03",
     "id": "I;M]:Lp4s7",
@@ -91,7 +91,7 @@
   },
   {
     "k": "女",
-    "reading": "おんな",
+    "reading": "おんな / じょ",
     "meaning": "Woman",
     "added": "2026-10-03",
     "id": "kp57shUbO9",
@@ -99,7 +99,7 @@
   },
   {
     "k": "男",
-    "reading": "おとこ",
+    "reading": "おとこ / だん",
     "meaning": "Man",
     "added": "2026-10-03",
     "id": "i7$dDf;L&;",
@@ -107,7 +107,7 @@
   },
   {
     "k": "車",
-    "reading": "くるま",
+    "reading": "くるま / しゃ",
     "meaning": "Car",
     "added": "2026-10-03",
     "id": "tW=p-N;/k^",
@@ -115,7 +115,7 @@
   },
   {
     "k": "人",
-    "reading": "ひと",
+    "reading": "ひと / じん / にん",
     "meaning": "Person",
     "added": "2026-10-03",
     "id": "8DsoszGPlQ",
@@ -123,7 +123,7 @@
   },
   {
     "k": "酒",
-    "reading": "さけ",
+    "reading": "さけ / しゅ",
     "meaning": "Sake / alcohol",
     "added": "2026-10-03",
     "id": "of1vVhbq/?",
@@ -139,7 +139,7 @@
   },
   {
     "k": "木",
-    "reading": "き",
+    "reading": "き / もく",
     "meaning": "Tree",
     "added": "2026-10-03",
     "id": "Zr3bAbdWob",
@@ -147,7 +147,7 @@
   },
   {
     "k": "山",
-    "reading": "やま",
+    "reading": "やま / さん",
     "meaning": "Mountain",
     "added": "2026-10-03",
     "id": "I4ua7M4VEn",
@@ -155,7 +155,7 @@
   },
   {
     "k": "川",
-    "reading": "かわ",
+    "reading": "かわ / せん",
     "meaning": "River",
     "added": "2026-10-03",
     "id": "5DxLG3Fvkn",
@@ -179,7 +179,7 @@
   },
   {
     "k": "学",
-    "reading": "がく",
+    "reading": "がく / まな",
     "meaning": "Study / learning",
     "added": "2026-10-03",
     "id": "pV6leXHeCW",
@@ -187,7 +187,7 @@
   },
   {
     "k": "本",
-    "reading": "ほん",
+    "reading": "ほん / もと",
     "meaning": "Book",
     "added": "2026-10-03",
     "id": "dtdhGrnbis",
@@ -195,7 +195,7 @@
   },
   {
     "k": "私",
-    "reading": "わたし",
+    "reading": "わたし / し",
     "meaning": "I / me",
     "added": "2026-10-03",
     "id": "7fC6sam4nw",
@@ -203,7 +203,7 @@
   },
   {
     "k": "田",
-    "reading": "た",
+    "reading": "た / でん",
     "meaning": "Rice field",
     "added": "2026-10-03",
     "id": "SI4Gi58RGP",
@@ -211,7 +211,7 @@
   },
   {
     "k": "日",
-    "reading": "ひ",
+    "reading": "ひ / にち / び",
     "meaning": "Sun / day",
     "added": "2026-10-03",
     "id": "Yk9AtTQbj2",
@@ -256,7 +256,7 @@
   },
   {
     "k": "出",
-    "reading": "で",
+    "reading": "で / しゅつ",
     "meaning": "Exit / go out — as in 出口 (でぐち)",
     "added": "2026-10-03",
     "id": "SGpe3Dws5w",
@@ -264,7 +264,7 @@
   },
   {
     "k": "止",
-    "reading": "とまれ",
+    "reading": "と / し",
     "meaning": "Stop (as in 止まれ)",
     "added": "2026-10-03",
     "id": "i2)@EhSm|a",
@@ -280,7 +280,7 @@
   },
   {
     "k": "鳥",
-    "reading": "とり",
+    "reading": "とり / ちょう",
     "meaning": "Chicken",
     "added": "2026-10-03",
     "id": "DHS5ueX@RB",
@@ -288,7 +288,7 @@
   },
   {
     "k": "魚",
-    "reading": "さかな",
+    "reading": "さかな / ぎょ",
     "meaning": "Fish",
     "added": "2026-10-03",
     "id": "JR;`7z=@Bk",
@@ -296,7 +296,7 @@
   },
   {
     "k": "分",
-    "reading": "ぷん",
+    "reading": "ぷん / ふん / わ",
     "meaning": "Minute",
     "added": "2026-10-03",
     "id": "bhU[co{d2.",
@@ -312,7 +312,7 @@
   },
   {
     "k": "東",
-    "reading": "ひがし",
+    "reading": "ひがし / とう",
     "meaning": "East",
     "added": "2026-10-03",
     "id": "j%Tu@I;1IJ",
@@ -320,20 +320,20 @@
   },
   {
     "k": "西",
-    "reading": "にし",
+    "reading": "にし / せい",
     "meaning": "West",
     "added": "2026-10-03"
   },
   {
     "k": "南",
-    "reading": "みなみ",
+    "reading": "みなみ / なん",
     "meaning": "South",
     "added": "2026-10-03",
     "level": "great"
   },
   {
     "k": "北",
-    "reading": "きた",
+    "reading": "きた / ほく",
     "meaning": "North",
     "added": "2026-10-03",
     "level": "great"
@@ -354,28 +354,28 @@
   },
   {
     "k": "食",
-    "reading": "た",
+    "reading": "た / しょく",
     "meaning": "Eat — as in 食べます (たべます)",
     "added": "2026-10-03",
     "level": "great"
   },
   {
     "k": "飲",
-    "reading": "の",
+    "reading": "の / いん",
     "meaning": "Drink — as in 飲みます (のみます)",
     "added": "2026-10-03",
     "level": "great"
   },
   {
     "k": "見",
-    "reading": "み",
+    "reading": "み / けん",
     "meaning": "See / look — as in 見ます (みます)",
     "added": "2026-10-03",
     "level": "great"
   },
   {
     "k": "行",
-    "reading": "い",
+    "reading": "い / こう",
     "meaning": "Go — as in 行きます (いきます)",
     "added": "2026-10-03",
     "level": "great"
@@ -389,20 +389,20 @@
   },
   {
     "k": "水",
-    "reading": "みず",
+    "reading": "みず / すい",
     "meaning": "Water",
     "added": "2026-10-03",
     "level": "great"
   },
   {
     "k": "名",
-    "reading": "な",
+    "reading": "な / めい",
     "meaning": "Name",
     "added": "2026-10-03"
   },
   {
     "k": "白",
-    "reading": "しろ",
+    "reading": "しろ / はく",
     "meaning": "White",
     "added": "2026-10-03",
     "level": "great"
@@ -422,7 +422,7 @@
   },
   {
     "k": "発",
-    "reading": "はつ",
+    "reading": "はつ / はっ",
     "meaning": "Depart / emit (as in 開発, development)",
     "added": "2026-10-03"
   },
@@ -471,7 +471,7 @@
   },
   {
     "k": "目",
-    "reading": "め",
+    "reading": "め / もく",
     "meaning": "Eye",
     "added": "2026-10-03"
   },
@@ -490,14 +490,14 @@
   },
   {
     "k": "左",
-    "reading": "ひだり",
+    "reading": "ひだり / さ",
     "meaning": "Left",
     "added": "2026-10-09",
     "level": "great"
   },
   {
     "k": "右",
-    "reading": "みぎ",
+    "reading": "みぎ / ゆう",
     "meaning": "Right",
     "added": "2026-10-09",
     "level": "great"
@@ -525,27 +525,27 @@
   },
   {
     "k": "朝",
-    "reading": "あさ",
+    "reading": "あさ / ちょう",
     "meaning": "Morning",
     "added": "2026-10-09",
     "level": "great"
   },
   {
     "k": "夜",
-    "reading": "よる",
+    "reading": "よる / や",
     "meaning": "Night",
     "added": "2026-10-09"
   },
   {
     "k": "書",
-    "reading": "か",
+    "reading": "か / しょ",
     "meaning": "Write — as in 書きます (かきます)",
     "added": "2026-10-09",
     "level": "great"
   },
   {
     "k": "読",
-    "reading": "よ",
+    "reading": "よ / どく",
     "meaning": "Read — as in 読みます (よみます)",
     "added": "2026-10-09",
     "level": "great"
@@ -559,7 +559,7 @@
   },
   {
     "k": "好",
-    "reading": "す",
+    "reading": "す / こう",
     "meaning": "Like / fond of — as in 好き (すき), 大好き (だいすき)",
     "added": "2026-10-09",
     "level": "great"
@@ -586,7 +586,7 @@
   },
   {
     "k": "雨",
-    "reading": "あめ",
+    "reading": "あめ / う",
     "meaning": "Rain",
     "added": "2026-10-10",
     "level": "great"
@@ -805,7 +805,7 @@
   },
   {
     "k": "千",
-    "reading": "せん",
+    "reading": "せん / ち",
     "meaning": "Thousand — as in 千円 (せんえん)",
     "parts": "ノ + 十",
     "story": "Ten (十) wearing a little hat (ノ) — ten got promoted to a thousand.",
@@ -912,7 +912,7 @@
   },
   {
     "k": "耳",
-    "reading": "みみ",
+    "reading": "みみ / じ",
     "meaning": "Ear — as in 耳 (みみ)",
     "parts": "pictograph",
     "story": "The outline of an ear, with lines inside for its folds.",
@@ -930,7 +930,7 @@
   },
   {
     "k": "虫",
-    "reading": "むし",
+    "reading": "むし / ちゅう",
     "meaning": "Bug — as in 虫 (むし)",
     "parts": "pictograph",
     "story": "A bug with a big round body (口), a line down the middle and a little tail flick.",
@@ -949,7 +949,7 @@
   },
   {
     "k": "米",
-    "reading": "こめ",
+    "reading": "こめ / べい",
     "meaning": "Rice — as in 米 (こめ)",
     "parts": "pictograph",
     "story": "Grains of rice scattered around a stalk.",
@@ -968,7 +968,7 @@
   },
   {
     "k": "天",
-    "reading": "てん",
+    "reading": "てん / あま",
     "meaning": "Sky / heaven — as in 天気 (てんき)",
     "parts": "一 + 大",
     "story": "One (一) line above a big (大) person — the sky over his head.",
@@ -1023,7 +1023,7 @@
   },
   {
     "k": "石",
-    "reading": "いし",
+    "reading": "いし / せき",
     "meaning": "Stone — as in 石 (いし)",
     "parts": "丆 + 口",
     "story": "A rock (口) tumbling down under a cliff (丆).",
@@ -1059,7 +1059,7 @@
   },
   {
     "k": "赤",
-    "reading": "あか",
+    "reading": "あか / せき",
     "meaning": "Red — as in 赤い (あかい)",
     "parts": "土 + flames",
     "story": "Earth (土) with flames burning underneath — glowing red.",
