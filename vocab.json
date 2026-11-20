@@ -6544,5 +6544,499 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933879",
+    "word": "家族",
+    "kana": "かぞく",
+    "meaning": "family",
+    "examples": [
+      {
+        "jp": "わたしの かぞくは よにんです。",
+        "en": "There are four people in my family.",
+        "kanji": "私の家族は四人です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933880",
+    "word": "",
+    "kana": "おじいさん",
+    "meaning": "grandfather / old man · usually written in kana",
+    "examples": [
+      {
+        "jp": "おじいさんは げんきです。",
+        "en": "My grandfather is well.",
+        "kanji": "おじいさんは元気です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933881",
+    "word": "",
+    "kana": "おばあさん",
+    "meaning": "grandmother / old woman · usually written in kana",
+    "examples": [
+      {
+        "jp": "おばあさんは やさしいです。",
+        "en": "My grandmother is kind.",
+        "kanji": "おばあさんは優しいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933882",
+    "word": "お兄さん",
+    "kana": "おにいさん",
+    "meaning": "older brother (someone else's, or talking to him) · your own: あに",
+    "examples": [
+      {
+        "jp": "おにいさんは なんさいですか。",
+        "en": "How old is your older brother?",
+        "kanji": "お兄さんは何歳ですか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933883",
+    "word": "兄",
+    "kana": "あに",
+    "meaning": "my older brother (humble) · someone else's: おにいさん",
+    "examples": [
+      {
+        "jp": "あには とうきょうに すんで います。",
+        "en": "My older brother lives in Tokyo.",
+        "kanji": "兄は東京に住んでいます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933884",
+    "word": "お姉さん",
+    "kana": "おねえさん",
+    "meaning": "older sister (someone else's, or talking to her) · your own: あね",
+    "examples": [
+      {
+        "jp": "おねえさんは がくせいですか。",
+        "en": "Is your older sister a student?",
+        "kanji": "お姉さんは学生ですか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933885",
+    "word": "姉",
+    "kana": "あね",
+    "meaning": "my older sister (humble) · someone else's: おねえさん",
+    "examples": [
+      {
+        "jp": "あねは かいしゃで はたらいて います。",
+        "en": "My older sister works at a company.",
+        "kanji": "姉は会社で働いています。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933886",
+    "word": "妹",
+    "kana": "いもうと",
+    "meaning": "younger sister",
+    "examples": [
+      {
+        "jp": "いもうとは じゅうさんさいです。",
+        "en": "My younger sister is thirteen.",
+        "kanji": "妹は十三歳です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933887",
+    "word": "弟",
+    "kana": "おとうと",
+    "meaning": "younger brother",
+    "examples": [
+      {
+        "jp": "おとうとは サッカーが すきです。",
+        "en": "My younger brother likes football.",
+        "kanji": "弟はサッカーが好きです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933888",
+    "word": "兄弟",
+    "kana": "きょうだい",
+    "meaning": "brothers and sisters / siblings",
+    "examples": [
+      {
+        "jp": "きょうだいが いますか。",
+        "en": "Do you have any brothers or sisters?",
+        "kanji": "兄弟がいますか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933889",
+    "word": "男の人",
+    "kana": "おとこのひと",
+    "meaning": "man · 男 = male · の人 = person → \"male person\"",
+    "examples": [
+      {
+        "jp": "あの おとこのひとは だれですか。",
+        "en": "Who is that man?",
+        "kanji": "あの男の人は誰ですか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933890",
+    "word": "女の人",
+    "kana": "おんなのひと",
+    "meaning": "woman · 女 = female · の人 = person → \"female person\"",
+    "examples": [
+      {
+        "jp": "あの おんなのひとは せんせいです。",
+        "en": "That woman is a teacher.",
+        "kanji": "あの女の人は先生です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933891",
+    "word": "歌",
+    "kana": "うた",
+    "meaning": "song",
+    "examples": [
+      {
+        "jp": "この うたが すきです。",
+        "en": "I like this song.",
+        "kanji": "この歌が好きです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933892",
+    "word": "長い",
+    "kana": "ながい",
+    "meaning": "long — い-adjective",
+    "examples": [
+      {
+        "jp": "かみが ながいです。",
+        "en": "(She) has long hair.",
+        "kanji": "髪が長いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933893",
+    "word": "短い",
+    "kana": "みじかい",
+    "meaning": "short (length) — い-adjective · short person = せが ひくい",
+    "examples": [
+      {
+        "jp": "この ズボンは みじかいです。",
+        "en": "These trousers are short.",
+        "kanji": "このズボンは短いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933894",
+    "word": "速い",
+    "kana": "はやい",
+    "meaning": "fast — い-adjective · early = 早い (same sound)",
+    "examples": [
+      {
+        "jp": "しんかんせんは はやいです。",
+        "en": "The bullet train is fast.",
+        "kanji": "新幹線は速いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933895",
+    "word": "背が高い",
+    "kana": "せが たかい",
+    "meaning": "tall (person) — 背 = height",
+    "examples": [
+      {
+        "jp": "あには せが たかいです。",
+        "en": "My older brother is tall.",
+        "kanji": "兄は背が高いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933896",
+    "word": "背が低い",
+    "kana": "せが ひくい",
+    "meaning": "short (person) — 背 = height",
+    "examples": [
+      {
+        "jp": "わたしは せが ひくいです。",
+        "en": "I'm short.",
+        "kanji": "私は背が低いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933897",
+    "word": "頭がいい",
+    "kana": "あたまが いい",
+    "meaning": "bright / smart / clever — 頭 = head · past: あたまが よかった",
+    "examples": [
+      {
+        "jp": "いもうとは あたまが いいです。",
+        "en": "My younger sister is smart.",
+        "kanji": "妹は頭がいいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933898",
+    "word": "親切",
+    "kana": "しんせつ",
+    "meaning": "kind — な-adjective · しんせつな ひと = a kind person",
+    "examples": [
+      {
+        "jp": "ホストファミリーは しんせつです。",
+        "en": "My host family is kind.",
+        "kanji": "ホストファミリーは親切です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933899",
+    "word": "便利",
+    "kana": "べんり",
+    "meaning": "convenient — な-adjective · べんりな ところ = a convenient place",
+    "examples": [
+      {
+        "jp": "コンビニは べんりです。",
+        "en": "Convenience stores are convenient.",
+        "kanji": "コンビニは便利です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933900",
+    "word": "歌う",
+    "kana": "うたう",
+    "masu": "歌います",
+    "masuKana": "うたいます",
+    "group": "u-verb",
+    "meaning": "to sing · うた = song",
+    "examples": [
+      {
+        "jp": "カラオケで うたいました。",
+        "en": "I sang at karaoke.",
+        "kanji": "カラオケで歌いました。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "UTA = song, UTAU = to song it → sing"
+  },
+  {
+    "id": "anki-1795218933901",
+    "word": "",
+    "kana": "かぶる",
+    "masu": "かぶります",
+    "masuKana": "かぶります",
+    "group": "u-verb",
+    "meaning": "to put on (a hat) · usually written in kana",
+    "examples": [
+      {
+        "jp": "ぼうしを かぶって います。",
+        "en": "(He) is wearing a hat.",
+        "kanji": "帽子をかぶっています。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "a KABUki actor puts on a big hat: kaburu = hat on"
+  },
+  {
+    "id": "anki-1795218933902",
+    "word": "",
+    "kana": "はく",
+    "masu": "はきます",
+    "masuKana": "はきます",
+    "group": "u-verb",
+    "meaning": "to put on (items below your waist — trousers, shoes, socks) · usually written in kana",
+    "examples": [
+      {
+        "jp": "ジーンズを はいて います。",
+        "en": "(She) is wearing jeans.",
+        "kanji": "ジーンズをはいています。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "HAKu → \"HAul up\" your trousers: haku = put on below the waist"
+  },
+  {
+    "id": "anki-1795218933903",
+    "word": "太る",
+    "kana": "ふとる",
+    "masu": "太ります",
+    "masuKana": "ふとります",
+    "group": "u-verb",
+    "meaning": "to gain weight — \"is overweight\" = ふとって います · opposite: やせる",
+    "examples": [
+      {
+        "jp": "ちちは ふとって います。",
+        "en": "My father is overweight.",
+        "kanji": "父は太っています。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "FUTOn all day → you gain weight: futoru"
+  },
+  {
+    "id": "anki-1795218933904",
+    "word": "",
+    "kana": "かける",
+    "masu": "かけます",
+    "masuKana": "かけます",
+    "group": "ru-verb",
+    "meaning": "to put on (glasses) · usually written in kana",
+    "examples": [
+      {
+        "jp": "めがねを かけて います。",
+        "en": "(He) wears glasses.",
+        "kanji": "眼鏡をかけています。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "glasses HANG (kakeru) on your ears"
+  },
+  {
+    "id": "anki-1795218933905",
+    "word": "着る",
+    "kana": "きる",
+    "masu": "着ます",
+    "masuKana": "きます",
+    "group": "ru-verb",
+    "meaning": "to put on (clothes above your waist — shirts, jackets) · not 切る (to cut, u-verb)",
+    "examples": [
+      {
+        "jp": "Tシャツを きて います。",
+        "en": "(She) is wearing a T-shirt.",
+        "kanji": "Tシャツを着ています。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "KIRU → \"KEY\" item of clothing: your top"
+  },
+  {
+    "id": "anki-1795218933906",
+    "word": "",
+    "kana": "やせる",
+    "masu": "やせます",
+    "masuKana": "やせます",
+    "group": "ru-verb",
+    "meaning": "to lose weight — \"is thin\" = やせて います · opposite: ふとる",
+    "examples": [
+      {
+        "jp": "あねは やせて います。",
+        "en": "My older sister is thin.",
+        "kanji": "姉はやせています。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "YAY, SEe the scales go down: yaseru = lose weight"
+  },
+  {
+    "id": "anki-1795218933907",
+    "word": "結婚する",
+    "kana": "けっこんする",
+    "masu": "結婚します",
+    "masuKana": "けっこんします",
+    "group": "irregular verb",
+    "meaning": "to get married — \"is married\" = けっこんして います · person と けっこんする = marry someone",
+    "examples": [
+      {
+        "jp": "あには けっこんして います。",
+        "en": "My older brother is married.",
+        "kanji": "兄は結婚しています。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "KEKKON → \"KICK ON\" with your new life: get married"
+  },
+  {
+    "id": "anki-1795218933908",
+    "word": "",
+    "kana": "〜が",
+    "meaning": "but (joins two sentences) · sentence が、sentence",
+    "examples": [
+      {
+        "jp": "にほんごは むずかしいですが、おもしろいです。",
+        "en": "Japanese is hard, but it's interesting.",
+        "kanji": "日本語は難しいですが、面白いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933909",
+    "word": "何も",
+    "kana": "なにも",
+    "meaning": "not … anything (+ negative) · always with a negative verb",
+    "examples": [
+      {
+        "jp": "きのうは なにも しませんでした。",
+        "en": "I didn't do anything yesterday.",
+        "kanji": "昨日は何もしませんでした。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933910",
+    "word": "別に",
+    "kana": "べつに",
+    "meaning": "nothing in particular (+ negative) · always with a negative",
+    "examples": [
+      {
+        "jp": "べつに なにも しません。",
+        "en": "I'm not doing anything in particular.",
+        "kanji": "別に何もしません。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795218933911",
+    "word": "",
+    "kana": "よかったら",
+    "meaning": "if you like · よかったら + ください / どうぞ",
+    "examples": [
+      {
+        "jp": "よかったら、どうぞ。",
+        "en": "Please, if you like.",
+        "kanji": "よかったら、どうぞ。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
