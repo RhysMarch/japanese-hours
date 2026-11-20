@@ -6516,5 +6516,19 @@
     ],
     "deck": "Vocab",
     "hook": "TSUKE → \"SWITCH-a\": tsukeru = switch on"
+  },
+  {
+    "id": "anki-1795199926992",
+    "word": "声",
+    "kana": "こえ",
+    "meaning": "voice — 大声 (おおごえ) = loud voice",
+    "examples": [
+      {
+        "jp": "おおきい こえ で はなして ください。",
+        "en": "Please speak in a loud voice.",
+        "kanji": "大きい声で話してください。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
