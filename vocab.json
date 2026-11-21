@@ -7112,5 +7112,33 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795283471469",
+    "word": "",
+    "kana": "よかった",
+    "meaning": "I'm glad / that's good / phew — relief that things turned out well · to someone else: よかったですね！",
+    "examples": [
+      {
+        "jp": "しけんに ごうかくしました。— よかったですね！",
+        "en": "I passed the exam. — That's great, I'm glad!",
+        "kanji": "試験に合格しました。— よかったですね！"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795283471471",
+    "word": "嬉しい",
+    "kana": "うれしい",
+    "meaning": "happy — い-adjective · about something that happened · usually written in kana",
+    "examples": [
+      {
+        "jp": "あえて うれしいです。",
+        "en": "I'm happy to see you.",
+        "kanji": "会えて嬉しいです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
