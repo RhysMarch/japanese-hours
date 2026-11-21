@@ -7056,5 +7056,19 @@
     ],
     "deck": "Vocab",
     "hook": "the plane goes \"TSUK!\" as its wheels hit the runway: tsuku = arrive"
+  },
+  {
+    "id": "anki-1795222254106",
+    "word": "何か",
+    "kana": "なにか",
+    "meaning": "something / anything (in questions) — なに + か · opposite: なにも + negative",
+    "examples": [
+      {
+        "jp": "なにか しゅみは ありますか。",
+        "en": "Do you have any hobbies?",
+        "kanji": "何か趣味はありますか。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
