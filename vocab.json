@@ -7038,5 +7038,23 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795220500889",
+    "word": "着く",
+    "kana": "つく",
+    "masu": "着きます",
+    "masuKana": "つきます",
+    "group": "u-verb",
+    "meaning": "to arrive — place + に · same kanji as 着る (きる, to wear)",
+    "examples": [
+      {
+        "jp": "にほんに にじゅうよっかに つきました。",
+        "en": "I arrived in Japan on the 24th.",
+        "kanji": "日本に二十四日に着きました。"
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "the plane goes \"TSUK!\" as its wheels hit the runway: tsuku = arrive"
   }
 ]
