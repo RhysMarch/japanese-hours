@@ -7084,5 +7084,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795224527738",
+    "word": "お箸",
+    "kana": "おはし",
+    "meaning": "chopsticks — お is the polite prefix, people almost always say おはし · not 橋 (はし, bridge)",
+    "examples": [
+      {
+        "jp": "おはしを ください。",
+        "en": "Chopsticks, please.",
+        "kanji": "お箸をください。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
