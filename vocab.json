@@ -7070,5 +7070,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795222332096",
+    "word": "〜って何ですか",
+    "kana": "〜って なんですか",
+    "meaning": "What's [word]? / What does [word] mean? — って = quote marks around the word · casual: 〜って なに？",
+    "examples": [
+      {
+        "jp": "「しゅみ」って なんですか。",
+        "en": "What does \"shumi\" mean?",
+        "kanji": "「趣味」って何ですか。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
