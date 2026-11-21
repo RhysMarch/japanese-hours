@@ -7098,5 +7098,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795224638993",
+    "word": "",
+    "kana": "フォーク",
+    "meaning": "fork — from English",
+    "examples": [
+      {
+        "jp": "フォークを ください。",
+        "en": "A fork, please.",
+        "kanji": "フォークをください。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
