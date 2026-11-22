@@ -1093,5 +1093,275 @@
     "added": "2026-11-20",
     "id": "anki-1795199926956",
     "level": "great"
+  },
+  {
+    "k": "飯",
+    "reading": "はん / めし",
+    "meaning": "Meal / cooked rice — as in ご飯 (ごはん)",
+    "parts": "食 + 反",
+    "story": "Food (食) you keep coming back (反) to, three times a day: a meal.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164848"
+  },
+  {
+    "k": "物",
+    "reading": "もの / ぶつ",
+    "meaning": "Thing — as in 買い物 (かいもの)",
+    "parts": "牛 + 勿",
+    "story": "A cow (牛) was the most valuable thing a farmer owned.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164849"
+  },
+  {
+    "k": "電",
+    "reading": "でん",
+    "meaning": "Electricity — as in 電話 (でんわ)",
+    "parts": "雨 + 申",
+    "story": "Rain (雨) clouds with a bolt of lightning striking down: electricity.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164850"
+  },
+  {
+    "k": "会",
+    "reading": "かい / あ(う)",
+    "meaning": "Meet / meeting — as in 会社 (かいしゃ)",
+    "parts": "人 + 云",
+    "story": "People (人) gathering under one roof to talk (云): a meeting.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164851"
+  },
+  {
+    "k": "勉",
+    "reading": "べん",
+    "meaning": "Exertion / effort — as in 勉強 (べんきょう)",
+    "parts": "免 + 力",
+    "story": "Getting out of (免) homework takes no effort; studying takes strength (力).",
+    "added": "2026-11-22",
+    "id": "anki-1795370164852"
+  },
+  {
+    "k": "強",
+    "reading": "つよ(い) / きょう",
+    "meaning": "Strong — as in 勉強 (べんきょう)",
+    "parts": "弓 + 厶 + 虫",
+    "story": "A bow (弓) strong enough to shoot down a bug (虫): strong.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164853"
+  },
+  {
+    "k": "楽",
+    "reading": "たの(しい) / がく / らく",
+    "meaning": "Fun / music — as in 楽しい (たのしい)",
+    "parts": "白 + 木 + ⺍",
+    "story": "A white (白) drum on a wooden (木) stand: music makes things fun.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164854"
+  },
+  {
+    "k": "社",
+    "reading": "しゃ / じゃ",
+    "meaning": "Company / shrine — as in 会社 (かいしゃ)",
+    "parts": "礻 + 土",
+    "story": "An altar (礻) set on the ground (土): a shrine, where everyone gathers.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164855"
+  },
+  {
+    "k": "屋",
+    "reading": "や / おく",
+    "meaning": "Shop / room / roof — as in 部屋 (へや)",
+    "parts": "尸 + 至",
+    "story": "Under a roof (尸) is where you arrive (至): a room or a shop.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164856"
+  },
+  {
+    "k": "自",
+    "reading": "じ / し",
+    "meaning": "Self — as in 自転車 (じてんしゃ)",
+    "parts": "pictograph",
+    "story": "A nose: in Japan you point at your nose to say \"me\".",
+    "added": "2026-11-22",
+    "id": "anki-1795370164857"
+  },
+  {
+    "k": "面",
+    "reading": "めん / おも",
+    "meaning": "Face / surface — as in 面白い (おもしろい)",
+    "parts": "pictograph",
+    "story": "A face framed by its outline, with the nose in the middle.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164858"
+  },
+  {
+    "k": "味",
+    "reading": "あじ / み",
+    "meaning": "Taste / flavour — as in 美味しい (おいしい)",
+    "parts": "口 + 未",
+    "story": "Put it in your mouth (口) before it's ready (未): just a taste.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164859"
+  },
+  {
+    "k": "願",
+    "reading": "ねが(う) / がん",
+    "meaning": "Request / wish — as in お願いします (おねがいします)",
+    "parts": "原 + 頁",
+    "story": "Bowing your head (頁) at the source (原): making a wish.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164860"
+  },
+  {
+    "k": "計",
+    "reading": "けい / はか(る)",
+    "meaning": "Measure / count — as in 時計 (とけい)",
+    "parts": "言 + 十",
+    "story": "Saying (言) the numbers up to ten (十): measuring and counting.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164861"
+  },
+  {
+    "k": "買",
+    "reading": "か(う) / ばい",
+    "meaning": "Buy — as in 買う (かう)",
+    "parts": "罒 + 貝",
+    "story": "Shells (貝) were money: scoop them up in a net (罒) to buy things.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164862"
+  },
+  {
+    "k": "教",
+    "reading": "おし(える) / きょう",
+    "meaning": "Teach — as in 教える (おしえる)",
+    "parts": "孝 + 攵",
+    "story": "A strict hand (攵) guiding a child (子): teaching.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164863"
+  },
+  {
+    "k": "家",
+    "reading": "いえ / うち / か",
+    "meaning": "House / home — as in 家 (うち)",
+    "parts": "宀 + 豕",
+    "story": "A pig (豕) under a roof (宀): in old China the pig lived in the house.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164864"
+  },
+  {
+    "k": "猫",
+    "reading": "ねこ / びょう",
+    "meaning": "Cat — as in 猫 (ねこ)",
+    "parts": "犭 + 苗",
+    "story": "An animal (犭) hiding in the seedlings (苗): a cat.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164865"
+  },
+  {
+    "k": "道",
+    "reading": "みち / どう",
+    "meaning": "Road / way — as in 道 (みち)",
+    "parts": "辶 + 首",
+    "story": "Walking (辶) along with your head (首) up: following the road.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164866"
+  },
+  {
+    "k": "服",
+    "reading": "ふく",
+    "meaning": "Clothes — as in 服 (ふく)",
+    "parts": "月 + 卩 + 又",
+    "story": "月 on the left means body: something that goes on the body. Clothes.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164867"
+  },
+  {
+    "k": "窓",
+    "reading": "まど",
+    "meaning": "Window — as in 窓 (まど)",
+    "parts": "穴 + 厶 + 心",
+    "story": "A hole (穴) in the wall your heart (心) looks out of: a window.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164868"
+  },
+  {
+    "k": "机",
+    "reading": "つくえ",
+    "meaning": "Desk — as in 机 (つくえ)",
+    "parts": "木 + 几",
+    "story": "A wooden (木) table (几): a desk.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164869"
+  },
+  {
+    "k": "席",
+    "reading": "せき",
+    "meaning": "Seat — as in 席 (せき)",
+    "parts": "广 + 廿 + 巾",
+    "story": "Cloth (巾) cushions laid out in a hall (广): seats.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164870"
+  },
+  {
+    "k": "語",
+    "reading": "ご / かた(る)",
+    "meaning": "Language / word — as in 日本語 (にほんご)",
+    "parts": "言 + 吾",
+    "story": "Words (言) that I (吾) speak: language. (吾 is from RTK lesson 2.)",
+    "added": "2026-11-22",
+    "id": "anki-1795370164871"
+  },
+  {
+    "k": "間",
+    "reading": "あいだ / かん / ま",
+    "meaning": "Interval / between — as in 時間 (じかん)",
+    "parts": "門 + 日",
+    "story": "The sun (日) shining through the gap in a gate (門): the space between.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164872"
+  },
+  {
+    "k": "聞",
+    "reading": "き(く) / ぶん",
+    "meaning": "Hear / listen / ask — as in 聞く (きく)",
+    "parts": "門 + 耳",
+    "story": "An ear (耳) pressed against the gate (門): listening.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164873"
+  },
+  {
+    "k": "言",
+    "reading": "い(う) / げん",
+    "meaning": "Say — as in 言う (いう)",
+    "parts": "pictograph",
+    "story": "Words coming out of a mouth (口) in lines.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164874"
+  },
+  {
+    "k": "校",
+    "reading": "こう",
+    "meaning": "School — as in 学校 (がっこう)",
+    "parts": "木 + 交",
+    "story": "Wooden (木) buildings where people mix (交): a school.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164875"
+  },
+  {
+    "k": "気",
+    "reading": "き / け",
+    "meaning": "Spirit / energy — as in お元気ですか (おげんきですか)",
+    "parts": "气 + 㐅",
+    "story": "Steam (气) rising: the energy or mood in the air.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164876"
+  },
+  {
+    "k": "新",
+    "reading": "あたら(しい) / しん",
+    "meaning": "New — as in 新しい (あたらしい)",
+    "parts": "立 + 木 + 斤",
+    "story": "Stand (立) by a tree (木) with an axe (斤): freshly cut wood is new.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164877"
   }
 ]
