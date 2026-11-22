@@ -7329,5 +7329,47 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795316177754",
+    "word": "専攻",
+    "kana": "せんこう",
+    "meaning": "major (subject at university) — the everyday way to talk about your degree",
+    "examples": [
+      {
+        "jp": "せんこうは コンピューターサイエンスです。",
+        "en": "My major is computer science.",
+        "kanji": "専攻はコンピューターサイエンスです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795316177756",
+    "word": "",
+    "kana": "コンピューターサイエンス",
+    "meaning": "computer science — from English · more formal: 情報工学 (じょうほうこうがく)",
+    "examples": [
+      {
+        "jp": "だいがくで コンピューターサイエンスを べんきょうしました。",
+        "en": "I studied computer science at university.",
+        "kanji": "大学でコンピューターサイエンスを勉強しました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795316177758",
+    "word": "学位",
+    "kana": "がくい",
+    "meaning": "(university) degree — formal: CVs, official forms · in conversation, talk about your 専攻 instead",
+    "examples": [
+      {
+        "jp": "コンピューターサイエンスの がくいを もって います。",
+        "en": "I have a degree in computer science.",
+        "kanji": "コンピューターサイエンスの学位を持っています。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
