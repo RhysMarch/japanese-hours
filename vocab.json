@@ -7444,5 +7444,20 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795370592935",
+    "word": "散歩",
+    "kana": "さんぽ",
+    "meaning": "a walk / a stroll — to go for a walk: さんぽする · walk around a place: place + を",
+    "examples": [
+      {
+        "jp": "いぬと こうえんを さんぽします。",
+        "kanji": "犬と公園を散歩します。",
+        "en": "I go for a walk in the park with my dog."
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "\"SAN, POp out for a walk?\" (san-po)"
   }
 ]
