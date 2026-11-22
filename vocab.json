@@ -7315,5 +7315,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795316128667",
+    "word": "歴史",
+    "kana": "れきし",
+    "meaning": "history — にほんの れきし = Japanese history",
+    "examples": [
+      {
+        "jp": "にほんの れきしが すきです。",
+        "en": "I like Japanese history.",
+        "kanji": "日本の歴史が好きです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
