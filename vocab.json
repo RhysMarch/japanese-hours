@@ -7400,5 +7400,20 @@
     ],
     "deck": "Vocab",
     "adj": "i"
+  },
+  {
+    "id": "anki-1795370328017",
+    "word": "動物",
+    "kana": "どうぶつ",
+    "meaning": "animal",
+    "examples": [
+      {
+        "jp": "ねこは かわいい どうぶつです。",
+        "kanji": "猫は可愛い動物です。",
+        "en": "Cats are cute animals."
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "動 (move) + 物 (thing): a thing that moves"
   }
 ]
