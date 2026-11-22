@@ -7459,5 +7459,20 @@
     ],
     "deck": "Vocab",
     "hook": "\"SAN, POp out for a walk?\" (san-po)"
+  },
+  {
+    "id": "anki-1795370930755",
+    "word": "豚肉",
+    "kana": "ぶたにく",
+    "meaning": "pork — ぶた (豚) = pig · とん is the other reading: とんかつ = pork cutlet",
+    "examples": [
+      {
+        "jp": "ばんごはんに ぶたにくを たべました。",
+        "kanji": "晩ご飯に豚肉を食べました。",
+        "en": "I had pork for dinner."
+      }
+    ],
+    "deck": "Vocab",
+    "hook": "豚 (pig) + 肉 (meat): literally \"pig meat\""
   }
 ]
