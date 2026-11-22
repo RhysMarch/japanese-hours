@@ -7182,5 +7182,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795313638944",
+    "word": "痛い",
+    "kana": "いたい",
+    "meaning": "painful / it hurts — い-adjective · body part が いたいです = my … hurts · \"ouch!\" = いたい！/ いたっ！",
+    "examples": [
+      {
+        "jp": "あたまが いたいです。",
+        "en": "I have a headache.",
+        "kanji": "頭が痛いです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
