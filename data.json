@@ -456,5 +456,14 @@
     "listening": 0.25,
     "speaking": 0.25,
     "duolingo": 0.25
+  },
+  "2026-11-22": {
+    "genki": 2,
+    "anki_kanji": 0.5,
+    "anki_vocab": 0.5,
+    "reading": 0.25,
+    "listening": 0.25,
+    "speaking": 0.25,
+    "duolingo": 0.25
   }
 }
