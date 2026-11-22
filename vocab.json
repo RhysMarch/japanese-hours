@@ -7196,5 +7196,47 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795313715080",
+    "word": "",
+    "kana": "たぶん",
+    "meaning": "probably / maybe — usually written in kana · often ends with でしょう (I think)",
+    "examples": [
+      {
+        "jp": "あしたは たぶん あめです。",
+        "en": "It'll probably rain tomorrow.",
+        "kanji": "明日はたぶん雨です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795313715082",
+    "word": "",
+    "kana": "まだ",
+    "meaning": "not yet (+ negative) / still — \"not yet\" on its own = まだです · opposite: もう (already)",
+    "examples": [
+      {
+        "jp": "ひるごはんを たべましたか。— いいえ、まだです。",
+        "en": "Have you had lunch? — No, not yet.",
+        "kanji": "昼ご飯を食べましたか。— いいえ、まだです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795313715084",
+    "word": "風邪",
+    "kana": "かぜ",
+    "meaning": "a cold (illness) — かぜを ひく = to catch a cold · same sound as 風 (かぜ, wind)",
+    "examples": [
+      {
+        "jp": "かぜを ひきました。",
+        "en": "I caught a cold.",
+        "kanji": "風邪をひきました。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
