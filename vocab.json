@@ -7371,5 +7371,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795316318223",
+    "word": "元カノ",
+    "kana": "もとカノ",
+    "meaning": "ex-girlfriend — 元 (もと) = former + カノ (short for 彼女) · casual · ex-boyfriend = 元カレ (もとカレ)",
+    "examples": [
+      {
+        "jp": "もとカノと まだ ともだちです。",
+        "en": "I'm still friends with my ex-girlfriend.",
+        "kanji": "元カノとまだ友達です。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
