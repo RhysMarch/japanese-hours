@@ -7385,5 +7385,20 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795370247699",
+    "word": "若い",
+    "kana": "わかい",
+    "meaning": "young — for people and animals · new things are あたらしい, not わかい",
+    "examples": [
+      {
+        "jp": "せんせいは わかいです。",
+        "kanji": "先生は若いです。",
+        "en": "The teacher is young."
+      }
+    ],
+    "deck": "Vocab",
+    "adj": "i"
   }
 ]
