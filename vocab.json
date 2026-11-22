@@ -7238,5 +7238,33 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795315263136",
+    "word": "",
+    "kana": "わかんないな〜",
+    "meaning": "I dunno… (thinking to yourself) — casual わからない squashed to わかんない · な〜 = mulling it over · polite: わかりません",
+    "examples": [
+      {
+        "jp": "うーん、わかんないな〜。",
+        "en": "Hmm, I dunno…",
+        "kanji": "うーん、分かんないな〜。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795315263138",
+    "word": "",
+    "kana": "どうだろう",
+    "meaning": "Hmm, I wonder… (how it'll turn out) — 〜だろう = I wonder · softer: どうかな · なんでだろう = I wonder why… · なんだろう = I wonder what it is…",
+    "examples": [
+      {
+        "jp": "あめ、ふるかな。…どうだろう。",
+        "en": "Will it rain? …Hmm, I wonder.",
+        "kanji": "雨、降るかな。…どうだろう。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
