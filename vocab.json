@@ -244,7 +244,8 @@
         "kanji": "自転車が好きです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "n>*|-bx>-%",
@@ -258,7 +259,8 @@
         "kanji": "日本の食べ物が大好きです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "Kv68GM!RD;",
@@ -286,7 +288,8 @@
         "kanji": "日本語の勉強は楽しいです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "CK_p,EM@zH",
@@ -300,7 +303,8 @@
         "kanji": "漢字は難しいです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "Ju*a+?CQcT",
@@ -314,7 +318,8 @@
         "kanji": "この猫は可愛いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "yS7|_m[Ra3",
@@ -1004,7 +1009,8 @@
         "kanji": "日本語は面白いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791037024497",
@@ -1017,7 +1023,8 @@
         "en": "That bicycle is cool."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791037024498",
@@ -1031,7 +1038,8 @@
         "kanji": "このラーメンは美味しいです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791037024499",
@@ -1385,7 +1393,8 @@
         "en": "I want a cat."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791043845271",
@@ -1510,7 +1519,8 @@
         "en": "There's a small cat."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791049112438",
@@ -1524,7 +1534,8 @@
         "en": "It's a big dog."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791049112439",
@@ -1594,7 +1605,8 @@
         "en": "The teacher is kind."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791049112444",
@@ -2403,7 +2415,8 @@
         "en": "The hotel is expensive."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791133492394",
@@ -2538,7 +2551,8 @@
         "en": "This room is bright."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791501115640",
@@ -2552,7 +2566,8 @@
         "en": "The park is dark at night."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791501115641",
@@ -3062,7 +3077,8 @@
         "en": "This café is nice."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791501977188",
@@ -3075,7 +3091,8 @@
         "en": "This room is clean."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1791501977189",
@@ -3089,7 +3106,8 @@
         "en": "It's hot today."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791501977190",
@@ -3103,7 +3121,8 @@
         "en": "It's cold today. I want gloves."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791501977191",
@@ -3635,7 +3654,8 @@
         "en": "Cleaning is such a pain."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791800000004",
@@ -3648,7 +3668,8 @@
         "en": "That dog is huge!"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791800000005",
@@ -3662,7 +3683,8 @@
         "en": "I'm sleepy today."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791800000006",
@@ -3675,7 +3697,8 @@
         "en": "The bus stop is noisy at night."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791800000007",
@@ -3688,7 +3711,8 @@
         "en": "These fireworks are amazing!"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791800000008",
@@ -3772,7 +3796,8 @@
         "en": "This shop is cheap."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791900000005",
@@ -3786,7 +3811,8 @@
         "en": "I bought a new smartphone."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1791900000006",
@@ -4054,7 +4080,8 @@
         "en": "I have an early morning tomorrow."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1792200000015",
@@ -4214,7 +4241,8 @@
         "kanji": "醜いアヒルの子"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1792703804133",
@@ -4228,7 +4256,8 @@
         "kanji": "このテストは簡単です。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1792703804134",
@@ -4242,7 +4271,8 @@
         "kanji": "今日は天気が悪いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1792703804135",
@@ -4382,7 +4412,8 @@
         "kanji": "図書館は静かです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1792790508837",
@@ -4396,7 +4427,8 @@
         "kanji": "この車は古いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1792790508838",
@@ -4409,7 +4441,8 @@
         "en": "Tokyo is lively."
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1792790508839",
@@ -5972,7 +6005,8 @@
         "kanji": "今日は忙しいです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1794429663858",
@@ -5986,7 +6020,8 @@
         "kanji": "この映画はつまらないです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1794429663859",
@@ -6000,7 +6035,8 @@
         "kanji": "この映画は怖かったです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1794429663860",
@@ -6014,7 +6050,8 @@
         "kanji": "野菜が嫌いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1794429663861",
@@ -6028,7 +6065,8 @@
         "kanji": "虫が大嫌いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1794429663862",
@@ -6148,7 +6186,8 @@
         "kanji": "仕事は大変です。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1794678458631",
@@ -6739,7 +6778,8 @@
         "kanji": "髪が長いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1795218933893",
@@ -6753,7 +6793,8 @@
         "kanji": "このズボンは短いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1795218933894",
@@ -6767,7 +6808,8 @@
         "kanji": "新幹線は速いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1795218933895",
@@ -6781,7 +6823,8 @@
         "kanji": "兄は背が高いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1795218933896",
@@ -6795,7 +6838,8 @@
         "kanji": "私は背が低いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1795218933897",
@@ -6809,7 +6853,8 @@
         "kanji": "妹は頭がいいです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1795218933898",
@@ -6823,7 +6868,8 @@
         "kanji": "ホストファミリーは親切です。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1795218933899",
@@ -6837,7 +6883,8 @@
         "kanji": "コンビニは便利です。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "na"
   },
   {
     "id": "anki-1795218933900",
@@ -6971,7 +7018,7 @@
     "kana": "けっこんする",
     "masu": "結婚します",
     "masuKana": "けっこんします",
-    "group": "irregular verb",
+    "group": "irregular",
     "meaning": "to get married — \"is married\" = けっこんして います · person と けっこんする = marry someone",
     "examples": [
       {
@@ -7139,7 +7186,8 @@
         "kanji": "会えて嬉しいです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1795313386852",
@@ -7195,7 +7243,8 @@
         "kanji": "頭が痛いです。"
       }
     ],
-    "deck": "Vocab"
+    "deck": "Vocab",
+    "adj": "i"
   },
   {
     "id": "anki-1795313715080",

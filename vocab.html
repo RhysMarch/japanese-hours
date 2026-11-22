@@ -51,6 +51,7 @@
   .grp.u-verb { color: #2f6fb0; border-color: #2f6fb055; }
   .grp.ru-verb { color: #2e8a57; border-color: #2e8a5755; }
   .grp.irregular { color: #b0602f; border-color: #b0602f55; }
+  .grp.adj { color: #8a4fb0; border-color: #8a4fb055; }
   .d-masu { text-align: center; font-size: 14px; color: var(--muted); }
   .vrow .ex { font-size: 15px; overflow-wrap: anywhere; }
   mark { background: var(--accent-soft); color: var(--accent); font-weight: 600; border-radius: 3px; padding: 0 2px; }
@@ -187,6 +188,28 @@ let group = 'all';     // verb group filter
 const GROUPS = { 'u-verb': 'u-verbs', 'ru-verb': 'ru-verbs', 'irregular': 'Irregular' };
 const grpTag = v => v.group ? `<span class="grp ${esc(v.group)}" title="${esc(v.groupNote || '')}">${esc(v.group)}</span>` : '';
 const masuLine = v => v.masuKana ? `<small>${esc(v.masuKana)}</small>` : '';
+// Negative (ない) and て-form, worked out from the verb group or adjective type (adj: 'i' | 'na')
+const U_NAI = { う: 'わ', く: 'か', ぐ: 'が', す: 'さ', つ: 'た', ぬ: 'な', ぶ: 'ば', む: 'ま', る: 'ら' };
+const U_TE = { う: 'って', つ: 'って', る: 'って', む: 'んで', ぶ: 'んで', ぬ: 'んで', く: 'いて', ぐ: 'いで', す: 'して' };
+function conjugate(v) {
+  const k = v.kana, stem = k.slice(0, -1), last = k.slice(-1);
+  if (v.group === 'ru-verb') return { neg: stem + 'ない', te: stem + 'て' };
+  if (v.group === 'irregular' && k.endsWith('する')) return { neg: k.slice(0, -2) + 'しない', te: k.slice(0, -2) + 'して' };
+  if (v.group === 'irregular' && k.endsWith('くる')) return { neg: k.slice(0, -2) + 'こない', te: k.slice(0, -2) + 'きて' };
+  if (v.group === 'u-verb') {
+    if (k === 'ある') return { neg: 'ない', te: 'あって' };                     // ある → ない, not あらない
+    if (k === 'いく') return { neg: 'いかない', te: 'いって' };                  // いく → いって, not いいて
+    if (U_NAI[last]) return { neg: stem + U_NAI[last] + 'ない', te: stem + U_TE[last] };
+  }
+  if (v.adj === 'i') {
+    const s = /^いい$|[ こ]いい$/.test(k) ? k.slice(0, -2) + 'よ' : stem;      // いい・かっこいい → よくない (not かわいい)
+    return { neg: s + 'くない', te: s + 'くて' };
+  }
+  if (v.adj === 'na') return { neg: k + 'じゃない', te: k + 'で' };
+  return null;
+}
+const formsLine = v => { const c = conjugate(v); return c ? `<div class="d-masu" lang="ja">not: ${esc(c.neg)} · て-form: ${esc(c.te)}</div>` : ''; };
+const adjTag = v => v.adj ? `<span class="grp adj">${v.adj === 'i' ? 'い-adj' : 'な-adj'}</span>` : '';
 let kanji = [];        // from kanji.json, to mark which of a word's kanji you know
 
 function toast(msg) {
@@ -232,14 +255,14 @@ function render() {
 
   const q = $('q').value.trim().toLowerCase();
   const shown = vocab.filter(v => (deck === 'all' || v.deck === deck) && (group === 'all' || v.group === group) &&
-    matchesQuery(q, [v.word, v.kana, v.masu, v.masuKana, v.meaning]));
+    matchesQuery(q, [v.word, v.kana, v.masu, v.masuKana, v.meaning, conjugate(v)?.neg, conjugate(v)?.te]));
 
   $('list').innerHTML = shown.length ? shown.map(v => {
     const ex = v.examples[0];
     return `
     <div class="vrow" data-id="${esc(v.id)}">
       <span class="word" lang="ja">${esc(v.word) || '—'}</span>
-      <span class="kana" lang="ja">${esc(v.kana)}${grpTag(v)}${masuLine(v)}</span>
+      <span class="kana" lang="ja">${esc(v.kana)}${grpTag(v)}${adjTag(v)}${masuLine(v)}</span>
       <span class="ex" lang="ja">${ex ? highlight(ex.jp, v) : ''}</span>
       <span class="en"><b>${esc(v.meaning)}</b>${ex?.en ? `<span>${esc(ex.en)}</span>` : ''}</span>
     </div>`;
@@ -264,7 +287,8 @@ function showWord(id) {
     <div class="d-word" lang="ja">${esc(v.word || v.kana)}</div>
     ${v.word ? `<div class="d-kana" lang="ja">${esc(v.kana)}</div>` : ''}
     ${v.masuKana ? `<div class="d-masu" lang="ja">ます form: ${esc(v.masu && v.masu !== v.masuKana ? v.masu + ' · ' + v.masuKana : v.masuKana)}</div>` : ''}
-    <div class="d-meaning">${esc(v.meaning)}${grpTag(v)}</div>
+    ${formsLine(v)}
+    <div class="d-meaning">${esc(v.meaning)}${grpTag(v)}${adjTag(v)}</div>
     ${v.groupNote ? `<div class="d-hook">${esc(v.groupNote)}</div>` : ''}
     ${v.hook ? `<div class="d-hook">💡 ${esc(v.hook)}</div>` : ''}
     ${kanjiIn(v.word).length ? `<div class="d-h" style="margin-top:0">Kanji in this word</div>
