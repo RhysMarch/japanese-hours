@@ -7430,5 +7430,19 @@
     ],
     "deck": "Vocab",
     "adj": "i"
+  },
+  {
+    "id": "anki-1795370545729",
+    "word": "海",
+    "kana": "うみ",
+    "meaning": "sea / ocean",
+    "examples": [
+      {
+        "jp": "しゅうまつ うみに いきます。",
+        "kanji": "週末海に行きます。",
+        "en": "I'm going to the sea at the weekend."
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
