@@ -1498,7 +1498,7 @@
           "id": "tekudasai",
           "title": "〜てください",
           "gist": "Please do…",
-          "note": "て form + ください.",
+          "note": "て form + ください. With close friends or family, the て form alone is a casual request: まど、あけて。 (Open the window, will you?)",
           "uses": [
             {
               "examples": [
@@ -1506,10 +1506,80 @@
                   "jp": "ここに かい[てください]。",
                   "kj": "ここに書い[てください]。",
                   "en": "Please write here."
+                },
+                {
+                  "jp": "すみません。ちょっと おしえ[てください]。",
+                  "kj": "すみません。ちょっと教え[てください]。",
+                  "en": "Excuse me, please teach me a little."
                 }
               ]
             }
-          ]
+          ],
+          "covered": true
+        },
+        {
+          "id": "telink",
+          "title": "〜て、〜 (joining verbs)",
+          "gist": "Do A and (then) B",
+          "note": "Put every verb except the last in て form. The last verb sets the tense for the whole sentence. (と only joins nouns.)",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "としょかんに い[って]、ほんを かります。",
+                  "kj": "図書館に行[って]、本を借ります。",
+                  "en": "I'll go to the library and borrow some books."
+                },
+                {
+                  "jp": "きょうは ろくじに おき[て]、べんきょうしました。",
+                  "kj": "今日は六時に起き[て]、勉強しました。",
+                  "en": "Today I got up at 6 and studied."
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "id": "temoii",
+          "title": "〜ても いいです(か)",
+          "gist": "You may… / May I…?",
+          "note": "て form + も いいです. Add か to ask permission. To say yes: はい、いいですよ。",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "きょうかしょを み[ても いいです]よ。",
+                  "kj": "教科書を見[てもいいです]よ。",
+                  "en": "You may look at the textbook."
+                },
+                {
+                  "jp": "トイレに いっ[ても いいですか]。",
+                  "kj": "トイレに行っ[てもいいですか]。",
+                  "en": "May I go to the toilet?"
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "id": "tewaikemasen",
+          "title": "〜ては いけません",
+          "gist": "You must not…",
+          "note": "て form + は いけません. Used for rules.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "ここで しゃしんを とっ[ては いけません]。",
+                  "kj": "ここで写真を撮っ[てはいけません]。",
+                  "en": "You must not take photos here."
+                }
+              ]
+            }
+          ],
+          "covered": true
         },
         {
           "id": "teimasu",
@@ -1772,7 +1842,7 @@
           "id": "mashou",
           "title": "〜ましょう・〜ましょうか",
           "gist": "Let's… / Shall we…?",
-          "note": "Take the ます form and change ます → ましょう (let's) or ましょうか (shall we?, a bit softer).",
+          "note": "Take the ます form and change ます → ましょう (let's) or ましょうか (shall we?, a bit softer). ましょうか also offers help: \"shall I…?\"",
           "uses": [
             {
               "examples": [
@@ -1785,6 +1855,11 @@
                   "jp": "あそこで コーヒーを のみ[ましょうか]。",
                   "kj": "あそこでコーヒーを飲み[ましょうか]。",
                   "en": "Shall we drink coffee over there?"
+                },
+                {
+                  "jp": "にもつを もち[ましょうか]。",
+                  "kj": "荷物を持ち[ましょうか]。",
+                  "en": "Shall I carry your bag?"
                 }
               ]
             }
