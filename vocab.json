@@ -7140,5 +7140,47 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795313386852",
+    "word": "口",
+    "kana": "くち",
+    "meaning": "mouth — becomes ぐち in words: 入口 (いりぐち), 出口 (でぐち)",
+    "examples": [
+      {
+        "jp": "くちを あけて ください。",
+        "en": "Please open your mouth.",
+        "kanji": "口を開けてください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795313386854",
+    "word": "耳",
+    "kana": "みみ",
+    "meaning": "ear",
+    "examples": [
+      {
+        "jp": "みみが いたいです。",
+        "en": "My ear hurts.",
+        "kanji": "耳が痛いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795313386856",
+    "word": "鼻",
+    "kana": "はな",
+    "meaning": "nose — same sound as 花 (はな, flower)",
+    "examples": [
+      {
+        "jp": "ぞうは はなが ながいです。",
+        "en": "Elephants have long noses.",
+        "kanji": "象は鼻が長いです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
