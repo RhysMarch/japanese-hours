@@ -7415,5 +7415,20 @@
     ],
     "deck": "Vocab",
     "hook": "動 (move) + 物 (thing): a thing that moves"
+  },
+  {
+    "id": "anki-1795370482047",
+    "word": "重い",
+    "kana": "おもい",
+    "meaning": "heavy — opposite: かるい (軽い, light) · don't mix up おもいです (it's heavy) with おもいます (I think, from 思う)",
+    "examples": [
+      {
+        "jp": "この にもつは おもいです。",
+        "kanji": "この荷物は重いです。",
+        "en": "This luggage is heavy."
+      }
+    ],
+    "deck": "Vocab",
+    "adj": "i"
   }
 ]
