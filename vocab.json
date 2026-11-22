@@ -7513,5 +7513,229 @@
     ],
     "deck": "Vocab",
     "hook": "豚 (pig) + 肉 (meat): literally \"pig meat\""
+  },
+  {
+    "id": "anki-1795390557356",
+    "word": "眉毛",
+    "kana": "まゆげ",
+    "meaning": "eyebrow",
+    "examples": [
+      {
+        "jp": "まゆげが ふといです。",
+        "en": "(He) has thick eyebrows.",
+        "kanji": "眉毛が太いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557357",
+    "word": "手",
+    "kana": "て",
+    "meaning": "hand",
+    "examples": [
+      {
+        "jp": "てを あらって ください。",
+        "en": "Please wash your hands.",
+        "kanji": "手を洗ってください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557358",
+    "word": "歯",
+    "kana": "は",
+    "meaning": "tooth · brush your teeth = はを みがく",
+    "examples": [
+      {
+        "jp": "まいあさ はを みがきます。",
+        "en": "I brush my teeth every morning.",
+        "kanji": "毎朝歯を磨きます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557359",
+    "word": "首",
+    "kana": "くび",
+    "meaning": "neck",
+    "examples": [
+      {
+        "jp": "くびが いたいです。",
+        "en": "My neck hurts.",
+        "kanji": "首が痛いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557360",
+    "word": "指",
+    "kana": "ゆび",
+    "meaning": "finger · also toe · ring = ゆびわ (finger + ring)",
+    "examples": [
+      {
+        "jp": "ゆびを きりました。",
+        "en": "I cut my finger.",
+        "kanji": "指を切りました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557361",
+    "word": "目",
+    "kana": "め",
+    "meaning": "eye · glasses = めがね",
+    "examples": [
+      {
+        "jp": "ねこの めは おおきいです。",
+        "en": "Cats' eyes are big.",
+        "kanji": "猫の目は大きいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557362",
+    "word": "頭",
+    "kana": "あたま",
+    "meaning": "head · smart = あたまが いい",
+    "examples": [
+      {
+        "jp": "あたまが いたいです。",
+        "en": "I have a headache.",
+        "kanji": "頭が痛いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557363",
+    "word": "顔",
+    "kana": "かお",
+    "meaning": "face",
+    "examples": [
+      {
+        "jp": "かおを あらいます。",
+        "en": "I wash my face.",
+        "kanji": "顔を洗います。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557364",
+    "word": "肩",
+    "kana": "かた",
+    "meaning": "shoulder · stiff shoulders = かたが こる",
+    "examples": [
+      {
+        "jp": "かたが いたいです。",
+        "en": "My shoulder hurts.",
+        "kanji": "肩が痛いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557365",
+    "word": "胸",
+    "kana": "むね",
+    "meaning": "chest",
+    "examples": [
+      {
+        "jp": "むねが いたいです。",
+        "en": "My chest hurts.",
+        "kanji": "胸が痛いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557366",
+    "word": "背中",
+    "kana": "せなか",
+    "meaning": "back (of your body) · 背 = height/back · 中 = middle",
+    "examples": [
+      {
+        "jp": "せなかが かゆいです。",
+        "en": "My back is itchy.",
+        "kanji": "背中がかゆいです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557367",
+    "word": "お尻",
+    "kana": "おしり",
+    "meaning": "bum · often written in kana: おしり",
+    "examples": [
+      {
+        "jp": "ずっと すわって いて、おしりが いたいです。",
+        "en": "I've been sitting for ages and my bum hurts.",
+        "kanji": "ずっと座っていて、お尻が痛いです。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557368",
+    "word": "お腹",
+    "kana": "おなか",
+    "meaning": "stomach · I'm hungry = おなかが すいた",
+    "examples": [
+      {
+        "jp": "おなかが すきました。",
+        "en": "I'm hungry.",
+        "kanji": "お腹が空きました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557369",
+    "word": "夫",
+    "kana": "おっと",
+    "meaning": "my husband · someone else’s: ごしゅじん",
+    "examples": [
+      {
+        "jp": "おっとは かいしゃいんです。",
+        "en": "My husband is an office worker.",
+        "kanji": "夫は会社員です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557370",
+    "word": "妻",
+    "kana": "つま",
+    "meaning": "my wife · someone else’s: おくさん",
+    "examples": [
+      {
+        "jp": "つまは にほんじんです。",
+        "en": "My wife is Japanese.",
+        "kanji": "妻は日本人です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795390557371",
+    "word": "足",
+    "kana": "あし",
+    "meaning": "leg · also foot (one word for both)",
+    "examples": [
+      {
+        "jp": "あしが ながいです。",
+        "en": "(She) has long legs.",
+        "kanji": "足が長いです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
