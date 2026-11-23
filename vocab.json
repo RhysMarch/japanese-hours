@@ -7751,5 +7751,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795470844690",
+    "word": "雨上がり",
+    "kana": "あめあがり",
+    "meaning": "just after the rain · 雨 (rain) + 上がる (to stop, of rain)",
+    "examples": [
+      {
+        "jp": "あめあがりの そらは きれいです。",
+        "en": "The sky after the rain is beautiful.",
+        "kanji": "雨上がりの空はきれいです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
