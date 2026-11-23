@@ -1546,5 +1546,104 @@
     "story": "A samurai (士) with a cover (冖) over his goods, walking on legs (儿) door to door, selling.",
     "added": "2026-11-23",
     "id": "anki-1795472156728"
+  },
+  {
+    "k": "午",
+    "reading": "ご",
+    "meaning": "Noon — as in 午前 (ごぜん)",
+    "parts": "𠂉 + 十",
+    "story": "A sundial pole (十) with the sun right on top of it: noon.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310525"
+  },
+  {
+    "k": "長",
+    "reading": "なが(い) / ちょう",
+    "meaning": "Long / chief — as in 長い (ながい)",
+    "parts": "long hair + 𧘇",
+    "story": "An old man with long hair flowing down: long, and the eldest is the chief.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310526"
+  },
+  {
+    "k": "多",
+    "reading": "おお(い) / た",
+    "meaning": "Many — as in 多い (おおい)",
+    "parts": "夕 + 夕",
+    "story": "Two evenings (夕) stacked up: many nights.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310527"
+  },
+  {
+    "k": "少",
+    "reading": "すこ(し) / すく(ない) / しょう",
+    "meaning": "Few / a little — as in 少し (すこし)",
+    "parts": "小 + 丿",
+    "story": "Something small (小) with a slice (丿) cut off: even less.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310528"
+  },
+  {
+    "k": "立",
+    "reading": "た(つ) / りつ",
+    "meaning": "Stand — as in 立つ (たつ)",
+    "parts": "亠 + 丷 + 一",
+    "story": "A person with a head (亠) and arms out (丷), standing on the ground (一).",
+    "added": "2026-11-23",
+    "id": "anki-1795472310529"
+  },
+  {
+    "k": "押",
+    "reading": "お(す)",
+    "meaning": "Push — as in 押す (おす)",
+    "parts": "扌 + 甲",
+    "story": "A hand (扌) pressing on a shell (甲): push.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310530"
+  },
+  {
+    "k": "引",
+    "reading": "ひ(く) / いん",
+    "meaning": "Pull — as in 引く (ひく)",
+    "parts": "弓 + 丨",
+    "story": "Drawing back the string (丨) of a bow (弓): pull.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310531"
+  },
+  {
+    "k": "閉",
+    "reading": "し(める) / へい",
+    "meaning": "Close — as in 閉める (しめる)",
+    "parts": "門 + 才",
+    "story": "A bar (才) jammed in the gate (門): closed.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310532"
+  },
+  {
+    "k": "階",
+    "reading": "かい",
+    "meaning": "Floor (storey) — as in 二階 (にかい)",
+    "parts": "阝 + 皆",
+    "story": "Everyone (皆) climbing the hill (阝) step by step: floors.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310533"
+  },
+  {
+    "k": "無",
+    "reading": "む / ぶ",
+    "meaning": "Nothing / without — as in 無料 (むりょう)",
+    "parts": "𠂉 + 灬",
+    "story": "Everything burned in the fire (灬) below: nothing left.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310534"
+  },
+  {
+    "k": "料",
+    "reading": "りょう",
+    "meaning": "Fee / ingredients — as in 無料 (むりょう)",
+    "parts": "米 + 斗",
+    "story": "Rice (米) measured out with a ladle (斗): you pay a fee for it.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310535"
   }
 ]
