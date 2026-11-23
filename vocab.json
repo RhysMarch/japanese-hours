@@ -7765,5 +7765,20 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795475495488",
+    "word": "無理",
+    "kana": "むり",
+    "adj": "na",
+    "meaning": "impossible · casual 「むり！」= no way! · むりしないで = don't push yourself",
+    "examples": [
+      {
+        "jp": "きょうは ちょっと むりです。",
+        "en": "Today's a bit difficult (I can't today).",
+        "kanji": "今日はちょっと無理です。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
