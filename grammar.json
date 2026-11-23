@@ -1584,7 +1584,7 @@
         {
           "id": "teimasu",
           "title": "〜ています",
-          "gist": "Is doing (right now)",
+          "gist": "Is doing (right now) / does as a job or habit",
           "uses": [
             {
               "examples": [
@@ -1592,10 +1592,45 @@
                   "jp": "いま にほんごを べんきょうし[ています]。",
                   "kj": "今、日本語を勉強し[ています]。",
                   "en": "I'm studying Japanese right now."
+                },
+                {
+                  "jp": "わたしは えいごを おしえ[ています]。",
+                  "kj": "私は英語を教え[ています]。",
+                  "en": "I teach English."
                 }
               ]
             }
-          ]
+          ],
+          "covered": true,
+          "note": "て form + います, with activity verbs (たべる, よむ, べんきょうする). いる conjugates like a ru-verb: います · いません · いました · いませんでした."
+        },
+        {
+          "id": "teimasu-result",
+          "title": "〜ています (result of a change)",
+          "gist": "Is (in a state that came from a change)",
+          "note": "With change verbs (けっこんする, しる, すむ, いく, くる) it means the change happened and is still true. Don't know = しりません, not しっていません.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "やましたさんは けっこんし[ています]。",
+                  "kj": "山下さんは結婚し[ています]。",
+                  "en": "Ms. Yamashita is married."
+                },
+                {
+                  "jp": "リースさんは ははを しっ[ています]。",
+                  "kj": "リースさんは母を知っ[ています]。",
+                  "en": "Rhys knows my mother."
+                },
+                {
+                  "jp": "かぞくは とうきょうに すんで[います]。",
+                  "kj": "家族は東京に住んで[います]。",
+                  "en": "My family lives in Tokyo."
+                }
+              ]
+            }
+          ],
+          "covered": true
         },
         {
           "id": "jikan",
@@ -1821,6 +1856,80 @@
           ],
           "covered": true,
           "tip": "Casual: drop です. な-adjectives use だ / だった instead (しずかだ, しずかだった)."
+        },
+        {
+          "id": "body-ga",
+          "title": "A は (body part) が (adjective)",
+          "gist": "A has (adjective) (body part)",
+          "note": "Used to describe what someone looks like. Put the person with は and the body part with が.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "メアリーさんは かみ[が] ながいです。",
+                  "kj": "メアリーさんは髪[が]長いです。",
+                  "en": "Mary has long hair."
+                },
+                {
+                  "jp": "トムさんは め[が] おおきいです。",
+                  "kj": "トムさんは目[が]大きいです。",
+                  "en": "Tom has big eyes."
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "id": "adj-te",
+          "title": "Adjective / noun て-form: 〜くて · 〜で",
+          "gist": "…and… (joining descriptions)",
+          "note": "い-adjective: い → くて (いい → よくて). な-adjective and noun: add で. The last part sets the tense.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "あの みせの たべものは やす[くて]、おいしいです。",
+                  "kj": "あの店の食べ物は安[くて]、おいしいです。",
+                  "en": "That shop's food is cheap and tasty."
+                },
+                {
+                  "jp": "ホテルは きれい[で]、よかったです。",
+                  "kj": "ホテルはきれい[で]、よかったです。",
+                  "en": "The hotel was clean, and I was happy."
+                },
+                {
+                  "jp": "かのじょは にほんじん[で]、がくせいです。",
+                  "kj": "彼女は日本人[で]、学生です。",
+                  "en": "She is Japanese and a student."
+                }
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "id": "stem-ni-iku",
+          "title": "(verb stem) に いく / くる / かえる",
+          "gist": "Go / come / go home to do…",
+          "note": "The stem is the ます form without ます: かいます → かい. Place に (or へ) + what you'll do + に + いく / くる / かえる.",
+          "uses": [
+            {
+              "examples": [
+                {
+                  "jp": "デパートに かばんを [かいに] いきました。",
+                  "kj": "デパートにかばんを[買いに]行きました。",
+                  "en": "I went to a department store to buy a bag."
+                },
+                {
+                  "jp": "にほんに [べんきょうしに] きました。",
+                  "kj": "日本に[勉強しに]来ました。",
+                  "en": "I came to Japan to study."
+                }
+              ]
+            }
+          ],
+          "covered": true
         },
         {
           "id": "yori",
