@@ -1371,5 +1371,140 @@
     "story": "Stand (立) by a tree (木) with an axe (斤): freshly cut wood is new.",
     "added": "2026-11-22",
     "id": "anki-1795370164877"
+  },
+  {
+    "k": "週",
+    "reading": "しゅう",
+    "meaning": "Week — as in 今週 (こんしゅう)",
+    "parts": "辶 + 周",
+    "story": "Walking (辶) all the way around (周) the calendar: one week.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168421"
+  },
+  {
+    "k": "晩",
+    "reading": "ばん",
+    "meaning": "Evening — as in 今晩 (こんばん)",
+    "parts": "日 + 免",
+    "story": "The sun (日) is excused (免) from work: evening.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168422"
+  },
+  {
+    "k": "兄",
+    "reading": "あに / にい / きょう",
+    "meaning": "Older brother — as in お兄さん (おにいさん)",
+    "parts": "口 + 儿",
+    "story": "A big mouth (口) on legs (儿): your older brother, always telling you what to do.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168423"
+  },
+  {
+    "k": "姉",
+    "reading": "あね / ねえ",
+    "meaning": "Older sister — as in お姉さん (おねえさん)",
+    "parts": "女 + 市",
+    "story": "A woman (女) who takes you to the market (市): your older sister.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168424"
+  },
+  {
+    "k": "弟",
+    "reading": "おとうと / だい",
+    "meaning": "Younger brother — as in 弟 (おとうと)",
+    "parts": "丷 + 弓 + 丿",
+    "story": "Two little horns (丷) on a bow (弓): your little brother playing with toy weapons.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168425"
+  },
+  {
+    "k": "昨",
+    "reading": "さく",
+    "meaning": "Previous — as in 昨日 (きのう)",
+    "parts": "日 + 乍",
+    "story": "The sun (日) that just (乍) went down: the day before.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168426"
+  },
+  {
+    "k": "館",
+    "reading": "かん",
+    "meaning": "Hall / building — as in 図書館 (としょかん)",
+    "parts": "食 + 官",
+    "story": "An official (官) building where you can eat (食): a big hall.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168427"
+  },
+  {
+    "k": "練",
+    "reading": "れん",
+    "meaning": "Practise — as in 練習 (れんしゅう)",
+    "parts": "糸 + 東",
+    "story": "Thread (糸) wound round and round, east (東) to west: practice is repetition.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168428"
+  },
+  {
+    "k": "習",
+    "reading": "なら(う) / しゅう",
+    "meaning": "Learn — as in 練習 (れんしゅう)",
+    "parts": "羽 + 白",
+    "story": "A white (白) bird flapping its wings (羽) again and again: learning to fly.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168429"
+  },
+  {
+    "k": "図",
+    "reading": "ず / と",
+    "meaning": "Map / drawing — as in 地図 (ちず)",
+    "parts": "囗 + marks",
+    "story": "Lines and marks drawn inside a frame (囗): a map.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168430"
+  },
+  {
+    "k": "乗",
+    "reading": "の(る) / じょう",
+    "meaning": "Ride — as in 乗る (のる)",
+    "parts": "禾 + 北",
+    "story": "Someone sitting on top of a tree, arms out to both sides (北): riding.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168431"
+  },
+  {
+    "k": "住",
+    "reading": "す(む) / じゅう",
+    "meaning": "Live (reside) — as in 住む (すむ)",
+    "parts": "亻 + 主",
+    "story": "The person (亻) who is master (主) of the house: they live there.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168432"
+  },
+  {
+    "k": "持",
+    "reading": "も(つ) / じ",
+    "meaning": "Hold — as in 持つ (もつ)",
+    "parts": "扌 + 寺",
+    "story": "A hand (扌) holding the temple (寺) offerings: to hold.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168433"
+  },
+  {
+    "k": "仕",
+    "reading": "し",
+    "meaning": "Serve — as in 仕事 (しごと)",
+    "parts": "亻 + 士",
+    "story": "A person (亻) serving like a samurai (士): to serve.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168434"
+  },
+  {
+    "k": "事",
+    "reading": "こと / じ",
+    "meaning": "Thing / matter — as in 仕事 (しごと)",
+    "parts": "⺕ + 亅",
+    "story": "A hand (⺕) holding a brush on a pole: a thing to get done.",
+    "added": "2026-11-23",
+    "id": "anki-1795471168435"
   }
 ]
