@@ -7780,5 +7780,34 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795477523547",
+    "word": "少し",
+    "kana": "すこし",
+    "meaning": "a little · a bit more polite than ちょっと",
+    "examples": [
+      {
+        "jp": "にほんごが すこし わかります。",
+        "en": "I understand a little Japanese.",
+        "kanji": "日本語が少し分かります。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795477523548",
+    "word": "狭い",
+    "kana": "せまい",
+    "adj": "i",
+    "meaning": "cramped · also narrow (a road) · opposite: ひろい (spacious)",
+    "examples": [
+      {
+        "jp": "にほんは すこし せまいです。",
+        "en": "Japan is a little cramped.",
+        "kanji": "日本は少し狭いです。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
