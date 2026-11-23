@@ -1645,5 +1645,41 @@
     "story": "Rice (米) measured out with a ladle (斗): you pay a fee for it.",
     "added": "2026-11-23",
     "id": "anki-1795472310535"
+  },
+  {
+    "k": "首",
+    "reading": "くび / しゅ",
+    "meaning": "Neck — as in 首 (くび)",
+    "parts": "丷 + 一 + 自",
+    "story": "Two horns (丷) on top of a head (自): the head sits on the neck.",
+    "id": "anki-1795472480839",
+    "added": "2026-11-23"
+  },
+  {
+    "k": "毛",
+    "reading": "け / げ",
+    "meaning": "Hair (body hair, fur) — as in 眉毛 (まゆげ)",
+    "parts": "丿 + 二 + 乚",
+    "story": "A single hair with little strands sticking out and a curl at the end.",
+    "id": "anki-1795472480840",
+    "added": "2026-11-23"
+  },
+  {
+    "k": "正",
+    "reading": "ただ(しい) / しょう / せい",
+    "meaning": "Correct / right — as in 正しい (ただしい)",
+    "parts": "一 + 止",
+    "story": "Stop (止) exactly at the line (一): that's the correct place.",
+    "id": "anki-1795472480841",
+    "added": "2026-11-23"
+  },
+  {
+    "k": "茶",
+    "reading": "ちゃ / さ",
+    "meaning": "Tea — as in お茶 (おちゃ)",
+    "parts": "艹 + 人 + 木",
+    "story": "A person (人) between the grass (艹) and a tree (木), picking tea leaves.",
+    "id": "anki-1795472507162",
+    "added": "2026-11-23"
   }
 ]
