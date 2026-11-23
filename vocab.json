@@ -7737,5 +7737,19 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795392373829",
+    "word": "何してんの？",
+    "kana": "なにしてんの？",
+    "meaning": "What are you doing? (casual) · short for なにを しているの · polite: なにを していますか · Kansai: なにしてん",
+    "examples": [
+      {
+        "jp": "いま なにしてんの？",
+        "en": "What are you up to right now?",
+        "kanji": "今何してんの？"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
