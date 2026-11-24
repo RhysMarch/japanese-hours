@@ -420,7 +420,36 @@
     "k": "開",
     "reading": "かい / あ",
     "meaning": "Open — as in 開発者 (かいはつしゃ), 開けます (あけます)",
-    "added": "2026-10-03"
+    "added": "2026-10-03",
+    "parts": "門 + 开",
+    "story": "Hands (开) pushing the gate (門) open."
+  },
+  {
+    "k": "閉",
+    "reading": "し(める) / へい",
+    "meaning": "Close — as in 閉める (しめる)",
+    "parts": "門 + 才",
+    "story": "A bar (才) jammed in the gate (門): closed.",
+    "added": "2026-11-23",
+    "id": "anki-1795472310532"
+  },
+  {
+    "k": "間",
+    "reading": "あいだ / かん / ま",
+    "meaning": "Interval / between — as in 時間 (じかん)",
+    "parts": "門 + 日",
+    "story": "The sun (日) shining through the gap in a gate (門): the space between.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164872"
+  },
+  {
+    "k": "聞",
+    "reading": "き(く) / ぶん",
+    "meaning": "Hear / listen / ask — as in 聞く (きく)",
+    "parts": "門 + 耳",
+    "story": "An ear (耳) pressed against the gate (門): listening.",
+    "added": "2026-11-22",
+    "id": "anki-1795370164873"
   },
   {
     "k": "発",
@@ -1321,24 +1350,6 @@
     "id": "anki-1795370164871"
   },
   {
-    "k": "間",
-    "reading": "あいだ / かん / ま",
-    "meaning": "Interval / between — as in 時間 (じかん)",
-    "parts": "門 + 日",
-    "story": "The sun (日) shining through the gap in a gate (門): the space between.",
-    "added": "2026-11-22",
-    "id": "anki-1795370164872"
-  },
-  {
-    "k": "聞",
-    "reading": "き(く) / ぶん",
-    "meaning": "Hear / listen / ask — as in 聞く (きく)",
-    "parts": "門 + 耳",
-    "story": "An ear (耳) pressed against the gate (門): listening.",
-    "added": "2026-11-22",
-    "id": "anki-1795370164873"
-  },
-  {
     "k": "言",
     "reading": "い(う) / げん",
     "meaning": "Say — as in 言う (いう)",
@@ -1610,15 +1621,6 @@
     "story": "Drawing back the string (丨) of a bow (弓): pull.",
     "added": "2026-11-23",
     "id": "anki-1795472310531"
-  },
-  {
-    "k": "閉",
-    "reading": "し(める) / へい",
-    "meaning": "Close — as in 閉める (しめる)",
-    "parts": "門 + 才",
-    "story": "A bar (才) jammed in the gate (門): closed.",
-    "added": "2026-11-23",
-    "id": "anki-1795472310532"
   },
   {
     "k": "階",
