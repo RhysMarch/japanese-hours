@@ -7809,5 +7809,107 @@
       }
     ],
     "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795480034629",
+    "word": "会社員",
+    "kana": "かいしゃいん",
+    "meaning": "office worker · 会社 (company) + 員 (member)",
+    "examples": [
+      {
+        "jp": "ちちは かいしゃいんです。",
+        "en": "My father is an office worker.",
+        "kanji": "父は会社員です。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795480034630",
+    "word": "残業",
+    "kana": "ざんぎょう",
+    "meaning": "overtime (work) · to do overtime = ざんぎょうする",
+    "examples": [
+      {
+        "jp": "きょうは ざんぎょうします。",
+        "en": "I'm doing overtime today.",
+        "kanji": "今日は残業します。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795480034631",
+    "word": "新聞",
+    "kana": "しんぶん",
+    "meaning": "newspaper · 新 (new) + 聞 (hear): \"new things heard\"",
+    "examples": [
+      {
+        "jp": "あさ しんぶんを よみます。",
+        "en": "I read the newspaper in the morning.",
+        "kanji": "朝、新聞を読みます。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795480034632",
+    "word": "",
+    "kana": "まず",
+    "meaning": "first of all · then: つぎに · lastly: さいごに",
+    "examples": [
+      {
+        "jp": "まず、てを あらって ください。",
+        "en": "First of all, please wash your hands.",
+        "kanji": "まず、手を洗ってください。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795480034633",
+    "word": "最後に",
+    "kana": "さいごに",
+    "meaning": "lastly · first: まず · next: つぎに",
+    "examples": [
+      {
+        "jp": "さいごに、しつもんは ありますか。",
+        "en": "Lastly, are there any questions?",
+        "kanji": "最後に、質問はありますか。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795480034634",
+    "word": "この間",
+    "kana": "このあいだ",
+    "meaning": "the other day · 間 here is read あいだ",
+    "examples": [
+      {
+        "jp": "このあいだ、えいがを みました。",
+        "en": "I watched a movie the other day.",
+        "kanji": "この間、映画を見ました。"
+      }
+    ],
+    "deck": "Vocab"
+  },
+  {
+    "id": "anki-1795480034635",
+    "word": "答える",
+    "kana": "こたえる",
+    "masu": "答えます",
+    "masuKana": "こたえます",
+    "group": "ru-verb",
+    "hook": "KOTAE → \"COAT? Eh!\" you answer when someone asks whose coat it is",
+    "meaning": "to answer · answer a question = しつもんに こたえる",
+    "examples": [
+      {
+        "jp": "しつもんに こたえて ください。",
+        "en": "Please answer the question.",
+        "kanji": "質問に答えてください。"
+      }
+    ],
+    "deck": "Vocab"
   }
 ]
