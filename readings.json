@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ame-no-nichiyoubi",
+    "title": "{雨|あめ}の{日曜日|にちようび}",
+    "en": "A Rainy Sunday",
+    "author": "トム",
+    "level": "Genki 1 · up to lesson 7",
+    "added": "2026-11-24",
+    "paragraphs": [
+      {
+        "jp": "{私|わたし}は{東京|とうきょう}に{住|す}んでいます。{会社員|かいしゃいん}で、{毎日|まいにち}{少|すこ}し{残業|ざんぎょう}をします。{!部屋|へや}は{狭|せま}いですが、{駅|えき}から{近|ちか}くて、{便利|べんり}です。",
+        "en": "I live in Tokyo. I'm an office worker, and I do a little overtime every day. My room is cramped, but it's close to the station and convenient."
+      },
+      {
+        "jp": "この{!間|あいだ}の{日曜日|にちようび}は、{朝|あさ}から{雨|あめ}でした。まず、コーヒーを{飲|の}んで、{新聞|しんぶん}を{読|よ}みました。{日本語|にほんご}の{新聞|しんぶん}はまだ{難|むずか}しいですから、{少|すこ}しだけ{読|よ}みました。",
+        "en": "The other Sunday, it rained from the morning. First, I drank coffee and read the newspaper. Japanese newspapers are still difficult, so I only read a little."
+      },
+      {
+        "jp": "{次|つぎ}に、{友|とも}だちのけんさんに{電話|でんわ}しました。「{今日|きょう}、カラオケに{行|い}きませんか。」けんさんは「いいですね。でも、{雨|あめ}ですから、{午後|ごご}に{行|い}きましょう」と{言|い}いました。",
+        "en": "Next, I called my friend Ken. \"Do you want to go to karaoke today?\" Ken said, \"Sounds good. But it's raining, so let's go in the afternoon.\""
+      },
+      {
+        "jp": "{午後|ごご}{二時|にじ}ごろ、{雨|あめ}が{!止|や}みました。{雨上|あめあ}がりの{町|まち}はとてもきれいで、{空気|くうき}がおいしかったです。けんさんと{駅|えき}で{会|あ}って、カラオケに{歌|うた}いに{行|い}きました。",
+        "en": "Around 2 p.m., the rain stopped. The town after the rain was really beautiful, and the air was fresh. I met Ken at the station, and we went to sing karaoke."
+      },
+      {
+        "jp": "けんさんは{歌|うた}が{!上手|じょうず}で、{日本|にほん}の{歌|うた}をたくさん{歌|うた}いました。「トムさんも{日本語|にほんご}の{歌|うた}を{歌|うた}ってください！」{私|わたし}は「ちょっと{無理|むり}です！」と{言|い}いました。だから、{英語|えいご}の{歌|うた}を{歌|うた}いました。",
+        "en": "Ken is good at singing, and he sang lots of Japanese songs. \"Tom, you sing a Japanese song too!\" I said, \"That's a bit impossible!\" So I sang an English song."
+      },
+      {
+        "jp": "{最後|さいご}に、ラーメンを{食|た}べに{行|い}きました。{店|みせ}は{小|ちい}さくて{狭|せま}かったですが、ラーメンは{安|やす}くて、{本当|ほんとう}においしかったです。",
+        "en": "Lastly, we went to eat ramen. The shop was small and cramped, but the ramen was cheap and really delicious."
+      },
+      {
+        "jp": "{!家|うち}に{帰|かえ}って、けんさんに「{今日|きょう}はありがとう。また{来週|らいしゅう}も{行|い}きましょう」とメッセージを{書|か}きました。とても{楽|たの}しい{日曜日|にちようび}でした。",
+        "en": "I went home and wrote Ken a message: \"Thanks for today. Let's go again next week.\" It was a really fun Sunday."
+      }
+    ],
+    "words": [
+      { "w": "止む", "k": "やむ", "en": "to stop (rain)" },
+      { "w": "町", "k": "まち", "en": "town" },
+      { "w": "空気", "k": "くうき", "en": "air" },
+      { "w": "上手", "k": "じょうず", "en": "good at" },
+      { "w": "近い", "k": "ちかい", "en": "close / near" },
+      { "w": "メッセージ", "k": "", "en": "message" },
+      { "w": "だけ", "k": "", "en": "only / just" }
+    ],
+    "questions": [
+      { "q": "トムさんの{!部屋|へや}はどうですか。", "a": "{狭|せま}いですが、{駅|えき}から{近|ちか}くて{便利|べんり}です。" },
+      { "q": "{日曜日|にちようび}の{朝|あさ}、トムさんは{何|なに}をしましたか。", "a": "コーヒーを{飲|の}んで、{新聞|しんぶん}を{読|よ}みました。" },
+      { "q": "{何時|なんじ}ごろ{雨|あめ}が{!止|や}みましたか。", "a": "{二時|にじ}ごろです。" },
+      { "q": "どうしてトムさんは{英語|えいご}の{歌|うた}を{歌|うた}いましたか。", "a": "{日本語|にほんご}の{歌|うた}はちょっと{無理|むり}でしたから。" },
+      { "q": "ラーメンの{店|みせ}はどうでしたか。", "a": "{小|ちい}さくて{狭|せま}かったですが、ラーメンは{安|やす}くておいしかったです。" }
+    ]
+  }
+]

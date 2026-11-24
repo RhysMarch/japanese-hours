@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>読み物 Reading</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23c8102e'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
+    --accent: #c8102e; --accent-soft: #fbe9ec;
+    --paper: #fffdf7; --paper-ink: #2a2620; --rule: #e9e2d2; --margin: #f0c9cf; --furi: #8a8378;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20;
+      --paper: #23211d; --paper-ink: #e8e2d5; --rule: #2f2c26; --margin: #4a2a2f; --furi: #a39b8e; }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  a { color: var(--accent); }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 820px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  h1 { margin: 0; font-size: 28px; letter-spacing: .5px; }
+  h1 span { color: var(--accent); }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .muted { color: var(--muted); }
+  .jp { font-family: "UD Digi Kyokasho N-R", "UD デジタル 教科書体 N-R", "Klee One", "Yu Mincho", serif; }
+
+  /* list of readings */
+  .list { display: grid; gap: 12px; }
+  .item { display: block; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 10px; padding: 14px 16px; color: inherit; text-decoration: none; }
+  .item:hover { border-color: var(--accent); }
+  .item .t { font-size: 24px; }
+  .item .s { color: var(--muted); font-size: 14px; }
+
+  /* controls */
+  .bar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 0 0 14px; font-size: 14px; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--card); }
+  .seg button { font: inherit; font-size: 13px; border: none; background: none; color: var(--ink); padding: 4px 12px; cursor: pointer; }
+  .seg button.on { background: var(--ink); color: var(--bg); }
+  .back { text-decoration: none; }
+
+  /* the page */
+  .paper { --fs: 22px; --lh: calc(var(--fs) * 2.4);
+    background: var(--paper); color: var(--paper-ink); border-radius: 4px; position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.06); padding: 36px 40px 40px 64px; }
+  .paper::before { content: ""; position: absolute; top: 0; bottom: 0; left: 44px; border-left: 2px solid var(--margin); }
+  .p-head { text-align: center; margin-bottom: 8px; }
+  .p-title { font-size: calc(var(--fs) * 1.35); font-weight: 600; letter-spacing: .08em; line-height: 2.2; }
+  .p-author { text-align: right; font-size: calc(var(--fs) * .9); }
+  .p-body { font-size: var(--fs); line-height: var(--lh);
+    background-image: repeating-linear-gradient(to bottom, transparent 0, transparent calc(var(--lh) - 1px), var(--rule) calc(var(--lh) - 1px), var(--rule) var(--lh)); }
+  .p-body p { margin: 0; text-indent: 1em; }
+  .p-body .en { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 15px; line-height: var(--lh); color: var(--muted); text-indent: 0; }
+  ruby rt { font-size: .5em; color: var(--furi); letter-spacing: 0; }
+
+  /* words + questions */
+  .box { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-top: 16px; }
+  .box h2 { font-size: 16px; margin: 0 0 8px; }
+  .words { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 24px; }
+  .words div { display: flex; gap: 10px; align-items: baseline; }
+  .words .w { font-size: 19px; }
+  .words .k { color: var(--muted); font-size: 14px; }
+  .words .e { margin-left: auto; font-size: 14px; }
+  details { border-top: 1px solid var(--line); padding: 8px 0; }
+  details:first-of-type { border-top: none; }
+  summary { cursor: pointer; font-size: 19px; line-height: 2.2; }
+  details .a { font-size: 18px; line-height: 2.2; padding-left: 18px; color: var(--accent); }
+  @media (max-width: 600px) {
+    .paper { padding: 24px 18px 28px 30px; }
+    .paper::before { left: 18px; }
+    .words { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><span>読み物</span> Reading</h1>
+    <div class="row">
+      <a href="./">Hours</a>
+      <a href="kanji.html">Kanji</a>
+      <a href="vocab.html">Vocab</a>
+      <a href="grammar.html">Grammar</a>
+    </div>
+  </header>
+  <div id="content"><p class="muted">Loading…</p></div>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const pref = {
+  get(k, d) { try { return localStorage.getItem('reading.' + k) ?? d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('reading.' + k, v); } catch {} },
+};
+
+let readings = [], known = new Set();
+let furi = pref.get('furi', 'unknown');   // unknown | all | off
+let showEn = pref.get('en', 'off') === 'on';
+let size = +pref.get('size', 22);
+
+// {漢字|かな} → ruby. {!漢字|かな} = always show (a reading you haven't learned yet).
+// In "unknown" mode furigana shows only when one of the kanji isn't on the Kanji page.
+function rubyText(s) {
+  return esc(s).replace(/\{(!?)([^|{}]+)\|([^{}]+)\}/g, (_, force, base, kana) => {
+    const unknown = force || [...base].some(c => /[一-鿿]/.test(c) && !known.has(c));
+    const show = furi === 'all' || (furi === 'unknown' && unknown);
+    return show ? `<ruby>${base}<rt>${kana}</rt></ruby>` : base;
+  });
+}
+const strip = s => s.replace(/\{!?([^|{}]+)\|[^{}]+\}/g, '$1');
+
+function renderList() {
+  $('content').innerHTML = `<div class="list">${readings.map(r => `
+    <a class="item" href="#${esc(r.id)}">
+      <div class="t jp" lang="ja">${esc(strip(r.title))}</div>
+      <div class="s">${esc(r.en)} · ${esc(r.level)} · ${strip(r.paragraphs.map(p => p.jp).join('')).length} characters</div>
+    </a>`).join('')}</div>`;
+}
+
+function seg(name, value, options) {
+  return `<span class="seg" data-name="${name}">${options.map(([v, label]) =>
+    `<button type="button" data-v="${v}" class="${String(value) === String(v) ? 'on' : ''}">${label}</button>`).join('')}</span>`;
+}
+
+function renderReading(r) {
+  $('content').innerHTML = `
+    <div class="bar">
+      <a class="back" href="#">← All readings</a>
+      <span>Furigana ${seg('furi', furi, [['unknown', 'New kanji'], ['all', 'All'], ['off', 'Off']])}</span>
+      <span>English ${seg('en', showEn ? 'on' : 'off', [['off', 'Hide'], ['on', 'Show']])}</span>
+      <span>Size ${seg('size', size, [[19, 'S'], [22, 'M'], [26, 'L']])}</span>
+    </div>
+    <article class="paper jp" lang="ja" style="--fs:${size}px">
+      <div class="p-head"><div class="p-title">${rubyText(r.title)}</div></div>
+      <div class="p-author">${esc(r.author)}</div>
+      <div class="p-body">${r.paragraphs.map(p => `<p>${rubyText(p.jp)}</p>${showEn ? `<p class="en" lang="en">${esc(p.en)}</p>` : ''}`).join('')}</div>
+    </article>
+    <section class="box">
+      <h2>Words to know</h2>
+      <div class="words">${r.words.map(w => `<div><span class="w jp" lang="ja">${esc(w.w)}</span>${w.k ? `<span class="k jp" lang="ja">${esc(w.k)}</span>` : ''}<span class="e">${esc(w.en)}</span></div>`).join('')}</div>
+    </section>
+    <section class="box">
+      <h2>Questions <span class="muted" style="font-weight:400;font-size:13px">tap to see an answer</span></h2>
+      ${r.questions.map((q, i) => `<details><summary class="jp" lang="ja">${i + 1}. ${rubyText(q.q)}</summary><div class="a jp" lang="ja">${rubyText(q.a)}</div></details>`).join('')}
+    </section>`;
+}
+
+function route() {
+  const r = readings.find(x => x.id === location.hash.slice(1));
+  r ? renderReading(r) : renderList();
+}
+
+$('content').addEventListener('click', ev => {
+  const b = ev.target.closest('.seg button');
+  if (!b) return;
+  const name = b.parentElement.dataset.name, v = b.dataset.v;
+  if (name === 'furi') furi = v;
+  if (name === 'en') showEn = v === 'on';
+  if (name === 'size') size = +v;
+  pref.set(name, v);
+  route();
+});
+addEventListener('hashchange', () => { route(); scrollTo(0, 0); });
+
+Promise.all([
+  fetch('readings.json?t=' + Date.now(), { cache: 'no-store' }).then(r => r.json()),
+  fetch('kanji.json?t=' + Date.now(), { cache: 'no-store' }).then(r => r.json()).catch(() => []),
+]).then(([rs, ks]) => {
+  readings = rs;
+  known = new Set(ks.map(k => k.k));
+  route();
+}).catch(() => { $('content').innerHTML = '<p class="muted">Couldn\'t load readings.</p>'; });
+</script>
+</body>
+</html>
