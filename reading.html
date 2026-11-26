@@ -12,11 +12,11 @@
   :root {
     --bg: #faf7f2; --card: #ffffff; --ink: #1f1d1a; --muted: #77716a; --line: #e7e1d8;
     --accent: #c8102e; --accent-soft: #fbe9ec;
-    --paper: #fffdf7; --paper-ink: #2a2620; --rule: #e9e2d2; --margin: #f0c9cf; --furi: #8a8378;
+    --paper: #fffdf7; --paper-ink: #2a2620; --rule: #e9e2d2; --margin: #f0c9cf; --furi: #8a8378; --done: #2f8a57;
   }
   @media (prefers-color-scheme: dark) {
     :root { --bg: #161513; --card: #201f1c; --ink: #eeeae4; --muted: #9a948b; --line: #33302b; --accent-soft: #3a1b20;
-      --paper: #23211d; --paper-ink: #e8e2d5; --rule: #2f2c26; --margin: #4a2a2f; --furi: #a39b8e; }
+      --paper: #23211d; --paper-ink: #e8e2d5; --rule: #2f2c26; --margin: #4a2a2f; --furi: #a39b8e; --done: #4fae78; }
   }
   * { box-sizing: border-box; }
   [hidden] { display: none !important; }
@@ -36,6 +36,12 @@
   .item:hover { border-color: var(--accent); }
   .item .t { font-size: 24px; }
   .item .s { color: var(--muted); font-size: 14px; }
+  .item.done { border-left-color: var(--done); }
+  .item.done .t { opacity: .7; }
+  .tick { float: right; font-size: 13px; color: var(--done); border: 1px solid currentColor; border-radius: 999px; padding: 1px 10px; }
+  .readbtn { font: inherit; font-size: 15px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px; padding: 8px 18px; cursor: pointer; }
+  .readbtn.on { background: var(--done); border-color: var(--done); color: #fff; }
+  .done-row { text-align: center; margin-top: 18px; }
 
   /* controls */
   .bar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin: 0 0 14px; font-size: 14px; }
@@ -91,6 +97,7 @@
   <div id="content"><p class="muted">Loading…</p></div>
 </main>
 
+<script src="github.js?v=20261003b"></script>
 <script>
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -100,6 +107,19 @@ const pref = {
 };
 
 let readings = [], known = new Set();
+// Read marks: { storyId: 'YYYY-MM-DD' } in reading-progress.json (synced via GitHub when signed in), copied in localStorage
+const PROGRESS = 'reading-progress.json';
+let done = {};
+try { done = JSON.parse(pref.get('done', '{}')) || {}; } catch {}
+const token = store.get(TOKEN_KEY);
+async function toggleRead(id) {
+  const today = new Date().toLocaleDateString('en-CA');
+  const mark = d => { if (d[id]) delete d[id]; else d[id] = today; return d; };
+  mark(done); pref.set('done', JSON.stringify(done)); route();
+  if (!token) return;
+  try { done = await ghWrite(PROGRESS, mark, (done[id] ? 'Read: ' : 'Unread: ') + id, token); pref.set('done', JSON.stringify(done)); }
+  catch (e) { console.warn('Could not sync read mark:', e.message); }
+}
 let furi = pref.get('furi', 'unknown');   // unknown | all | off
 let showEn = pref.get('en', 'off') === 'on';
 let size = +pref.get('size', 22);
@@ -116,8 +136,10 @@ function rubyText(s) {
 const strip = s => s.replace(/\{!?([^|{}]+)\|[^{}]+\}/g, '$1');
 
 function renderList() {
-  $('content').innerHTML = `<div class="list">${readings.map(r => `
-    <a class="item" href="#${esc(r.id)}">
+  const n = readings.filter(r => done[r.id]).length;
+  $('content').innerHTML = `<p class="muted">${n} of ${readings.length} read</p><div class="list">${readings.map(r => `
+    <a class="item${done[r.id] ? ' done' : ''}" href="#${esc(r.id)}">
+      ${done[r.id] ? '<span class="tick">✓ Read</span>' : ''}
       <div class="t jp" lang="ja">${esc(strip(r.title))}</div>
       <div class="s">${esc(r.en)} · ${esc(r.level)} · ${strip(r.paragraphs.map(p => p.jp).join('')).length} characters</div>
     </a>`).join('')}</div>`;
@@ -148,7 +170,8 @@ function renderReading(r) {
     <section class="box">
       <h2>Questions <span class="muted" style="font-weight:400;font-size:13px">tap to see an answer</span></h2>
       ${r.questions.map((q, i) => `<details><summary class="jp" lang="ja">${i + 1}. ${rubyText(q.q)}</summary><div class="a jp" lang="ja">${rubyText(q.a)}</div></details>`).join('')}
-    </section>`;
+    </section>
+    <div class="done-row"><button type="button" class="readbtn${done[r.id] ? ' on' : ''}" data-read="${esc(r.id)}">${done[r.id] ? '✓ Read on ' + esc(done[r.id]) : 'Mark as read'}</button></div>`;
 }
 
 function route() {
@@ -157,6 +180,8 @@ function route() {
 }
 
 $('content').addEventListener('click', ev => {
+  const rb = ev.target.closest('[data-read]');
+  if (rb) return toggleRead(rb.dataset.read);
   const b = ev.target.closest('.seg button');
   if (!b) return;
   const name = b.parentElement.dataset.name, v = b.dataset.v;
@@ -171,8 +196,10 @@ addEventListener('hashchange', () => { route(); scrollTo(0, 0); });
 Promise.all([
   fetch('readings.json?t=' + Date.now(), { cache: 'no-store' }).then(r => r.json()),
   fetch('kanji.json?t=' + Date.now(), { cache: 'no-store' }).then(r => r.json()).catch(() => []),
-]).then(([rs, ks]) => {
+  ghRead(PROGRESS, {}, token).then(x => x.data).catch(() => null),
+]).then(([rs, ks, prog]) => {
   readings = rs;
+  if (prog) { done = token ? prog : { ...done, ...prog }; pref.set('done', JSON.stringify(done)); }
   known = new Set(ks.map(k => k.k));
   route();
 }).catch(() => { $('content').innerHTML = '<p class="muted">Couldn\'t load readings.</p>'; });
