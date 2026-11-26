@@ -192,5 +192,97 @@
         "a": "{晩|ばん}ご{飯|はん}とケーキを{食|た}べます。"
       }
     ]
+  },
+  {
+    "id": "tonari-no-neko",
+    "title": "{隣|となり}の{猫|ねこ}",
+    "en": "The Cat Next Door",
+    "author": "さくら",
+    "level": "Genki 1 · up to lesson 7",
+    "added": "2026-11-26",
+    "paragraphs": [
+      {
+        "jp": "{私|わたし}は{大学生|だいがくせい}で、{小|ちい}さいアパートに{住|す}んでいます。アパートの{隣|となり}に{古|ふる}い{家|いえ}があります。その{家|いえ}に{白|しろ}い{猫|ねこ}がいます。",
+        "en": "I'm a university student, and I live in a small apartment. Next to the apartment there's an old house. A white cat lives in that house."
+      },
+      {
+        "jp": "{猫|ねこ}の{名前|なまえ}はモモです。{毎朝|まいあさ}、モモは{私|わたし}の{部屋|へや}の{窓|まど}の{前|まえ}に{来|き}ます。そして、「ニャー」と{言|い}います。",
+        "en": "The cat's name is Momo. Every morning, Momo comes to the front of my room's window. Then she says \"Meow.\""
+      },
+      {
+        "jp": "{私|わたし}は{窓|まど}を{開|あ}けて、「おはよう、モモ」と{言|い}います。モモは{部屋|へや}に{入|はい}って、{机|つくえ}の{上|うえ}で{寝|ね}ます。{私|わたし}は{宿題|しゅくだい}をしていますが、モモはぜんぜん{手伝|てつだ}いません！",
+        "en": "I open the window and say \"Morning, Momo.\" Momo comes into my room and sleeps on top of my desk. I'm doing my homework, but Momo doesn't help at all!"
+      },
+      {
+        "jp": "この{!間|あいだ}の{日曜日|にちようび}、モモは{来|き}ませんでした。{次|つぎ}の{日|ひ}も{来|き}ませんでした。{私|わたし}はとても{心配|しんぱい}でした。",
+        "en": "The other Sunday, Momo didn't come. She didn't come the next day either. I was really worried."
+      },
+      {
+        "jp": "{火曜日|かようび}に、{隣|となり}の{家|いえ}のおばあさんに{会|あ}いました。「モモは{元気|げんき}ですか。」おばあさんは「{元気|げんき}ですよ。ちょっと{見|み}てください」と{言|い}いました。",
+        "en": "On Tuesday, I met the old lady from the house next door. \"Is Momo okay?\" The old lady said, \"She's fine. Come and have a look.\""
+      },
+      {
+        "jp": "{家|いえ}の{中|なか}で、モモが{寝|ね}ていました。モモの{隣|となり}に、{子猫|こねこ}が{四匹|よんひき}いました！{白|しろ}い{子猫|こねこ}と{黒|くろ}い{子猫|こねこ}で、とてもかわいかったです。",
+        "en": "Inside the house, Momo was sleeping. Next to Momo, there were four kittens! They were white kittens and black kittens, and they were really cute."
+      },
+      {
+        "jp": "{今|いま}、{毎朝|まいあさ}{窓|まど}の{前|まえ}に{猫|ねこ}が{五匹|ごひき}{来|き}ます。{宿題|しゅくだい}はぜんぜんできません。でも、{毎朝|まいあさ}とても{楽|たの}しいです。",
+        "en": "Now, five cats come to my window every morning. I can't get any homework done at all. But every morning is really fun."
+      }
+    ],
+    "words": [
+      {
+        "w": "隣",
+        "k": "となり",
+        "en": "next to / next door"
+      },
+      {
+        "w": "宿題",
+        "k": "しゅくだい",
+        "en": "homework"
+      },
+      {
+        "w": "心配",
+        "k": "しんぱい",
+        "en": "worried"
+      },
+      {
+        "w": "子猫",
+        "k": "こねこ",
+        "en": "kitten"
+      },
+      {
+        "w": "〜匹",
+        "k": "ひき / びき / ぴき",
+        "en": "counter for small animals"
+      },
+      {
+        "w": "黒い",
+        "k": "くろい",
+        "en": "black"
+      }
+    ],
+    "questions": [
+      {
+        "q": "モモは{毎朝|まいあさ}どこに{来|き}ますか。",
+        "a": "さくらさんの{部屋|へや}の{窓|まど}の{前|まえ}に{来|き}ます。"
+      },
+      {
+        "q": "モモは{部屋|へや}で{何|なに}をしますか。",
+        "a": "{机|つくえ}の{上|うえ}で{寝|ね}ます。"
+      },
+      {
+        "q": "どうしてさくらさんは{心配|しんぱい}でしたか。",
+        "a": "モモが{日曜日|にちようび}と{次|つぎ}の{日|ひ}に{来|き}ませんでしたから。"
+      },
+      {
+        "q": "{子猫|こねこ}は{何匹|なんびき}いましたか。",
+        "a": "{四匹|よんひき}いました。"
+      },
+      {
+        "q": "{今|いま}、{毎朝|まいあさ}{猫|ねこ}は{何匹|なんびき}{来|き}ますか。",
+        "a": "{五匹|ごひき}{来|き}ます。"
+      }
+    ]
   }
 ]
