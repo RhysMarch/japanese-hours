@@ -481,5 +481,12 @@
     "reading": 0.25,
     "listening": 0.25,
     "duolingo": 0.25
+  },
+  "2026-11-25": {
+    "anki_kanji": 0.25,
+    "anki_vocab": 0.25,
+    "reading": 0.25,
+    "listening": 0.25,
+    "duolingo": 0.25
   }
 }
