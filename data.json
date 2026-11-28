@@ -495,5 +495,10 @@
     "listening": 0.5,
     "speaking": 0.25,
     "duolingo": 0.25
+  },
+  "2026-11-27": {
+    "anki_kanji": 0.5,
+    "anki_vocab": 0.25,
+    "reading": 0.5
   }
 }
